@@ -1,0 +1,36 @@
+.about .prose thead {
+  @apply hidden;
+}
+
+.about .prose tbody {
+  @apply w-full block;
+}
+
+.about .prose tr {
+  @apply flex border-t border-gray-300;
+}
+
+.about .prose td,
+.about .prose th {
+  @apply py-2.5 px-0.5;
+}
+
+.about .prose td p {
+  @apply m-0;
+}
+
+.about .prose td:first-child {
+  @apply flex-1;
+}
+
+.about .prose td:last-child {
+  @apply text-right w-24;
+}
+
+.about .socials a {
+  @apply font-normal decoration-none;
+}
+
+.dark .about .prose tr {
+  @apply border-gray-600;
+}

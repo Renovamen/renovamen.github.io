@@ -1,0 +1,21 @@
+@import "./prose.css";
+@import "./about.css";
+
+html,
+body,
+#app {
+  @apply h-full m-0 p-0;
+}
+
+html.dark {
+  @apply bg-gray-700;
+}
+
+#nprogress {
+  @apply pointer-events-none;
+}
+
+#nprogress .bar {
+  @apply fixed opacity-75 top-0 left-0 w-full h-0.5 z-50;
+  background: #377bb5;
+}
