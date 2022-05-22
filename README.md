@@ -2,7 +2,7 @@
 
 This is my personal website, built on [Vitesse](https://github.com/antfu/vitesse).
 
-My Chinese blog is now moved here: [blog.zxh.io](https://blog.zxh.io) / [code](https://github.com/Renovamen/blog.zxh.io)
+My Chinese blog is now moved to: [blog.zxh.io](https://blog.zxh.io) / [code](https://github.com/Renovamen/blog.zxh.io)
 
 Any way, just have fun: [zxh.io](https://zxh.io)
 

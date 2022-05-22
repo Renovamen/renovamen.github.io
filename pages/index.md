@@ -31,7 +31,7 @@ Her current research interests lie primarily in topics related to exploring the 
 |   |   |
 |---|---|
 | **M.S. in Computer Science**, Boston University | 2021-2023 |
-| **B.E. in Software Engineering**, Tongji University <p style="margin-top: 5px">Thesis: *Food Image Aesthetic Assessment and Captioning*</p> <p>Advisor: [Prof. Qinpei Zhao](http://sse.tongji.edu.cn/zhaoqinpei)</p> | 2016-2020 |
+| **B.E. in Software Engineering**, Tongji University <p>Thesis: *Food Image Aesthetic Assessment and Captioning*</p> | 2016-2020 |
 
 
 ## Publications
@@ -58,7 +58,7 @@ Her current research interests lie primarily in topics related to exploring the 
   
   **Oral Presentation**
 
-  [[Paper]](https://ieeexplore.ieee.org/document/9288208) [[Code]](https://github.com/Renovamen/Food-IAC) [[Slide]](/files/papers/ictai2020/food-iac-slide.pdf)
+  [[Paper]](https://ieeexplore.ieee.org/document/9288208) [[Code]](https://github.com/Renovamen/Food-IAC) [[Slide]](/files/papers/ictai2020/slide.pdf)
 
 - **A Survey on Application of Knowledge Graph**
 
@@ -83,7 +83,6 @@ Her current research interests lie primarily in topics related to exploring the 
 ## Talks
 
 - [Meta / Few-shot Learning](/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
-- [Automatic Generation on Food Image Aesthetic Captioning](/files/papers/ictai2020/food-iac-slide.pdf), ICTAI 2020
 - [Continual Learning: Meta Continual Learning & Task Free Settings](/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
 
 

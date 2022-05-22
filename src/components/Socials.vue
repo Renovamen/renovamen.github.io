@@ -3,8 +3,7 @@
     <a
       v-for="(item, i) in socials"
       :key="`social-${i}-${item.icon}`"
-      class="hstack space-x-1 rounded-md transition-colors"
-      p="x-3 y-2"
+      class="hstack space-x-1 rounded transition-colors px-3 h-9"
       bg="gray-100/90 hover:gray-500 dark:gray-50/10"
       un-text="sm hover:white"
       type="button"
