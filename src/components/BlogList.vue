@@ -1,19 +1,21 @@
 <template>
   <template v-for="key in Object.keys(postMap)" :key="key">
     <h3>{{ key }}</h3>
-    <router-link
+    <div
       v-for="route in postMap[key]"
       :key="route.path"
-      class="font-normal my-1 mx-0.5 md:justify-between md:hstack !no-underline"
-      :to="route.path"
+      class="font-normal my-1 mx-0.5 flex"
     >
-      <div class="title text-lg lt-md:-mt-4">
+      <div class="w-14 h-6 leading-6 opacity-50 text-sm mr-2">
+        {{ formatDate(route.date, false) }}
+      </div>
+      <router-link
+        class="flex-1 !no-underline hover:(!underline)"
+        :to="route.path"
+      >
         {{ route.title }}
-      </div>
-      <div class="time opacity-50 text-sm">
-        {{ formatDate(route.date) }}
-      </div>
-    </router-link>
+      </router-link>
+    </div>
   </template>
 </template>
 
@@ -45,13 +47,3 @@ for (const p of posts) {
   postMap[y] ? postMap[y].push(p) : (postMap[y] = [p]);
 }
 </script>
-
-<style scoped>
-a:hover .title {
-  @apply text-blue-500;
-}
-
-.dark a:hover .title {
-  @apply text-blue-300;
-}
-</style>
