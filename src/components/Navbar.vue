@@ -28,18 +28,6 @@
         <span class="lt-md:hidden">Blog</span>
       </router-link>
 
-      <a
-        href="https://portfolio.zxh.io/"
-        rel="noopener noreferrer"
-        target="_blank"
-        title="Portfolio"
-        aria-label="Portfolio"
-        class="nav-item"
-      >
-        <div i-ri:game-line class="md:hidden" />
-        <span class="lt-md:hidden">Portfolio</span>
-      </a>
-
       <button
         class="nav-item !outline-none"
         title="Toggle dark"
