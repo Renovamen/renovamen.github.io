@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BlogList: typeof import('./components/BlogList.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    Layout: typeof import('./components/Layout.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     OhCV: typeof import('./components/icons/OhCV.vue')['default']
     OhVueIcons: typeof import('./components/icons/OhVueIcons.vue')['default']

@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <script>
-    (function() {
+    (function () {
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
       const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
       if (setting === 'dark' || (prefersDark && setting !== 'light'))

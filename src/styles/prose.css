@@ -18,12 +18,11 @@
 }
 
 .prose pre[class*="language-"] {
-  border: solid 1px #e5e7eb;
-  padding: 1rem 1.25rem;
+  @apply border border-gray-200 px-5 py-4;
 }
 
 html.dark .prose pre[class*="language-"] {
-  border: solid 1px #4b5563;
+  @apply border-gray-600;
 }
 
 html:not(.dark) .prose {
@@ -46,6 +45,7 @@ html:not(.dark) .prose {
   --prism-decorator: #bd8f8f;
   --prism-regex: #ab5e3f;
   --prism-json-property: #698c96;
+  --un-prose-hr: #e5e7eb;  /* border-gray-200 */
 }
 
 html.dark .prose {
@@ -72,4 +72,5 @@ html.dark .prose {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+  --un-prose-hr: #4b5563;  /* border-gray-600 */
 }

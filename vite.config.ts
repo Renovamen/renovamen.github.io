@@ -13,7 +13,7 @@ import LinkAttributes from "markdown-it-link-attributes";
 import Unocss from "unocss/vite";
 import matter from "gray-matter";
 
-const markdownWrapperClasses = "prose prose-sm m-auto text-left";
+const markdownWrapperClasses = "prose m-auto text-left";
 
 export default defineConfig({
   resolve: {
@@ -62,7 +62,8 @@ export default defineConfig({
         "@vueuse/head",
         "@vueuse/core"
       ],
-      dts: "src/auto-imports.d.ts"
+      dts: "src/auto-imports.d.ts",
+      dirs: ["src/composables"]
     }),
 
     // https://github.com/antfu/unplugin-vue-components

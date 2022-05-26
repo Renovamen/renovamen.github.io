@@ -5,7 +5,7 @@ export const isExternal = (path: string) => {
   return outboundRE.test(path);
 };
 
-export function formatDate(date: string | Date, year: boolean = true) {
+export function formatDate(date: string | Date, year = true) {
   return year ? dayjs(date).format("MMM D, YYYY") : dayjs(date).format("MMM D");
 }
 

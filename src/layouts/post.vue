@@ -1,23 +1,13 @@
 <template>
-  <main
-    class="flex flex-col min-h-full"
-    p="x-4 t-24 b-6"
-    text="gray-800 dark:gray-200"
-  >
-    <div class="flex-1">
-      <Navbar />
-
-      <div class="article-header mt-6 mb-8 mx-auto">
-        <h1 class="text-3xl font-bold">{{ title }}</h1>
-        <p class="opacity-50 mt-2">
-          {{ formatDate(date) }}
-        </p>
-      </div>
-
-      <RouterView />
+  <Layout>
+    <div class="article-header mt-6 mb-8 mx-auto">
+      <h1 class="text-3xl font-bold">{{ title }}</h1>
+      <p class="opacity-50 mt-2">
+        {{ formatDate(date) }}
+      </p>
     </div>
-    <Footer />
-  </main>
+    <RouterView />
+  </Layout>
 </template>
 
 <script setup lang="ts">

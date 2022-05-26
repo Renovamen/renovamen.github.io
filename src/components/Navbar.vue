@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { toggleDark } from "~/composables";
+import { toggleDark } from "~/composables/dark";
 import { isClient } from "~/utils";
 
 const navbar = ref<HTMLElement | null>(null);

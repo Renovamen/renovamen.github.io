@@ -40,5 +40,5 @@ export default defineConfig({
     presetTypography()
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: "prose prose-sm m-auto text-left".split(" ")
+  safelist: "prose m-auto text-left".split(" ")
 });

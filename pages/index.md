@@ -1,9 +1,9 @@
 ---
 socials:
+  - icon: i-academicons:cv
+    link: /files/cv/en/full.pdf
   - icon: i-eva:github-outline
     link: https://github.com/Renovamen
-  - icon: i-academicons:cv
-    link: /files/cv/en/brief.pdf
   - icon: i-radix-icons:linkedin-logo
     link: https://www.linkedin.com/in/xiaohan-zou
   - icon: i-academicons:google-scholar
@@ -91,9 +91,9 @@ Her current research interests lie primarily in topics related to exploring the 
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) and [Uno CSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🧐 My complete curriculum vitae can be found [here](/files/cv/en/full.pdf)
+- 🧐 My one-page resume can be found [here](/files/cv/en/brief.pdf)
 
 - 🕹️ Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
 

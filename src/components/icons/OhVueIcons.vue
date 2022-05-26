@@ -29,7 +29,5 @@
 </template>
 
 <script setup lang="ts">
-import { isDark } from "~/composables";
-
 const color = computed(() => (isDark.value ? "#ff6562" : "#e1190e"));
 </script>
