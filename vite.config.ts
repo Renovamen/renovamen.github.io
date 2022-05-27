@@ -1,5 +1,4 @@
 import { resolve } from "path";
-import fs from "fs-extra";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Pages from "vite-plugin-pages";
@@ -11,7 +10,7 @@ import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import LinkAttributes from "markdown-it-link-attributes";
 import Unocss from "unocss/vite";
-import matter from "gray-matter";
+import { resolveBlogFile } from "./node";
 
 const markdownWrapperClasses = "prose m-auto text-left";
 
@@ -32,22 +31,7 @@ export default defineConfig({
     Pages({
       pagesDir: "pages",
       extensions: ["vue", "md"],
-      extendRoute(route) {
-        if (route.path.startsWith("/posts") && route.path !== "/posts") {
-          const path = resolve(__dirname, route.component.slice(1));
-
-          const md = fs.readFileSync(path, "utf-8");
-          const { data } = matter(md);
-
-          route.meta = Object.assign(route.meta || {}, {
-            frontmatter: data,
-            layout: "post",
-            date: route.path.substring(7, 17)
-          });
-        }
-
-        return route;
-      }
+      extendRoute: (route) => resolveBlogFile(route)
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts

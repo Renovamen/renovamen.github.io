@@ -32,7 +32,7 @@ const router = useRouter();
 
 const posts: Post[] = router
   .getRoutes()
-  .filter((i: any) => i.path.startsWith("/posts") && i.meta.frontmatter)
+  .filter((i: any) => i.meta.layout === "post")
   .map((i: any) => ({
     path: i.path,
     title: i.meta.frontmatter.title,
