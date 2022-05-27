@@ -1,0 +1,32 @@
+.post a.header-anchor {
+  float: left;
+  margin-top: 0.15em;
+  margin-left: -1.3em;
+  font-size: 0.85em;
+  opacity: 0;
+  text-decoration: none;
+}
+
+.post a.header-anchor:hover,
+.post a.header-anchor:focus {
+  text-decoration: none;
+}
+
+.post h2:hover .header-anchor,
+.post h2:focus .header-anchor,
+.post h3:hover .header-anchor,
+.post h3:focus .header-anchor,
+.post h4:hover .header-anchor,
+.post h4:focus .header-anchor,
+.post h5:hover .header-anchor,
+.post h5:focus .header-anchor,
+.post h6:hover .header-anchor,
+.post h6:focus .header-anchor {
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .post a.header-anchor {
+    display: none;
+  }
+}

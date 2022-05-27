@@ -7,10 +7,8 @@ import Layouts from "vite-plugin-vue-layouts";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Markdown from "vite-plugin-md";
-import Prism from "markdown-it-prism";
-import LinkAttributes from "markdown-it-link-attributes";
 import Unocss from "unocss/vite";
-import { resolveBlogFile } from "./node";
+import { resolveBlogFile, installMarkdownPlugins } from "./node";
 
 const markdownWrapperClasses = "prose m-auto text-left";
 
@@ -68,17 +66,7 @@ export default defineConfig({
     Markdown({
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
-      markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism);
-        md.use(LinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: "_blank",
-            rel: "noopener"
-          }
-        });
-      }
+      markdownItSetup: (md) => installMarkdownPlugins(md)
     })
   ],
 
@@ -86,8 +74,6 @@ export default defineConfig({
   ssgOptions: {
     script: "async",
     formatting: "minify",
-    onFinished() {
-      generateSitemap();
-    }
+    onFinished: () => generateSitemap()
   }
 });

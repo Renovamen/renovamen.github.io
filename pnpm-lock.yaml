@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify/json': ^2.1.50
   '@types/fs-extra': ^9.0.13
+  '@types/markdown-it': ^12.2.3
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@typescript-eslint/eslint-plugin': ^5.22.0
@@ -20,6 +21,8 @@ specifiers:
   eslint-plugin-vue: ^8.7.1
   fs-extra: ^10.1.0
   gray-matter: ^4.0.3
+  markdown-it: ^13.0.1
+  markdown-it-anchor: ^8.6.4
   markdown-it-link-attributes: ^4.0.0
   markdown-it-prism: ^2.2.4
   nprogress: ^0.2.0
@@ -56,6 +59,7 @@ dependencies:
 
 devDependencies:
   '@types/fs-extra': 9.0.13
+  '@types/markdown-it': 12.2.3
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.23.0_ktswwmsnk3mcu6sgpnzzqmezla
@@ -70,6 +74,8 @@ devDependencies:
   eslint-plugin-vue: 8.7.1_eslint@8.16.0
   fs-extra: 10.1.0
   gray-matter: 4.0.3
+  markdown-it: 13.0.1
+  markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
   markdown-it-link-attributes: 4.0.0
   markdown-it-prism: 2.2.4
   pnpm: 7.1.5
@@ -2286,8 +2292,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /linkify-it/4.0.0:
-    resolution: {integrity: sha512-QAxkXyzT/TXgwGyY4rTgC95Ex6/lZ5/lYTV9nug6eJt93BCBQGOE47D/g2+/m5J1MrVLr2ot97OXkBZ9bBpR4A==}
+  /linkify-it/4.0.1:
+    resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
     dependencies:
       uc.micro: 1.0.6
     dev: true
@@ -2342,6 +2348,16 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /markdown-it-anchor/8.6.4_ea7kj7wzjkld5jo2noyjqxi764:
+    resolution: {integrity: sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+    dependencies:
+      '@types/markdown-it': 12.2.3
+      markdown-it: 13.0.1
+    dev: true
+
   /markdown-it-link-attributes/4.0.0:
     resolution: {integrity: sha512-ssjxSLlLfQBkX6BvAx1rCPrx7ZoK91llQQvS3P7KXvlbnVD34OUkfXwWecN7su/7mrI/HOW0RI5szdJOIqYC3w==}
     dev: true
@@ -2353,13 +2369,13 @@ packages:
       prismjs: 1.28.0
     dev: true
 
-  /markdown-it/13.0.0:
-    resolution: {integrity: sha512-WArlIpVFvVwb8t3wgJuOsbMLhNWlzuQM7H2qXmuUEnBtXRqKjLjwFUMbZOyJgHygVZSjvcLR4EcXcRilqMavrA==}
+  /markdown-it/13.0.1:
+    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
       entities: 3.0.1
-      linkify-it: 4.0.0
+      linkify-it: 4.0.1
       mdurl: 1.0.1
       uc.micro: 1.0.6
     dev: true
@@ -3249,7 +3265,7 @@ packages:
       '@types/markdown-it': 12.2.3
       '@vue/runtime-core': 3.2.33
       gray-matter: 4.0.3
-      markdown-it: 13.0.0
+      markdown-it: 13.0.1
       vite: 2.9.9
     dev: true
 

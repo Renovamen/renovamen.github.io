@@ -25,6 +25,10 @@ html.dark .prose pre[class*="language-"] {
   @apply border-gray-600;
 }
 
+main:not(.post) a.header-anchor {
+  display: none;
+}
+
 html:not(.dark) .prose {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
