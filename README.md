@@ -1,4 +1,4 @@
-# Hi! 🧐
+# Hi! 🤔
 
 This is my personal website, built on [Vitesse](https://github.com/antfu/vitesse).
 

@@ -1,7 +1,7 @@
 <template>
   <header
     ref="navbar"
-    class="z-40 w-full h-14 flex justify-between items-center px-4"
+    class="z-40 w-full h-14 flex justify-between items-center px-4 md:px-5"
     bg="white dark:gray-700"
     :class="[
       isFixed &&
@@ -35,6 +35,8 @@
       >
         <div i="carbon-sun dark:carbon-moon" />
       </button>
+
+      <slot />
     </nav>
   </header>
 </template>

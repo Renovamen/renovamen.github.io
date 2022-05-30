@@ -5,7 +5,9 @@
     text="gray-800 dark:gray-200"
   >
     <div class="flex-1 mb-6">
-      <Navbar />
+      <Navbar>
+        <slot name="navbar" />
+      </Navbar>
       <slot />
     </div>
     <Footer />

@@ -43,7 +43,7 @@ const getNumCN = (text: string): number => {
   return (text.match(/[\u4E00-\u9FA5]/g) || []).length;
 };
 
-const getNumEN =  (text: string): number => {
+const getNumEN = (text: string): number => {
   return (
     text
       .replace(/[\u4E00-\u9FA5]/g, "")
