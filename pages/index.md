@@ -34,7 +34,7 @@ Her current research interests lie primarily in topics related to exploring the 
 |   |   |
 |---|---|
 | **M.S. in Computer Science**, Boston University | 2021-2023 |
-| **B.E. in Software Engineering**, Tongji University <p>Thesis: *Food Image Aesthetic Assessment and Captioning*</p> | 2016-2020 |
+| **B.Eng. in Software Engineering**, Tongji University <p>Thesis: *Food Image Aesthetic Assessment and Captioning*</p> | 2016-2020 |
 
 
 ## Publications
@@ -95,7 +95,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🧐 My one-page resume can be found [here](/files/cv/en/brief.pdf)
 
-- 🕹️ Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
+- 🔭 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
 
 - 🎃 *Renovamen* is a Latin word means *renewal*
 
@@ -107,7 +107,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🌭 My dream: `while(sleeping){money++;}`
 
-- 🎃 Currently interested in constructing buildings in Minecraft
+- 🕹️ Currently interested in constructing buildings in Minecraft
 
 - 🦖 在中文社交平台上的 ID 有较大可能为“西伯利亚大恶龙”
 
