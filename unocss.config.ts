@@ -4,6 +4,7 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
+  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from "unocss";
@@ -27,7 +28,7 @@ export default defineConfig({
   ],
   theme: {
     fontFamily: {
-      sans: `"DM Sans", system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji`
+      sans: `"Computer Modern Sans", system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif`
     }
   },
   presets: [
@@ -37,7 +38,12 @@ export default defineConfig({
       scale: 1.2,
       warn: true
     }),
-    presetTypography()
+    presetTypography(),
+    presetWebFonts({
+      fonts: {
+        ui: "DM Sans:400,700"
+      }
+    })
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: "prose m-auto text-left".split(" ")

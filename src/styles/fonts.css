@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Computer Modern Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("~/assets/fonts/cmu-sans/regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("~/assets/fonts/cmu-sans/bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  font-style: italic;
+  font-weight: normal;
+  src: url("~/assets/fonts/cmu-sans/italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Computer Modern Sans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("~/assets/fonts/cmu-sans/bolditalic.woff") format("woff");
+}

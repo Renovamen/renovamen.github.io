@@ -12,7 +12,7 @@
 
 .about .prose td,
 .about .prose th {
-  @apply py-2.5 px-0.5;
+  @apply py-2 px-0.5;
 }
 
 .about .prose td p {
@@ -24,7 +24,7 @@
 }
 
 .about .prose td:last-child {
-  @apply text-right w-24;
+  @apply text-right w-22;
 }
 
 .about .socials a {

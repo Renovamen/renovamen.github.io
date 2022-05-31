@@ -74,7 +74,7 @@
   opacity: 0.6;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1100px) {
   .table-of-contents {
     @apply bg-white shadow top-0 border-l border-gray-200;
   }

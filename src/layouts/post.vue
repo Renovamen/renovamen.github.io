@@ -94,6 +94,6 @@ onMounted(() => {
 
 <style scoped>
 .article-header {
-  max-width: 65ch;
+  max-width: 85ch;
 }
 </style>

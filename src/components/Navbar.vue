@@ -1,7 +1,9 @@
 <template>
   <header
     ref="navbar"
-    class="z-40 w-full h-14 flex justify-between items-center px-4 md:px-5"
+    class="z-40 w-full h-14 flex justify-between items-center"
+    p="x-4 md:x-5"
+    font="ui"
     bg="white dark:gray-700"
     :class="[
       isFixed &&
