@@ -14,10 +14,12 @@
   >
     <router-link
       font="bold"
-      un-text="lg gray-600 hover:black dark:(gray-300 hover:white)"
+      un-text="gray-600 hover:black dark:(gray-300 hover:white)"
       to="/"
     >
-      $ cd /home/
+      <span text="lg">hi@zxh</span>
+      <div i-fa6-solid:angle-right class="prompt inline-block" />
+      <span class="blink">_</span>
     </router-link>
     <nav class="flex space-x-4">
       <router-link to="/projects" title="Projects" class="nav-item">
@@ -71,3 +73,20 @@ if (isClient) {
   });
 }
 </script>
+
+<style scoped>
+.prompt {
+  vertical-align: -0.2em;
+  font-size: 0.85em;
+}
+
+.blink {
+  animation: blinker 1s none infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
