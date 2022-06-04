@@ -1,8 +1,8 @@
 .post a.header-anchor {
   float: left;
-  margin-top: 0.15em;
+  margin-top: 0.1em;
   margin-left: -1.3em;
-  font-size: 0.85em;
+  font-size: 0.75em;
   opacity: 0;
   text-decoration: none;
 }
