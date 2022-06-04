@@ -3,11 +3,11 @@
 
 .prose {
   --prism-font-family: 'DM Mono', monospace;
-  max-width: 85ch !important;
+  @apply !w-content;
 }
 
 .prose img {
-  width: 100%;
+  @apply w-full;
 }
 
 .prose p {
@@ -15,11 +15,7 @@
 }
 
 .prose li p {
-  margin: 0 !important;
-}
-
-.prose b, strong {
-  font-weight: bold;
+  @apply !m-0;
 }
 
 .prose pre[class*="language-"] {
@@ -31,7 +27,7 @@ html.dark .prose pre[class*="language-"] {
 }
 
 main:not(.post) a.header-anchor {
-  display: none;
+  @apply hidden;
 }
 
 html:not(.dark) .prose {

@@ -10,7 +10,7 @@
       </button>
     </template>
 
-    <div class="article-header mt-6 mb-8 mx-auto">
+    <div class="w-content mt-6 mb-8 mx-auto">
       <h1 class="text-3xl font-bold">{{ title }}</h1>
       <p class="opacity-50 mt-2">
         {{ formatDate(date) }} · {{ readingTime }} min
@@ -91,9 +91,3 @@ onMounted(() => {
   }
 });
 </script>
-
-<style scoped>
-.article-header {
-  max-width: 85ch;
-}
-</style>

@@ -8,7 +8,7 @@
     :class="[
       isFixed &&
         'fixed -top-14 left-0 transition duration-300 border-b border-gray-200 dark:border-gray-600',
-      isVisible && 'translate-y-full nav-shadow',
+      isVisible && 'translate-y-full shadow-nav',
       !isFixed && !isVisible && 'absolute top-0 left-0'
     ]"
   >

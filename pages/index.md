@@ -41,13 +41,13 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - **TokenFlow: Rethinking Fine-grained Cross-modal Alignment in Vision-Language Retrieval**
 
-  **Xiaohan Zou**, Changqiao Wu, Lele Cheng, and Zhongyuan Wang
+  <u>Xiaohan Zou</u>, Changqiao Wu, Lele Cheng, and Zhongyuan Wang
 
   In submission, 2022
 
 - **Efficient Meta-Learning for Continual Learning with Taylor Expansion Approximation**
 
-  **Xiaohan Zou**, and Tong Lin
+  <u>Xiaohan Zou</u>, and Tong Lin
 
   International Joint Conference on Neural Networks **(IJCNN)**, 2022
 
@@ -55,7 +55,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - **To be an Artist: Automatic Generation on Food Image Aesthetic Captioning**
 
-  **Xiaohan Zou**, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
+  <u>Xiaohan Zou</u>, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
 
   International Conference on Tools with Artificial Intelligence **(ICTAI)**, 2020 
   
@@ -65,7 +65,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - **A Survey on Application of Knowledge Graph**
 
-  **Xiaohan Zou**
+  <u>Xiaohan Zou</u>
 
   International Conference on Control Engineering and Artificial Intelligence **(CCEAI)**, 2020
 

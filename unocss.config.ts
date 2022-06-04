@@ -23,12 +23,16 @@ export default defineConfig({
       "hstack space-x-1 text-gray-600 hover:text-black dark:(text-gray-300 hover:text-white)"
     ]
   ],
-  rules: [
-    ["nav-shadow", { "box-shadow": "0 1px 8px 0 rgba(27, 35, 47, .1);" }]
-  ],
+  rules: [["w-content", { "max-width": "85ch" }]],
   theme: {
     fontFamily: {
       sans: `"Computer Modern Sans", system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif`
+    },
+    boxShadow: {
+      nav: "0 1px 8px 0 rgba(27, 35, 47, .1)"
+    },
+    colors: {
+      brand: "#377bb5"
     }
   },
   presets: [
