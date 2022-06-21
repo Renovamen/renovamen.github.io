@@ -22,7 +22,7 @@ socials:
 
 # Xiaohan Zou <span text="base gray-600 dark:gray-400">邹笑寒</span>
 
-<Socials :socials="frontmatter.socials" />
+<Links :links="frontmatter.socials" />
 
 Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/). Prior to that, she received her bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/), where she worked with [Prof. Qinpei Zhao](http://sse.tongji.edu.cn/zhaoqinpei) for her undergraduate thesis. She has also luckily worked in [Peking University](https://english.pku.edu.cn/) as a research intern with [Prof. Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm).
 

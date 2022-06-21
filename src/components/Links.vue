@@ -1,7 +1,7 @@
 <template>
-  <div class="socials flex flex-wrap">
+  <div class="links flex flex-wrap">
     <a
-      v-for="(item, i) in socials"
+      v-for="(item, i) in links"
       :key="`social-${i}-${item.icon}`"
       class="hstack space-x-1 rounded transition-colors px-3 h-9 mr-1 mb-1"
       bg="gray-100/90 hover:gray-500 dark:gray-50/10"
@@ -28,7 +28,7 @@ type Item = {
 };
 
 defineProps({
-  socials: {
+  links: {
     type: Array as PropType<Array<Item>>,
     required: true
   }

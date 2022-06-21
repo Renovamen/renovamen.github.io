@@ -27,7 +27,7 @@
   @apply text-right w-22;
 }
 
-.about .socials a {
+.about .links a {
   @apply font-normal decoration-none;
 }
 
