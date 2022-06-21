@@ -103,7 +103,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🛠 Like to contribute to open-source machine learning and frontend projects in spare time
 
-- 🥎 Used to be a member of the softball team and the vice president of the baseball and softball association of Tongji University (Jiading campus)
+- 🥎 Used to be a member of the softball team of Tongji University
 
 - 🌭 My dream: `while(sleeping){money++;}`
 
