@@ -15,10 +15,6 @@ export default defineConfig({
     ["hstack", "flex items-center"],
     ["vstack", "flex flex-col justify-center"],
     [
-      "btn",
-      "px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50"
-    ],
-    [
       "nav-item",
       "hstack space-x-1 text-gray-600 hover:text-black dark:(text-gray-300 hover:text-white)"
     ]

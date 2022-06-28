@@ -8,7 +8,7 @@ useHead({
     { name: "description", content: "A dragon lost in human world." },
     {
       name: "theme-color",
-      content: computed(() => (isDark.value ? "#00aba9" : "#ffffff"))
+      content: computed(() => (isDark.value ? "#374151" : "#ffffff"))
     }
   ]
 });
