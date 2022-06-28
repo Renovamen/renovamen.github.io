@@ -46,7 +46,7 @@
 }
 
 .table-of-contents > ul > li::before {
-  @apply content-['#'] opacity-60 mr-1;
+  @apply content-[#] opacity-60 mr-1;
 }
 
 .table-of-contents > ul > li > ul > li {

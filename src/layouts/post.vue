@@ -20,6 +20,23 @@
     <article ref="content" :class="isTocOpen && 'toc-open'">
       <RouterView />
     </article>
+
+    <div
+      v-if="prevBlog || nextBlog"
+      class="w-content mx-auto grid md:grid-cols-2 pt-4 mt-16"
+      border="t gray-200 dark:gray-600"
+    >
+      <span class="prev">
+        <RouterLink v-if="prevBlog" hover:underline :to="prevBlog.path">
+          {{ prevBlog.title }}
+        </RouterLink>
+      </span>
+      <span class="next text-right">
+        <RouterLink v-if="nextBlog" hover:underline :to="nextBlog.path">
+          {{ nextBlog.title }}
+        </RouterLink>
+      </span>
+    </div>
   </Layout>
 </template>
 
@@ -28,11 +45,14 @@ import { formatDate, isClient } from "~/utils";
 
 const router = useRouter();
 
-const meta = router.currentRoute.value.meta;
+const meta = computed(() => router.currentRoute.value.meta);
 
-const title = meta.frontmatter.title;
-const date = meta.date;
-const readingTime = meta.readingTime.minutes;
+const title = computed(() => meta.value.frontmatter.title);
+const date = computed(() => meta.value.date);
+const readingTime = computed(() => meta.value.readingTime.minutes);
+
+const prevBlog = computed(() => meta.value.prev);
+const nextBlog = computed(() => meta.value.next);
 
 const content = ref<HTMLDivElement>();
 
@@ -85,9 +105,28 @@ const isTocOpen = ref(false);
 const isToc = ref(false);
 
 onMounted(() => {
-  if (isClient) {
-    const toc = document.querySelector(".table-of-contents");
-    isToc.value = toc ? true : false;
-  }
+  const initToc = () =>
+    nextTick(() => {
+      if (isClient) {
+        const toc = document.querySelector(".table-of-contents");
+        isToc.value = toc ? true : false;
+      }
+    });
+
+  initToc();
+
+  watch(
+    () => router.currentRoute.value.path,
+    () => initToc()
+  );
 });
 </script>
+
+<style scoped>
+.prev a::before {
+  content: "←";
+}
+.next a::after {
+  content: "→";
+}
+</style>

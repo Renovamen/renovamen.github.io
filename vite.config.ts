@@ -8,7 +8,11 @@ import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Markdown from "vite-plugin-vue-markdown";
 import Unocss from "unocss/vite";
-import { resolveBlogFile, installMarkdownPlugins } from "./node";
+import {
+  resolveBlogFile,
+  resolveBlogList,
+  installMarkdownPlugins
+} from "./node";
 
 const markdownWrapperClasses = "prose w-content m-auto text-left";
 
@@ -29,7 +33,8 @@ export default defineConfig({
     Pages({
       pagesDir: "pages",
       extensions: ["vue", "md"],
-      extendRoute: (route) => resolveBlogFile(route)
+      extendRoute: (route) => resolveBlogFile(route),
+      onRoutesGenerated: (routes) => resolveBlogList(routes)
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts

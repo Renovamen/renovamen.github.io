@@ -1,8 +1,8 @@
 <template>
-  <template v-for="key in Object.keys(postMap)" :key="key">
+  <template v-for="key in Object.keys(blogMap)" :key="key">
     <h3>{{ key }}</h3>
     <div
-      v-for="route in postMap[key]"
+      v-for="route in blogMap[key]"
       :key="route.path"
       class="font-normal my-1 mx-0.5 flex"
     >
@@ -23,28 +23,30 @@
 import { formatDate } from "~/utils";
 import dayjs from "dayjs";
 
-export interface Post {
+type Blog = {
   path: string;
   title: string;
   date: string;
-}
+};
 
 const router = useRouter();
 
-const posts: Post[] = router
+const blogs: Blog[] = router
   .getRoutes()
   .filter((i: any) => i.meta.layout === "post")
-  .map((i: any) => ({
-    path: i.path,
-    title: i.meta.frontmatter.title,
-    date: i.meta.date
-  }))
-  .sort((a: any, b: any) => dayjs(b.date).unix() - dayjs(a.date).unix());
+  .map(
+    (i: any): Blog => ({
+      path: i.path,
+      title: i.meta.frontmatter.title,
+      date: i.meta.date
+    })
+  )
+  .sort((a: Blog, b: Blog) => dayjs(b.date).unix() - dayjs(a.date).unix());
 
-const postMap: Record<string, Post[]> = {};
+const blogMap: Record<string, Blog[]> = {};
 
-for (const p of posts) {
-  const y = p.date.substring(0, 4);
-  postMap[y] ? postMap[y].push(p) : (postMap[y] = [p]);
+for (const b of blogs) {
+  const y = b.date.substring(0, 4);
+  blogMap[y] ? blogMap[y].push(b) : (blogMap[y] = [b]);
 }
 </script>
