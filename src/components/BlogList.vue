@@ -21,6 +21,7 @@
 
 <script setup lang="ts">
 import { formatDate } from "~/utils";
+import dayjs from "dayjs";
 
 export interface Post {
   path: string;
@@ -38,7 +39,7 @@ const posts: Post[] = router
     title: i.meta.frontmatter.title,
     date: i.meta.date
   }))
-  .sort((a: any, b: any) => b.date - a.date);
+  .sort((a: any, b: any) => dayjs(b.date).unix() - dayjs(a.date).unix());
 
 const postMap: Record<string, Post[]> = {};
 

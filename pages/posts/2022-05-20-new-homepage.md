@@ -1,5 +1,5 @@
 ---
-title: New Homepage
+title: New homepage
 ---
 
 It seems that I always spend a lot of time on building my homepage. 
@@ -18,7 +18,7 @@ I want my homepage to be more "research" and "serious". My [old homepage](https:
 I don't want to modify my blog theme directly since I still love its style and it already has a certain number of users. Thus I wrote a new one.
 
 
-## Tech Stack
+## Tech stack
 
 Gradually I found I got so caught up with atomic CSS frameworks like [Tailwind CSS](https://tailwindcss.com/), [Windi CSS](https://windicss.org/) and [UnoCSS](https://github.com/antfu/unocss). I'm using UnoCSS in almost all of my recent projects and I can say that I never want to write semantic class names and regular CSS anymore. Actually I was even thinking about applying UnoCSS on VuePress blog theme [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir), but it sounds a heavy work and I'm not sure if it is a right choice. But starting a new site with UnoCSS could be much eaiser - that's what I'm doing. 
 

@@ -46,5 +46,5 @@ export default defineConfig({
     })
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: "prose m-auto text-left".split(" ")
+  safelist: "prose w-content m-auto text-left".split(" ")
 });

@@ -10,7 +10,7 @@ import Markdown from "vite-plugin-vue-markdown";
 import Unocss from "unocss/vite";
 import { resolveBlogFile, installMarkdownPlugins } from "./node";
 
-const markdownWrapperClasses = "prose m-auto text-left";
+const markdownWrapperClasses = "prose w-content m-auto text-left";
 
 export default defineConfig({
   resolve: {

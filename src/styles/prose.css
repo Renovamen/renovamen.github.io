@@ -3,7 +3,6 @@
 
 .prose {
   --prism-font-family: 'DM Mono', monospace;
-  @apply !w-content;
 }
 
 .prose img {
