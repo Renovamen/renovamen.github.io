@@ -17,9 +17,9 @@ export default defineConfig({
     [
       "nav-item",
       "hstack space-x-1 text-gray-600 hover:text-black dark:(text-gray-300 hover:text-white)"
-    ]
+    ],
+    ["prose-lg", "lg:text-lg max-w-content"]
   ],
-  rules: [["w-content", { "max-width": "85ch" }]],
   theme: {
     fontFamily: {
       sans: `"Computer Modern Sans", system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif`
@@ -29,6 +29,9 @@ export default defineConfig({
     },
     colors: {
       brand: "#377bb5"
+    },
+    maxWidth: {
+      content: '85ch'
     }
   },
   presets: [
@@ -46,5 +49,5 @@ export default defineConfig({
     })
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: "prose w-content m-auto text-left".split(" ")
+  safelist: "prose prose-lg m-auto text-left".split(" ")
 });

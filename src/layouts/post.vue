@@ -10,8 +10,8 @@
       </button>
     </template>
 
-    <div class="w-content mt-6 mb-8 mx-auto">
-      <h1 class="text-3xl font-bold">{{ title }}</h1>
+    <div class="prose-lg mt-6 mb-8 mx-auto">
+      <h1 class="text-4xl font-bold">{{ title }}</h1>
       <p class="opacity-50 mt-2">
         {{ formatDate(date) }} · {{ readingTime }} min
       </p>
@@ -23,7 +23,7 @@
 
     <div
       v-if="prevBlog || nextBlog"
-      class="w-content mx-auto grid md:grid-cols-2 pt-4 mt-16"
+      class="prose-lg mx-auto grid md:grid-cols-2 pt-4 mt-16"
       border="t gray-200 dark:gray-600"
     >
       <span class="prev">
@@ -124,9 +124,9 @@ onMounted(() => {
 
 <style scoped>
 .prev a::before {
-  content: "←";
+  content: "← ";
 }
 .next a::after {
-  content: "→";
+  content: " →";
 }
 </style>

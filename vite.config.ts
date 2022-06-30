@@ -14,7 +14,7 @@ import {
   installMarkdownPlugins
 } from "./node";
 
-const markdownWrapperClasses = "prose w-content m-auto text-left";
+const markdownWrapperClasses = "prose prose-lg m-auto text-left";
 
 export default defineConfig({
   resolve: {
