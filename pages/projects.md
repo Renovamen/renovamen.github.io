@@ -49,7 +49,7 @@ projects:
     - name: Oh, CV!
       link: https://ohcv.zxh.io
       desc: Write your curriculum vitae / resume in Markdown online
-      icon: oh-cv
+      icon: i-academicons:cv-square
       repo: Renovamen/oh-cv
     - name: Wordle Helper
       link: https://wordle.zxh.io

@@ -6,7 +6,7 @@
         title="Toggle toc"
         @click="isTocOpen = !isTocOpen"
       >
-        <div i-tabler:menu-2 />
+        <div i-ri:layout-right-2-line />
       </button>
     </template>
 

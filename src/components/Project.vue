@@ -18,17 +18,9 @@
       </div>
       <div class="text-sm opacity-50 font-normal mt-1" v-html="item.desc" />
     </div>
-    <div class="pt-2">
-      <OhCV v-if="item.icon === 'oh-cv'" class="text-3xl opacity-60" />
-      <OhVueIcons
-        v-else-if="item.icon === 'oh-vue-icons'"
-        class="text-3xl opacity-60"
-      />
-      <div
-        v-else
-        class="text-3xl opacity-50"
-        :class="item.icon || 'i-carbon-unknown'"
-      />
+    <div class="pt-2 text-3xl opacity-50">
+      <OhVueIcons v-if="item.icon === 'oh-vue-icons'" />
+      <div v-else :class="item.icon || 'i-carbon-unknown'" />
     </div>
   </a>
 </template>

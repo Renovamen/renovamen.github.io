@@ -12,7 +12,6 @@ declare module '@vue/runtime-core' {
     Layout: typeof import('./components/Layout.vue')['default']
     Links: typeof import('./components/Links.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
-    OhCV: typeof import('./components/icons/OhCV.vue')['default']
     OhVueIcons: typeof import('./components/icons/OhVueIcons.vue')['default']
     Project: typeof import('./components/Project.vue')['default']
     ProjectList: typeof import('./components/ProjectList.vue')['default']
