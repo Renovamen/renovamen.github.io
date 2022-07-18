@@ -29,6 +29,11 @@ projects:
       desc: Some text classification models implemented in PyTorch
       icon: i-gg:format-text
       repo: Renovamen/Text-Classification
+    - name: pcalg-py
+      link: https://github.com/Renovamen/pcalg-py
+      desc: Implement PC algorithm in Python
+      icon: i-ph:graph
+      repo: Renovamen/pcalg-py
   JavaScript Libraries:
     - name: VuePress Theme Gungnir
       link: https://github.com/Renovamen/vuepress-theme-gungnir

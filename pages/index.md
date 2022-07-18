@@ -49,7 +49,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
   <u>Xiaohan Zou</u>, and Tong Lin
 
-  International Joint Conference on Neural Networks **(IJCNN)**, 2022
+  International Joint Conference on Neural Networks (IJCNN), 2022
 
   **Oral Presentation**
 
@@ -57,7 +57,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
   <u>Xiaohan Zou</u>, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
 
-  International Conference on Tools with Artificial Intelligence **(ICTAI)**, 2020 
+  International Conference on Tools with Artificial Intelligence (ICTAI), 2020 
   
   **Oral Presentation**
 
@@ -67,7 +67,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
   <u>Xiaohan Zou</u>
 
-  International Conference on Control Engineering and Artificial Intelligence **(CCEAI)**, 2020
+  International Conference on Control Engineering and Artificial Intelligence (CCEAI), 2020
 
   [[Paper]](https://iopscience.iop.org/article/10.1088/1742-6596/1487/1/012016/pdf)
 
