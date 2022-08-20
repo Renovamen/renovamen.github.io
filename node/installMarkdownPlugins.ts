@@ -1,4 +1,4 @@
-import Prism from "markdown-it-prism";
+import Shiki from "markdown-it-shiki";
 import LinkAttributes from "markdown-it-link-attributes";
 // @ts-expect-error missing types
 import TOC from "markdown-it-table-of-contents";
@@ -7,8 +7,12 @@ import type MarkdownIt from "markdown-it";
 import { slugify } from ".";
 
 export const installMarkdownPlugins = (md: MarkdownIt) => {
-  // https://prismjs.com/
-  md.use(Prism);
+  md.use(Shiki, {
+    theme: {
+      light: "github-light",
+      dark: "github-dark-dimmed"
+    }
+  });
 
   md.use(anchor, {
     slugify,

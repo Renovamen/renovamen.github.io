@@ -14,8 +14,6 @@ import {
   installMarkdownPlugins
 } from "./node";
 
-const markdownWrapperClasses = "prose prose-lg m-auto text-left";
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -70,7 +68,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
-      wrapperClasses: markdownWrapperClasses,
+      wrapperClasses: "prose prose-lg m-auto text-left",
       headEnabled: true,
       markdownItSetup: (md) => installMarkdownPlugins(md)
     })

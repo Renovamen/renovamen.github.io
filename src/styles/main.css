@@ -1,4 +1,4 @@
-@import "./prose.css";
+@import "./markdown.css";
 @import "./about.css";
 @import "./post.css";
 @import "./fonts.css";
@@ -11,6 +11,7 @@ body,
 
 html.dark {
   @apply bg-gray-700;
+  color-scheme: dark;
 }
 
 #nprogress {

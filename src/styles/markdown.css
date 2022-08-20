@@ -1,0 +1,47 @@
+.prose pre:not(.shiki) {
+  @apply p-0;
+}
+
+.prose .shiki {
+  font-family: "DM Mono", monospace;
+  font-size: 1.15em;
+  line-height: 1.4;
+}
+
+.prose img {
+  @apply w-full;
+}
+
+.prose p {
+  line-height: 1.55 !important;
+}
+
+.prose ul,
+.prose li p {
+  @apply !m-0;
+}
+
+main:not(.post) a.header-anchor {
+  @apply hidden;
+}
+
+.shiki-light,
+.shiki-dark {
+  @apply !bg-transparent border px-5 py-4;
+}
+
+.shiki-light {
+  @apply border-gray-300;
+}
+
+.shiki-dark {
+  @apply border-gray-500;
+}
+
+html.dark .shiki-light {
+  @apply hidden;
+}
+
+html:not(.dark) .shiki-dark {
+  @apply hidden;
+}
