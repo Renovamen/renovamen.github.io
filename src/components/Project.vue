@@ -20,6 +20,7 @@
     </div>
     <div class="pt-2 text-3xl opacity-50">
       <OhVueIcons v-if="item.icon === 'oh-vue-icons'" />
+      <OhCV v-else-if="item.icon === 'oh-cv'" />
       <div v-else :class="item.icon || 'i-carbon-unknown'" />
     </div>
   </a>
