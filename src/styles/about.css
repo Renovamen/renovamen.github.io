@@ -7,7 +7,7 @@
 }
 
 .about .prose tr {
-  @apply flex border-t border-gray-300;
+  @apply flex border-t border-c-dark;
 }
 
 .about .prose td,
@@ -25,12 +25,4 @@
 
 .about .prose td:last-child {
   @apply text-right w-22;
-}
-
-.about .links a {
-  @apply font-normal decoration-none;
-}
-
-.dark .about .prose tr {
-  @apply border-gray-600;
 }

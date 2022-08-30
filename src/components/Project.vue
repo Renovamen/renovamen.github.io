@@ -1,7 +1,7 @@
 <template>
   <a
     class="relative flex items-center space-x-5 p-4 !no-underline"
-    border="1 gray-200 dark:gray-600 hover:transparent"
+    border="1 c hover:transparent"
     bg="hover:gray-100 dark:hover:gray-600"
     :href="item.link"
     :title="item.name"
@@ -10,10 +10,16 @@
   >
     <div class="flex-auto">
       <div class="text-normal hstack space-x-2">
-        <span>{{ item.name }}</span>
-        <span v-if="star" hstack space-x-1 opacity-60>
-          <div i-ph:star text-xs />
-          <span text-sm>{{ star }}</span>
+        <span mr-1>{{ item.name }}</span>
+        <span
+          v-for="icon of item.tech"
+          :key="`${item.name}-${icon}`"
+          class="text-xs"
+          :class="icon"
+        />
+        <span v-if="star" hstack space-x-1>
+          <span i-noto-v1:star text-xs />
+          <span class="text-sm mt-0.5">{{ star }}</span>
         </span>
       </div>
       <div class="text-sm opacity-50 font-normal mt-1" v-html="item.desc" />

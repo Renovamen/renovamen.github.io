@@ -1,22 +1,16 @@
 <template>
   <header
     ref="navbar"
-    class="z-40 w-full h-14 flex justify-between items-center"
+    class="z-40 w-full h-14 flex justify-between items-center bg-c font-ui"
     p="x-4 md:x-5"
-    font="ui"
-    bg="white dark:gray-700"
     :class="[
       isFixed &&
-        'fixed -top-14 left-0 transition duration-300 border-b border-gray-200 dark:border-gray-600',
+        'fixed -top-14 left-0 transition duration-300 border-b border-c',
       isVisible && 'translate-y-full shadow-nav',
       !isFixed && !isVisible && 'absolute top-0 left-0'
     ]"
   >
-    <router-link
-      font="bold"
-      un-text="gray-600 hover:black dark:(gray-300 hover:white)"
-      to="/"
-    >
+    <router-link class="font-bold" un-text="c-light hover:c-dark" to="/">
       <span text="lg">hi@zxh</span>
       <div i-fa6-solid:angle-right class="prompt inline-block" />
       <span class="blink">_</span>
@@ -32,11 +26,7 @@
         <span class="lt-md:hidden">Blog</span>
       </router-link>
 
-      <button
-        class="nav-item !outline-none"
-        title="Toggle dark"
-        @click="toggleDark()"
-      >
+      <button nav-item title="Toggle dark" @click="toggleDark()">
         <div i="carbon-sun dark:carbon-moon" />
       </button>
 

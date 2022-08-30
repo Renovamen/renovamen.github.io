@@ -20,7 +20,7 @@ socials:
     name: 中文博客
 ---
 
-# Xiaohan Zou <span text="base gray-600 dark:gray-400">邹笑寒</span>
+# Xiaohan Zou <span text="base c-light">邹笑寒</span>
 
 <Links :links="frontmatter.socials" />
 

@@ -1,12 +1,8 @@
 <template>
   <Layout class="post">
     <template v-if="isToc" #navbar>
-      <button
-        class="nav-item !outline-none"
-        title="Toggle toc"
-        @click="isTocOpen = !isTocOpen"
-      >
-        <div i-ri:layout-right-2-line />
+      <button nav-item title="Toggle toc" @click="isTocOpen = !isTocOpen">
+        <div i-fluent:sidebar-search-rtl-20-regular />
       </button>
     </template>
 
@@ -23,8 +19,7 @@
 
     <div
       v-if="prevBlog || nextBlog"
-      class="prose-lg mx-auto grid md:grid-cols-2 pt-4 mt-16"
-      border="t gray-200 dark:gray-600"
+      class="prose-lg mx-auto grid md:grid-cols-2 pt-4 mt-16 border-t border-c"
     >
       <span class="prev">
         <RouterLink v-if="prevBlog" hover:underline :to="prevBlog.path">

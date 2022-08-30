@@ -55,10 +55,6 @@
 
 @media (max-width: 1100px) {
   .table-of-contents {
-    @apply bg-white shadow top-0 border-l border-gray-200;
-  }
-
-  html.dark .table-of-contents {
-    @apply bg-gray-700 border-gray-600;
+    @apply top-0 bg-c border-l border-c shadow;
   }
 }
