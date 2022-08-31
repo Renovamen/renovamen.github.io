@@ -53,6 +53,8 @@ Her current research interests lie primarily in topics related to exploring the 
 
   **Oral Presentation**
 
+  [[Paper]](/files/papers/ijcnn2022/paper.pdf) [[Slide]](/files/papers/ijcnn2022/slide.pdf)
+
 - **To be an Artist: Automatic Generation on Food Image Aesthetic Captioning**
 
   <u>Xiaohan Zou</u>, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
@@ -93,9 +95,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🧐 My one-page resume can be found [here](/files/cv/en/brief.pdf)
-
-- 🔭 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
+- 🧐 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
 
 - 🎃 *Renovamen* is a Latin word means *renewal*
 
