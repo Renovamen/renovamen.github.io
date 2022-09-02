@@ -7,7 +7,7 @@
     "lint": "eslint --ext .js,.ts,.vue .",
     "serve": "vite preview --port 8000 --host",
     "typecheck": "vue-tsc --noEmit",
-    "up": "taze minor"
+    "up": "taze major -I"
   },
   "prettier": {
     "trailingComma": "none"
@@ -18,16 +18,16 @@
     "dayjs": "^1.11.5",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.21",
-    "vue": "^3.2.37",
+    "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.100",
+    "@iconify/json": "^2.1.101",
     "@types/fs-extra": "^9.0.13",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-vue": "^3.0.3",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
@@ -46,7 +46,7 @@
     "shiki": "^0.11.1",
     "taze": "^0.7.6",
     "typescript": "^4.8.2",
-    "unocss": "^0.45.13",
+    "unocss": "^0.45.14",
     "unplugin-auto-import": "^0.11.2",
     "unplugin-vue-components": "^0.22.4",
     "vite": "3.0.3",
@@ -55,7 +55,7 @@
     "vite-plugin-vue-markdown": "^0.21.1",
     "vite-ssg": "^0.20.2",
     "vite-ssg-sitemap": "^0.3.2",
-    "vue-tsc": "^0.40.4"
+    "vue-tsc": "^0.40.5"
   },
   "pnpm": {
     "peerDependencyRules": {
