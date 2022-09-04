@@ -95,7 +95,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🧐 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/) & [resume.zxh.io](https://resume.zxh.io/)
+- 🧐 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/), [resume.zxh.io](https://resume.zxh.io/)
 
 - 🎃 *Renovamen* is a Latin word means *renewal*
 
@@ -109,9 +109,9 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🕹️ Currently interested in constructing buildings in Minecraft
 
-- 🦖 在中文社交平台上的 ID 有较大可能为“西伯利亚大恶龙”
+- ⛵️ God knows what's this: [<span i-radix-icons:crumpled-paper text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/god_knows.pdf) & 大概率更新不及时的中文简历：[<span i-majesticons:paper-fold-text-line text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/cn.pdf)
 
-- ⛵️ 大概率更新不及时的中文简历：[<span i-majesticons:paper-fold-text-line text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/cn.pdf)
+- 🦖 在中文社交平台上的 ID 有较大可能为“西伯利亚大恶龙”
 
 
 <route lang="yaml">
