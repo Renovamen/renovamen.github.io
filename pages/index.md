@@ -2,6 +2,8 @@
 socials:
   - icon: i-academicons:cv
     link: /files/cv/en.pdf
+  - icon: "i-ion:mail-outline"
+    link: "mailto:renovamenzxh@gmail.com"
   - icon: i-eva:github-outline
     link: https://github.com/Renovamen
   - icon: i-radix-icons:linkedin-logo
@@ -109,7 +111,7 @@ Her current research interests lie primarily in topics related to exploring the 
 
 - 🕹️ Currently interested in constructing buildings in Minecraft
 
-- ⛵️ God knows what's this: [<span i-radix-icons:crumpled-paper text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/god_knows.pdf) & 大概率更新不及时的中文简历：[<span i-majesticons:paper-fold-text-line text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/cn.pdf)
+- ⛵️ God knows what's this: [<span i-radix-icons:crumpled-paper text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/god_knows.pdf) & 大概率更新不及时的中文简历：[<span i-ph:scroll text="[0.9em]" opacity-65 hover:opacity-100 duration-200 />](/files/cv/cn.pdf)
 
 - 🦖 在中文社交平台上的 ID 有较大可能为“西伯利亚大恶龙”
 
