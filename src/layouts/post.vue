@@ -36,7 +36,8 @@
 </template>
 
 <script setup lang="ts">
-import { formatDate, isClient } from "~/utils";
+import { isClient } from "@renovamen/utils";
+import { formatDate } from "~/utils";
 
 const router = useRouter();
 

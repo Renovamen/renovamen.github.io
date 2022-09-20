@@ -1,5 +1,5 @@
 .post a.header-anchor {
-  @apply float-left opacity-0 no-underline;
+  @apply float-left opacity-0 text-c no-underline;
   margin-top: 0.1em;
   margin-left: -1.3em;
   font-size: 0.75em;
@@ -38,11 +38,7 @@
 }
 
 .table-of-contents ul > li > a {
-  @apply !no-underline;
-}
-
-.table-of-contents ul > li > a:hover {
-  @apply !underline;
+  @apply text-c;
 }
 
 .table-of-contents > ul > li::before {

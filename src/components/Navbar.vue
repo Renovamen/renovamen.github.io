@@ -36,8 +36,8 @@
 </template>
 
 <script setup lang="ts">
+import { isClient } from "@renovamen/utils";
 import { toggleDark } from "~/composables/dark";
-import { isClient } from "~/utils";
 
 const navbar = ref<HTMLElement | null>(null);
 const isFixed = ref(false);

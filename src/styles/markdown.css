@@ -21,6 +21,10 @@
   @apply !m-0;
 }
 
+.prose a {
+  @apply no-underline hover:underline text-c-active;
+}
+
 main:not(.post) a.header-anchor {
   @apply hidden;
 }

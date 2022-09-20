@@ -9,10 +9,7 @@
       <div class="w-14 h-6 leading-6 opacity-50 text-sm mr-2">
         {{ formatDate(route.date, false) }}
       </div>
-      <router-link
-        class="flex-1 !no-underline hover:(!underline)"
-        :to="route.path"
-      >
+      <router-link class="flex-1 !text-c" :to="route.path">
         {{ route.title }}
       </router-link>
     </div>
@@ -20,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import { formatDate } from "~/utils";
 import dayjs from "dayjs";
+import { formatDate } from "~/utils";
 
 type Blog = {
   path: string;

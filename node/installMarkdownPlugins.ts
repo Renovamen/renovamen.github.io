@@ -4,7 +4,7 @@ import LinkAttributes from "markdown-it-link-attributes";
 import TOC from "markdown-it-table-of-contents";
 import anchor from "markdown-it-anchor";
 import type MarkdownIt from "markdown-it";
-import { slugify } from ".";
+import { slugify } from "@renovamen/utils";
 
 export const installMarkdownPlugins = (md: MarkdownIt) => {
   md.use(Shiki, {

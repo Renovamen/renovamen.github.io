@@ -21,10 +21,11 @@ export default defineConfig({
     ["text-c-light", "text-gray-600 dark:text-gray-300"],
     ["text-c-lighter", "text-gray-400 dark:text-gray-500"],
     ["text-c-dark", "text-black dark:text-white"],
+    ["text-c-active", "text-brand dark:text-blue-300"],
     ["nav-item", "hstack space-x-1 text-c-light hover:text-c-dark"],
     [
       "btn",
-      "hstack space-x-1 rounded transition-colors decoration-none text-sm bg-gray-100/90 dark:bg-gray-50/10 hover:(bg-gray-500 text-white)"
+      "hstack space-x-1 rounded transition-colors decoration-none text-sm !text-c bg-gray-100/90 dark:bg-gray-50/10 hover:(!bg-gray-500 !text-white !no-underline)"
     ],
     ["prose-lg", "lg:text-lg max-w-content"]
   ],
@@ -36,7 +37,7 @@ export default defineConfig({
       nav: "0 1px 8px 0 rgba(27, 35, 47, .1)"
     },
     colors: {
-      brand: "#377bb5"
+      brand: "#1772d0"
     },
     maxWidth: {
       content: "85ch"

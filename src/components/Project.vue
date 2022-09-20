@@ -1,6 +1,6 @@
 <template>
   <a
-    class="relative flex items-center space-x-5 p-4 !no-underline"
+    class="relative flex items-center space-x-5 p-4 !no-underline !text-c"
     border="1 c hover:transparent"
     bg="hover:gray-100 dark:hover:gray-600"
     :href="item.link"

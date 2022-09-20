@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { isExternal } from "~/utils";
+import { isExternal } from "@renovamen/utils";
 
 type Item = {
   icon: string;

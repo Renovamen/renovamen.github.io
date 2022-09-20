@@ -8,10 +8,12 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BlogList: typeof import('./components/BlogList.vue')['default']
+    FlipImage: typeof import('./components/FlipImage.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
     Links: typeof import('./components/Links.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
+    Nutshell: typeof import('./components/Nutshell.vue')['default']
     OhCV: typeof import('./components/icons/OhCV.vue')['default']
     OhVueIcons: typeof import('./components/icons/OhVueIcons.vue')['default']
     Project: typeof import('./components/Project.vue')['default']
