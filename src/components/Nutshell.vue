@@ -3,9 +3,9 @@
     class="text-c-active cursor-pointer hover:underline"
     @click="isOpen = !isOpen"
   >
-    {{ text }}
+    <span>{{ text }}</span>
   </span>
-  <div v-show="isOpen" text-c-light my-2 py-2 border="y c-dark">
+  <div v-show="isOpen" text-c my-2 py-2 border="y-1.5 c-dark">
     <slot />
   </div>
 </template>
