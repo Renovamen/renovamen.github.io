@@ -5,7 +5,7 @@
   >
     <span>{{ text }}</span>
   </span>
-  <div v-show="isOpen" text-c my-2 py-2 border="y-1.5 c-dark">
+  <div v-if="isOpen" text-c my-2 py-2 border="y-1.5 c-dark">
     <slot />
   </div>
 </template>

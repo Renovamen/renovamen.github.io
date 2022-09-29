@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@7.12.1",
+  "packageManager": "pnpm@7.12.2",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --host",
