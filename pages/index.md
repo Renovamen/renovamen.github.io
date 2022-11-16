@@ -35,9 +35,12 @@ socials:
   </div>
 </div>
 
-Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/). Prior to that, she received her bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/), where she worked with [Prof. Qinpei Zhao](http://sse.tongji.edu.cn/zhaoqinpei) for her undergraduate thesis. She has also luckily worked in [Peking University](https://english.pku.edu.cn/) as a research intern with [Prof. Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm).
+Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/) and working with Prof. [Bryan Plummer](https://bryanplummer.com/). Her current research interests lie primarily in exploring the capability of machines to be continual, generalizable and efficient, like continual learning, meta-learning, few-shot learning and parameter
+sharing. She is also interested in vision-language learning and video understanding.
 
-Her current research interests lie primarily in topics related to exploring the capability of machines to be continual, generalizable and data-efficient, like continual learning, meta-learning and few-shot learning. She also has experience in vision-language learning and video understanding.
+Previously, she received her bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/), where she worked on image aesthetic captioning with Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html). She was also fortunate to work with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation.
+
+Check her [Curriculum Vitae](/files/cv/en.pdf) for more details.
 
 
 ## Education
@@ -134,9 +137,7 @@ in recent years, several aspects still remain to be explored.</nutshell>
 
 - 🕹️ Currently interested in constructing buildings in Minecraft
 
-- ⛵️ God knows what's this: [<span i-radix-icons:crumpled-paper text="[0.9em]" />](/files/cv/god_knows.pdf) & 大概率更新不及时的中文简历：[<span i-ph:scroll text="[0.9em]" />](/files/cv/cn.pdf)
-
-- 🦖 在中文社交平台上的 ID 有较大可能为“西伯利亚大恶龙”
+- 📜 大概率更新不及时的[中文简历](/files/cv/cn.pdf)
 
 
 <route lang="yaml">

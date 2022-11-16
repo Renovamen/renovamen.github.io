@@ -22,7 +22,7 @@
 }
 
 .prose a {
-  @apply no-underline hover:underline text-c-active;
+  @apply no-underline hover:underline text-c-active font-normal;
 }
 
 main:not(.post) a.header-anchor {

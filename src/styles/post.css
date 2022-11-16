@@ -1,6 +1,5 @@
 .post a.header-anchor {
   @apply float-left opacity-0 text-c no-underline;
-  margin-top: 0.1em;
   margin-left: -1.3em;
   font-size: 0.75em;
 }
@@ -25,8 +24,7 @@
 }
 
 .table-of-contents {
-  @apply fixed w-45 top-20 pt-18 pr-5.5 right-0 bottom-0 overflow-y-auto overflow-x-hidden text-right text-ellipsis hidden;
-  font-size: 0.8em;
+  @apply fixed w-45 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis hidden;
 }
 
 .toc-open .table-of-contents {
