@@ -35,8 +35,7 @@ socials:
   </div>
 </div>
 
-Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/) and working with Prof. [Bryan Plummer](https://bryanplummer.com/). Her current research interests lie primarily in exploring the capability of machines to be continual, generalizable and efficient, like continual learning, meta-learning, few-shot learning and parameter
-sharing. She is also interested in vision-language learning and video understanding.
+Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/) and working with Prof. [Bryan Plummer](https://bryanplummer.com/). Her current research interests lie primarily in exploring the capability of machine learning systems to be continuous, generalizable, and efficient, like continual learning, meta-learning, and parameter sharing. She is also interested in efficiency of vision-language and video models.
 
 Previously, she received her bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/), where she worked on image aesthetic captioning with Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html). She was also fortunate to work with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation.
 
@@ -106,11 +105,11 @@ in recent years, several aspects still remain to be explored.</nutshell>
 
 |   |   |
 |---|---|
-| **Machine Learning Engineer Intern**, *[Kuaishou](https://www.kuaishou.com/en)*, Beijing | 2021–2022 |
-| **Research Intern**, *[Peking University](https://english.pku.edu.cn/)*, Beijing (with [Prof. Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2020–2022 |
+| **Machine Learning Engineer Intern**, *[Kuaishou](https://www.kuaishou.com/en)*, Beijing, China | 2021–2022 |
+| **Research Intern**, *[Peking University](https://english.pku.edu.cn/)*, Beijing, China (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2020–2022 |
 | **Software Engineer Intern**, *China Electronics Technology Group Corporation* | 2020–2021 |
-| **Game Engineer Intern**, *[Banana Interactive](https://banana.games/)*, Shanghai | 2019–2020 |
-| **Research Intern**, *[Peking University](https://english.pku.edu.cn/)*, Beijing (with [Prof. Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2018 |
+| **Game Engineer Intern**, *[Banana Interactive](https://banana.games/)*, Shanghai, China | 2019–2020 |
+| **Research Intern**, *[Peking University](https://english.pku.edu.cn/)*, Beijing, China (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2018 |
 
 
 ## Talks
@@ -121,7 +120,7 @@ in recent years, several aspects still remain to be explored.</nutshell>
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Vitesse](https://github.com/antfu/vitesse), with the power of [Vue 3](https://github.com/vuejs/vue-next), [Vite](https://github.com/vitejs/vite) and [UnoCSS](https://github.com/antfu/unocss)
 
 - 🧐 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/), [resume.zxh.io](https://resume.zxh.io/)
 
