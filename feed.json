@@ -1,0 +1,33 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Xiaohan Zou",
+    "home_page_url": "https://zxh.io",
+    "feed_url": "https://zxh.io/feed.json",
+    "description": "A dragon lost in human world.",
+    "author": {
+        "name": "Xiaohan Zou",
+        "url": "https://zxh.io"
+    },
+    "items": [
+        {
+            "id": "https://zxh.io/posts/2022-06-28-new-mac",
+            "url": "https://zxh.io/posts/2022-06-28-new-mac",
+            "title": "What to install after getting a new Macbook",
+            "date_modified": "2022-06-28T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
+        },
+        {
+            "id": "https://zxh.io/posts/2022-05-20-new-homepage",
+            "url": "https://zxh.io/posts/2022-05-20-new-homepage",
+            "title": "New homepage",
+            "date_modified": "2022-05-20T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
+        }
+    ]
+}

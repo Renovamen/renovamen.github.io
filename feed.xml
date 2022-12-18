@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Xiaohan Zou</title>
+        <link>https://zxh.io</link>
+        <description>A dragon lost in human world.</description>
+        <lastBuildDate>Sun, 18 Dec 2022 10:17:40 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>© Xiaohan Zou 2022</copyright>
+        <atom:link href="https://zxh.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[What to install after getting a new Macbook]]></title>
+            <link>https://zxh.io/posts/2022-06-28-new-mac</link>
+            <guid>https://zxh.io/posts/2022-06-28-new-mac</guid>
+            <pubDate>Tue, 28 Jun 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[New homepage]]></title>
+            <link>https://zxh.io/posts/2022-05-20-new-homepage</link>
+            <guid>https://zxh.io/posts/2022-05-20-new-homepage</guid>
+            <pubDate>Fri, 20 May 2022 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
