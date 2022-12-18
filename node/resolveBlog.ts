@@ -1,8 +1,28 @@
+import type { RouteMeta } from "vue-router";
 import { resolve } from "path";
 import fs from "fs-extra";
 import matter from "gray-matter";
 import dayjs from "dayjs";
-import { readingTime } from ".";
+import { readingTime, type ReadingTime } from "./readingTime";
+
+export interface BlogFrontmatter {
+  title: string;
+}
+
+export interface BlogPager {
+  path: string;
+  title: string;
+  date: string;
+}
+
+export interface BlogMeta extends RouteMeta {
+  frontmatter: BlogFrontmatter;
+  layout: "post";
+  date: string;
+  readingTime: ReadingTime;
+  prev: BlogPager | null;
+  next: BlogPager | null;
+}
 
 export const resolveBlogFile = (route: any) => {
   if (!route.path.startsWith("/posts") || route.path === "/posts") return;
@@ -16,7 +36,7 @@ export const resolveBlogFile = (route: any) => {
     layout: "post",
     date: route.path.substring(7, 17),
     readingTime: readingTime(content)
-  });
+  } as BlogMeta);
 
   return route;
 };

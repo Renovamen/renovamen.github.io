@@ -15,16 +15,21 @@
       <div i-fa6-solid:angle-right class="prompt inline-block" />
       <span class="blink">_</span>
     </router-link>
-    <nav class="flex space-x-4">
-      <router-link to="/projects" title="Projects" class="nav-item">
-        <div i-ph:rocket-launch-duotone class="md:hidden" />
+
+    <nav flex space-x-4>
+      <router-link nav-item to="/projects" title="Projects">
+        <div i-ph:rocket-launch-duotone md:hidden />
         <span class="lt-md:hidden">Projects</span>
       </router-link>
 
-      <router-link to="/posts" title="Blog" class="nav-item">
-        <div i-majesticons:paper-fold-text-line class="md:hidden" />
+      <router-link nav-item to="/posts" title="Blog">
+        <div i-majesticons:paper-fold-text-line md:hidden />
         <span class="lt-md:hidden">Blog</span>
       </router-link>
+
+      <a nav-item href="/feed.xml" title="RSS" target="_blank">
+        <div i-jam:rss-feed />
+      </a>
 
       <button nav-item title="Toggle dark" @click="toggleDark()">
         <div i="carbon-sun dark:carbon-moon" />

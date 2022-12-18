@@ -11,8 +11,10 @@ import Unocss from "unocss/vite";
 import {
   resolveBlogFile,
   resolveBlogList,
-  installMarkdownPlugins
+  installMarkdownPlugins,
+  generateRSS
 } from "./node";
+import { hostname } from "./src/meta";
 
 export default defineConfig({
   resolve: {
@@ -78,6 +80,11 @@ export default defineConfig({
   ssgOptions: {
     script: "async",
     formatting: "minify",
-    onFinished: () => generateSitemap()
+    onFinished: () => {
+      generateSitemap({
+        hostname
+      });
+      generateRSS();
+    }
   }
 });
