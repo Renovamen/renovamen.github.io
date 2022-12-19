@@ -14,7 +14,7 @@ import {
   installMarkdownPlugins,
   generateRSS
 } from "./node";
-import { hostname } from "./src/meta";
+import { hostname, title, description, author } from "./src/meta";
 
 export default defineConfig({
   resolve: {
@@ -84,7 +84,14 @@ export default defineConfig({
       generateSitemap({
         hostname
       });
-      generateRSS();
+      generateRSS({
+        hostname,
+        title,
+        description,
+        author,
+        sourceDir: "pages/posts",
+        exclude: ["index.md"]
+      });
     }
   }
 });
