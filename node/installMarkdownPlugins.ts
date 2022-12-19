@@ -1,9 +1,10 @@
+import type MarkdownIt from "markdown-it";
 import Shiki from "markdown-it-shiki";
 import LinkAttributes from "markdown-it-link-attributes";
 // @ts-expect-error missing types
 import TOC from "markdown-it-table-of-contents";
 import anchor from "markdown-it-anchor";
-import type MarkdownIt from "markdown-it";
+import KaTeX from "@renovamen/markdown-it-katex";
 import { slugify } from "@renovamen/utils";
 
 export const installMarkdownPlugins = (md: MarkdownIt) => {
@@ -34,4 +35,6 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
     includeLevel: [2, 3],
     slugify
   });
+
+  md.use(KaTeX);
 };

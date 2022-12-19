@@ -29,6 +29,12 @@ main:not(.post) a.header-anchor {
   @apply hidden;
 }
 
+.prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 .shiki-light,
 .shiki-dark {
   @apply !bg-transparent border px-5 py-4;

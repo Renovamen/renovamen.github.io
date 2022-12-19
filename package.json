@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.153",
+    "@renovamen/markdown-it-katex": "^0.1.0",
     "@renovamen/utils": "^0.1.0",
     "@types/fs-extra": "^9.0.13",
     "@types/markdown-it-link-attributes": "^3.0.1",
