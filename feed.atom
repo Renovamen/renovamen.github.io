@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxh.io</id>
     <title>Xiaohan Zou</title>
-    <updated>2022-12-18T10:17:40.692Z</updated>
+    <updated>2022-12-20T02:35:45.668Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Xiaohan Zou</name>
@@ -11,7 +11,6 @@
     <link rel="alternate" href="https://zxh.io"/>
     <link rel="self" href="https://zxh.io/feed.atom"/>
     <subtitle>A dragon lost in human world.</subtitle>
-    <icon>https://zxh.io/favicon.svg</icon>
     <rights>© Xiaohan Zou 2022</rights>
     <entry>
         <title type="html"><![CDATA[What to install after getting a new Macbook]]></title>
