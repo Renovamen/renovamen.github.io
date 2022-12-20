@@ -10,6 +10,16 @@
     },
     "items": [
         {
+            "id": "https://zxh.io/posts/2022-12-19-monocular-visual-odometry",
+            "url": "https://zxh.io/posts/2022-12-19-monocular-visual-odometry",
+            "title": "Implement Monocular Visual Odometry",
+            "date_modified": "2022-12-19T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
+        },
+        {
             "id": "https://zxh.io/posts/2022-06-28-new-mac",
             "url": "https://zxh.io/posts/2022-06-28-new-mac",
             "title": "What to install after getting a new Macbook",
