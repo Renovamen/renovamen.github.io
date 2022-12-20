@@ -24,6 +24,10 @@
   @apply no-underline hover:underline text-c-active font-normal;
 }
 
+.prose hr {
+  @apply border-t border-c;
+}
+
 main:not(.post) a.header-anchor {
   @apply hidden;
 }
@@ -32,6 +36,10 @@ main:not(.post) a.header-anchor {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+}
+
+.prose .katex {
+  font-size: 1.1em;
 }
 
 .shiki-light,
