@@ -1,9 +1,9 @@
 import type { RouteMeta } from "vue-router";
-import { resolve } from "path";
 import fs from "fs-extra";
 import matter from "gray-matter";
 import dayjs from "dayjs";
 import { readingTime, type ReadingTime } from "./readingTime";
+import { resolvePath } from "./utils";
 
 export interface BlogFrontmatter {
   title: string;
@@ -24,10 +24,15 @@ export interface BlogMeta extends RouteMeta {
   next: BlogPager | null;
 }
 
-export const resolveBlogFile = (route: any) => {
-  if (!route.path.startsWith("/posts") || route.path === "/posts") return;
+const isBlog = (route: any) =>
+  route.path.startsWith("/posts") &&
+  !route.path.startsWith("/posts/tags") &&
+  route.path !== "/posts";
 
-  const path = resolve(__dirname, "..", route.component.slice(1));
+export const resolveBlogFile = (route: any) => {
+  if (!isBlog(route)) return;
+
+  const path = resolvePath(route.component.slice(1));
   const md = fs.readFileSync(path, "utf-8");
   const { content, data } = matter(md);
 
@@ -52,13 +57,15 @@ export const resolveBlogList = (routes: any[]) => {
     .sort((a: any, b: any) => dayjs(b.date).unix() - dayjs(a.date).unix());
 
   return routes.map((item) => {
-    const i = blogs.findIndex((blog) => blog.path === item.path);
+    if (isBlog(item)) {
+      const i = blogs.findIndex((blog) => blog.path === item.path);
 
-    item.meta = {
-      ...item.meta,
-      prev: i < blogs.length ? blogs[i + 1] : null,
-      next: i > 0 ? blogs[i - 1] : null
-    };
+      item.meta = {
+        ...item.meta,
+        prev: i < blogs.length ? blogs[i + 1] : null,
+        next: i > 0 ? blogs[i - 1] : null
+      };
+    }
 
     return item;
   });

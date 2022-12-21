@@ -11,8 +11,10 @@ import Unocss from "unocss/vite";
 import {
   resolveBlogFile,
   resolveBlogList,
+  resolveTags,
   installMarkdownPlugins,
-  generateRSS
+  generateRSS,
+  getTagPathsFromFiles
 } from "./node";
 import { hostname, title, description, author } from "./src/meta";
 
@@ -34,7 +36,10 @@ export default defineConfig({
       pagesDir: "pages",
       extensions: ["vue", "md"],
       extendRoute: (route) => resolveBlogFile(route),
-      onRoutesGenerated: (routes) => resolveBlogList(routes)
+      onRoutesGenerated: (routes) => {
+        resolveBlogList(routes);
+        resolveTags(routes);
+      }
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -90,8 +95,18 @@ export default defineConfig({
         description,
         author,
         sourceDir: "pages/posts",
-        exclude: ["index.md"]
+        exclude: ["index.md", "tags/*"]
       });
+    },
+    includedRoutes: async (paths) => {
+      const p = paths.filter(
+        (i) => !["/:all(.*)*", "/posts/tags/:all(.*)", ""].includes(i)
+      );
+      const tagPaths = await getTagPathsFromFiles("pages/posts", [
+        "index.md",
+        "tags/*"
+      ]);
+      return p.concat(tagPaths);
     }
   }
 });

@@ -1,5 +1,7 @@
 ---
 title: Implement Monocular Visual Odometry
+tags:
+  - computer vision
 ---
 
 [[toc]]

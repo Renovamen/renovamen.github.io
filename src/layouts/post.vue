@@ -10,6 +10,16 @@
       <h1 class="text-4xl font-bold">{{ title }}</h1>
       <p class="opacity-50 mt-2">
         {{ formatDate(date) }} · {{ readingTime }} min
+
+        <span v-if="tags?.length">
+          · <span i-uil:tag-alt mr-1 text-sm />
+          <span v-for="(tag, i) in tags" :key="tag">
+            <router-link :to="`/posts/tags/${slugify(tag)}`" hover:underline>
+              {{ tag }}
+            </router-link>
+            <span v-if="i !== tags.length - 1">, </span>
+          </span>
+        </span>
       </p>
     </div>
 
@@ -36,19 +46,23 @@
 </template>
 
 <script setup lang="ts">
-import { isClient } from "@renovamen/utils";
+import { isClient, slugify } from "@renovamen/utils";
 import { formatDate } from "~/utils";
 
 const router = useRouter();
 
 const meta = computed(() => router.currentRoute.value.meta);
+const path = computed(() => router.currentRoute.value.path);
 
 const title = computed(() => meta.value.frontmatter.title);
+const tags = computed(() => meta.value.frontmatter.tags);
 const date = computed(() => meta.value.date);
 const readingTime = computed(() => meta.value.readingTime.minutes);
 
 const prevBlog = computed(() => meta.value.prev);
 const nextBlog = computed(() => meta.value.next);
+
+// Navigate to anchors
 
 const content = ref<HTMLDivElement>();
 
@@ -97,6 +111,8 @@ onMounted(() => {
   setTimeout(navigate, 500);
 });
 
+// Table of content
+
 const isTocOpen = ref(false);
 const isToc = ref(false);
 
@@ -110,11 +126,7 @@ onMounted(() => {
     });
 
   initToc();
-
-  watch(
-    () => router.currentRoute.value.path,
-    () => initToc()
-  );
+  watch(path, () => initToc());
 });
 </script>
 

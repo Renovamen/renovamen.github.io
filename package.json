@@ -3,7 +3,7 @@
   "packageManager": "pnpm@7.12.2",
   "type": "module",
   "scripts": {
-    "build": "vite-ssg build && rm dist/.html",
+    "build": "vite-ssg build",
     "dev": "vite --port 3333 --host",
     "lint": "eslint --ext .js,.ts,.vue .",
     "serve": "vite preview --port 8000 --host",

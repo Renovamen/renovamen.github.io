@@ -6,6 +6,7 @@ import fg from "fast-glob";
 import matter from "gray-matter";
 import { Feed, type Author, type FeedOptions } from "feed";
 import { cyan, dim, gray, green, yellow } from "kolorist";
+import { resolvePath } from "./utils";
 
 export interface RSSOptions {
   /**
@@ -66,8 +67,6 @@ const resolveOptions = (options: RSSOptions) => {
     options
   );
 };
-
-const resolvePath = (p: string) => path.resolve(__dirname, "..", p);
 
 const getBlogs = async (sourceDir: string, exclude?: string[]) => {
   sourceDir = resolvePath(sourceDir);
