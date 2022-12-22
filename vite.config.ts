@@ -14,7 +14,8 @@ import {
   resolveTags,
   installMarkdownPlugins,
   generateRSS,
-  getTagPathsFromFiles
+  getTagPathsFromFiles,
+  shiki
 } from "./node";
 import { hostname, title, description, author } from "./src/meta";
 
@@ -77,6 +78,12 @@ export default defineConfig({
     Markdown({
       wrapperClasses: "prose prose-lg m-auto text-left",
       headEnabled: true,
+      markdownItOptions: {
+        highlight: await shiki({
+          light: "github-light",
+          dark: "github-dark-dimmed"
+        })
+      },
       markdownItSetup: (md) => installMarkdownPlugins(md)
     })
   ],

@@ -37,40 +37,44 @@ main:not(.post) a.header-anchor {
 
 /** Code blocks **/
 
-.prose pre:not(.shiki) {
-  @apply p-0;
+.prose div[class*=language-] {
+  @apply relative border border-c-dark pt-6 rounded-md;
 }
 
-.prose code[class*=language-] {
-  @apply relative;
+.prose div[class*=language-]::before {
+  @apply content-[""] absolute w-2.5 h-2.5 top-3.5 left-4 rounded-full bg-[#fd5f57];
+  box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
 }
 
-.prose code[class*=language-] > span.lang {
-  @apply absolute top-6 right-2.5 text-xs opacity-60 hidden sm:block;
+.prose div[class*=language-] > span.lang {
+  @apply absolute top-2.5 right-3 text-sm opacity-60;
 }
 
 .prose .shiki {
-  font-size: 1.05em;
-  line-height: 1.4;
+  @apply !bg-transparent p-4 m-0 leading-6 text-[0.925em];
 }
 
-.shiki-light,
-.shiki-dark {
-  @apply !bg-transparent border px-5 py-4;
+.prose .shiki code {
+  @apply block w-fit min-w-full;
 }
 
-.shiki-light {
-  @apply border-gray-300;
+.prose .shiki code > span.highlighted {
+  @apply -mx-4 px-4 inline-block;
+  width: calc(100% + 2 * 16px);
 }
 
-.shiki-dark {
-  @apply border-gray-500;
+.prose .shiki-light code > span.highlighted {
+  @apply bg-gray-200;
 }
 
-html.dark .shiki-light {
+.prose .shiki-dark code > span.highlighted {
+  @apply bg-gray-800;
+}
+
+html.dark .prose .shiki-light {
   @apply hidden;
 }
 
-html:not(.dark) .shiki-dark {
+html:not(.dark) .prose .shiki-dark {
   @apply hidden;
 }
