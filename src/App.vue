@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { isClient } from "@renovamen/utils";
-import { title, description, themeLight, themeDark } from "~/meta";
+import { title, description, themeLight, themeDark } from "../shared";
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,

@@ -27,7 +27,13 @@
         <span class="lt-md:hidden">Blog</span>
       </router-link>
 
-      <a nav-item href="/feed.xml" title="RSS" target="_blank">
+      <a
+        nav-item
+        href="/feed.xml"
+        title="RSS"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div i-jam:rss-feed />
       </a>
 

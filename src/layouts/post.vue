@@ -12,7 +12,8 @@
         {{ formatDate(date) }} · {{ readingTime }} min
 
         <span v-if="tags?.length">
-          · <span i-uil:tag-alt mr-1 text-sm />
+          ·
+          <span i-uil:tag-alt mr-1 text-sm />
           <span v-for="(tag, i) in tags" :key="tag">
             <router-link :to="`/posts/tags/${slugify(tag)}`" hover:underline>
               {{ tag }}
@@ -27,27 +28,46 @@
       <RouterView />
     </article>
 
-    <div
-      v-if="prevBlog || nextBlog"
-      class="prose-lg mx-auto grid md:grid-cols-2 pt-4 mt-16 border-t border-c"
-    >
-      <span class="prev">
-        <RouterLink v-if="prevBlog" hover:underline :to="prevBlog.path">
-          {{ prevBlog.title }}
-        </RouterLink>
-      </span>
-      <span class="next text-right">
-        <RouterLink v-if="nextBlog" hover:underline :to="nextBlog.path">
-          {{ nextBlog.title }}
-        </RouterLink>
-      </span>
-    </div>
+    <footer prose-lg mx-auto mt-16>
+      <div class="grid md:grid-cols-2 pb-3 text-[0.95em]">
+        <a
+          :href="editLink.url"
+          title="Edit link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline text-c-active"
+        >
+          <span i-material-symbols:edit-square-outline w-4 h-4 align-text-top />
+          {{ editLink.text }}
+        </a>
+        <span text="md:right c-light">
+          {{ lastUpdatedText }} {{ lastUpdated }}
+        </span>
+      </div>
+
+      <div
+        v-if="prevBlog || nextBlog"
+        class="grid md:grid-cols-2 pt-3 border-t border-c text-[0.95em]"
+      >
+        <span class="prev">
+          <RouterLink v-if="prevBlog" :to="prevBlog.path" hover:underline>
+            {{ prevBlog.title }}
+          </RouterLink>
+        </span>
+        <span class="next text-right">
+          <RouterLink v-if="nextBlog" :to="nextBlog.path" hover:underline>
+            {{ nextBlog.title }}
+          </RouterLink>
+        </span>
+      </div>
+    </footer>
   </Layout>
 </template>
 
 <script setup lang="ts">
 import { isClient, slugify } from "@renovamen/utils";
 import { formatDate } from "~/utils";
+import { lastUpdatedText } from "../../shared";
 
 const router = useRouter();
 
@@ -58,6 +78,8 @@ const title = computed(() => meta.value.frontmatter.title);
 const tags = computed(() => meta.value.frontmatter.tags);
 const date = computed(() => meta.value.date);
 const readingTime = computed(() => meta.value.readingTime.minutes);
+const lastUpdated = computed(() => meta.value.lastUpdated);
+const editLink = useEditLink();
 
 const prevBlog = computed(() => meta.value.prev);
 const nextBlog = computed(() => meta.value.next);

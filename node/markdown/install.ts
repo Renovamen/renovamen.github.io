@@ -24,7 +24,7 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
     matcher: (link: string) => /^https?:\/\//.test(link),
     attrs: {
       target: "_blank",
-      rel: "noopener"
+      rel: "noopener noreferrer"
     }
   });
 

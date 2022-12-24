@@ -1,33 +1,11 @@
-import dayjs from "dayjs";
 import type { ComputedRef } from "vue";
-
-type BlogType = {
-  path: string;
-  title: string;
-  date: string;
-};
+import { getBlogs, type BlogType } from "../../shared";
 
 export const useBlog = (tag?: ComputedRef<string | undefined>) => {
   const router = useRouter();
 
   const blogs = computed<BlogType[]>(() =>
-    router
-      .getRoutes()
-      .filter((i: any) => i.meta.layout === "post")
-      .filter((i: any) =>
-        tag?.value ? i.meta.frontmatter.tags?.includes(tag.value) : true
-      )
-      .map(
-        (i: any): BlogType => ({
-          path: i.path,
-          title: i.meta.frontmatter.title,
-          date: i.meta.date
-        })
-      )
-      .sort(
-        (a: BlogType, b: BlogType) =>
-          dayjs(b.date).unix() - dayjs(a.date).unix()
-      )
+    getBlogs(router.getRoutes(), tag?.value)
   );
 
   const yearToBlog = computed(() => {

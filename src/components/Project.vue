@@ -5,8 +5,8 @@
     bg="hover:gray-100 dark:hover:gray-600"
     :href="item.link"
     :title="item.name"
-    rel="noopener noreferrer"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <div class="flex-auto">
       <div class="text-normal hstack space-x-2">

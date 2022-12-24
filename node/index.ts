@@ -1,5 +1,4 @@
 export * from "./markdown";
-export * from "./resolveBlog";
+export * from "./resolveBlogs";
 export * from "./resolveTags";
-export * from "./readingTime";
 export * from "./generateRSS";

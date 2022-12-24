@@ -1,4 +1,4 @@
-// Credits: https://github.com/Zhengqbbb/qbb.sh/blob/main/build/node/rss.ts
+// Modified from: https://github.com/Zhengqbbb/qbb.sh/blob/main/build/node/rss.ts
 
 import * as path from "path";
 import fs from "fs-extra";

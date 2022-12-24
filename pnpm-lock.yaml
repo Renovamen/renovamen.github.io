@@ -4,6 +4,7 @@ specifiers:
   '@iconify/json': ^2.1.153
   '@renovamen/markdown-it-katex': ^0.1.0
   '@renovamen/utils': ^0.1.0
+  '@types/cross-spawn': ^6.0.2
   '@types/fs-extra': ^9.0.13
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
@@ -15,6 +16,7 @@ specifiers:
   '@vueuse/head': ^1.0.22
   critters: ^0.0.16
   cross-env: ^7.0.3
+  cross-spawn: ^7.0.3
   dayjs: ^1.11.7
   eslint: ^8.30.0
   eslint-config-prettier: ^8.5.0
@@ -62,6 +64,7 @@ devDependencies:
   '@iconify/json': 2.1.153
   '@renovamen/markdown-it-katex': 0.1.0
   '@renovamen/utils': 0.1.0
+  '@types/cross-spawn': 6.0.2
   '@types/fs-extra': 9.0.13
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
@@ -70,6 +73,7 @@ devDependencies:
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.1+vue@3.2.45
   critters: 0.0.16
   cross-env: 7.0.3
+  cross-spawn: 7.0.3
   eslint: 8.30.0
   eslint-config-prettier: 8.5.0_eslint@8.30.0
   eslint-plugin-prettier: 4.2.1_kl4pe43v5b43npmso5hoplpbyi
@@ -632,6 +636,12 @@ packages:
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
+    dev: true
+
+  /@types/cross-spawn/6.0.2:
+    resolution: {integrity: sha512-KuwNhp3eza+Rhu8IFI5HUXRP0LIhqH5cAjubUvGXXthh4YYBuP2ntwEX+Cz8GJoZUHlKo247wPWOfA9LYEq4cw==}
+    dependencies:
+      '@types/node': 18.11.17
     dev: true
 
   /@types/debug/4.1.7:
