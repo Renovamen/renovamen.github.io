@@ -81,7 +81,7 @@ export default defineConfig({
       markdownItOptions: {
         highlight: await shiki(shikiTheme)
       },
-      markdownItSetup: (md) => installMarkdownPlugins(md)
+      markdownItSetup: installMarkdownPlugins
     })
   ],
 
