@@ -1,91 +1,94 @@
 {
-  "src/layouts/about.vue": [
-    "/assets/about-3ad9254b.js"
-  ],
-  "shared/blogs.ts": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/composables/tags.ts": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/composables/blogs.ts": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/components/BlogList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/components/BlogList.vue": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/components/TagList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/TagList-59724f49.js"
-  ],
-  "src/components/TagList.vue": [
-    "/assets/TagList-59724f49.js"
-  ],
   "pages/posts/index.md": [
-    "/assets/index-a73f1de1.js"
+    "/assets/index-b660ec56.js"
   ],
   "src/utils/index.ts": [
-    "/assets/index-c1c2aa70.js"
+    "/assets/index-0031d823.js"
+  ],
+  "shared/blogs.ts": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/composables/tags.ts": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/composables/blogs.ts": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/components/BlogList.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/components/BlogList.vue": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/components/TagList.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/components/TagList.vue": [
+    "/assets/TagList-cd695380.js"
+  ],
+  "src/layouts/about.vue": [
+    "/assets/about-5bdd663d.js"
+  ],
+  "pages/posts/tags/[...all].md": [
+    "/assets/_...all_-907f2f63.js"
   ],
   "src/components/icons/OhCV.vue": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/icons/OhVueIcons.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/icons/OhVueIcons.vue": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/Project.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/Project.vue": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/ProjectList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "src/components/ProjectList.vue": [
-    "/assets/projects-9ad2aa0d.js"
+    "/assets/projects-01655812.js"
   ],
   "pages/projects.md": [
-    "/assets/projects-9ad2aa0d.js"
-  ],
-  "pages/posts/2022-06-28-new-mac.md": [
-    "/assets/2022-06-28-new-mac-dae3e175.js"
+    "/assets/projects-01655812.js"
   ],
   "pages/posts/2022-05-20-new-homepage.md": [
-    "/assets/2022-05-20-new-homepage-025b3a12.js"
-  ],
-  "pages/[...all].vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/_...all_-6076283f.js"
-  ],
-  "pages/[...all].vue": [
-    "/assets/_...all_-6076283f.js"
+    "/assets/2022-05-20-new-homepage-5d60ecfc.js"
   ],
   "src/composables/editLink.ts": [
-    "/assets/post-1c42e1f4.js",
+    "/assets/post-b6f72aa9.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/post-1c42e1f4.js",
+    "/assets/post-b6f72aa9.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue?vue&type=style&index=0&scoped=9b596018&lang.css": [
-    "/assets/post-1c42e1f4.js",
+    "/assets/post-b6f72aa9.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue": [
-    "/assets/post-1c42e1f4.js",
+    "/assets/post-b6f72aa9.js",
     "/assets/post-1d6a6dca.css"
   ],
-  "pages/posts/tags/[...all].md": [
-    "/assets/_...all_-d47a149f.js"
+  "pages/[...all].vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/_...all_-17446bdf.js"
+  ],
+  "pages/[...all].vue": [
+    "/assets/_...all_-17446bdf.js"
+  ],
+  "pages/posts/2022-06-28-new-mac.md": [
+    "/assets/2022-06-28-new-mac-c37873ca.js"
+  ],
+  "pages/posts/2022-12-29-natural-gradient-decent.md": [
+    "/assets/2022-12-29-natural-gradient-decent-bc2a8340.js"
   ],
   "pages/posts/2022-12-19-monocular-visual-odometry.md": [
-    "/assets/2022-12-19-monocular-visual-odometry-8a319e80.js"
+    "/assets/2022-12-19-monocular-visual-odometry-c9ab8b13.js"
   ],
   "\u0000vite/modulepreload-polyfill": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",

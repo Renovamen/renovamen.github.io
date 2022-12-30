@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxh.io</id>
     <title>Xiaohan Zou</title>
-    <updated>2022-12-24T05:14:42.758Z</updated>
+    <updated>2022-12-30T02:43:53.939Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Xiaohan Zou</name>
@@ -12,6 +12,17 @@
     <link rel="self" href="https://zxh.io/feed.atom"/>
     <subtitle>A dragon lost in human world.</subtitle>
     <rights>© Xiaohan Zou 2022</rights>
+    <entry>
+        <title type="html"><![CDATA[Natural Gradient Decent]]></title>
+        <id>https://zxh.io/posts/2022-12-29-natural-gradient-decent</id>
+        <link href="https://zxh.io/posts/2022-12-29-natural-gradient-decent"/>
+        <updated>2022-12-29T00:00:00.000Z</updated>
+        <author>
+            <name>Xiaohan Zou</name>
+            <uri>https://zxh.io</uri>
+        </author>
+        <rights>© Xiaohan Zou 2022</rights>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Implement Monocular Visual Odometry]]></title>
         <id>https://zxh.io/posts/2022-12-19-monocular-visual-odometry</id>

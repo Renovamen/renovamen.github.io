@@ -10,6 +10,16 @@
     },
     "items": [
         {
+            "id": "https://zxh.io/posts/2022-12-29-natural-gradient-decent",
+            "url": "https://zxh.io/posts/2022-12-29-natural-gradient-decent",
+            "title": "Natural Gradient Decent",
+            "date_modified": "2022-12-29T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
+        },
+        {
             "id": "https://zxh.io/posts/2022-12-19-monocular-visual-odometry",
             "url": "https://zxh.io/posts/2022-12-19-monocular-visual-odometry",
             "title": "Implement Monocular Visual Odometry",
