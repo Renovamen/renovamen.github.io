@@ -23,7 +23,7 @@
       </router-link>
 
       <router-link nav-item to="/posts" title="Blog">
-        <div i-majesticons:paper-fold-text-line md:hidden />
+        <div i-majesticons:pencil-line md:hidden />
         <span class="lt-md:hidden">Blog</span>
       </router-link>
 

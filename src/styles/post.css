@@ -24,7 +24,7 @@
 }
 
 .table-of-contents {
-  @apply fixed z-30 w-45 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis hidden;
+  @apply fixed z-30 w-55 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis hidden;
 }
 
 .toc-open .table-of-contents {
@@ -47,7 +47,7 @@
   @apply opacity-60;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .table-of-contents {
     @apply top-0 bg-c border-l border-c shadow;
   }

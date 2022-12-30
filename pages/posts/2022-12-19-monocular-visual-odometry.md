@@ -86,7 +86,7 @@ The fundamental matrix $F = \begin{bmatrix}
 \end{bmatrix}$ is a $3 \times 3$ matrix that encodes the relative orientation and position of the camera between $I_i$ and $I_{i+1}$.
 
 
-### Hartley's Algorithm
+### Eight Point Algorithm
 
 To estimate $F$, one of the solutions is [Hartley's normalized 8-point algorithm](https://www.cs.cmu.edu/~16385/s17/Slides/12.4_8Point_Algorithm.pdf), where the constraint for $F$ is:
 

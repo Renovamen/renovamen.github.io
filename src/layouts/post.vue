@@ -2,7 +2,7 @@
   <Layout class="post">
     <template v-if="isToc" #navbar>
       <button nav-item title="Toggle toc" @click="isTocOpen = !isTocOpen">
-        <div i-fluent:sidebar-search-rtl-20-regular />
+        <div i-ri:menu-3-line />
       </button>
     </template>
 
@@ -135,7 +135,8 @@ onMounted(() => {
 
 // Table of content
 
-const isTocOpen = ref(false);
+const { width } = useWindowSize()
+const isTocOpen = ref(width.value > 1200);
 const isToc = ref(false);
 
 onMounted(() => {
