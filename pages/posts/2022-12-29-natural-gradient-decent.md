@@ -95,7 +95,8 @@ $$
 KL \Big ( p(x \mid \theta) \| p(x \mid \theta + d) \Big ) \approx \frac{1}{2} d^T F d
 $$
 
-*Proof*:
+:::details Proof
+For convenience, we denote $p(x \mid \theta)$ and $p(x \mid \theta + d)$ as $p(\theta)$ and $p(\theta + d)$, respectively.
 
 $$
 \begin{aligned}
@@ -109,6 +110,7 @@ $$
     & = \frac{1}{2} d^T F d
 \end{aligned}
 $$
+:::
 
 Which means the Fisher Information Matrix $F$ defines the local curvature in distribution space for which KL-divergence is the metric.
 

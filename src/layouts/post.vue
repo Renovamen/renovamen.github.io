@@ -135,7 +135,7 @@ onMounted(() => {
 
 // Table of content
 
-const { width } = useWindowSize()
+const { width } = useWindowSize();
 const isTocOpen = ref(width.value > 1200);
 const isToc = ref(false);
 

@@ -26,6 +26,7 @@ specifiers:
   fs-extra: ^11.1.0
   gray-matter: ^4.0.3
   markdown-it-anchor: ^8.6.6
+  markdown-it-container: ^3.0.0
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.7.2
   markdown-it-table-of-contents: ^0.6.0
@@ -82,6 +83,7 @@ devDependencies:
   fs-extra: 11.1.0
   gray-matter: 4.0.3
   markdown-it-anchor: 8.6.6
+  markdown-it-container: 3.0.0
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.7.2
   markdown-it-table-of-contents: 0.6.0
@@ -2879,6 +2881,10 @@ packages:
         optional: true
       markdown-it:
         optional: true
+    dev: true
+
+  /markdown-it-container/3.0.0:
+    resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
     dev: true
 
   /markdown-it-link-attributes/4.0.1:
