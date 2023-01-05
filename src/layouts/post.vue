@@ -2,7 +2,8 @@
   <Layout class="post">
     <template v-if="isToc" #navbar>
       <button nav-item title="Toggle toc" @click="isTocOpen = !isTocOpen">
-        <div i-ri:menu-3-line />
+        <div v-if="isTocOpen" i-ri:menu-3-line />
+        <div v-else i-ri:menu-fold-line />
       </button>
     </template>
 
@@ -37,10 +38,11 @@
           rel="noopener noreferrer"
           class="hover:underline text-c-active"
         >
-          <span i-material-symbols:edit-square-outline w-4 h-4 align-text-top />
+          <span i-tabler:edit w-4.5 h-4.5 align-text-top />
           {{ editLink.text }}
         </a>
         <span text="md:right c-light">
+          <span i-ic:round-update w-4.5 h-4.5 />
           {{ lastUpdatedText }} {{ lastUpdated }}
         </span>
       </div>
