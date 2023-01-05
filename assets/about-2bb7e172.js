@@ -1,1 +1,0 @@
-import{_ as t,r as n,o as a,c as r,w as c,a as s,b as _}from"./app-d5444fcf.js";const u={};function i(m,l){const o=n("RouterView"),e=_;return a(),r(e,{class:"about"},{default:c(()=>[s(o)]),_:1})}const f=t(u,[["render",i],["__file","/home/runner/work/renovamen.github.io/renovamen.github.io/src/layouts/about.vue"]]);export{f as default};
