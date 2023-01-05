@@ -29,7 +29,7 @@
       <RouterView />
     </article>
 
-    <footer prose-lg mx-auto mt-16>
+    <div prose-lg mx-auto mt-16>
       <div class="grid md:grid-cols-2 pb-3 text-[0.95em]">
         <a
           :href="editLink.url"
@@ -49,7 +49,7 @@
 
       <div
         v-if="prevBlog || nextBlog"
-        class="grid md:grid-cols-2 pt-3 border-t border-c text-[0.95em]"
+        class="grid md:grid-cols-2 pt-3 text-[0.95em] border-t border-c"
       >
         <span class="prev">
           <RouterLink v-if="prevBlog" :to="prevBlog.path" hover:underline>
@@ -62,9 +62,13 @@
           </RouterLink>
         </span>
       </div>
-    </footer>
 
-    <Giscus :key="router.currentRoute.value.fullPath" prose-lg mx-auto mt-20 />
+      <Giscus
+        v-if="!disableGiscus"
+        :key="router.currentRoute.value.fullPath"
+        mt-20
+      />
+    </div>
   </Layout>
 </template>
 
@@ -80,6 +84,7 @@ const path = computed(() => router.currentRoute.value.path);
 
 const title = computed(() => meta.value.frontmatter.title);
 const tags = computed(() => meta.value.frontmatter.tags);
+const disableGiscus = computed(() => meta.value.frontmatter.giscus === false);
 const date = computed(() => meta.value.date);
 const readingTime = computed(() => meta.value.readingTime.minutes);
 const lastUpdated = computed(() => meta.value.lastUpdated);
