@@ -16,3 +16,12 @@ export const editLink = {
     "https://github.com/Renovamen/renovamen.github.io/edit/main/pages:path",
   text: "Edit this page on GitHub"
 };
+
+export const giscus = {
+  repo: "This-is-an-Apple/giscus-zxh.io",
+  repoId: "R_kgDOIulgbw",
+  category: "Announcements",
+  categoryId: "DIC_kwDOIulgb84CTbeQ",
+  light: "light",
+  dark: `${hostname}/css/giscus-dark.css`
+};

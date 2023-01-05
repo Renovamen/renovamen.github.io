@@ -7,7 +7,7 @@
       </button>
     </template>
 
-    <div class="prose-lg mt-6 mb-8 mx-auto">
+    <div prose-lg mx-auto mt-6 mb-8>
       <h1 class="text-4xl font-bold">{{ title }}</h1>
       <p class="opacity-50 mt-2">
         {{ formatDate(date) }} · {{ readingTime }} min
@@ -63,6 +63,8 @@
         </span>
       </div>
     </footer>
+
+    <Giscus :key="router.currentRoute.value.fullPath" prose-lg mx-auto mt-20 />
   </Layout>
 </template>
 

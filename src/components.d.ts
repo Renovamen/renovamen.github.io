@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     BlogList: typeof import('./components/BlogList.vue')['default']
     FlipImage: typeof import('./components/FlipImage.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    Giscus: typeof import('./components/Giscus.vue')['default']
     Layout: typeof import('./components/Layout.vue')['default']
     Links: typeof import('./components/Links.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
