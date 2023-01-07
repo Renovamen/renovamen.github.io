@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxh.io</id>
     <title>Xiaohan Zou</title>
-    <updated>2023-01-05T23:45:50.748Z</updated>
+    <updated>2023-01-07T08:19:05.479Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Xiaohan Zou</name>
@@ -11,7 +11,7 @@
     <link rel="alternate" href="https://zxh.io"/>
     <link rel="self" href="https://zxh.io/feed.atom"/>
     <subtitle>A dragon lost in human world.</subtitle>
-    <rights>© Xiaohan Zou 2022</rights>
+    <rights>© Xiaohan Zou 2023</rights>
     <entry>
         <title type="html"><![CDATA[Natural Gradient Decent]]></title>
         <id>https://zxh.io/posts/2022-12-29-natural-gradient-decent</id>
@@ -21,7 +21,7 @@
             <name>Xiaohan Zou</name>
             <uri>https://zxh.io</uri>
         </author>
-        <rights>© Xiaohan Zou 2022</rights>
+        <rights>© Xiaohan Zou 2023</rights>
     </entry>
     <entry>
         <title type="html"><![CDATA[Implement Monocular Visual Odometry]]></title>
@@ -32,7 +32,7 @@
             <name>Xiaohan Zou</name>
             <uri>https://zxh.io</uri>
         </author>
-        <rights>© Xiaohan Zou 2022</rights>
+        <rights>© Xiaohan Zou 2023</rights>
     </entry>
     <entry>
         <title type="html"><![CDATA[What to install after getting a new Macbook]]></title>
@@ -43,7 +43,7 @@
             <name>Xiaohan Zou</name>
             <uri>https://zxh.io</uri>
         </author>
-        <rights>© Xiaohan Zou 2022</rights>
+        <rights>© Xiaohan Zou 2023</rights>
     </entry>
     <entry>
         <title type="html"><![CDATA[New homepage]]></title>
@@ -54,6 +54,6 @@
             <name>Xiaohan Zou</name>
             <uri>https://zxh.io</uri>
         </author>
-        <rights>© Xiaohan Zou 2022</rights>
+        <rights>© Xiaohan Zou 2023</rights>
     </entry>
 </feed>
