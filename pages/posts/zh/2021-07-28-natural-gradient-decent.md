@@ -4,6 +4,8 @@ tags:
   - machine learning
 ---
 
+[[toc]]
+
 自然梯度下降（Natural Gradient Decent）把参数看成一种概率分布，然后使用 KL 散度而不是欧氏距离来作为距离的度量，从而更好地描述更新后的分布和原分布有多大的不同。
 
 

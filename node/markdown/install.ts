@@ -15,7 +15,7 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
   md.use(containerPlugin);
 
   md.use(anchorPlugin, {
-    slugify,
+    slugify: (s) => decodeURI(slugify(s)),
     permalink: anchorPlugin.permalink.linkInsideHeader({
       symbol: "#",
       ariaHidden: true
