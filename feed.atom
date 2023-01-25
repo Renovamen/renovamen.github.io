@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxh.io</id>
     <title>Xiaohan Zou</title>
-    <updated>2023-01-07T08:19:05.479Z</updated>
+    <updated>2023-01-25T04:24:56.476Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Xiaohan Zou</name>
@@ -50,6 +50,17 @@
         <id>https://zxh.io/posts/2022-05-20-new-homepage</id>
         <link href="https://zxh.io/posts/2022-05-20-new-homepage"/>
         <updated>2022-05-20T00:00:00.000Z</updated>
+        <author>
+            <name>Xiaohan Zou</name>
+            <uri>https://zxh.io</uri>
+        </author>
+        <rights>© Xiaohan Zou 2023</rights>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自然梯度下降]]></title>
+        <id>https://zxh.io/posts/zh/2021-07-28-natural-gradient</id>
+        <link href="https://zxh.io/posts/zh/2021-07-28-natural-gradient"/>
+        <updated>2021-07-01T00:00:00.000Z</updated>
         <author>
             <name>Xiaohan Zou</name>
             <uri>https://zxh.io</uri>

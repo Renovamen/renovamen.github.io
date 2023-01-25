@@ -4,7 +4,7 @@
         <title>Xiaohan Zou</title>
         <link>https://zxh.io</link>
         <description>A dragon lost in human world.</description>
-        <lastBuildDate>Sat, 07 Jan 2023 08:19:05 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Jan 2023 04:24:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© Xiaohan Zou 2023</copyright>
@@ -32,6 +32,12 @@
             <link>https://zxh.io/posts/2022-05-20-new-homepage</link>
             <guid>https://zxh.io/posts/2022-05-20-new-homepage</guid>
             <pubDate>Fri, 20 May 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[自然梯度下降]]></title>
+            <link>https://zxh.io/posts/zh/2021-07-28-natural-gradient</link>
+            <guid>https://zxh.io/posts/zh/2021-07-28-natural-gradient</guid>
+            <pubDate>Thu, 01 Jul 2021 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

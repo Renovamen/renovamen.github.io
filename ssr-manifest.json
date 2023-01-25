@@ -1,102 +1,130 @@
 {
-  "shared/blogs.ts": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/composables/tags.ts": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/composables/blogs.ts": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/components/BlogList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/components/BlogList.vue": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/components/TagList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/TagList-c96d8b59.js"
-  ],
-  "src/components/TagList.vue": [
-    "/assets/TagList-c96d8b59.js"
-  ],
   "src/utils/index.ts": [
-    "/assets/index-b9b708d9.js"
+    "/assets/index-82514d00.js"
+  ],
+  "pages/posts/zh/index.md": [
+    "/assets/index-86617c52.js"
   ],
   "src/layouts/about.vue": [
-    "/assets/about-50807d54.js"
+    "/assets/about-61f6dfbe.js"
   ],
   "pages/posts/index.md": [
-    "/assets/index-377680ef.js"
+    "/assets/index-b71929f5.js"
   ],
   "pages/posts/2022-12-29-natural-gradient-decent.md": [
-    "/assets/2022-12-29-natural-gradient-decent-c2a9a34a.js"
+    "/assets/2022-12-29-natural-gradient-decent-ba303f23.js"
+  ],
+  "pages/posts/zh/2021-07-28-natural-gradient.md": [
+    "/assets/2021-07-28-natural-gradient-9712f1c7.js"
+  ],
+  "shared/blogs.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/composables/lang.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/composables/tags.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/composables/blogs.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/BlogList.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/BlogList.vue": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/TagList.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/TagList.vue": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/ToggleLang.vue?vue&type=style&index=0&scoped=227e31e5&lang.css": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "src/components/ToggleLang.vue": [
+    "/assets/ToggleLang-6d132dc6.js",
+    "/assets/ToggleLang-994cf7c7.css"
+  ],
+  "pages/posts/zh/tags/[...all].md": [
+    "/assets/_...all_-97591879.js"
   ],
   "src/components/Giscus.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/components/Giscus.vue": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/composables/editLink.ts": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue?vue&type=style&index=0&scoped=9b596018&lang.css": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
   "src/layouts/post.vue": [
-    "/assets/post-a68c7d12.js",
+    "/assets/post-8bc9607c.js",
     "/assets/post-1d6a6dca.css"
   ],
-  "src/components/icons/OhCV.vue": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/icons/OhVueIcons.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/icons/OhVueIcons.vue": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/Project.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/Project.vue": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/ProjectList.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "src/components/ProjectList.vue": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "pages/projects.md": [
-    "/assets/projects-f52daaa1.js"
-  ],
-  "pages/posts/2022-05-20-new-homepage.md": [
-    "/assets/2022-05-20-new-homepage-91b22976.js"
+  "pages/posts/tags/[...all].md": [
+    "/assets/_...all_-3f520a64.js"
   ],
   "pages/[...all].vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/_...all_-35e46ddb.js"
+    "/assets/_...all_-f8827fd3.js"
   ],
   "pages/[...all].vue": [
-    "/assets/_...all_-35e46ddb.js"
+    "/assets/_...all_-f8827fd3.js"
+  ],
+  "src/components/icons/OhCV.vue": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/icons/OhVueIcons.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/icons/OhVueIcons.vue": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/Project.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/Project.vue": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/ProjectList.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "src/components/ProjectList.vue": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "pages/projects.md": [
+    "/assets/projects-e50ae05e.js"
+  ],
+  "pages/posts/2022-05-20-new-homepage.md": [
+    "/assets/2022-05-20-new-homepage-362f2cd9.js"
   ],
   "pages/posts/2022-06-28-new-mac.md": [
-    "/assets/2022-06-28-new-mac-d625470b.js"
-  ],
-  "pages/posts/tags/[...all].md": [
-    "/assets/_...all_-226da579.js"
+    "/assets/2022-06-28-new-mac-490c5c76.js"
   ],
   "pages/posts/2022-12-19-monocular-visual-odometry.md": [
-    "/assets/2022-12-19-monocular-visual-odometry-013ed93e.js"
+    "/assets/2022-12-19-monocular-visual-odometry-a423e88a.js"
   ],
   "\u0000vite/modulepreload-polyfill": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
@@ -813,7 +841,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vue+devtools-api@6.4.5/node_modules/@vue/devtools-api/lib/esm/env.js": [
+  "node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/env.js": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -878,7 +906,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vue+devtools-api@6.4.5/node_modules/@vue/devtools-api/lib/esm/const.js": [
+  "node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/const.js": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -943,7 +971,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vue+devtools-api@6.4.5/node_modules/@vue/devtools-api/lib/esm/time.js": [
+  "node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/time.js": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1008,7 +1036,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vue+devtools-api@6.4.5/node_modules/@vue/devtools-api/lib/esm/proxy.js": [
+  "node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/proxy.js": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1073,7 +1101,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vue+devtools-api@6.4.5/node_modules/@vue/devtools-api/lib/esm/index.js": [
+  "node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/index.js": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1138,7 +1166,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/pinia@2.0.28_prq2uz4lho2pwp6irk4cfkrxwu/node_modules/pinia/dist/pinia.mjs": [
+  "node_modules/.pnpm/pinia@2.0.29_prq2uz4lho2pwp6irk4cfkrxwu/node_modules/pinia/dist/pinia.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1398,7 +1426,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@unhead+vue@1.0.14_vue@3.2.45/node_modules/@unhead/vue/dist/index.mjs": [
+  "node_modules/.pnpm/@unhead+vue@1.0.18_vue@3.2.45/node_modules/@unhead/vue/dist/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1463,7 +1491,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@unhead+dom@1.0.14/node_modules/@unhead/dom/dist/index.mjs": [
+  "node_modules/.pnpm/@unhead+dom@1.0.18/node_modules/@unhead/dom/dist/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1528,7 +1556,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vueuse+head@1.0.22_vue@3.2.45/node_modules/@vueuse/head/dist/index.mjs": [
+  "node_modules/.pnpm/@vueuse+head@1.0.23_vue@3.2.45/node_modules/@vueuse/head/dist/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1593,7 +1621,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/vite-ssg@0.22.1_taxab7htm3ndplav6c3d2ozfxa/node_modules/vite-ssg/dist/shared/vite-ssg.a009fbf1.mjs": [
+  "node_modules/.pnpm/vite-ssg@0.22.1_sieo3airv7it63syofhmk4kcsa/node_modules/vite-ssg/dist/shared/vite-ssg.a009fbf1.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1658,7 +1686,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/vite-ssg@0.22.1_taxab7htm3ndplav6c3d2ozfxa/node_modules/vite-ssg/dist/shared/vite-ssg.5912142e.mjs": [
+  "node_modules/.pnpm/vite-ssg@0.22.1_sieo3airv7it63syofhmk4kcsa/node_modules/vite-ssg/dist/shared/vite-ssg.5912142e.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1723,7 +1751,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/vite-ssg@0.22.1_taxab7htm3ndplav6c3d2ozfxa/node_modules/vite-ssg/dist/index.mjs": [
+  "node_modules/.pnpm/vite-ssg@0.22.1_sieo3airv7it63syofhmk4kcsa/node_modules/vite-ssg/dist/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -1983,7 +2011,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vueuse+shared@9.10.0_vue@3.2.45/node_modules/@vueuse/shared/index.mjs": [
+  "node_modules/.pnpm/@vueuse+shared@9.11.1_vue@3.2.45/node_modules/@vueuse/shared/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -2048,7 +2076,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@vueuse+core@9.10.0_vue@3.2.45/node_modules/@vueuse/core/index.mjs": [
+  "node_modules/.pnpm/@vueuse+core@9.11.1_vue@3.2.45/node_modules/@vueuse/core/index.mjs": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",
@@ -3803,7 +3831,7 @@
     "/assets/italic-c0fd060e.woff",
     "/assets/bolditalic-28145ed6.woff"
   ],
-  "node_modules/.pnpm/@unocss+reset@0.48.0/node_modules/@unocss/reset/tailwind.css": [
+  "node_modules/.pnpm/@unocss+reset@0.48.4/node_modules/@unocss/reset/tailwind.css": [
     "/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "/assets/KaTeX_AMS-Regular-68534840.ttf",

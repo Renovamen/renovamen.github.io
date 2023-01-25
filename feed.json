@@ -48,6 +48,16 @@
                 "name": "Xiaohan Zou",
                 "url": "https://zxh.io"
             }
+        },
+        {
+            "id": "https://zxh.io/posts/zh/2021-07-28-natural-gradient",
+            "url": "https://zxh.io/posts/zh/2021-07-28-natural-gradient",
+            "title": "自然梯度下降",
+            "date_modified": "2021-07-01T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
         }
     ]
 }
