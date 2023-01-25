@@ -35,9 +35,10 @@ socials:
   </div>
 </div>
 
-Xiaohan is a [Computer Science](https://www.bu.edu/cs/) master's student at [Boston University](https://www.bu.edu/) and working with Prof. [Bryan Plummer](https://bryanplummer.com/). Her current research interests lie primarily in exploring the capability of machine learning systems to be continuous, generalizable, and efficient, like continual learning, meta-learning, and parameter sharing. She is also interested in efficiency of vision-language and video models.
 
-Previously, she received her bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/), where she worked on image aesthetic captioning with Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html). She was also fortunate to work with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation.
+Xiaohan's current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of deep learning systems. She is also interested in vision-language and video models.
+
+Previously, she received her master's degree in [Computer Science](https://www.bu.edu/cs/) at [Boston University](https://www.bu.edu/) and bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/). She was fortunate to work with Prof. [Bryan Plummer](https://bryanplummer.com/) (BU) on continual learning and parameter sharing, Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation, and Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html) (Tongji) on image aesthetic captioning.
 
 Check her [Curriculum Vitae](/files/cv/en.pdf) for more details.
 

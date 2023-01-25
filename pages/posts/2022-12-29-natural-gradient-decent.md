@@ -7,7 +7,7 @@ tags:
 
 [[toc]]
 
-[中文版本](https://blog.zxh.io/post/2021/07/28/natural-gradient/)
+[中文版本](/posts/zh/2021-07-28-natural-gradient-decent)
 
 Natural gradient decent minimizes the loss function in distribution space with KL-divergence as metric, instead of the usual parameter space with Euclidean metric.
 

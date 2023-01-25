@@ -36,10 +36,15 @@ export default defineConfig({
     Pages({
       pagesDir: "pages",
       extensions: ["vue", "md"],
-      extendRoute: resolveBlogFile,
+      extendRoute: (route) => {
+        resolveBlogFile(route, "en");
+        resolveBlogFile(route, "zh");
+      },
       onRoutesGenerated: (routes) => {
-        resolveBlogList(routes);
-        resolveTags(routes);
+        resolveBlogList(routes, "en");
+        resolveBlogList(routes, "zh");
+        resolveTags(routes, "en");
+        resolveTags(routes, "zh");
       }
     }),
 
@@ -99,18 +104,23 @@ export default defineConfig({
         description,
         author,
         sourceDir: "pages/posts",
-        exclude: ["index.md", "tags/*"]
+        exclude: ["index.md", "zh/index.md", "tags/*", "zh/tags/*"]
       });
     },
     includedRoutes: async (paths) => {
       const p = paths.filter(
         (i) => !["/:all(.*)*", "/posts/tags/:all(.*)", ""].includes(i)
       );
-      const tagPaths = await getTagPathsFromFiles("pages/posts", [
+      const enTags = await getTagPathsFromFiles("pages/posts", "en", [
+        "index.md",
+        "tags/*",
+        "zh/*"
+      ]);
+      const zhTags = await getTagPathsFromFiles("pages/posts/zh", "zh", [
         "index.md",
         "tags/*"
       ]);
-      return p.concat(tagPaths);
+      return p.concat(enTags, zhTags);
     }
   }
 });

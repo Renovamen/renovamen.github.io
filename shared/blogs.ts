@@ -22,11 +22,26 @@ export interface BlogMeta extends RouteMeta {
   next: BlogType | null;
 }
 
-export const getBlogs = (routes: any[], tag?: string): BlogType[] =>
+export const checkBlogLang = (path: string, lang: string) =>
+  lang === "en" ? path.split("/").length === 3 : path.split("/")[2] === lang;
+
+export const getBlogs = (
+  routes: any[],
+  options?: {
+    tag?: string;
+    lang?: string;
+  }
+): BlogType[] =>
   routes
+    // is blog
     .filter((item: any) => item.meta?.layout === "post")
+    // check language
     .filter((item: any) =>
-      tag ? item.meta.frontmatter.tags?.includes(tag) : true
+      options?.lang ? checkBlogLang(item.path, options.lang) : true
+    )
+    // check tags
+    .filter((item: any) =>
+      options?.tag ? item.meta.frontmatter.tags?.includes(options.tag) : true
     )
     .map(
       (item: any): BlogType => ({
@@ -35,4 +50,5 @@ export const getBlogs = (routes: any[], tag?: string): BlogType[] =>
         date: item.meta.date
       })
     )
+    // sort by date (reverse order)
     .sort((a, b) => dayjs(b.date).unix() - dayjs(a.date).unix());

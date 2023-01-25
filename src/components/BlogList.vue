@@ -1,5 +1,5 @@
 <template>
-  <template v-for="key in Object.keys(yearToBlog)" :key="key">
+  <template v-for="key in years" :key="key">
     <h3>{{ key }}</h3>
     <div
       v-for="route in yearToBlog[key]"
@@ -20,13 +20,18 @@
 import { formatDate } from "~/utils";
 
 const router = useRouter();
-const path = computed(() => router.currentRoute.value.path);
+const path = computed<string>(() => router.currentRoute.value.path);
+
+const lang = useLang();
 
 const { tagMap, tags } = useTags();
-
 const tag = computed(() => {
   const tagName = tags.value.find((t) => tagMap.value[t].path === path.value);
   return tagName;
 });
-const { yearToBlog } = useBlog(tag);
+
+const { yearToBlog } = useBlog(lang, tag);
+const years = computed(() =>
+  Object.keys(yearToBlog.value).sort((a, b) => b.localeCompare(a))
+);
 </script>

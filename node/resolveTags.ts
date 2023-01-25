@@ -3,27 +3,30 @@ import fg from "fast-glob";
 import matter from "gray-matter";
 import { slugify } from "@renovamen/utils";
 import { resolvePath } from "./utils";
+import { checkBlogLang } from "../shared";
 
-const prefix = "/posts/tags/";
+const indexURL = (lang?: string) => `/posts${lang === "en" ? "" : "/" + lang}`;
+const tagURL = (lang?: string) => `${indexURL(lang)}/tags/`;
 
-export const resolveTags = (routes: any[]) => {
+export const resolveTags = (routes: any[], lang: string) => {
   const tagMap = {} as { [key: string]: { path: string; blogs: string[] } };
 
   routes
     .filter((item) => item.meta?.layout === "post")
+    .filter((item) => checkBlogLang(item.path, lang))
     .forEach((item) => {
       item.meta.frontmatter.tags?.forEach((tag: string) => {
         if (tag in tagMap) tagMap[tag].blogs.push(item.path);
         else
           tagMap[tag] = {
-            path: `${prefix}${slugify(tag)}`,
+            path: `${tagURL(lang)}${slugify(tag)}`,
             blogs: [item.path]
           };
       });
     });
 
   return routes.map((item) => {
-    if (item.path === "/posts" || item.path.startsWith(prefix)) {
+    if (item.path === indexURL(lang) || item.path.startsWith(tagURL(lang))) {
       if (!item.meta) item.meta = {};
       item.meta.tagMap = tagMap;
     }
@@ -33,6 +36,7 @@ export const resolveTags = (routes: any[]) => {
 
 export const getTagPathsFromFiles = async (
   sourceDir: string,
+  lang: string,
   exclude?: string[]
 ) => {
   sourceDir = resolvePath(sourceDir);
@@ -44,7 +48,9 @@ export const getTagPathsFromFiles = async (
     files.map(async (f) => {
       const raw = await fs.readFile(`${sourceDir}/${f}`);
       const { data } = matter(raw);
-      data.tags?.forEach((tag: string) => tags.add(`${prefix}${slugify(tag)}`));
+      data.tags?.forEach((tag: string) =>
+        tags.add(`${tagURL(lang)}${slugify(tag)}`)
+      );
     })
   );
 

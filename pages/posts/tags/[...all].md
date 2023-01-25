@@ -2,7 +2,7 @@
 title: Blog - Xiaohan Zou
 ---
 
-# Blog
+# Blog <ToggleLang />
 
 <TagList />
 <BlogList />

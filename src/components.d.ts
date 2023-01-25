@@ -22,5 +22,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TagList: typeof import('./components/TagList.vue')['default']
+    ToggleLang: typeof import('./components/ToggleLang.vue')['default']
   }
 }

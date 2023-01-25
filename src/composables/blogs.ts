@@ -1,11 +1,14 @@
 import type { ComputedRef } from "vue";
 import { getBlogs, type BlogType } from "../../shared";
 
-export const useBlog = (tag?: ComputedRef<string | undefined>) => {
+export const useBlog = (
+  lang?: ComputedRef<string | undefined>,
+  tag?: ComputedRef<string | undefined>
+) => {
   const router = useRouter();
 
   const blogs = computed<BlogType[]>(() =>
-    getBlogs(router.getRoutes(), tag?.value)
+    getBlogs(router.getRoutes(), { lang: lang?.value, tag: tag?.value })
   );
 
   const yearToBlog = computed(() => {
