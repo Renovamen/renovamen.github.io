@@ -5,7 +5,9 @@ export const useLang = () => {
     if (!route.path.startsWith("/posts")) return undefined; // not in "posts" folder
 
     const list = route.path.split("/");
-    return list.length === 2 || list[2] === "tags" ? "en" : list[2];
+
+    if (list.length > 2 && list[2] === "zh") return "zh";
+    return "en";
   });
 
   return lang;

@@ -16,7 +16,7 @@
           ·
           <span i-uil:tag-alt mr-1 text-sm />
           <span v-for="(tag, i) in tags" :key="tag">
-            <router-link :to="`/posts/tags/${slugify(tag)}`" hover:underline>
+            <router-link :to="tagURL(tag)" hover:underline>
               {{ tag }}
             </router-link>
             <span v-if="i !== tags.length - 1">, </span>
@@ -160,6 +160,13 @@ onMounted(() => {
   initToc();
   watch(path, initToc);
 });
+
+// Tags
+const lang = useLang();
+const tagURL = (tag: string) =>
+  lang.value === "en"
+    ? `/posts/tags/${slugify(tag)}`
+    : `/posts/${lang.value}/tags/${slugify(tag)}`;
 </script>
 
 <style scoped>
