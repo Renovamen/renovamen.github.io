@@ -1,28 +1,28 @@
 import type MarkdownIt from "markdown-it";
 import { slugify } from "@renovamen/utils";
-import LinkAttributes from "markdown-it-link-attributes";
+import linkAttributesPlugin from "markdown-it-link-attributes";
 // @ts-expect-error missing types
-import TOC from "markdown-it-table-of-contents";
-import anchor from "markdown-it-anchor";
-import KaTeX from "@renovamen/markdown-it-katex";
-import CodeBlock from "./codeBlock";
-import HighlightLines from "./highlightLines";
-import Container from "./container";
+import tocPlugin from "markdown-it-table-of-contents";
+import anchorPlugin from "markdown-it-anchor";
+import katexPlugin from "@renovamen/markdown-it-katex";
+import codeBlockPlugin from "./codeBlock";
+import highlightLinesPlugin from "./highlightLines";
+import containerPlugin from "./container";
 
 export const installMarkdownPlugins = (md: MarkdownIt) => {
-  md.use(HighlightLines);
-  md.use(CodeBlock);
-  md.use(Container);
+  md.use(highlightLinesPlugin);
+  md.use(codeBlockPlugin);
+  md.use(containerPlugin);
 
-  md.use(anchor, {
+  md.use(anchorPlugin, {
     slugify,
-    permalink: anchor.permalink.linkInsideHeader({
+    permalink: anchorPlugin.permalink.linkInsideHeader({
       symbol: "#",
-      renderAttrs: () => ({ "aria-hidden": "true" })
+      ariaHidden: true
     })
   });
 
-  md.use(LinkAttributes, {
+  md.use(linkAttributesPlugin, {
     matcher: (link: string) => /^https?:\/\//.test(link),
     attrs: {
       target: "_blank",
@@ -30,10 +30,10 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
     }
   });
 
-  md.use(TOC, {
+  md.use(tocPlugin, {
     includeLevel: [2, 3],
     slugify
   });
 
-  md.use(KaTeX);
+  md.use(katexPlugin);
 };

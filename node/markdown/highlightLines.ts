@@ -4,7 +4,7 @@ import type { PluginSimple } from "markdown-it";
 
 const RE = /{([\d,-]+)}/;
 
-export const highlightLines: PluginSimple = (md) => {
+export const highlightLinesPlugin: PluginSimple = (md) => {
   const fence = md.renderer.rules.fence!;
 
   md.renderer.rules.fence = (...args) => {
@@ -25,4 +25,4 @@ export const highlightLines: PluginSimple = (md) => {
   };
 };
 
-export default highlightLines;
+export default highlightLinesPlugin;

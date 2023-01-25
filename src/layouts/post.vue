@@ -158,7 +158,7 @@ onMounted(() => {
     });
 
   initToc();
-  watch(path, () => initToc());
+  watch(path, initToc);
 });
 </script>
 

@@ -8,7 +8,7 @@ const extractLang = (info: string) =>
     .replace(/(-vue|{| ).*$/, "")
     .replace(/^vue-html$/, "template");
 
-export const codeBlock: PluginSimple = (md) => {
+export const codeBlockPlugin: PluginSimple = (md) => {
   const fence = md.renderer.rules.fence!;
 
   md.renderer.rules.fence = (...args) => {
@@ -24,4 +24,4 @@ export const codeBlock: PluginSimple = (md) => {
   };
 };
 
-export default codeBlock;
+export default codeBlockPlugin;
