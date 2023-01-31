@@ -2,6 +2,7 @@
 title: 自然梯度下降
 tags:
   - machine learning
+  - math
 ---
 
 [[toc]]

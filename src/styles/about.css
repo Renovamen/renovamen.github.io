@@ -7,7 +7,11 @@
 }
 
 .about .prose tr {
-  @apply flex border-t border-c-dark;
+  @apply flex;
+}
+
+.about .prose tr:last-child {
+  @apply border-b-none;
 }
 
 .about .prose td,

@@ -1,5 +1,5 @@
 .prose img {
-  @apply w-full;
+  @apply mx-auto;
 }
 
 .prose p {
@@ -27,6 +27,16 @@ html.dark .prose hr {
 
 main:not(.post) a.header-anchor {
   @apply hidden;
+}
+
+/** Table **/
+
+.prose tr {
+  @apply border-t border-c-dark;
+}
+
+.prose tr:last-child {
+  @apply border-b;
 }
 
 /** KaTeX **/
@@ -85,7 +95,7 @@ html:not(.dark) .prose .shiki-dark {
   @apply bg-gray-800;
 }
 
-/* Containers */
+/** Containers **/
 
 .prose .custom-block {
   @apply border rounded-md px-4 py-0 my-6;
@@ -99,20 +109,28 @@ html:not(.dark) .prose .shiki-dark {
   @apply border-c-dark py-4;
 }
 
+.prose .custom-block.info {
+  @apply border-blue-600 dark:border-sky-400;
+}
+
+.prose .custom-block.info .custom-block-title {
+  @apply text-blue-600 dark:text-sky-400;
+}
+
 .prose .custom-block.tip {
-  @apply border-green-600 dark:border-lime-600;
+  @apply border-green-600 dark:border-lime-500;
 }
 
 .prose .custom-block.tip .custom-block-title {
-  @apply text-green-600 dark:text-lime-600;
+  @apply text-green-600 dark:text-lime-500;
 }
 
 .prose .custom-block.warning {
-  @apply border-amber-600;
+  @apply border-amber-600 dark:border-amber-500;
 }
 
 .prose .custom-block.warning .custom-block-title {
-  @apply text-amber-600;
+  @apply text-amber-600 dark:text-amber-500;
 }
 
 .prose .custom-block.danger {
