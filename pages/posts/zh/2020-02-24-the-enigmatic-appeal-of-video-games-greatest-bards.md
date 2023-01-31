@@ -12,7 +12,7 @@ tags:
   - 摸鱼
 ---
 
-翻译自 [EGM](https://egmnow.com/) 上的文章：[<v-icon name="ri-link-m" scale="0.9"/> *Toss a Coin: The Enigmatic Appeal of Gaming’s Greatest Bards*](https://egmnow.com/toss-a-coin-the-enigmatic-appeal-of-video-games-greatest-bards/)。
+翻译自 [EGM](https://egmnow.com/) 上的文章：[<span i-gg:link /> *Toss a Coin: The Enigmatic Appeal of Gaming’s Greatest Bards*](https://egmnow.com/toss-a-coin-the-enigmatic-appeal-of-video-games-greatest-bards/)。
 
 <!-- more -->
 

@@ -8,7 +8,7 @@
     </template>
 
     <div prose-lg mx-auto mt-6 mb-8>
-      <h1 class="text-4xl font-bold">{{ title }}</h1>
+      <h1 class="text-4xl font-bold leading-12">{{ title }}</h1>
       <p class="opacity-50 mt-2">
         {{ formatDate(date) }} · {{ readingTime }} min
 

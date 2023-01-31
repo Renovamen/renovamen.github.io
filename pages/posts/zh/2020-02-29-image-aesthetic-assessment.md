@@ -63,7 +63,7 @@ tags:
 
 现在有 30,000 左右张图片，每张图片被按内容分为了 7 个类别。美学标注只有“高质量”和“低质量”两个，高低质量图片比例约为 1:3（[Deng et al. 2017](https://arxiv.org/pdf/1610.00838.pdf)）。所以该数据集很难被用来进行评分任务的训练，而且分类难度不算大。因为是直接把从专业摄影网站（dpchallenge.com）和从业余摄影师处收集到的图片混在了一起，所以可能不能代表真实场景（[Murray et al. 2012](http://refbase.cvc.uab.es/files/MMP2012a.pdf)）。
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/>  Multimedia Laboratory, CUHK](http://mmlab.ie.cuhk.edu.hk/archive/CUHKPQ/Dataset.htm)
+下载：[<span i-gg:link />  Multimedia Laboratory, CUHK](http://mmlab.ie.cuhk.edu.hk/archive/CUHKPQ/Dataset.htm)
 
 ### AVA
 
@@ -81,7 +81,7 @@ tags:
 
 但 AVA 的很多图片后期处理痕迹太重。且绝大多数图片来自于专业摄影者而非普通人，所以 AVA 有较大的 bias（[Kone et al. 2016](https://arxiv.org/pdf/1606.01621.pdf)）。
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/> Github](https://github.com/mtobeiyf/ava_downloader)
+下载：[<span i-gg:link /> Github](https://github.com/mtobeiyf/ava_downloader)
 
 
 ### AADB
@@ -100,7 +100,7 @@ tags:
 
 但 AADB 的数据量过小，且标注人员过少。
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/> Google Drive](https://drive.google.com/open?id=0BxeylfSgpk1MOVduWGxyVlJFUHM)
+下载：[<span i-gg:link /> Google Drive](https://drive.google.com/open?id=0BxeylfSgpk1MOVduWGxyVlJFUHM)
 
 
 ### AROD
@@ -124,7 +124,7 @@ $$
 
 <p class="desc">AROD 与其他数据集的比较</p>
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/> Github](https://github.com/cgtuebingen/will-people-like-your-image)，`arod/list.txt` 中给出了图片的 URL，格式为 `url;faves;views`。
+下载：[<span i-gg:link /> Github](https://github.com/cgtuebingen/will-people-like-your-image)，`arod/list.txt` 中给出了图片的 URL，格式为 `url;faves;views`。
 
 ### GPA
 
@@ -132,7 +132,7 @@ $$
 
 一个用于食物图片美感评估的数据集。从社交媒体和食物分类数据集中收集了共 24,000 张图片，然后人工标注（二分类）。
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/> Github](https://github.com/Openning07/GPA)
+下载：[<span i-gg:link /> Github](https://github.com/Openning07/GPA)
 
 
 
@@ -144,7 +144,7 @@ $$
 
 但数据量过少。
 
-~~我并没有找到这个数据集，该论文的 [Github 主页](https://github.com/kunghunglu/DeepPhotoCritic-ICCV17)上似乎也没有。~~ 不久前似乎开源了：[<v-icon name="ri-link-m" scale="0.9"/> Github](https://github.com/ivclab/DeepPhotoCritic-ICCV17)
+~~我并没有找到这个数据集，该论文的 [Github 主页](https://github.com/kunghunglu/DeepPhotoCritic-ICCV17)上似乎也没有。~~ 不久前似乎开源了：[<span i-gg:link /> Github](https://github.com/ivclab/DeepPhotoCritic-ICCV17)
 
 我也不明白为啥 2017 年的论文 2020 年才开源数据集...
 
@@ -155,7 +155,7 @@ $$
 
 把 AVA 中图片的评论都爬了下来，并按角度分成了 6 类，分类的标准基于从 PCCD 中统计出来的信息。比 PCCD 数据量大得多，但没有每个角度的评分，标注要弱一些。
 
-下载：[<v-icon name="ri-link-m" scale="0.9"/> Github](https://github.com/BestiVictory/DPC-Captions)
+下载：[<span i-gg:link /> Github](https://github.com/BestiVictory/DPC-Captions)
 
 
 
