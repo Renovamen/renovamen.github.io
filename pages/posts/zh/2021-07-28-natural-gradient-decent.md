@@ -82,7 +82,7 @@ $$
 
 ### Fisher 信息矩阵
 
-具体的细节可以看我的[这篇博客](/post/2021/07/27/fisher-information-matrix/)。简单来说，**Fisher 信息矩阵**（Fisher Information Matrix）是：
+具体的细节可以看我的[这篇博客](/posts/zh/2021-07-27-fisher-information-matrix)。简单来说，**Fisher 信息矩阵**（Fisher Information Matrix）是：
 
 - 对数似然函数的一阶导的二阶矩（基本定义）：
 

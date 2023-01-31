@@ -23,6 +23,15 @@
   }
 }
 
+.post img,
+.post video {
+  @apply mx-auto my-2;
+}
+
+.post .desc {
+  @apply text-sm text-c-light text-center;
+}
+
 .table-of-contents {
   @apply fixed z-30 w-55 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis hidden;
 }
@@ -45,6 +54,10 @@
 
 .table-of-contents > ul > li > ul > li {
   @apply opacity-60;
+}
+
+.table-of-contents::-webkit-scrollbar {
+  @apply hidden;
 }
 
 @media (max-width: 1200px) {

@@ -17,9 +17,6 @@ socials:
   - icon: i-ri:game-line
     link: https://portfolio.zxh.io
     name: Portfolio
-  - icon: i-system-uicons:paper-plane
-    link: https://blog.zxh.io
-    name: 中文博客
 ---
 
 <div flex items-end justify-between>
