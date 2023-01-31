@@ -58,6 +58,16 @@
                 "name": "Xiaohan Zou",
                 "url": "https://zxh.io"
             }
+        },
+        {
+            "id": "https://zxh.io/posts/zh/2021-06-12-svm",
+            "url": "https://zxh.io/posts/zh/2021-06-12-svm",
+            "title": "支持向量机",
+            "date_modified": "2021-06-01T00:00:00.000Z",
+            "author": {
+                "name": "Xiaohan Zou",
+                "url": "https://zxh.io"
+            }
         }
     ]
 }
