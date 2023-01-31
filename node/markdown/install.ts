@@ -3,6 +3,8 @@ import linkAttributesPlugin from "markdown-it-link-attributes";
 // @ts-expect-error missing types
 import tocPlugin from "markdown-it-table-of-contents";
 import anchorPlugin from "markdown-it-anchor";
+// @ts-expect-error missing types
+import footnotePlugin from "markdown-it-footnote";
 import katexPlugin from "@renovamen/markdown-it-katex";
 import codeBlockPlugin from "./codeBlock";
 import highlightLinesPlugin from "./highlightLines";
@@ -35,6 +37,7 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
   md.use(highlightLinesPlugin);
   md.use(codeBlockPlugin);
   md.use(containerPlugin);
+  md.use(footnotePlugin);
 
   md.use(anchorPlugin, {
     slugify,
