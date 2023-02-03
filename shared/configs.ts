@@ -19,9 +19,9 @@ export const editLink = {
 
 export const giscus = {
   repo: "This-is-an-Apple/giscus-zxh.io",
-  repoId: "R_kgDOIulgbw",
+  repoId: "R_kgDOGl2SjQ",
   category: "Announcements",
-  categoryId: "DIC_kwDOIulgb84CTbeQ",
+  categoryId: "DIC_kwDOGl2Sjc4CAcxK",
   light: "light",
   dark: `${hostname}/css/giscus-dark.css`
 };
