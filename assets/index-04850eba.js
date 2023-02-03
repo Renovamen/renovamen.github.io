@@ -1,1 +1,0 @@
-import{u as o,e as a,J as n}from"./app-329a65c1.js";const u=()=>{const t=o();return a(()=>{if(!t.path.startsWith("/posts"))return;const s=t.path.split("/");return s.length>2&&s[2]==="zh"?"zh":"en"})};function f(t,r=!0){return r?n(t).format("MMM D, YYYY"):n(t).format("MMM D")}export{f,u};
