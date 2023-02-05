@@ -84,9 +84,7 @@ $$
 
 它的思想是，先假设当前参数点 0 按上一次的动量多更新一步到点 1（下图的棕色箭头），然后在更新后的参数 $\theta'_t = \theta_t - r \rho v_{t-1}$ 上算梯度 $\nabla L(\theta'_t)$（红色箭头），用这个梯度来算这一次的动量 $v_t$（绿色箭头），最后用这个动量来真正的更新当前参数点 0 到点 2。
 
-![Hinton's example](/img/posts/zh/2021-01-28/nesterov-momentum-hinton.png)
-
-<p class="desc">图片来源：<a href="https://stats.stackexchange.com/questions/179915/whats-the-difference-between-momentum-based-gradient-descent-and-nesterovs-acc" target="_blank">What's the difference between momentum based gradient descent and Nesterov's accelerated gradient descent?</a></p>
+![Hinton's example](/img/posts/zh/2021-01-28/nesterov-momentum-hinton.png) <!-- desc="图片来源：[What's the difference between momentum based gradient descent and Nesterov's accelerated gradient descent?](https://stats.stackexchange.com/questions/179915/whats-the-difference-between-momentum-based-gradient-descent-and-nesterovs-acc)" -->
 
 可以看到，$\theta$ 和 $\nabla L(\theta)$ 是不需要关注的，我们没有必要 $0 \rarr 1 \rarr 0 \rarr 2 \rarr 3$，我们可以直接把 $\theta'$ 和 $\nabla L(\theta')$ 作为目标，即直接 $1 \rarr 2 \rarr 3$，$1 \rarr 2$ 是在更新参数，$2 \rarr 3$ 相当于是每一步都多更新一步，就不用再假设和回退了。
 

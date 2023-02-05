@@ -72,7 +72,8 @@ $g$ 是一个非线性函数，用于输出单词 $y_t$ 的概率（比如 softm
 
 首次把 attention 引入 seq2seq。
 
-<img src="/img/posts/zh/2020-03-17/machine-translation/seq2seq-attention.png" width="450px" alt="seq2seq attention" />
+![seq2seq attention](/img/posts/zh/2020-03-17/machine-translation/seq2seq-attention.png) <!-- w=450 -->
+
 
 #### Encoder
 
@@ -145,7 +146,7 @@ $a$ 是一个 MLP，$\alpha_{ij}$ 由 $e_{ij}$ 归一化（softmax）后得到�
 
 - 两个层次的 attention (word attention 和 sentence attention)。动机是文档中不同的句子和单词的重要性不同，且词和句子的重要性依赖于上下文。
 
-<img src="/img/posts/zh/2020-03-17/text-classification/HAN.png" width="450px" alt="HAN" />
+![HAN](/img/posts/zh/2020-03-17/text-classification/HAN.png) <!-- w=450 -->
 
 
 #### Word Encoder
@@ -204,6 +205,7 @@ $$
 
 其中，$L$ 为文档中的句子个数。
 
+
 #### Sentence Attention
 
 对每个 $h_i$ 计算一个权重（MLP + softmax），然后加权平均得到文档向量 $v$：
@@ -221,6 +223,7 @@ v = \sum_t \alpha_i h_i
 $$
 
 $u_s$ 依然是是一个随机初始化的 context vector，用于表示哪些句子更重要。
+
 
 #### Document Classification
 
@@ -298,17 +301,19 @@ $c_{t-1}$ 是 LSTM 在上一时间步的细胞状态。
 
 **Rethinking the Inception Architecture for Computer Vision.** *Christian Szegedy, et al.* CVPR 2016. [[Paper]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf) [[Code]](https://github.com/tensorflow/models/blob/master/research/slim/nets/inception_v3.py)
 
+
 #### LSTM
 
 在[另一篇文章](/post/2019/02/15/rnn-with-its-friends/#lstm)里理过 LSTM。
 
-<img src="/img/posts/zh/2020-03-17/img2txt/lstm.png" width="350px" alt="LSTM" />
+![LSTM](/img/posts/zh/2020-03-17/img2txt/lstm.png) <!-- w=350 -->
+
 
 ##### Training
 
 把 LSTM 按时间步展开就是这个样子：
 
-<img src="/img/posts/zh/2020-03-17/img2txt/cnn-lstm.png" width="450px" alt="CNN-LSTM" />
+![CNN-LSTM](/img/posts/zh/2020-03-17/img2txt/cnn-lstm.png) <!-- w=450 -->
 
 这样看起来就像一个前馈网络了。
 
@@ -355,7 +360,7 @@ $$
 
 #### Experiments
 
-<img src="/img/posts/zh/2020-03-17/img2txt/img2txt-result.png" width="400px" alt="result" />
+![result](/img/posts/zh/2020-03-17/img2txt/img2txt-result.png) <!-- w=400 -->
 
 
 ### Show, Attend and Tell
@@ -381,6 +386,7 @@ $$
 
 **Neural Machine Translation by Jointly Learning to Align and Translate.** *Dzmitry Bahdanau, KyungHyun Cho, and Yoshua Bengio.* arXiv 2014. [[arXiv]](https://arxiv.org/pdf/1409.0473.pdf)
 
+
 #### CNN
 
 CNN 用了 VGGNet。
@@ -391,13 +397,12 @@ $$
 a = \{ \bold{a}_1, ..., \bold{a}_L \}, \bold{a}_i \in \reals^D
 $$
 
-<img src="/img/posts/zh/2020-03-17/show-attend-tell/vggnet-arrow.png" width="500px" alt="VGGNet" />
-
-<p class="desc">VGGNet 结构</p>
+![VGGNet](/img/posts/zh/2020-03-17/show-attend-tell/vggnet-arrow.png) <!-- w=500 desc="VGGNet 结构" -->
 
 其中 $H$ 和 $W$ 为特征图的高度和宽度，$D$ 为特征图的维度，$L = H \times W$。相当于对于图片的 $L$ 个位置各提一个特征，每个特征都是一个 $D$ 维向量（annotation vector）。
 
 于是接下来的 LSTM 就需要在这 $L$ 个位置的特征里选有用的，这就是 Attention 机制。
+
 
 #### LSTM + Attention
 
@@ -405,7 +410,7 @@ $$
 
 - LSTM 结构：
 
-  <img src="/img/posts/zh/2020-03-17/show-attend-tell/attention-lstm.png" width="400px" alt="LSTM" />
+  ![LSTM](/img/posts/zh/2020-03-17/show-attend-tell/attention-lstm.png) <!-- w=400 -->
 
 - 推导公式：
 
@@ -431,7 +436,7 @@ $$
 
 但从代码实现来看（以原版代码为准），图应该画成这样（代码实现跟论文描述的出入会在后面提到）（图来自论文 [Adaptive Attention](#adaptive-attention)）：
 
-<img src="/img/posts/zh/2020-03-17/show-attend-tell/true-attention-lstm.png" width="400px" alt="True LSTM" />
+![True LSTM](/img/posts/zh/2020-03-17/show-attend-tell/true-attention-lstm.png) <!-- w=400 -->
 
 ::: info 备注
 虽然在图和推导式里，上一步输出 $y_{t-1}$ 也参与了这一步的计算，但代码（原版和复现）里似乎没有参与。
@@ -518,8 +523,8 @@ $$
 
 **Knowing When to Look: Adaptive Attention via A Visual Sentinel for Image Captioning.** *Jiasen Lu, et al.* CVPR 2017. [[Paper]](http://openaccess.thecvf.com/content_cvpr_2017/papers/Lu_Knowing_When_to_CVPR_2017_paper.pdf) [[Code]](https://github.com/jiasenlu/AdaptiveAttention)
 
-
 不是每个单词的生成都需要利用图像特征，有的词的生成只需要依赖语义信息，如“the”、“of”等词，和跟在“talking on a cell”后面的“phone”等词。因此该论文的 Adaptive Attention 机制能决定当前时间步要用多少图像特征和多少语义信息。
+
 
 #### CNN
 
@@ -562,14 +567,11 @@ $$
 
 首先对 Attention 机制做了一些修改：
 
-<img src="/img/posts/zh/2020-03-17/adaptive-attention/spatial-attention.png" width="500px" alt="Spatial Attention" />
-
-<p class="desc">(a)：Show, Attend and Tell 网络结构，(b)：该论文的 Spatial Attention 网络结构</p>
+![Spatial Attention](/img/posts/zh/2020-03-17/adaptive-attention/spatial-attention.png) <!-- w=500 desc="(a)：Show, Attend and Tell 网络结构，(b)：该论文的 Spatial Attention 网络结构" -->
 
 与[上一篇论文](#show-attend-and-tell)的不同：
 
 - 计算 context vector $c_t$ 时用了 $h_t$ 而不是 $h_{t-1}$，论文认为这样 $c_t$ 就可以看作 $h_t$ 的残差连接，可以在生成下一个词时降低不确定性和提供当前时刻隐状态的信息，灵感来源于 [ResNet](http://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
 
 - $c_t$ 没有输入 LSTM
 
@@ -591,7 +593,6 @@ $$
 \alpha_t = \text{softmax}(z_t)
 $$
 
-
 $\frak{1} \in R^k$ 是一个元素全为 1 的向量，目的是跟 $W_g h_t$ 相乘得到 $k \times k$ 的矩阵。$W_v, W_g \in R^{k \times d}$
 和 $w_h \in R^k$ 都是要学习的权重参数。
 
@@ -604,7 +605,7 @@ $$
 
 #### Adaptive Attention
 
-<img src="/img/posts/zh/2020-03-17/adaptive-attention/adaptive-attention.png" width="400px" alt="Adaptive Attention" />
+![Adaptive Attention](/img/posts/zh/2020-03-17/adaptive-attention/adaptive-attention.png) <!-- w=400 -->
 
 在 LSTM 上新增了一个叫 visual sentinel 的向量 $s_t$，用于记录一部分的细胞状态：
 
@@ -774,25 +775,23 @@ $$
 
 #### Experiments
 
-
 - 与以优化交叉熵损失（XE）为目标的模型和用 MIXER 方法训练的模型的对比实验：
 
-  <img src="/img/posts/zh/2020-03-17/self-critical/sc-result1.png" width="400px" alt="self-critical result1" />
+  ![self-critical result1](/img/posts/zh/2020-03-17/self-critical/sc-result1.png) <!-- w=400 -->
 
 - 尝试 curriculum learning，即先对最后一个单词以优化 CIDEr 为目标进行训练，前面的词则以优化交叉熵损失为目标进行训练，然后每个 epoch 增加一个用 CIDEr 进行训练的单词。但这种方法至少在 MSCOCO 上对效果没有提升。
 
 - 尝试以优化别的指标为目标，但优化 CIDEr 的效果是最好的，能把所有指标都往上拉：
 
-  <img src="/img/posts/zh/2020-03-17/self-critical/sc-result2.png" width="450px" alt="self-critical result2" />
-
+  ![self-critical result2](/img/posts/zh/2020-03-17/self-critical/sc-result2.png) <!-- w=450 -->
 
 - 发现 beam search 对 RL 训练出来的模型效果提升很小：
 
-  <img src="/img/posts/zh/2020-03-17/self-critical/sc-result3.png" width="450px" alt="self-critical result3" />
+  ![self-critical result3](/img/posts/zh/2020-03-17/self-critical/sc-result3.png) <!-- w=450 -->
 
   作为对比，这是 beam search 对用交叉熵损失训练出来的模型效果提升：
 
-  <img src="/img/posts/zh/2020-03-17/self-critical/sc-result4.png" width="450px" alt="self-critical result4" />
+  ![self-critical result4](/img/posts/zh/2020-03-17/self-critical/sc-result4.png) <!-- w=450 -->
 
 - 似乎能对 objects out-of-context (OOOC) 的图片生成比较好的结果
 
@@ -811,7 +810,6 @@ $$
 D = (\Phi_i, C_i, a_i), i \in \{ 1 ... N \}
 $$
 
-
 $\Phi_i$ 是第 $i$ 张图片，$C_i$ 是它的描述（同一张图片可能有多个不同角度的描述），$a_i$（$i \in \{1 ... L\}$）是该描述的角度。在此之外，还有一个 $p_{i,l} \in [0, 1]$ 来描述图片 $\Phi_i$ 在角度 $l$ 上的美感分数。
 
 
@@ -825,7 +823,8 @@ AO 中，训练数据中每张图都只带有一个角度的描述，即 $(\Phi_
 
 CNN 还会用 $\{ (\Phi_i; p_{i,l}) \}$ 进行训练。在测试时，它会输出图片在每个角度上的美感分数，然后把得分最高的角度 $l^*$ 所对应的 CNN-LSTM 模型的输出结果当做最终结果。流程图如下：
 
-<img src="/img/posts/zh/2020-03-17/pccd/ao.png" width="400px" alt="ao-approach" />
+![ao-approach](/img/posts/zh/2020-03-17/pccd/ao.png) <!-- w=400 -->
+
 
 #### Aspect-fusion
 
@@ -860,16 +859,13 @@ $$
 \alpha_{lt}^{\tau} = \frac{ \exp (e_{lt}^{\tau}) }{ \sum_{p=1}^L \sum_{q=1}^T \exp (e_{pq}^{\tau}) }
 $$
 
-
 其中，$\gamma$ 是 ReLU 激活函数，$W \in R^{n \times n}$、$U \in R^{n \times n}$ 和 $V \in R^{n \times n}$ 是需要学习的权重，$n$ 是 LSTM 隐藏层大小（论文里面设的 768）。
 
 流程图如下（自行加了一些不知对不对的标注）：
 
-<img src="/img/posts/zh/2020-03-17/pccd/af.jpg" width="600px" alt="af-approach" />
-
+![af-approach](/img/posts/zh/2020-03-17/pccd/af.jpg) <!-- w=600 -->
 
 相当于论文认为 CNN-LSTM 输出的隐状态可以被看做每个角度的输入的深层特征，然后 Soft Attention 机制又可以很好的把它们融合到一起。
-
 
 **困惑**：按照代码里面的写法，第二个 LSTM 明明已经是在生成融合各个角度之后的句子了，却依然把每个角度的句子分别输入和用来算损失，感觉说不通，虽然的确也没有角度融合后的 ground truth 就是了...
 
@@ -878,7 +874,7 @@ $$
 
 图片和评论来源于 [GuruShots](https://gurushots.com/)，评论被分为了 7 个角度，每个角度都有评分（评分范围为 1-10）：
 
-<img src="/img/posts/zh/2020-03-17/pccd/pccd.png" width="450px" alt="PCCD" />
+![PCCD](/img/posts/zh/2020-03-17/pccd/pccd.png) <!-- w=450 -->
 
 
 #### Experiments
@@ -889,7 +885,6 @@ $$
 
 评估指标用了 [SPICE](https://panderson.me/images/SPICE.pdf)。
 
-
 实验结果：
 
-<img src="/img/posts/zh/2020-03-17/pccd/pccd-result.png" width="450px" alt="result" />
+![result](/img/posts/zh/2020-03-17/pccd/pccd-result.png) <!-- w=450 -->

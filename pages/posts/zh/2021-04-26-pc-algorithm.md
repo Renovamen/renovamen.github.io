@@ -32,9 +32,7 @@ $x$ 为随机向量 $X$ 的取值。可以看到，如果某些变量之间存�
 
 - 无向图模型，也称为**马尔可夫随机场**（Markov Random Field，MRF），使用无向图来描述变量之间的关系。两个节点之间有连边代表这两个变量之间有概率依赖关系，但不一定是因果关系。
 
-![pcg](/img/posts/zh/2021-04-26/pcg.png)
-
-<p class="desc">图片来源：<a href="https://github.com/nndl/nndl.github.io" target="_blank">《神经网络与深度学习》</a>，邱锡鹏</p>
+![pcg](/img/posts/zh/2021-04-26/pcg.png) <!-- desc="图片来源：[《神经网络与深度学习》](https://github.com/nndl/nndl.github.io)，邱锡鹏" -->
 
 本文只讨论有向图模型，即贝叶斯网络。
 
@@ -44,7 +42,6 @@ $x$ 为随机向量 $X$ 的取值。可以看到，如果某些变量之间存�
 ### 定义
 
 有向无环图 $G$ 中，每个节点对应 $K$ 维随机向量 $X$ 中的一个变量，有向边 $e_{ij}$ 表示随机变量 $X_i$ 和 $X_j$ 之间具有因果关系，父节点 $X_i$ 是『因』，子节点 $X_j$ 是『果』，显然这两个点之间一定非条件独立。
-
 
 令 $X_{\pi_k}$ 为变量 $X_k$ 的所有父节点变量集合，$P(X_k \mid X_{\pi_k})$ 表示每个随机变量的**局部条件概率分布（Local Conditional Probability Distribution）**。
 
@@ -124,9 +121,7 @@ $$
 
 用 $O(i, j)$ 表示能够 $d$ 分隔 $i$ 和 $j$ 的点集，用 $adj(G, x)$ 表示图 $G$ 中节点 $x$ 的相邻点集，那么 PC 算法检验条件独立性的具体流程为[^pc-jmlr2007]：
 
-![pc-skeleton](/img/posts/zh/2021-04-26/pc-skeleton.png)
-
-<p class="desc"><a href="https://www.jmlr.org/papers/volume8/kalisch07a/kalisch07a.pdf" target="_blank">Estimating High-Dimensional Directed Acyclic Graphs with the PC-Algorithm</a>. Markus Kalisch and Peter Buhlmann. JMLR 2007.</p>
+![pc-skeleton](/img/posts/zh/2021-04-26/pc-skeleton.png) <!-- desc="[Estimating High-Dimensional Directed Acyclic Graphs with the PC-Algorithm](https://www.jmlr.org/papers/volume8/kalisch07a/kalisch07a.pdf). Markus Kalisch and Peter Buhlmann. JMLR 2007." -->
 
 简单总结一下：
 
@@ -177,14 +172,13 @@ $$
 其中 $\Phi(\cdot)$ 为 $\mathcal{N}(0, 1)$ 的累积分布函数，则拒绝零假设，$i, k$ 关于 $K$  条件独立。所以将上面伪代码的第 11 行替换为 **if $\sqrt{n - |K| - 3}| Z(i,j \mid K) \leq \Phi^{-1} (1 - \alpha/2)$**。
 
 
-
 ### 依赖关系方向确立
 
 经过上一个阶段，我们得到了一个无向图。现在我们要利用 $d$ 分隔的原理来确定图中边的依赖方向，把骨架扩展为 DAG。
 
 对于任意三个以有效依赖关系边相连的节点 $X-Z-Y$，其依赖关系必为下图的四种关系之一：
 
-<img src="/img/posts/zh/2021-04-26/link.png" width="450px" alt="link" />
+![link](/img/posts/zh/2021-04-26/link.png) <!-- w=450 -->
 
 $d$ 分隔的结论为：对于有向无环图 $E$，有两个节点 $X, Y$ 和一个点集 $O$，为了判断 $X$ 和 $Y$ 是否关于 $O$ 条件独立，考虑 $E$ 中所有 $X$ 和 $Y$ 之间的无向路径，对于其中一条路径，如果它满足以下两个条件中的任意一条，则称这条路径是阻塞的：
 
@@ -207,9 +201,7 @@ $d$ 分隔的结论为：对于有向无环图 $E$，有两个节点 $X, Y$ 和�
 
 总结一下：
 
-![extend-to-cpdag](/img/posts/zh/2021-04-26/extend-to-cpdag.png)
-
-<p class="desc"><a href="https://www.jmlr.org/papers/volume8/kalisch07a/kalisch07a.pdf" target="_blank">Estimating High-Dimensional Directed Acyclic Graphs with the PC-Algorithm</a>. Markus Kalisch and Peter Buhlmann. JMLR 2007.</p>
+![extend-to-cpdag](/img/posts/zh/2021-04-26/extend-to-cpdag.png) <!-- desc="[Estimating High-Dimensional Directed Acyclic Graphs with the PC-Algorithm](https://www.jmlr.org/papers/volume8/kalisch07a/kalisch07a.pdf). Markus Kalisch and Peter Buhlmann. JMLR 2007." -->
 
 这样我们就可以得到一个完全部分有向无环图。
 
@@ -247,9 +239,7 @@ $d$ 分隔的结论为：对于有向无环图 $E$，有两个节点 $X, Y$ 和�
 
 举个栗子：
 
-<img src="/img/posts/zh/2021-04-26/markov-equivalence-class.png" width="450px" alt="markov-equivalence-class" />
-
-<p class="desc">马尔科夫等价类</p>
+![markov-equivalence-class](/img/posts/zh/2021-04-26/markov-equivalence-class.png) <!-- w=450 desc="马尔科夫等价类" -->
 
 上图 $G_1$ 和 $G_2$ 是马尔科夫等价类，它们左上角的那条有向边方向并不相同，这时 PC 算法就无法判断这条边的方向了，只能输出无向边，即 $G_3$。
 

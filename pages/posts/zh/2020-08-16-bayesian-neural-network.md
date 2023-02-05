@@ -160,7 +160,7 @@ MAP 提供了一个直观的方法来设计复杂但可解释的正则化项，�
 
 这是一个神经元：
 
-<img src="/img/posts/zh/2020-08-16/neuron.png" width="400px" alt="neuron" />
+![neuron](/img/posts/zh/2020-08-16/neuron.png) <!-- w=400 -->
 
 一般的神经网络中，$w$ 和 $b$ 都是确定的值。对于数据集 $D = \{(x_1, y_1), \dots, (x_n, y_n)\}$，其学习可以视作是一个极大似然估计：
 

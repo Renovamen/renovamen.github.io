@@ -1,5 +1,5 @@
 ---
-title: 元学习：一种套娃算法
+title: Meta Learning：一种套娃算法
 tags:
   - meta learning
   - deep learning
@@ -30,10 +30,7 @@ continual learning 方向 19 年之后的[几篇论文](https://note.zxh.io/pape
 
 但不同的相似任务之间是有联系的。比如人类学会分类新的物体并不需要很多的样本作为支撑，人类可以做到只观看一个物体的一张或几张图片，就在之后的照片中准确地识别。这就是利用了不同任务之间的联系，基于过往的经验快速地学习。比如下面这个例子，训练数据中每个类别就三个样本，然后让你判断测试数据是哪个画家的作品：
 
-![which painter](/img/posts/zh/2020-08-05/paint.png)
-
-<p class="desc">图片来源：<a href="https://drive.google.com/file/d/1DuHyotdwEAEhmuHQWwRosdiVBVGm8uYx/view" target="_blank">Slides for ICML 2019 Meta-Learning Tutorial</a></p>
-
+![which painter](/img/posts/zh/2020-08-05/paint.png) <!-- desc="图片来源：[Slides for ICML 2019 Meta-Learning Tutorial](https://drive.google.com/file/d/1DuHyotdwEAEhmuHQWwRosdiVBVGm8uYx/view)" -->
 
 答案是 Braque。由于每个类别的样本很少，人类能答对这个问题很大程度上是依赖过往经验，而不是从头开始学习（虽然作为~~神~~人类我觉得这个问题似乎也不简单？2333）。所以就有了这样的想法：有些不同的任务之间是有一定的联系的，所以虽然我现在要做的这个任务的数据集的数据量很少，但我有很多其它的数据集，如果模型可以先在其他数据集上学到“如何快速学习新知识”的先验知识（即 learn to learn，学习出一个会学习的模型），大概就能仅用少量的数据就学会新的概念。
 
@@ -59,17 +56,11 @@ $$
 
 数据集 $D$ 通常还会被划分为训练集 support set $S$ 和测试集 query set $B$，即 $D = \lang S,B \rang$。相当于 meta learning 的训练阶段会**模拟传统训练中的测试过程**。
 
-![datasets for meta-learning](/img/posts/zh/2020-08-05/meta-dataset.png)
-
-<p class="desc">图片来源：<a href="https://www.dropbox.com/s/sm68skkkbxbob0i/metalearning.pdf?dl=0" target="_blank">Generalizing from Few Examples with Meta-Learning</a></p>
-
+![datasets for meta-learning](/img/posts/zh/2020-08-05/meta-dataset.png) <!-- desc="图片来源：[Generalizing from Few Examples with Meta-Learning](https://www.dropbox.com/s/sm68skkkbxbob0i/metalearning.pdf?dl=0)" -->
 
 一个需要解释一下的术语是 N-way K-shot，指 support set 中有 N 类数据，每类数据有 K 个带有标注的样本。
 
-
-![few shot classification](/img/posts/zh/2020-08-05/few-shot-classification.png)
-
-<p class="desc">2-way 4-shot 图像分类示例。我们希望模型在知道了如何区分『猫和鸟』以及『花和自行车』后，能快速学会区分『狗和水獭』。图片来源：<a href="https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html#a-simple-view" target="_blank">Meta-Learning: Learning to Learn Fast</a></p>
+![few shot classification](/img/posts/zh/2020-08-05/few-shot-classification.png) <!-- desc="2-way 4-shot 图像分类示例。我们希望模型在知道了如何区分『猫和鸟』以及『花和自行车』后，能快速学会区分『狗和水獭』。图片来源：[Meta-Learning: Learning to Learn Fast](https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html#a-simple-view)" -->
 
 
 ### 训练过程
@@ -80,7 +71,7 @@ meta learning 的训练过程一般为，对于每一个 task $D$：
 
 2. 在 support set $S$ 上进行学习，根据这些样本上的损失进行参数更新，得到更新后的参数 $\theta'$。但通常 $\theta'$ 只是一个临时参数。
 
-    这一步被叫做元学习器（meta-learner），其目的是为整个模型（学习器）该怎么更新参数提供指导；
+  这一步被叫做元学习器（meta-learner），其目的是为整个模型（学习器）该怎么更新参数提供指导；
 
 3. 用临时参数 $\theta'$ 在 query set $B$ 上计算损失，并根据这个损失来更新模型参数。这一步是永久更新，与监督学习一致。
 
@@ -112,14 +103,14 @@ meta learning 主要有三类常见的方法：
 
 MAML（Model-Agnostic Meta-Learning）是一种通用的基于优化的算法，可以被用于任何基于梯度下降学习的模型。它的目标是学习出一组初始化参数 $\theta$，对于任意 task，这个初始化的参数都能在一步或极少步梯度下降中就快速达到最优参数解 $\theta_n^*$：
 
-<img src="/img/posts/zh/2020-08-05/maml-diagram.png" width="450px" alt="diagram of maml" />
+![diagram of maml](/img/posts/zh/2020-08-05/maml-diagram.png) <!-- w=450 -->
 
 
 ### Meta-Train
 
 MAML 的训练过程（一般被称为 meta-train）为：
 
-<img src="/img/posts/zh/2020-08-05/maml-alg.png" width="600px" alt="maml algorithm" />
+![maml algorithm](/img/posts/zh/2020-08-05/maml-alg.png) <!-- w=600 -->
 
 可以看到对于采样出每个 task $\mathcal{T}_i$，有两层循环：
 
@@ -129,10 +120,7 @@ MAML 的训练过程（一般被称为 meta-train）为：
 
 这个过程如下图所示：
 
-<img src="/img/posts/zh/2020-08-05/maml-update.png" width="300px" alt="maml update" />
-
-<p class="desc">图片来源：<a href="https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta1%20(v6).pdf" target="_blank">Meta Learning，李宏毅</a></p>
-
+![maml update](/img/posts/zh/2020-08-05/maml-update.png) <!-- w=300 desc="图片来源：[Meta Learning，李宏毅](https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta1%20(v6).pdf)" -->
 
 
 ### Meta-Test
@@ -179,7 +167,7 @@ MAML 的思想很像 transfer learning，即在大数据集上预训练一个模
 
 下图是 MAML 和一般的预训练模型的参数更新方式对比：
 
-<img src="/img/posts/zh/2020-08-05/maml-pretrain.png" width="600px" alt="maml vs pre-train" />
+![maml vs pre-train](/img/posts/zh/2020-08-05/maml-pretrain.png) <!-- w=600 -->
 
 
 ## FOMAML
@@ -200,13 +188,10 @@ $$
 
 FOMAML 算法流程为：
 
-![fomaml](/img/posts/zh/2020-08-05/fomaml.png)
-
-<p class="desc">图片来源：<a href="https://www.andrew.cmu.edu/user/abhijatb/assets/Deep_RL_project.pdf" target="_blank">First-order Meta-Learned Initialization for Faster Adaptation in Deep Reinforcement Learning</a></p>
-
-
+![fomaml](/img/posts/zh/2020-08-05/fomaml.png) <!-- desc="图片来源：[First-order Meta-Learned Initialization for Faster Adaptation in Deep Reinforcement Learning](https://www.andrew.cmu.edu/user/abhijatb/assets/Deep_RL_project.pdf)" -->
 
 从论文中的实验，包括 [Reptile](#reptile) 论文中的实验来看，省掉二阶梯度对于结果的影响并不大。
+
 
 ## Reptile
 
@@ -232,11 +217,11 @@ Reptile 与 FOMAML 的区别在于：
 
 Reptile 的参数更新过程：
 
-<img src="/img/posts/zh/2020-08-05/reptile-update.png" width="600px" alt="reptile update" />
+![reptile update](/img/posts/zh/2020-08-05/reptile-update.png) <!-- w=600 -->
 
 与 MAML 和 Pre-train 在一次外循环里的参数更新的对比：
 
-<img src="/img/posts/zh/2020-08-05/reptile-maml-pretrain.png" width="400px" alt="reptile vs maml vs pre-train" />
+![reptile vs maml vs pre-train](/img/posts/zh/2020-08-05/reptile-maml-pretrain.png) <!-- w=400 -->
 
 
 ## Reptile & MAML
@@ -249,9 +234,7 @@ Reptile 论文里还对 Reptile 和 MAML 的原理写了一大段分析。推了
 
 这是一张解释第二点的图：
 
-<img src="/img/posts/zh/2020-08-05/transfer-interference.jpg" width="550px" alt="transfer & interference" />
-
-<p class="desc">图片来源：<a href="https://arxiv.org/pdf/1810.11910.pdf" target="_blank">Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (ICLR 2019)</a></p>
+![transfer & interference](/img/posts/zh/2020-08-05/transfer-interference.jpg) <!-- w=550 desc="图片来源：[Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference (ICLR 2019)](https://arxiv.org/pdf/1810.11910.pdf)" -->
 
 
 ## 参考

@@ -9,6 +9,7 @@ import katexPlugin from "@renovamen/markdown-it-katex";
 import codeBlockPlugin from "./codeBlock";
 import highlightLinesPlugin from "./highlightLines";
 import containerPlugin from "./container";
+import imagePlugin from "./image";
 
 // https://github.com/mdit-vue/mdit-vue/blob/main/packages/shared/src/slugify.ts
 const rControl = /[\u0000-\u001f]/g;
@@ -38,6 +39,7 @@ export const installMarkdownPlugins = (md: MarkdownIt) => {
   md.use(codeBlockPlugin);
   md.use(containerPlugin);
   md.use(footnotePlugin);
+  md.use(imagePlugin);
 
   md.use(anchorPlugin, {
     slugify,

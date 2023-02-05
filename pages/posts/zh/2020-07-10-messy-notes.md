@@ -27,6 +27,7 @@ $$
 \theta_{t+1} = \theta_t - r \cdot \nabla L(\theta_t)
 $$
 
+
 #### BGD
 
 Batch Gradient Descent，批量梯度下降，在每一次迭代时使用所有样本来进行梯度更新：
@@ -39,7 +40,6 @@ $$
 - 所有的样本都对参数更新有贡献，凸函数假设下一定能达到全局最优；
 
 - 每次迭代都需要对所有样本进行计算，所以样本太多时，要耗费大量计算资源和时间
-
 
 
 #### SGD
@@ -107,11 +107,9 @@ $$
 \theta_{t+1} = \theta_t + v_t
 $$
 
-<img src="/img/posts/zh/2020-07-10/nesterov.jpeg" width="600px" alt="nesterov update" />
-
+![nesterov update](/img/posts/zh/2020-07-10/nesterov.jpeg) <!-- w=600 -->
 
 梯度不是根据当前参数位置 $\theta_t$，而是根据先走了本来计划要走的一步后，达到的参数位置 $\theta_t + \rho v_{t-1}$ 计算出来的。
-
 
 - 比原始 momentum 收敛得更快，[这里](https://zhuanlan.zhihu.com/p/22810533)是一个解释，简单来说就是因为 NAG 相对于 momentum 多了一个本次梯度相对上次梯度的变化量（目标函数的二阶导）。
 
@@ -141,6 +139,7 @@ $\epsilon$ 是一个用于保证分母非 0 的平滑项。相当于现在学习
 - 给不同参数不同的学习率
 
 - 因为 $\sqrt{h_t}$ 单调递增，所有学习率会单调递减至（接近）0，可能会使训练过程提前结束
+
 
 #### RMSProp
 
@@ -185,6 +184,7 @@ $$
 
 如果不考虑 $\epsilon$，可以看做是用 $\sqrt{\Delta \theta_{t-1}}$ 代替了 RMSProp 中的学习率 $r$。
 
+
 ### Adam
 
 Adaptive Moment Estimation，考虑了一阶动量和二阶动量，可以理解为 momentum + RMSprop：
@@ -214,6 +214,7 @@ $$
 $$
 \theta_t = \theta_{t-1} - r \cdot \frac{\hat{v}_t}{\sqrt{\hat{h}_t + \epsilon}}
 $$
+
 
 ### 参考
 
@@ -252,8 +253,7 @@ $$
 
 当窗口大小为 3（左右长度都为 1）时，共现矩阵为：
 
-<img src="/img/posts/zh/2020-07-10/co-matrix.png" width="500px" alt="Co-occurrence Matrix" />
-
+![Co-occurrence Matrix](/img/posts/zh/2020-07-10/co-matrix.png) <!-- w=500 -->
 
 可以想到的方法是把共现矩阵的行或列作为单词的词向量：
 
@@ -323,8 +323,8 @@ NNLM（Neural Network Language Model，神经网络语言模型）即用神经�
 
 具体原理和数学推导可以参考这里：[word2vec 中的数学原理详解](https://blog.csdn.net/itplus/article/details/37969519)
 
-
 word2vec 的本质依然是语言模型，但是它的目标并不是语言模型本身，而是词向量。所以它所采取的一系列优化都是为了更快更好的得到词向量。
+
 
 ##### 两种模型
 
@@ -335,6 +335,7 @@ word2vec 的本质依然是语言模型，但是它的目标并不是语言模�
 $$
 L = \sum_{w \in C} \log p(w | \text{Context}(w))
 $$
+
 
 ###### Skip-gram
 
@@ -359,8 +360,7 @@ Hierarchical Softmax（层次化 Softmax）会先构造一个哈夫曼树（Huff
 
 这里构造的哈夫曼树的根节点是整个词典，每一个子节点为父节点的两个不相交子集，每个单词都是一个叶子节点，叶子节点的权值为词频。带权路径最小的条件保证了哈夫曼树中，高频词离根结点更近，而低频词离根结点更远。
 
-<img src="/img/posts/zh/2020-07-10/huffman.jpg" width="400px" alt="Huffman" />
-
+![Huffman](/img/posts/zh/2020-07-10/huffman.jpg) <!-- w=400 -->
 
 考虑单词 $w$ 对应的叶子节点，记：
 
@@ -410,7 +410,6 @@ $$
 
 &nbsp;
 
-
 然后对条件概率函数求最大似然即可，具体公式上面引用的那篇[博客](https://blog.csdn.net/itplus/article/details/37969979)里有。
 
 - 时间复杂度从 $O(V)$ 降到 $O(\log_2V)$
@@ -434,8 +433,8 @@ $$
 p(u | \text{Context}(w)) = 
 
 \begin{cases}
-   \sigma(x_w^{\top} \theta^u),      &u \text{为正样本} \\
-   1 - \sigma(x_w^{\top} \theta^u),  &u \text{为负样本}
+  \sigma(x_w^{\top} \theta^u),      &u \text{为正样本} \\
+  1 - \sigma(x_w^{\top} \theta^u),  &u \text{为负样本}
 \end{cases}
 $$
 
@@ -472,8 +471,8 @@ $$
 p(z | w) = 
 
 \begin{cases}
-   \sigma(v(w)^{\top} \theta^z),      &z \text{为正样本} \\
-   1 - \sigma(v(w)^{\top} \theta^z),  &z \text{为负样本}
+  \sigma(v(w)^{\top} \theta^z),      &z \text{为正样本} \\
+  1 - \sigma(v(w)^{\top} \theta^z),  &z \text{为负样本}
 \end{cases}
 $$
 
@@ -489,7 +488,7 @@ $$
 
 然后把这些线段首尾相接拼在一起，形成一个长度为 1 的线段（相当于对区间 $[0,1]$ 做非等距切分）。然后再引入一个区间 $[0,1]$ 上的 $M$ 等距切分，其中 $M >> N$（word2vec 源码中 $M = 10^8$）。然后即可建立这两个切分的映射关系，如下图所示：
 
-<img src="/img/posts/zh/2020-07-10/neg.jpg" width="500px" alt="NEG" />
+![NEG](/img/posts/zh/2020-07-10/neg.jpg) <!-- w=500 -->
 
 采样时，每次生成一个 $[1, M-1]$ 之间的整数 $i$，则 $m_i$ 对应的线段对应的单词就是一个样本。当碰巧采样到自己（正样本）时，则跳过。
 
@@ -529,12 +528,12 @@ $$
 f(x) = 
 
 \begin{cases}
-    (x / x_{max})^{\alpha}  &\text{if } x < x_{max} \\
-    1                       &\text{otherwise}
+  (x / x_{max})^{\alpha}  &\text{if } x < x_{max} \\
+  1                       &\text{otherwise}
 \end{cases}
 $$
 
-<img src="/img/posts/zh/2020-07-10/glove-weighting-function.png" width="400px" alt="Weighting Function" />
+![Weighting Function](/img/posts/zh/2020-07-10/glove-weighting-function.png) <!-- w=400 -->
 
 该函数满足以下条件：
 
@@ -565,9 +564,9 @@ GloVe 的特点：
 
 - 相比 CBOW，考虑了 subword，最终的词向量是 subword 向量和的叠加。这样做的优点：
 
-    - 对于低频词生成的词向量效果会更好，因为它们的 subword 可以和其它词共享
+  - 对于低频词生成的词向量效果会更好，因为它们的 subword 可以和其它词共享
 
-    - 对于训练集之外的单词，依然可以构建它们的词向量（叠加它们的 subword 向量）
+  - 对于训练集之外的单词，依然可以构建它们的词向量（叠加它们的 subword 向量）
 
 
 用于文本分类时：
@@ -592,7 +591,7 @@ GloVe 的特点：
 
 - 语言模型综述：[A Survey on Neural Network Language Models](https://arxiv.org/pdf/1906.03591.pdf)
 
-    中文翻译：[神经网络语言模型综述](https://zhuanlan.zhihu.com/p/109564205)
+  中文翻译：[神经网络语言模型综述](https://zhuanlan.zhihu.com/p/109564205)
 
 - 预训练模型综述：[Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf)
 
@@ -607,10 +606,7 @@ GloVe 的特点：
 
 ## 预训练模型
 
-![Pre-trained Models](/img/posts/zh/2020-07-10/PTMs.jpg)
-
-<p class="desc">预训练模型分类（来源：<a href="https://zhuanlan.zhihu.com/p/115014536" target="_blank">PTMs：NLP预训练模型的全面总结</a>）</p>
-
+![Pre-trained Models](/img/posts/zh/2020-07-10/PTMs.jpg) <!-- desc="预训练模型分类（来源：[PTMs：NLP预训练模型的全面总结](https://zhuanlan.zhihu.com/p/115014536)）" -->
 
 预训练模型（Pre-trained Models）会学习带有上下文的 contextual embedding，词的表征可以根据上下的语境而动态改变。给定一个文本序列 $x_1, x_2, \dots, x_T$，$x_t$ 的 contextual embedding（或者叫 dynamical embedding）$h_t$ 依赖于整个文本：
 
@@ -620,10 +616,7 @@ $$
 
 $f_{\text{enc}}(\cdot)$ 就是下图中的 contextual encoder：
 
-<img src="/img/posts/zh/2020-07-10/contextual-embedding.png" width="500px" alt="Contextual Embeddings" />
-
-<p class="desc">图片来源：<a href="https://arxiv.org/pdf/2003.08271.pdf" target="_blank">Pre-trained Models for Natural Language Processing: A Survey</a></p>
-
+![Contextual Embeddings](/img/posts/zh/2020-07-10/contextual-embedding.png) <!-- w=500 desc="图片来源：[Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf)" -->
 
 输入为文本序列的 one-hot 编码，经过 embedding 层得到 non-contextual embeddings，然后经过 contextual encoder 得到 contextual embeddings。embedding 层和 contextual encoder 都需要学习。
 
@@ -631,35 +624,35 @@ $f_{\text{enc}}(\cdot)$ 就是下图中的 contextual encoder：
 
 - **自回归语言模型（Aotoregressive Lanuage Modeling）**
 
-    依据前面（或后面）出现的 token 来预测当前时刻的 token，代表模型有 ELMo、GTP 等。
+  依据前面（或后面）出现的 token 来预测当前时刻的 token，代表模型有 ELMo、GTP 等。
 
-    $$
-    p(x_{1:T}) = \prod_{t=1}^T p(x_t | x_{0:t-1})
-    $$
+  $$
+  p(x_{1:T}) = \prod_{t=1}^T p(x_t | x_{0:t-1})
+  $$
 
-    特点：
+  特点：
 
-    - 语言模型联合概率的无偏估计（即传统的语言模型），考虑被预测 token 之间的相关性，天然适合处理生成任务（所以 GPT 能编故事，BERT 编不太了）
+  - 语言模型联合概率的无偏估计（即传统的语言模型），考虑被预测 token 之间的相关性，天然适合处理生成任务（所以 GPT 能编故事，BERT 编不太了）
 
-    - 只能获取单方向的信息
+  - 只能获取单方向的信息
 
 - **自编码语言模型（Autoencoding Language Modeling）**
 
-    通过上下文信息来预测当前被 mask 的 token，代表模型有 BERT 等。
+  通过上下文信息来预测当前被 mask 的 token，代表模型有 BERT 等。
 
-    $$
-    p(x_{1:T}) = \sum_{t=1}^T m_t \log p(x_t | \hat{x})
-    $$
+  $$
+  p(x_{1:T}) = \sum_{t=1}^T m_t \log p(x_t | \hat{x})
+  $$
 
-    其中 $\hat{x}$ 为上下文，即加噪后的文本序列；如果当前 token 需要被预测，$m_t=1$，否则 $m_t=0$。
-    
-    特点：
+  其中 $\hat{x}$ 为上下文，即加噪后的文本序列；如果当前 token 需要被预测，$m_t=1$，否则 $m_t=0$。
+  
+  特点：
 
-    - 通过引入噪声「MASK」来获取双向上下文信息表示
+  - 通过引入噪声「MASK」来获取双向上下文信息表示
 
-    - 引入独立性假设，为语言模型联合概率的有偏估计，没有考虑预测 token 之间的相关性
+  - 引入独立性假设，为语言模型联合概率的有偏估计，没有考虑预测 token 之间的相关性
 
-    - 预训练（DAE；有「MASK」）与微调（Autogressive LM；，无「MASK」）模式不匹配
+  - 预训练（DAE；有「MASK」）与微调（Autogressive LM；，无「MASK」）模式不匹配
 
 - **排列语言模型（Permuted Language Model）**
 
@@ -670,9 +663,7 @@ $f_{\text{enc}}(\cdot)$ 就是下图中的 contextual encoder：
 
 自回归语言模型。编码器是双层双向 LSTM，每层的两个单向 LSTM（前向和后向）直接拼接。并未进行双向信息的融合，所以不会出现标签泄漏。（[这里](https://www.zhihu.com/question/322034410/answer/794201004)是对标签泄漏的更详细的解释）
 
-![ELMo](/img/posts/zh/2020-07-10/elmo.png)
-
-<p class="desc">图片来源：<a href="https://www.aclweb.org/anthology/N19-1423.pdf" target="_blank">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a></p>
+![ELMo](/img/posts/zh/2020-07-10/elmo.png) <!-- desc="图片来源：[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://www.aclweb.org/anthology/N19-1423.pdf)" -->
 
 ELMo 中每一层的输出向量都有不同的含义：E1 是单词特征，E2 是句法特征，E3 是语义特征。下游任务在使用词向量时，会通过一些方式将每一层的向量融合得到预训练词向量，然后将该向量与下游任务的词向量进行拼接得到最终的词向量。
 
@@ -692,11 +683,9 @@ ELMo 中每一层的输出向量都有不同的含义：E1 是单词特征，E2 
 - 进行下游任务时，直接在预训练模型上进行 fine-tuning，而不是直接用现成的词向量
 
 
-
 ### BERT
 
 **BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.** *Jacob Devlin, et al.* NAACL-HLT 2019. [[Paper]](https://www.aclweb.org/anthology/N19-1423.pdf) [[Slide]](https://nlp.stanford.edu/seminar/details/jdevlin.pdf) [[Code]](https://github.com/google-research/bert)
-
 
 自编码语言模型。编码器是 Transformer 的 encoder 部分，更够利用双向信息。
 
@@ -704,7 +693,7 @@ ELMo 中每一层的输出向量都有不同的含义：E1 是单词特征，E2 
 
 BERT 还在 Transformer-Encoder 的基础上做了 mask 操作（Masked Language Model，MLM），即随机 mask 掉输入序列的部分 tokens，然后只预测被 mask 掉的 tokens。MLM 能够更好的获取双向上下文特征表示，也能解决深度 Transformer 带来的标签泄露（see itself）的问题。标签泄露指，Transformer 自带的全局 self-attention 会将上下文的词编码到当前模型里，所以在预测其他词的时候，该词的信息已经包含在了前一层的网络参数里：
 
-<img src="/img/posts/zh/2020-07-10/see-itself.jpg" width="400px" alt="see itself" />
+![see itself](/img/posts/zh/2020-07-10/see-itself.jpg) <!-- w=400 -->
 
 BERT 的特点：
 
@@ -720,12 +709,11 @@ BERT 的特点：
 **XLNet: Generalized Autoregressive Pretraining for Language Understanding.** *Zhilin Yang, et al.* NIPS 2019. [[Paper]](http://papers.nips.cc/paper/8812-xlnet-generalized-autoregressive-pretraining-for-language-understanding.pdf) [[Code]](https://github.com/zihangdai/xlnet)
 
 
-
 ### 参考
 
 - 语言模型综述：[A Survey on Neural Network Language Models](https://arxiv.org/pdf/1906.03591.pdf)
 
-    中文翻译：[神经网络语言模型综述](https://zhuanlan.zhihu.com/p/109564205)
+  中文翻译：[神经网络语言模型综述](https://zhuanlan.zhihu.com/p/109564205)
 
 - 预训练模型综述：[Pre-trained Models for Natural Language Processing: A Survey](https://arxiv.org/pdf/2003.08271.pdf)
 
@@ -741,10 +729,6 @@ BERT 的特点：
 **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift.** *Sergey Ioffe and Christian Szegedy.* ICML 2015. [[Paper]](http://proceedings.mlr.press/v37/ioffe15.pdf)
 
 Inception V2 的论文，重要贡献之一是提出了 Batch Normalization（BN，批标准化）。
-
-
-
-
 
 
 ### 参考

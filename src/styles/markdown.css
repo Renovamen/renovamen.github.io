@@ -11,6 +11,15 @@
   @apply no-underline hover:underline text-c-active font-normal;
 }
 
+.prose img,
+.prose video {
+  @apply mx-auto my-2;
+}
+
+.prose figure figcaption {
+  @apply text-sm text-c-light;
+}
+
 .prose hr {
   /* border-c */
   border-top: 1px solid #e5e7eb;
@@ -19,6 +28,10 @@
 html.dark .prose hr {
   /* border-c */
   border-top: 1px solid #4b5563;
+}
+
+.prose hr.footnotes-sep {
+  @apply hidden;
 }
 
 main:not(.post) a.header-anchor {
@@ -58,7 +71,7 @@ html:not(.dark) .prose .shiki-dark {
 }
 
 .prose div[class*=language-] {
-  @apply relative border border-c-dark pt-6 rounded-md;
+  @apply relative my-2 border border-c-dark pt-6 rounded-md;
 }
 
 .prose div[class*=language-]::before {

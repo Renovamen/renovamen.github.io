@@ -13,17 +13,17 @@ tags:
 
 这是一个三维低等生物眼里的 RNN：
 
-<img src="/img/posts/zh/2019-02-15/rnn/rolled.png" width="100px" alt="Rolled RNN" />
+![Rolled RNN](/img/posts/zh/2019-02-15/rnn/rolled.png) <!-- w=100 -->
 
 这个细胞（绿色的框）相当于 Keras 中一层 RNN 的隐藏层，一个隐藏层可能有多个神经元。它在 $t$ 时刻的状态（隐状态）叫做 $h_t$，是一个向量，向量维数与这个隐藏层的神经元数量相等，每个神经元的值都是一个标量。
 
 这是一个四维高等生物眼里的 RNN（按时间步展开）：
 
-<img src="/img/posts/zh/2019-02-15/rnn/unrolled.png" width="600px" alt="Unrolled RNN" />
+![Unrolled RNN](/img/posts/zh/2019-02-15/rnn/unrolled.png) <!-- w=600 -->
 
 如果画得详细一点：
 
-<img src="/img/posts/zh/2019-02-15/rnn/unrolled-details.png" width="500px" alt="Unrolled RNN's Details" />
+![Unrolled RNN's Details](/img/posts/zh/2019-02-15/rnn/unrolled-details.png) <!-- w=500 -->
 
 其中：
 
@@ -34,8 +34,8 @@ tags:
 - $y_t$：$t$ 时刻的真实结果（ground truth）；
 - $W^x, W^h, W^o$：权重矩阵，要学习的参数，在所有时间步中都是共享的；
 
-
 上一个时间步的隐状态 $h_{t-1}$ 会在 $t$ 时刻乘一个权重矩阵 $W^h$ 然后重新输入细胞，也就是 $h_t$ 同时依赖于 $x_t$ 和 $h_{t-1}$。
+
 
 ### 前向传播
 
@@ -60,6 +60,7 @@ $$
 $$
 
 损失函数 $L_t$ 的作用就是量化模型在当前位置的损失，即 $\hat{y}_t$ 和 $y_t$ 的差距。
+
 
 ### 反向传播
 
@@ -92,8 +93,6 @@ $$
 = \sum_{t=1}^n \frac{\partial L_t}{\partial b^o}
 = \sum_{t=1}^n \hat{y}_t - y_t
 $$
-
-
 
 而正向传播中，$h_t$ 对 $h_{t+1}$ 还有贡献，所以反向传播计算 $W_x, W_h$ 在 $t$ 时刻的梯度时，还需要考虑 $t+1$ 时刻的梯度（全导数）。
 
@@ -141,7 +140,6 @@ $$
 $$
 
 
-
 ### 梯度消失和爆炸
 
 如果直接把 $W^h$ 在 $t$ 时刻的偏导式展开：
@@ -176,7 +174,7 @@ $$
 
 tanh 函数的函数图像和导数图像为：
 
-<img src="/img/posts/zh/2019-02-15/rnn/tanh.png" width="400px" alt="tanh function" />
+![tanh function](/img/posts/zh/2019-02-15/rnn/tanh.png) <!-- w=400 -->
 
 假设激活函数为 sigmoid：
 
@@ -186,7 +184,7 @@ $$
 
 sigmoid 函数的函数图像和导数图像为：
 
-<img src="/img/posts/zh/2019-02-15/rnn/sigmoid.jpeg" width="500px" alt="sigmoid function" />
+![sigmoid function](/img/posts/zh/2019-02-15/rnn/sigmoid.jpeg) <!-- w=500 -->
 
 **梯度消失：**
 
@@ -202,7 +200,7 @@ sigmoid 函数的函数图像和导数图像为：
 
 如，ReLU 激活函数的函数图像和导数图像为：
 
-<img src="/img/posts/zh/2019-02-15/rnn/relu.jpeg" width="500px" alt="relu function" />
+![relu function](/img/posts/zh/2019-02-15/rnn/relu.jpeg) <!-- w=500 -->
 
 因为 $y$ 轴右侧导数恒为 1，所以避免了梯度消失的问题。但恒为 1 的导数容易导致梯度爆炸，所以需要一些调参技巧，比如给梯度设定合适的阈值，如果大于这个阈值，就按这个阈值进行更新。
 
@@ -217,7 +215,7 @@ sigmoid 函数的函数图像和导数图像为：
 
 一般来说应该放一张这样的图：
 
-<img src="/img/posts/zh/2019-02-15/lstm/lstm1.png" width="500px" alt="LSTM" />
+![LSTM](/img/posts/zh/2019-02-15/lstm/lstm1.png) <!-- w=500 -->
 
 同样，这个细胞相当于 Keras 中一层 LSTM 的隐藏层，隐藏层里有四个前馈网络层。图里的 4 个黄色框每个都是一个前馈网络层，它们的激活函数分别为 sigmoid（1，2，4）和 tanh（3）。
 
@@ -226,8 +224,7 @@ Hidden Units（Keras 的 `units`）就是每个前馈网络层的神经元个数
 
 另一种画法（论文 [Show and Tell](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf)），虽然它似乎把 output gate $o$ 写成了 output gate $f$（...）：
 
-<img src="/img/posts/zh/2019-02-15/lstm/lstm2.png" width="350px" alt="Also a LSTM" />
-
+![Also a LSTM](/img/posts/zh/2019-02-15/lstm/lstm2.png) <!-- w=350 -->
 
 LSTM 的核心是一个由 3 个门控制的记忆细胞 $c$。$t-1$ 时的隐状态 $h_{t-1}$ 会被用于当前细胞状态的损失计算，和下一细胞状态（$t$ 时）的隐状态 $h_t$ 的计算，所以 $h_{t-1}$ 会在 $t$ 时经过这 3 个门重新进入细胞。
 
@@ -236,7 +233,7 @@ LSTM 的核心是一个由 3 个门控制的记忆细胞 $c$。$t-1$ 时的隐�
 
 传播流程：
 
-<img src="/img/posts/zh/2019-02-15/lstm/lstm-forward.png" width="250px" alt="LSTM Forward" />
+![LSTM Forward](/img/posts/zh/2019-02-15/lstm/lstm-forward.png) <!-- w=250 -->
 
 后面公式中的符号说明：
 
@@ -244,9 +241,10 @@ LSTM 的核心是一个由 3 个门控制的记忆细胞 $c$。$t-1$ 时的隐�
 - $\text{tanh}(\cdot)$：tanh 激活函数，会把矩阵转换为一个介于 -1 和 1 之间的值；
 - $\odot$：哈达玛积（Hadamard Product），即俩矩阵对应元素相乘，所以要求俩矩阵同形
 
+
 #### 遗忘门
 
-<img src="/img/posts/zh/2019-02-15/lstm/forget.png" width="250px" alt="Forget Gate" />
+![Forget Gate](/img/posts/zh/2019-02-15/lstm/forget.png) <!-- w=250 -->
 
 Forget Gate，对上一个细胞状态传进来的信息进行选择性遗忘。会根据 $h_{t-1}$ 和 $x_t$ 来为上一个细胞状态 $c_{t-1}$ 计算一个门控信号，计算公式为：
 
@@ -260,9 +258,10 @@ $$
 f_t \odot c_{t-1}
 $$
 
+
 #### 输入门
 
-<img src="/img/posts/zh/2019-02-15/lstm/input.png" width="250px" alt="Input Gate" />
+![Input Gate](/img/posts/zh/2019-02-15/lstm/input.png) <!-- w=250 -->
 
 Input Gate，对现阶段输入 $x_t$ 进行选择性记忆，更新细胞状态。由两个部分构成：
 
@@ -287,7 +286,7 @@ $$
 
 #### 输出门
 
-<img src="/img/posts/zh/2019-02-15/lstm/output.png" width="250px" alt="Output Gate" />
+![Output Gate](/img/posts/zh/2019-02-15/lstm/output.png) <!-- w=250 -->
 
 Output Gate，现在细胞状态已经更新了，所以要决定那些状态最终会被输出（隐状态 $h_t$）。依然用 sigmoid 激活函数来计算一个门控信号，控制要输出哪些内容：
 
@@ -300,6 +299,7 @@ Output Gate，现在细胞状态已经更新了，所以要决定那些状态最
 $$
 h_t = o_t \odot \text{tanh}(c_t)
 $$
+
 
 #### 最终输出
 
@@ -314,16 +314,17 @@ $$
 
 传播流程：
 
-<img src="/img/posts/zh/2019-02-15/lstm/lstm-backward.png" width="250px" alt="LSTM Backward" />
+![LSTM Backward](/img/posts/zh/2019-02-15/lstm/lstm-backward.png) <!-- w=250 -->
 
 公式以后再说，我已经跑偏太多了...
 
 
 ## GRU
 
-<img src="/img/posts/zh/2019-02-15/gru/gru.png" width="280px" alt="GRU" />
+![GRU](/img/posts/zh/2019-02-15/gru/gru.png) <!-- w=280 -->
 
 GRU 是 LSTM 的变体。它只有两个门，重置门 $r_t$ 和更新门 $z_t$（用一个门达到了遗忘和输入的目的）。它还合并了隐状态和细胞状态。它的模型结构比 LSTM 简单，但同时能达到跟 LSTM 相当的效果。
+
 
 ### 重置门
 
@@ -357,7 +358,6 @@ h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \hat{h}_t
 $$
 
 可以理解为 $(1 - z_t)$ 对标 LSTM 中的遗忘门控，$z_t$ 对标 LSTM 中的输入门控。
-
 
 
 ## Reference

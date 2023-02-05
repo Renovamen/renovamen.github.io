@@ -22,17 +22,14 @@ tags:
 
 Transformer 整体结构如下：
 
-<img src="/img/posts/zh/2020-07-17/transformer.png" width="400px" alt="Transformer" />
+![Transformer](/img/posts/zh/2020-07-17/transformer.png) <!-- w=400 -->
 
 
 ## Position Embedding
 
 Transformer 扔掉了 RNN，对输入句子的所有单词都是同时处理的，所以失去了捕捉单词的排序和位置信息的能力。如果不解决词序的问题，那即使把一句话打乱，attention 出来的结果也是一样的，相当于这就只是一个词袋模型。为了解决这个问题，论文引入 position embedding 来对单词的位置信息进行编码。最终的输入词向量 = word embedding + position embedding：
 
-![Positional Embedding](/img/posts/zh/2020-07-17/positional-embedding.png)
-
-<p class="desc">图片来源：<a href="http://jalammar.github.io/illustrated-transformer#representing-the-order-of-the-sequence-using-positional-encoding" target="_blank">The Illustrated Transformer</a></p>
-
+![Positional Embedding](/img/posts/zh/2020-07-17/positional-embedding.png) <!-- desc="图片来源：[The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer#representing-the-order-of-the-sequence-using-positional-encoding)" -->
 
 有两种搞到 position embedding 的思路：
 
@@ -58,9 +55,7 @@ $$
 
 其中 $d_{\text{model}}$ 为词嵌入维度（论文中为 512），pos 为该单词在序列中的位置，$2i$ 为词向量的偶数维度（用第一个公式），$2i+1$ 指词向量的奇数维度（用第二个公式）。波的频率和偏移对于每个维度是不同的：
 
-![wave](/img/posts/zh/2020-07-17/wave.png)
-
-<p class="desc">图片来源：<a href="http://nlp.seas.harvard.edu/2018/04/03/attention.html#positional-encoding" target="_blank">The Annotated Transformer</a></p>
+![wave](/img/posts/zh/2020-07-17/wave.png) <!-- desc="图片来源：[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html#positional-encoding)" -->
 
 因为三角函数还有以下特性：
 
@@ -79,8 +74,7 @@ $$
 
 论文中的 encoder 由 N = 6 个相同的 layer 堆叠而成：
 
-<img src="/img/posts/zh/2020-07-17/encoder.png" width="180px" alt="encoder" />
-
+![encoder](/img/posts/zh/2020-07-17/encoder.png) <!-- w=180 -->
 
 每个 layer 由两个 sub-layer 组成，分别为 multi-head self-attention 和 fully connected feed-forward network。
 
@@ -90,7 +84,7 @@ $$
 
 - Layer Normalisation：对层的激活值进行归一化，可以加速模型的训练过程，使其更快的收敛
     
-    [**Layer Normalization**](https://arxiv.org/pdf/1607.06450.pdf). *Jimmy Lei Ba, et al.* arXiv 2016.
+  [**Layer Normalization**](https://arxiv.org/pdf/1607.06450.pdf). *Jimmy Lei Ba, et al.* arXiv 2016.
 
 也就是输入会先进 LayerNorm，再进 sub-layer，然后加在原始输入上（虽然图上 LayerNorm 似乎在 sub-layer 后面，但[代码](http://nlp.seas.harvard.edu/2018/04/03/attention.html#encoder)里的确是先进 LayerNorm）。最后 6 个 layer 都跑完之后还要再单独 norm 一次（虽然图上没画但[代码](http://nlp.seas.harvard.edu/2018/04/03/attention.html#encoder)里写了）。
 
@@ -115,10 +109,7 @@ $$
 
 而 multi-head attention 就是通过 $h=8$ 个不同的线性变换得到不同的 $Q, V, K$，最后将这 $h$ 个 attention 结果拼接起来：
 
-![multi-head sekf-attention](/img/posts/zh/2020-07-17/multi-head-self-attention.png)
-
-<p class="desc">图片来源：<a href="http://jalammar.github.io/illustrated-transformer#the-beast-with-many-heads" target="_blank">The Illustrated Transformer</a></p>
-
+![multi-head self-attention](/img/posts/zh/2020-07-17/multi-head-self-attention.png) <!-- desc="图片来源：[The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer#the-beast-with-many-heads)" -->
 
 这里的 attention 计算公式为（scaled dot-product）：
 
@@ -148,15 +139,13 @@ $$
 
 encoder-decoder 结构：
 
-![encoder-decoder](/img/posts/zh/2020-07-17/encoder-decoder.png)
-
-<p class="desc">图片来源：<a href="http://jalammar.github.io/illustrated-transformer#the-residuals" target="_blank">The Illustrated Transformer</a></p>
+![encoder-decoder](/img/posts/zh/2020-07-17/encoder-decoder.png) <!-- desc="图片来源：[The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer#the-residuals)" -->
 
 [这里](http://jalammar.github.io/illustrated-transformer#the-decoder-side)还有两个清楚的解释了 encoder 和 decoder 的工作方式的动画。
 
 decoder 也由 N = 6 个相同的 layer 堆叠而成，每个 layer 由三个 sub-layer 组成：
 
-<img src="/img/posts/zh/2020-07-17/decoder.png" width="180px" alt="decoder" />
+![decoder](/img/posts/zh/2020-07-17/decoder.png) <!-- w=180 -->
 
 
 ### Masked Multi-Head Self-Attention
@@ -165,11 +154,10 @@ decoder 也由 N = 6 个相同的 layer 堆叠而成，每个 layer 由三个 su
 
 mask 是一个下三角矩阵，对角线以及对角线左下都是1，其余都是0：
 
-<img src="/img/posts/zh/2020-07-17/mask.png" width="300px" alt="mask" />
-
-<p class="desc">mask 矩阵，蓝色部分是 1，白色部分是 0（图片来源：<a href="https://spaces.ac.cn/archives/6933#单向语言模型" target="_blank">从语言模型到 Seq2Seq：Transformer 如戏，全靠 Mask</a>）</p>
+![mask](/img/posts/zh/2020-07-17/mask.png) <!-- w=300 desc="mask 矩阵，蓝色部分是 1，白色部分是 0（图片来源：[从语言模型到 Seq2Seq：Transformer 如戏，全靠 Mask](https://spaces.ac.cn/archives/6933#单向语言模型)）" -->
 
 矩阵的行为当前预测到第几个单词，列为当前允许看到前几个位置的信息。然后 mask=0 的位置上的元素会都被替换为 `-inf`。
+
 
 ### Multi-head Attention
 
@@ -189,28 +177,27 @@ mask 是一个下三角矩阵，对角线以及对角线左下都是1，其余�
 
 - 相比其他方法，当序列长度 $n$ 小于词向量维度 $d$ 时，每层的计算复杂度（complexity per layer）更低：
 
-    ![complexity](/img/posts/zh/2020-07-17/complexity.png)
+  ![complexity](/img/posts/zh/2020-07-17/complexity.png)
 
 - 更好的并行性，符合目前的硬件（GPU）环境
 
 - 更好地处理长时依赖问题：如果要处理一个长度为 n 的序列，CNN 需要增加卷积层数来扩大视野，RNN 需要从 1 到 n 逐个进行计算，而 self-attention 只需要一步矩阵运算就可以
 
-
 缺点：
 
 - 但同时从上面那张复杂度表里也能看出来，当句子太长时，Transformer $O(n^2)$ 的时间复杂度是非常爆炸的。Transformer 能更好地处理长时依赖问题，但这种复杂度又让它没法处理太长的文本，即使是 Bert 的最大长度也只有 512。
 
-    于是出现了一堆致力于解决这个问题的后续工作，等我摸两天鱼再看看有没有空写这个...
+  于是出现了一堆致力于解决这个问题的后续工作，等我摸两天鱼再看看有没有空写这个...
 
 - 扔掉了 RNN 和 CNN，导致失去了捕捉局部特征的能力
 
-    不过论文也提到了一个 restricted self-attention（上面那张复杂度表里有），它假设当前词只与前后 $r$ 个词有关，因此只在这 $2r+1$ 个词上做 attention，复杂度是 $O(nr)$，相当于是在捕捉局部特征。听上去很像卷积窗口？
+  不过论文也提到了一个 restricted self-attention（上面那张复杂度表里有），它假设当前词只与前后 $r$ 个词有关，因此只在这 $2r+1$ 个词上做 attention，复杂度是 $O(nr)$，相当于是在捕捉局部特征。听上去很像卷积窗口？
 
 - 失去的位置信息非常重要，在词向量中加入 position embedding 这个解决方案依然不够好
 
 - 非图灵完备（computationally universal）
 
-    [**Universal Transformer**](https://openreview.net/pdf?id=HyzdRiR9Y7). *Mostafa Dehghani, et al.* ICLR 2019.
+  [**Universal Transformer**](https://openreview.net/pdf?id=HyzdRiR9Y7). *Mostafa Dehghani, et al.* ICLR 2019.
 
 
 ## Reference
