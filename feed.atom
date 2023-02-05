@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxh.io</id>
     <title>Xiaohan Zou</title>
-    <updated>2023-02-03T03:23:50.180Z</updated>
+    <updated>2023-02-05T15:21:12.648Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Xiaohan Zou</name>
@@ -167,7 +167,7 @@
         <rights>© Xiaohan Zou 2023</rights>
     </entry>
     <entry>
-        <title type="html"><![CDATA[元学习：一种套娃算法]]></title>
+        <title type="html"><![CDATA[Meta Learning：一种套娃算法]]></title>
         <id>https://zxh.io/posts/zh/2020-08-05-meta-learning</id>
         <link href="https://zxh.io/posts/zh/2020-08-05-meta-learning"/>
         <updated>2020-08-01T00:00:00.000Z</updated>
@@ -212,8 +212,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[乱七八糟的知识点]]></title>
-        <id>https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp</id>
-        <link href="https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp"/>
+        <id>https://zxh.io/posts/zh/2020-07-10-messy-notes</id>
+        <link href="https://zxh.io/posts/zh/2020-07-10-messy-notes"/>
         <updated>2020-07-01T00:00:00.000Z</updated>
         <author>
             <name>Xiaohan Zou</name>

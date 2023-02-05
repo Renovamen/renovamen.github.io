@@ -4,7 +4,7 @@
         <title>Xiaohan Zou</title>
         <link>https://zxh.io</link>
         <description>A dragon lost in human world.</description>
-        <lastBuildDate>Fri, 03 Feb 2023 03:23:50 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Feb 2023 15:21:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>© Xiaohan Zou 2023</copyright>
@@ -94,7 +94,7 @@
             <pubDate>Thu, 01 Oct 2020 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[元学习：一种套娃算法]]></title>
+            <title><![CDATA[Meta Learning：一种套娃算法]]></title>
             <link>https://zxh.io/posts/zh/2020-08-05-meta-learning</link>
             <guid>https://zxh.io/posts/zh/2020-08-05-meta-learning</guid>
             <pubDate>Sat, 01 Aug 2020 00:00:00 GMT</pubDate>
@@ -119,8 +119,8 @@
         </item>
         <item>
             <title><![CDATA[乱七八糟的知识点]]></title>
-            <link>https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp</link>
-            <guid>https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp</guid>
+            <link>https://zxh.io/posts/zh/2020-07-10-messy-notes</link>
+            <guid>https://zxh.io/posts/zh/2020-07-10-messy-notes</guid>
             <pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate>
         </item>
         <item>

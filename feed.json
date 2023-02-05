@@ -152,7 +152,7 @@
         {
             "id": "https://zxh.io/posts/zh/2020-08-05-meta-learning",
             "url": "https://zxh.io/posts/zh/2020-08-05-meta-learning",
-            "title": "元学习：一种套娃算法",
+            "title": "Meta Learning：一种套娃算法",
             "date_modified": "2020-08-01T00:00:00.000Z",
             "author": {
                 "name": "Xiaohan Zou",
@@ -190,8 +190,8 @@
             }
         },
         {
-            "id": "https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp",
-            "url": "https://zxh.io/posts/zh/2020-07-10-messy-notes-nlp",
+            "id": "https://zxh.io/posts/zh/2020-07-10-messy-notes",
+            "url": "https://zxh.io/posts/zh/2020-07-10-messy-notes",
             "title": "乱七八糟的知识点",
             "date_modified": "2020-07-01T00:00:00.000Z",
             "author": {
