@@ -50,6 +50,7 @@
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-shiki": "^0.7.2",
     "markdown-it-table-of-contents": "^0.6.0",
+    "medium-zoom": "^1.0.8",
     "pnpm": "^7.26.3",
     "prettier": "^2.8.3",
     "shiki": "^0.14.0",

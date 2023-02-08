@@ -21,13 +21,11 @@
 }
 
 .prose hr {
-  /* border-c */
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;  /* border-c */
 }
 
 html.dark .prose hr {
-  /* border-c */
-  border-top: 1px solid #4b5563;
+  border-top: 1px solid #4b5563;  /* border-c */
 }
 
 .prose hr.footnotes-sep {
@@ -148,4 +146,14 @@ html:not(.dark) .prose .shiki-dark {
 
 .prose .custom-block.danger .custom-block-title {
   @apply text-red-600 dark:text-red-400;
+}
+
+/** Medium Zoom **/
+
+.medium-zoom-overlay {
+  @apply z-100 !bg-c;
+}
+
+.medium-zoom-overlay ~ img {
+  @apply z-101;
 }

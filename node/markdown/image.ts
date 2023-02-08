@@ -1,4 +1,4 @@
-// Borrowed from: https://github.com/Zhengqbbb/qbb.sh/blob/main/build/markdown/image.ts
+// Modified from: https://github.com/Zhengqbbb/qbb.sh/blob/main/build/markdown/image.ts
 
 import type { PluginSimple } from "markdown-it";
 
