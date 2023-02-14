@@ -1,7 +1,5 @@
 .post a.header-anchor {
-  @apply float-left opacity-0 text-c no-underline;
-  margin-left: -1.3em;
-  font-size: 0.75em;
+  @apply float-left ml-[-1.3em] text-[0.75em] opacity-0 text-c no-underline lt-sm:hidden;
 }
 
 .post h2:hover .header-anchor,
@@ -17,14 +15,8 @@
   @apply opacity-50;
 }
 
-@media (max-width: 640px) {
-  .post a.header-anchor {
-    @apply hidden;
-  }
-}
-
 .table-of-contents {
-  @apply fixed z-30 w-55 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis hidden;
+  @apply hidden fixed z-30 w-55 top-20 right-0 bottom-0 pt-18 pr-5.5 overflow-y-auto overflow-x-hidden text-[0.8em] text-right text-ellipsis lt-xl:(top-0 bg-c border-l border-c shadow);
 }
 
 .toc-open .table-of-contents {
@@ -49,10 +41,4 @@
 
 .table-of-contents::-webkit-scrollbar {
   @apply hidden;
-}
-
-@media (max-width: 1200px) {
-  .table-of-contents {
-    @apply top-0 bg-c border-l border-c shadow;
-  }
 }

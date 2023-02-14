@@ -1,5 +1,5 @@
 .prose p {
-  line-height: 1.55 !important;
+  @apply leading-[1.55];
 }
 
 .prose ul,
@@ -146,6 +146,34 @@ html:not(.dark) .prose .shiki-dark {
 
 .prose .custom-block.danger .custom-block-title {
   @apply text-red-600 dark:text-red-400;
+}
+
+.prose .pub-block {
+  @apply flex py-3 space-x-5 lt-sm:space-x-0 border-t border-c-dark;
+}
+
+.prose .pub-block .pub-images {
+  @apply w-1/4 flex-center p-1 rounded lt-sm:hidden;
+}
+
+.prose .pub-block .pub-images:not(.no-image) {
+  @apply bg-white;
+}
+
+.prose .pub-block .pub-images > div {
+  @apply space-y-1;
+}
+
+.prose .pub-block .pub-images > div img {
+  @apply my-0;
+}
+
+.prose .pub-block .pub-details {
+  @apply flex-1;
+}
+
+.prose .pub-block .pub-details p {
+  @apply my-1 leading-snug;
 }
 
 /** Medium Zoom **/

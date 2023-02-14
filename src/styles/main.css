@@ -11,7 +11,6 @@ body,
 
 html.dark {
   @apply bg-gray-700;
-  color-scheme: dark;
 }
 
 #nprogress {

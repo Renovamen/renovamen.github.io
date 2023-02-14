@@ -1,7 +1,7 @@
 <template>
   <header
     ref="navbar"
-    class="z-40 w-full h-14 flex justify-between items-center bg-c font-ui"
+    class="z-40 w-full h-14 hstack justify-between bg-c font-ui"
     p="x-4 md:x-5"
     :class="[
       isFixed &&
@@ -16,7 +16,7 @@
       <span class="blink">_</span>
     </router-link>
 
-    <nav flex space-x-4>
+    <nav hstack space-x-4>
       <router-link nav-item to="/projects" title="Projects">
         <div i-ph:rocket-launch-duotone md:hidden />
         <span class="lt-md:hidden">Projects</span>

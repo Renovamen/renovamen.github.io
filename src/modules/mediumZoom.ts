@@ -19,7 +19,7 @@ export const install: UserModule = ({ app, router, isClient }) => {
     const zoom = mediumZoom();
     zoom.refresh = () => {
       zoom.detach();
-      zoom.attach("main:not(.about) :not(a) > img");
+      zoom.attach(":not(a) > img:not(.no-zoom)");
     };
     app.provide(mediumZoomSymbol, zoom);
 

@@ -8,16 +8,17 @@ export const containerPlugin = (md: MarkdownIt) => {
     .use(...createContainer("info", "INFO", md))
     .use(...createContainer("warning", "WARNING", md))
     .use(...createContainer("danger", "DANGER", md))
-    .use(...createContainer("details", "Details", md));
+    .use(...createContainer("details", "Details", md))
+    .use(...createPubContainer());
 };
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }];
 
-function createContainer(
+const createContainer = (
   klass: string,
   defaultTitle: string,
   md: MarkdownIt
-): ContainerArgs {
+): ContainerArgs => {
   return [
     container,
     klass,
@@ -37,6 +38,39 @@ function createContainer(
       }
     }
   ];
-}
+};
+
+const createPubContainer = (): ContainerArgs => {
+  return [
+    container,
+    "pub",
+    {
+      render(tokens, idx) {
+        const token = tokens[idx];
+        const info = token.info.trim().slice(3).trim();
+
+        if (token.nesting === 1) {
+          if (info !== "") {
+            const images =
+              "<div>" +
+              info
+                .split(" ")
+                .map((src) => {
+                  const alt = src.match(/(?=[^\/]+$).*(?=\.)/);
+                  return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
+                })
+                .join("") +
+              "</div>";
+            return `<div class="pub-block"><div class="pub-images">${images}</div><div class="pub-details">\n`;
+          } else {
+            return `<div class="pub-block"><div class="pub-images no-image"></div><div class="pub-details">\n`;
+          }
+        } else {
+          return `</div></div>\n`;
+        }
+      }
+    }
+  ];
+};
 
 export default containerPlugin;
