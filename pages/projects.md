@@ -80,16 +80,17 @@ projects:
         - i-logos:unocss
         - i-logos:vitejs
       repo: Renovamen/playground-macos
-    - name: Oh, CV!
-      link: https://ohcv.zxh.io
-      desc: Write your curriculum vitae / resume in Markdown online
+    - name: Oh My CV!
+      link: https://ohmycv.app
+      desc: Write your curriculum vitae / resume in Markdown
       icon: oh-cv
       tech:
         - i-logos:vue
         - i-logos:typescript-icon
         - i-logos:unocss
         - i-logos:vitejs
-      repo: Renovamen/oh-cv
+        - i-simple-icons:pwa
+      repo: Renovamen/oh-my-cv
     - name: Wordle Helper
       link: https://wordle.zxh.io
       desc: Help you solve the Wordle puzzles when your vocabulary fails you

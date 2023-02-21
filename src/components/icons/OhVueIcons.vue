@@ -1,10 +1,8 @@
 <template>
   <svg
-    width="1.5em"
-    height="1.5em"
+    width="1.4em"
     viewBox="0 0 176 176"
     xmlns="http://www.w3.org/2000/svg"
-    xml:space="preserve"
     fill-rule="evenodd"
     stroke="currentColor"
     stroke-linecap="round"
