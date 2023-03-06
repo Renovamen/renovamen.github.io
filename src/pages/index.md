@@ -104,7 +104,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built on [Astro](https://astro.build/), [Vue 3](https://vuejs.org/) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built with [Astro](https://astro.build/), [Vue](https://vuejs.org/) and [UnoCSS](https://github.com/antfu/unocss)
 
 - 🧐 Here are two "interesting" versions of my portfolio/cv: [portfolio.zxh.io](https://portfolio.zxh.io/), [resume.zxh.io](https://resume.zxh.io/)
 

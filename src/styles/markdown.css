@@ -99,7 +99,7 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 }
 
 .prose div[class*="language-"] pre[data-theme="light"] > code > span.highlighted {
-  @apply bg-slate-200;
+  @apply bg-slate-100;
 }
 
 .prose div[class*="language-"] pre[data-theme="dark"] > code > span.highlighted {

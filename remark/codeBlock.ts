@@ -5,7 +5,7 @@ import type * as unified from "unified";
 export const remarkCodeBlock: unified.Plugin<[], mdast.Root> = () => {
   return (tree) => {
     visit(tree, "code", (node, index, parent) => {
-      if (parent === null || index === null) return;
+      if (!parent || typeof index !== "number") return;
 
       const lang = (node.lang ?? "").trim();
 
@@ -14,11 +14,7 @@ export const remarkCodeBlock: unified.Plugin<[], mdast.Root> = () => {
         children: [
           {
             type: "html",
-            value: `<div class="language-${lang}">`
-          },
-          {
-            type: "html",
-            value: `<span class="lang">`
+            value: `<div class="language-${lang}"><span class="lang">`
           },
           {
             type: "text",
