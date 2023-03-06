@@ -1,0 +1,120 @@
+---
+import { slugify } from "@renovamen/utils";
+import type { CollectionEntry } from "astro:content";
+import { SITE, THEME } from "@config";
+import Layout from "@layouts/Layout.astro";
+import ToggleToc from "@components/ToggleToc.vue";
+import Giscus from "@components/Giscus.vue";
+import { getPostDate, getPosts, getSortedPosts, formatDate, readingTime } from "@utils";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  lang: string;
+}
+
+const { post, lang } = Astro.props;
+const { title, author, tags } = post.data;
+
+const { Content } = await post.render();
+const tagURL = `/posts/${lang === "en" ? "" : lang + "/"}tags/`;
+
+// previous and next post
+const posts = getSortedPosts(await getPosts(lang));
+const postIndex = posts.findIndex((p) => p.id === post.id);
+
+const nextPost =
+  postIndex === 0
+    ? null
+    : {
+        title: posts[postIndex - 1].data.title,
+        path: posts[postIndex - 1].slug
+      };
+const prevPost =
+  postIndex === posts.length - 1
+    ? null
+    : {
+        title: posts[postIndex + 1].data.title,
+        path: posts[postIndex + 1].slug
+      };
+
+// edit link
+const editURL = THEME.editLink.pattern.replace(/:path/g, `/${post.slug}.md`);
+const editText = THEME.editLink.text;
+---
+
+<Layout title={`${title} - ${SITE.title}`} author={author} activePage="posts">
+  <ToggleToc client:only slot="navbar" />
+
+  <div class="prose prose-lg mx-auto pt-6 pb-16">
+    <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
+
+    <p opacity-50 mt-2 mb-8>
+      {formatDate(getPostDate(post))} · {readingTime(post.body).minutes} min
+      {
+        tags?.length && (
+          <span>
+            ·
+            <span i-uil:tag-alt text-sm />
+            {tags.map((tag, i) => (
+              <span>
+                <a href={tagURL + slugify(tag)} class="!text-c hover:underline">
+                  {tag}
+                </a>
+                {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
+              </span>
+            ))}
+          </span>
+        )
+      }
+    </p>
+
+    <Content />
+  </div>
+
+  <div prose-lg mx-auto>
+    <div class="grid md:grid-cols-2 pb-3 text-[0.95em]">
+      <a
+        href={editURL}
+        title="Edit link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline text-c-active"
+      >
+        <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
+        {editText}
+      </a>
+    </div>
+
+    {
+      (prevPost || nextPost) && (
+        <div class="mb-20 grid md:grid-cols-2 pt-3 text-[0.95em] border-t border-c">
+          <span class="prev">
+            {prevPost && (
+              <a href={`/posts/${prevPost.path}`} class="hover:underline">
+                {prevPost.title}
+              </a>
+            )}
+          </span>
+          <span class="next text-right">
+            {nextPost && (
+              <a href={`/posts/${nextPost.path}`} class="hover:underline">
+                {nextPost.title}
+              </a>
+            )}
+          </span>
+        </div>
+      )
+    }
+
+    <Giscus client:only />
+  </div>
+</Layout>
+
+<style scoped>
+  .prev a::before {
+    content: "← ";
+  }
+  .next a::after {
+    content: " →";
+  }
+</style>

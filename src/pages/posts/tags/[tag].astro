@@ -1,0 +1,23 @@
+---
+import { slugify } from "@renovamen/utils";
+import PostList from "@layouts/PostList.astro";
+import { getPosts, getTags } from "@utils";
+
+export interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+
+export const getStaticPaths = async () => {
+  const posts = await getPosts("en");
+  const { tags } = getTags(posts);
+
+  return tags.map((tag) => ({
+    params: { tag: slugify(tag) },
+    props: { tag }
+  }));
+};
+---
+
+<PostList lang="en" tag={tag} />

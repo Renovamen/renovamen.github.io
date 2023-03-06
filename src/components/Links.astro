@@ -1,0 +1,27 @@
+---
+import { isExternal } from "@renovamen/utils";
+import type { SocialItem } from "@types";
+
+export interface Props {
+  socials: SocialItem[];
+}
+
+const { socials } = Astro.props;
+---
+
+<div class="flex flex-wrap">
+  {
+    socials.map((item) => (
+      <a
+        class="btn font-normal px-3 h-9 mr-1 mb-1"
+        title={item.name || item.link}
+        href={item.link}
+        target={isExternal(item.link) ? "_blank" : "_self"}
+        rel="noopener noreferrer"
+      >
+        <div class={item.icon} w-5 h-5 />
+        {item.name && <div>{item.name}</div>}
+      </a>
+    ))
+  }
+</div>

@@ -3,19 +3,18 @@
 </template>
 
 <script setup lang="ts">
-import { isClient } from "@renovamen/utils";
-import { giscus } from "../../shared";
+import { GISCUS } from "@config";
 
-const theme = computed(() => (isDark.value ? giscus.dark : giscus.light));
+const theme = computed(() => (isDark.value ? GISCUS.dark : GISCUS.light));
 
 const getScriptElement = () => {
   const element = document.createElement("script");
 
   element.setAttribute("src", "https://giscus.app/client.js");
-  element.setAttribute("data-repo", giscus.repo);
-  element.setAttribute("data-repo-id", giscus.repoId);
-  element.setAttribute("data-category", giscus.category);
-  element.setAttribute("data-category-id", giscus.categoryId);
+  element.setAttribute("data-repo", GISCUS.repo);
+  element.setAttribute("data-repo-id", GISCUS.repoId);
+  element.setAttribute("data-category", GISCUS.category);
+  element.setAttribute("data-category-id", GISCUS.categoryId);
   element.setAttribute("data-theme", theme.value);
   element.setAttribute("data-lang", "en");
   element.setAttribute("data-mapping", "pathname");
@@ -29,9 +28,7 @@ const getScriptElement = () => {
 };
 
 const updateGiscus = () => {
-  const iframe = document.querySelector<HTMLIFrameElement>(
-    "iframe.giscus-frame"
-  );
+  const iframe = document.querySelector<HTMLIFrameElement>("iframe.giscus-frame");
   iframe?.contentWindow?.postMessage(
     {
       giscus: {
@@ -44,17 +41,15 @@ const updateGiscus = () => {
   );
 };
 
-if (isClient) {
-  const scriptElement = ref<HTMLScriptElement>(getScriptElement());
+const scriptElement = ref<HTMLScriptElement>(getScriptElement());
 
-  onMounted(() => {
-    document.head.appendChild(scriptElement.value);
-  });
+onMounted(() => {
+  document.head.appendChild(scriptElement.value);
+});
 
-  onBeforeUnmount(() => {
-    document.head.removeChild(scriptElement.value);
-  });
+onBeforeUnmount(() => {
+  document.head.removeChild(scriptElement.value);
+});
 
-  watch(theme, updateGiscus);
-}
+watch(theme, updateGiscus);
 </script>

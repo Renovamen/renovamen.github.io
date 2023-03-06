@@ -21,11 +21,11 @@
 }
 
 .prose hr {
-  border-top: 1px solid #e5e7eb;  /* border-c */
+  border-top: 1px solid #e5e7eb; /* border-c */
 }
 
 html.dark .prose hr {
-  border-top: 1px solid #4b5563;  /* border-c */
+  border-top: 1px solid #4b5563; /* border-c */
 }
 
 .prose hr.footnotes-sep {
@@ -68,16 +68,16 @@ html:not(.dark) .prose .shiki-dark {
   @apply hidden;
 }
 
-.prose div[class*=language-] {
+.prose div[class*="language-"] {
   @apply relative my-2 border border-c-dark pt-6 rounded-md;
 }
 
-.prose div[class*=language-]::before {
+.prose div[class*="language-"]::before {
   @apply content-[""] absolute w-2.5 h-2.5 top-3.5 left-4 rounded-full bg-[#fd5f57];
   box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
 }
 
-.prose div[class*=language-] > span.lang {
+.prose div[class*="language-"] > span.lang {
   @apply absolute top-2.5 right-3 text-sm opacity-60;
 }
 

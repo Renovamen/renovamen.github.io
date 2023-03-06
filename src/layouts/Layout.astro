@@ -1,0 +1,80 @@
+---
+import Navbar from "@components/Navbar.vue";
+import Footer from "@components/Footer.astro";
+import { SITE } from "@config";
+import "@styles/main.css";
+
+export interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  activePage?: string;
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.desc,
+  activePage
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+
+    <!-- General Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={canonicalURL} />
+
+    <script>
+      (function () {
+        const prefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const setting = localStorage.getItem("vueuse-color-scheme") || "auto";
+        if (setting === "dark" || (prefersDark && setting !== "light"))
+          document.documentElement.classList.toggle("dark", true);
+      })();
+    </script>
+  </head>
+
+  <body class="font-sans">
+    <main class="flex flex-col min-h-full text-c px-4 pt-24 pb-6">
+      <Navbar client:only activePage={activePage}>
+        <slot name="navbar" />
+      </Navbar>
+      <div class="flex-1 mb-6">
+        <slot />
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+---
+import { SITE } from "@config";
+import type { SocialItem } from "@types";
+import FlipImage from "@components/FlipImage.astro";
+import Links from "@components/Links.astro";
+import Layout from "./Layout.astro";
+
+export interface Props {
+  frontmatter: {
+    name: string;
+    subname?: string;
+    avatar?: string;
+    socials: SocialItem[];
+  };
+}
+
+const { name, subname, avatar, socials } = Astro.props.frontmatter;
+---
+
+<Layout title={`About - ${SITE.title}`}>
+  <div class="about prose prose-lg m-auto">
+    <div class="flex items-end justify-between">
+      <div>
+        <h1>
+          {name}
+          {subname && <span class="text-base text-c-light">{subname}</span>}
+        </h1>
+        <Links socials={socials} />
+      </div>
+      {
+        avatar && (
+          <div
+            class="p-1 mb-1 border border-c rounded-md lt-md:hidden"
+            shadow="[inset_0_0_10px_#000000] slate-200 dark:slate-800"
+          >
+            <FlipImage className="w-24 h-24" src={avatar} alt="avatar" />
+          </div>
+        )
+      }
+    </div>
+
+    <slot />
+  </div>
+</Layout>

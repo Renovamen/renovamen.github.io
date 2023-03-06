@@ -1,3 +1,14 @@
-import { type ViteSSGContext } from "vite-ssg";
+export interface SocialItem {
+  icon: string;
+  link: string;
+  name?: string;
+}
 
-export type UserModule = (ctx: ViteSSGContext) => void;
+export interface ProjectItem {
+  name: string;
+  link: string;
+  desc: string;
+  icon: string;
+  tech?: string[];
+  repo?: string;
+}

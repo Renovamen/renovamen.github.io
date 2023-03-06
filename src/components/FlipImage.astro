@@ -1,0 +1,19 @@
+---
+export interface Props {
+  src: string;
+  alt?: string;
+  className?: string;
+}
+
+const { src, className = "", alt = "" } = Astro.props;
+---
+
+<div class={`flip-image perspective-600 ${className}`}>
+  <img class="no-zoom rounded duration-800 !my-0" src={src} alt={alt} />
+</div>
+
+<style scoped>
+  .flip-image:hover img {
+    @apply rotate-y-180;
+  }
+</style>

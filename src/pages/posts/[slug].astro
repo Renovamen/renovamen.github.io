@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Post from "@layouts/Post.astro";
+import { getPosts } from "@utils";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
+export const getStaticPaths = async () =>
+  (await getPosts("en")).map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+---
+
+<Post post={post} lang="en" />

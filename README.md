@@ -1,10 +1,10 @@
 # Hi! 🤔
 
-This is my personal website, built on [Vitesse](https://github.com/antfu/vitesse).
+This is my personal website, built with [Astro](https://astro.build/) and [Vue 3](https://vuejs.org/).
 
-My old blog is now moved to: [blog.zxh.io](https://blog.zxh.io) / [code](https://github.com/Renovamen/blog.zxh.io)
+[Previous version](https://github.com/Renovamen/renovamen.github.io/tree/vitesse) is built on [Vitesse](https://github.com/antfu/vitesse).
 
-Any way, just have fun: [zxh.io](https://zxh.io)
+Anyway, just have fun: [zxh.io](https://zxh.io)
 
 
 &nbsp;
@@ -36,6 +36,7 @@ pnpm build
 
 - [antfu.me]( https://antfu.me/)
 - [qbb.sh](https://www.qbb.sh/)
+- [AstroPaper](https://github.com/satnaing/astro-paper)
 - [Vitepress](https://vitepress.vuejs.org/)
 - [Computer Modern Sans](https://checkmyworking.com/cm-web-fonts/)
 
