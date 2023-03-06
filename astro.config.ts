@@ -1,9 +1,10 @@
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";
 import vue from "@astrojs/vue";
-import remarkToc from "remark-toc";
 import sitemap from "@astrojs/sitemap";
 import autoimport from "unplugin-auto-import/astro";
+import remarkToc from "remark-toc";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +25,9 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [[remarkToc, { maxDepth: 3 }]],
+    rehypePlugins: [
+      [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }]
+    ],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true

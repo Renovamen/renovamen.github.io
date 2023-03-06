@@ -34,6 +34,7 @@
     "pnpm": "^7.29.0",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
+    "rehype-external-links": "^2.0.1",
     "taze": "^0.9.0",
     "unocss": "^0.50.4",
     "unplugin-auto-import": "^0.15.1",
