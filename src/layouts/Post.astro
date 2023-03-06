@@ -5,7 +5,14 @@ import { SITE, THEME } from "@config";
 import Layout from "@layouts/Layout.astro";
 import ToggleToc from "@components/ToggleToc.vue";
 import Giscus from "@components/Giscus.vue";
-import { getPostDate, getPosts, getSortedPosts, formatDate, readingTime } from "@utils";
+import {
+  getPostDate,
+  getPosts,
+  getSortedPosts,
+  formatDate,
+  readingTime,
+  lastUpdated
+} from "@utils";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -40,6 +47,10 @@ const prevPost =
 // edit link
 const editURL = THEME.editLink.pattern.replace(/:path/g, `/${post.slug}.md`);
 const editText = THEME.editLink.text;
+
+// last updated time
+const lastUpdatedTime = lastUpdated(post.slug);
+const lastUpdatedText = THEME.lastUpdatedText;
 ---
 
 <Layout title={`${title} - ${SITE.title}`} author={author} activePage="posts">
@@ -83,6 +94,11 @@ const editText = THEME.editLink.text;
         <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
         {editText}
       </a>
+      <span md:text-right text-c-light>
+        <span class="i-ic:round-update w-4.5 h-4.5"></span>
+        {lastUpdatedText}
+        {lastUpdatedTime}
+      </span>
     </div>
 
     {
