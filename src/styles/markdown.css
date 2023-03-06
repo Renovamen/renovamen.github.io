@@ -60,11 +60,11 @@ main:not(.post) a.header-anchor {
 
 /** Code blocks **/
 
-html.dark .prose .shiki-light {
+html.dark .prose div[class*="language-"] pre[data-theme="light"] {
   @apply hidden;
 }
 
-html:not(.dark) .prose .shiki-dark {
+html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply hidden;
 }
 
@@ -81,24 +81,28 @@ html:not(.dark) .prose .shiki-dark {
   @apply absolute top-2.5 right-3 text-sm opacity-60;
 }
 
-.prose .shiki {
-  @apply !bg-transparent p-4 m-0 leading-6 text-[0.925em];
+.prose div[class*="language-"] > p {
+  @apply hidden;
 }
 
-.prose .shiki code {
+.prose div[class*="language-"] pre {
+  @apply leading-6 text-[0.925em] m-0 p-4;
+}
+
+.prose div[class*="language-"] pre > code {
   @apply block w-fit min-w-full;
 }
 
-.prose .shiki code > span.highlighted {
+.prose div[class*="language-"] pre > code > span.highlighted {
   @apply -mx-4 px-4 inline-block;
   width: calc(100% + 2 * 16px);
 }
 
-.prose .shiki-light code > span.highlighted {
-  @apply bg-slate-100;
+.prose div[class*="language-"] pre[data-theme="light"] > code > span.highlighted {
+  @apply bg-slate-200;
 }
 
-.prose .shiki-dark code > span.highlighted {
+.prose div[class*="language-"] pre[data-theme="dark"] > code > span.highlighted {
   @apply bg-slate-600;
 }
 

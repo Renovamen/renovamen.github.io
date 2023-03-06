@@ -233,7 +233,7 @@ Then the problem is how to pick 8 keypoint correspondences (`sample_eight_points
 
 Essential matrix $E$ is another $3 \times 3$ matrix. But unlike $F$, $E$ assumes that the cameras obey the pinhole model. More specifically, given the camera calibration matrix $K$, $E = K^T F K$, which also can be solved using SVD.
 
-```python{6,12}
+```python {6-10,12}
 def find_essential_mat(K: np.ndarray, F: np.ndarray)-> np.ndarray:
     """Estimates the essential matrix."""
     E = K.T @ F @ K

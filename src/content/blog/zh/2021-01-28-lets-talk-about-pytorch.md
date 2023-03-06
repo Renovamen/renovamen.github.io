@@ -106,7 +106,7 @@ $- r \cdot \nabla L(\theta_t')$ 是 $1 \rarr 2$，$- r \rho v_t$ 是 $2 \rarr 3$
 
 包括 PyTorch 在内的深度学习框架的实现基本就是按照公式 $(1)$ 和 $(2)$ 来的，我把源码复制过来：
 
-```python{13,17,21}
+```python {13,17,21}
 for i, param in enumerate(params):
     d_p = d_p_list[i]
     # l2 正则化
@@ -144,7 +144,7 @@ PyTorch 中，linear 层和 conv 层的默认 init 是 kaiming init：
 
 [`nn/modules/linear.py`](https://github.com/pytorch/pytorch/blob/7a8c64da4d93fef5986aee5ada59289b5387cf8e/torch/nn/modules/linear.py#L86) / [`nn/modules/conv.py`](https://github.com/pytorch/pytorch/blob/7a8c64da4d93fef5986aee5ada59289b5387cf8e/torch/nn/modules/conv.py#L111)
 
-```python{2}
+```python {2}
 def reset_parameters(self) -> None:
     init.kaiming_uniform_(self.weight, a=math.sqrt(5))
     if self.bias is not None:

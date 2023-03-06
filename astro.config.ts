@@ -5,6 +5,10 @@ import sitemap from "@astrojs/sitemap";
 import autoimport from "unplugin-auto-import/astro";
 import remarkToc from "remark-toc";
 import rehypeExternalLinks from "rehype-external-links";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import rehypePrettyCode from "rehype-pretty-code";
+import { remarkCodeBlock } from "./remark";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +17,7 @@ export default defineConfig({
     unocss(),
     vue(),
     autoimport({
-      imports: ["vue", "@vueuse/head", "@vueuse/core"],
+      imports: ["vue", "@vueuse/core"],
       dts: "src/auto-imports.d.ts",
       dirs: ["src/composables"],
       vueTemplate: true,
@@ -24,13 +28,23 @@ export default defineConfig({
     sitemap()
   ],
   markdown: {
-    remarkPlugins: [[remarkToc, { maxDepth: 3 }]],
+    remarkPlugins: [remarkMath, remarkCodeBlock, [remarkToc, { maxDepth: 3 }]],
     rehypePlugins: [
-      [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }]
+      rehypeKatex,
+      [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }],
+      [
+        rehypePrettyCode,
+        {
+          theme: {
+            light: "github-light",
+            dark: "github-dark"
+          },
+          onVisitHighlightedLine: (node: any) => {
+            node.properties.className.push("highlighted");
+          }
+        }
+      ]
     ],
-    shikiConfig: {
-      theme: "one-dark-pro",
-      wrap: true
-    }
+    syntaxHighlight: false
   }
 });

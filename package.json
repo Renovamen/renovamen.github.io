@@ -9,14 +9,11 @@
     "lint": "pnpm format && eslint --ext .js,.ts,.astro,.vue ."
   },
   "dependencies": {
-    "@astrojs/rss": "^2.1.1",
     "@vueuse/core": "^9.13.0",
-    "@vueuse/head": "^1.1.15",
-    "astro": "^2.0.17",
-    "dayjs": "^1.11.7",
-    "remark-toc": "^8.0.1"
+    "dayjs": "^1.11.7"
   },
   "devDependencies": {
+    "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.1.0",
     "@astrojs/vue": "^2.0.1",
     "@iconify/json": "^2.2.31",
@@ -24,6 +21,7 @@
     "@types/cross-spawn": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
+    "astro": "^2.0.17",
     "astro-eslint-parser": "^0.11.0",
     "cross-spawn": "^7.0.3",
     "eslint": "^8.35.0",
@@ -35,6 +33,10 @@
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "rehype-external-links": "^2.0.1",
+    "rehype-katex": "^6.0.2",
+    "rehype-pretty-code": "^0.9.4",
+    "remark-math": "^5.1.1",
+    "remark-toc": "^8.0.1",
     "taze": "^0.9.0",
     "unocss": "^0.50.4",
     "unplugin-auto-import": "^0.15.1",
