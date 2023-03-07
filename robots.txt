@@ -1,4 +1,5 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
 Allow: /
-
-Sitemap: https://zxh.io/sitemap.xml
