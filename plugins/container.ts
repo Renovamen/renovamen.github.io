@@ -1,6 +1,6 @@
 import { visit } from "unist-util-visit";
 import type * as mdast from "mdast";
-import type * as unified from "unified";
+import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
 const getImages = (info: string) => {
   if (info !== "") {
@@ -20,10 +20,11 @@ const getImages = (info: string) => {
   }
 };
 
-export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
+export const remarkContainer: RemarkPlugin = () => {
   return (tree) => {
     visit(tree, "containerDirective", (node) => {
       const data = node.data || (node.data = {});
+      const children = node.children;
 
       if (["info", "tip", "warning", "danger", "details"].includes(node.name)) {
         data.hProperties = { class: ["custom-block", node.name] };
@@ -31,9 +32,9 @@ export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
 
         let title = node.name.toUpperCase();
 
-        if (node.children[0]?.data?.directiveLabel) {
-          title = ((node.children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
-          node.children.splice(0, 1);
+        if (children[0]?.data?.directiveLabel) {
+          title = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
+          children.splice(0, 1);
         }
 
         const titleNode: mdast.Paragraph = {
@@ -50,7 +51,7 @@ export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
           ]
         };
 
-        node.children.splice(0, 0, titleNode);
+        children.splice(0, 0, titleNode);
       }
 
       if (node.name === "paper") {
@@ -58,9 +59,9 @@ export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
 
         let info = "";
 
-        if (node.children[0]?.data?.directiveLabel) {
-          info = ((node.children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
-          node.children.splice(0, 1);
+        if (children[0]?.data?.directiveLabel) {
+          info = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
+          children.splice(0, 1);
         }
 
         const images = getImages(info);
@@ -74,8 +75,8 @@ export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
           value: "</div>"
         };
 
-        node.children.unshift(prev);
-        node.children.push(next);
+        children.unshift(prev);
+        children.push(next);
       }
     });
   };

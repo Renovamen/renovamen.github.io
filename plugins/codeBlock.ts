@@ -1,8 +1,8 @@
 import { visit } from "unist-util-visit";
 import type * as mdast from "mdast";
-import type * as unified from "unified";
+import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkCodeBlock: unified.Plugin<[], mdast.Root> = () => {
+export const remarkCodeBlock: RemarkPlugin = () => {
   return (tree) => {
     visit(tree, "code", (node, index, parent) => {
       if (!parent || typeof index !== "number") return;

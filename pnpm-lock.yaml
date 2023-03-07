@@ -19,6 +19,7 @@ specifiers:
   eslint-plugin-astro: ^0.23.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.9.0
+  mdast-util-toc: ^6.1.1
   medium-zoom: ^1.0.8
   pnpm: ^7.29.0
   prettier: ^2.8.4
@@ -29,7 +30,6 @@ specifiers:
   rehype-pretty-code: ^0.9.4
   remark-directive: ^2.0.1
   remark-math: ^5.1.1
-  remark-toc: ^8.0.1
   taze: ^0.9.0
   unocss: ^0.50.4
   unplugin-auto-import: ^0.15.1
@@ -57,6 +57,7 @@ devDependencies:
   eslint-plugin-astro: 0.23.0_eslint@8.35.0
   eslint-plugin-prettier: 4.2.1_u2zha4kiojzs42thzpgwygphmy
   eslint-plugin-vue: 9.9.0_eslint@8.35.0
+  mdast-util-toc: 6.1.1
   pnpm: 7.29.0
   prettier: 2.8.4
   prettier-plugin-astro: 0.8.0
@@ -66,7 +67,6 @@ devDependencies:
   rehype-pretty-code: 0.9.4
   remark-directive: 2.0.1
   remark-math: 5.1.1
-  remark-toc: 8.0.1
   taze: 0.9.0
   unocss: 0.50.4
   unplugin-auto-import: 0.15.1_@vueuse+core@9.13.0
@@ -4853,14 +4853,6 @@ packages:
       retext: 8.1.0
       retext-smartypants: 5.2.0
       unist-util-visit: 4.1.2
-    dev: true
-
-  /remark-toc/8.0.1:
-    resolution: {integrity: sha512-7he2VOm/cy13zilnOTZcyAoyoolV26ULlon6XyCFU+vG54Z/LWJnwphj/xKIDLOt66QmJUgTyUvLVHi2aAElyg==}
-    dependencies:
-      '@types/mdast': 3.0.10
-      mdast-util-toc: 6.1.1
-      unified: 10.1.2
     dev: true
 
   /require-directory/2.1.1:

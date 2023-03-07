@@ -1,9 +1,9 @@
 import { visit } from "unist-util-visit";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import type * as mdast from "mdast";
-import type * as unified from "unified";
+import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkImage: unified.Plugin<[], mdast.Root> = () => {
+export const remarkImage: RemarkPlugin = () => {
   const imageRE = /^<!-- (w=(?<width>\d+))? ?(desc="(?<desc>.*)")? -->/i;
 
   return (tree) => {
