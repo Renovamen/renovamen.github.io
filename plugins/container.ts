@@ -74,8 +74,8 @@ export const remarkContainer: unified.Plugin<[], mdast.Root> = () => {
           value: "</div>"
         };
 
-        node.children.splice(0, 0, prev);
-        node.children.splice(node.children.length + 2, 0, next);
+        node.children.unshift(prev);
+        node.children.push(next);
       }
     });
   };

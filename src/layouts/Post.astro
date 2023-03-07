@@ -79,7 +79,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
     </p>
   </div>
 
-  <div id="post-content" class="prose prose-lg mx-auto mb-16">
+  <div class="post prose prose-lg mx-auto mb-16">
     <Content />
   </div>
 
@@ -176,6 +176,6 @@ const lastUpdatedText = THEME.lastUpdatedText;
     }
   };
 
-  const content = document.querySelector("#post-content");
+  const content = document.querySelector(".post");
   useEventListener(content, "click", handleAnchors, { passive: false });
 </script>

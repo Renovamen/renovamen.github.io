@@ -32,7 +32,7 @@ html.dark .prose hr {
   @apply hidden;
 }
 
-main:not(.post) a.header-anchor {
+.prose:not(.post) a.header-anchor {
   @apply hidden;
 }
 

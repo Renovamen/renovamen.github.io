@@ -3,13 +3,7 @@ import unocss from "unocss/astro";
 import vue from "@astrojs/vue";
 import sitemap from "@astrojs/sitemap";
 import autoimport from "unplugin-auto-import/astro";
-import remarkToc from "remark-toc";
-import rehypeExternalLinks from "rehype-external-links";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import rehypePrettyCode from "rehype-pretty-code";
-import remarkDirective from "remark-directive";
-import { remarkCodeBlock, remarkImage, remarkContainer } from "./remark";
+import { remarkPlugins, rehypePlugins } from "./plugins";
 
 // https://astro.build/config
 export default defineConfig({
@@ -29,30 +23,8 @@ export default defineConfig({
     sitemap()
   ],
   markdown: {
-    remarkPlugins: [
-      remarkMath,
-      remarkCodeBlock,
-      remarkImage,
-      remarkDirective,
-      remarkContainer,
-      [remarkToc, { maxDepth: 3 }]
-    ],
-    rehypePlugins: [
-      rehypeKatex,
-      [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }],
-      [
-        rehypePrettyCode,
-        {
-          theme: {
-            light: "github-light",
-            dark: "github-dark"
-          },
-          onVisitHighlightedLine: (node: any) => {
-            node.properties.className.push("highlighted");
-          }
-        }
-      ]
-    ],
+    remarkPlugins,
+    rehypePlugins,
     syntaxHighlight: false
   }
 });
