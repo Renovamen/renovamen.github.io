@@ -62,5 +62,5 @@ export default defineConfig({
     })
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: "prose prose-lg m-auto text-left".split(" ")
+  safelist: "prose prose-lg mx-auto".split(" ")
 });

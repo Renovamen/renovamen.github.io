@@ -56,10 +56,9 @@ const lastUpdatedText = THEME.lastUpdatedText;
 <Layout title={`${title} - ${SITE.title}`} author={author} activePage="posts">
   <ToggleToc client:only slot="navbar" />
 
-  <div class="prose prose-lg mx-auto pt-6 pb-16">
+  <div prose-lg mx-auto mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
-
-    <p opacity-50 mt-2 mb-8>
+    <p opacity-50 mt-2>
       {formatDate(getPostDate(post))} · {readingTime(post.body).minutes} min
       {
         tags?.length && (
@@ -68,7 +67,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
             <span i-uil:tag-alt text-sm />
             {tags.map((tag, i) => (
               <span>
-                <a href={tagURL + slugify(tag)} class="!text-c hover:underline">
+                <a href={tagURL + slugify(tag)} class="hover:underline">
                   {tag}
                 </a>
                 {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
@@ -78,12 +77,14 @@ const lastUpdatedText = THEME.lastUpdatedText;
         )
       }
     </p>
+  </div>
 
+  <div id="post-content" class="prose prose-lg mx-auto mb-16">
     <Content />
   </div>
 
   <div prose-lg mx-auto>
-    <div class="grid md:grid-cols-2 pb-3 text-[0.95em]">
+    <div class="grid md:grid-cols-2 text-[0.95em]">
       <a
         href={editURL}
         title="Edit link"
@@ -103,7 +104,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
 
     {
       (prevPost || nextPost) && (
-        <div class="mb-20 grid md:grid-cols-2 pt-3 text-[0.95em] border-t border-c">
+        <div class="grid md:grid-cols-2 mt-3 pt-3 text-[0.95em] border-t border-c">
           <span class="prev">
             {prevPost && (
               <a href={`/posts/${prevPost.path}`} class="hover:underline">
@@ -122,7 +123,9 @@ const lastUpdatedText = THEME.lastUpdatedText;
       )
     }
 
-    <Giscus client:only />
+    <div mt-20>
+      <Giscus client:only />
+    </div>
   </div>
 </Layout>
 
