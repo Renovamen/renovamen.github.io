@@ -46,7 +46,7 @@ $$
 
 ### Momentum
 
-Momentum 的介绍可以参考[这里](/post/2020/07/10/messy-notes-nlp/#一阶动量)。首先，PyTorch 的 [momentum 实现](https://github.com/pytorch/pytorch/blob/7a8c64da4d93fef5986aee5ada59289b5387cf8e/torch/optim/functional.py#L143)是：
+Momentum 的介绍可以参考[这里](/posts/zh/2020-07-10-messy-notes#一阶动量)。首先，PyTorch 的 [momentum 实现](https://github.com/pytorch/pytorch/blob/7a8c64da4d93fef5986aee5ada59289b5387cf8e/torch/optim/functional.py#L143)是：
 
 $$
 v_t = \rho v_{t-1} + \nabla L(\theta_t)

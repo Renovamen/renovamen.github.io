@@ -285,7 +285,7 @@ $c_{t-1}$ 是 LSTM 在上一时间步的细胞状态。
 
 #### LSTM
 
-在[另一篇文章](/post/2019/02/15/rnn-with-its-friends/#lstm)里理过 LSTM。
+在[另一篇文章](/posts/zh/2019-02-15-rnn-with-its-friends#lstm)里理过 LSTM。
 
 ![LSTM](/img/posts/zh/2020-03-17/img2txt/lstm.png) <!-- w=350 -->
 
