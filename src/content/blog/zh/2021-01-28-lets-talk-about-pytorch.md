@@ -4,9 +4,9 @@ tags:
   - deep learning
 ---
 
-记录一些 PyTorch 的细节。
-
 ## toc
+
+记录一些 PyTorch 的细节。
 
 ## 名不符实的损失函数
 

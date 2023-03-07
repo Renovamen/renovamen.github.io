@@ -15,35 +15,31 @@
   @apply opacity-50;
 }
 
-h2#toc {
-  @apply hidden;
-}
-
-h2#toc + ul {
+.table-of-contents {
   @apply hidden fixed z-30 w-55 top-20 right-0 bottom-0 pl-0 pt-18 pr-5.5 overflow-y-auto text-[0.8em] text-right lt-xl:(top-0 bg-c border-l border-c shadow);
 }
 
-.toc-open h2#toc + ul {
+.toc-open .table-of-contents {
   @apply block;
 }
 
-h2#toc + ul a {
+.table-of-contents a {
   @apply text-c;
 }
 
-h2#toc + ul li {
+.table-of-contents li {
   @apply list-none truncate;
 }
 
-h2#toc + ul > li > p::before,
-h2#toc + ul > li > a::before {
+.table-of-contents > li > p::before,
+.table-of-contents > li > a::before {
   @apply content-["#"] opacity-60 mr-1;
 }
 
-h2#toc + ul > li > ul > li {
+.table-of-contents > li > ul > li {
   @apply opacity-60;
 }
 
-h2#toc + ul::-webkit-scrollbar {
+.table-of-contents::-webkit-scrollbar {
   @apply hidden;
 }

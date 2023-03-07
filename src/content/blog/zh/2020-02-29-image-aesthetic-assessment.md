@@ -4,9 +4,9 @@ tags:
   - computer vision
 ---
 
-对图像美感评估（Image Aesthetic Assessment）领域的简单调研，到时候大概可以直接复制粘贴进毕业论文里。
-
 ## toc
+
+对图像美感评估（Image Aesthetic Assessment）领域的简单调研，到时候大概可以直接复制粘贴进毕业论文里。
 
 ## Surveys
 

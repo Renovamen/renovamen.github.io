@@ -5,11 +5,11 @@ tags:
   - bayesian
 ---
 
+## toc
+
 把大三的时候在实验室摸鱼看贝叶斯网络和 PC 算法时写的笔记整理到这里来，免得哪天我换电脑时把笔记搞没了。
 
 这里是当时写的 PC 算法的 Python 实现：[<span i-gg:link></span> Renovamen/pcalg-py](https://github.com/Renovamen/pcalg-py)
-
-## toc
 
 ## 概率图模型
 

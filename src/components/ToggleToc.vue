@@ -11,7 +11,7 @@ const isTocOpen = ref(width.value > 1200);
 const isToc = ref(false);
 
 onMounted(() => {
-  const toc = document.querySelector("h2#toc");
+  const toc = document.querySelector(".table-of-contents");
   isToc.value = toc ? true : false;
   handleClass();
 });

@@ -4,6 +4,8 @@ tags:
   - computer vision
 ---
 
+## toc
+
 Monocular Visual Odometry (VO) is the process of estimating the pose (position and orientation) of a camera using only visual information from a single camera. It is a crucial component of many robotics and augmented reality systems, as it allows a device to understand its own movement and position in the world.
 
 This blog would be focussing on how to implement a simple monocular VO algorithm in Python. If you are new to it, I suggest having a look at [this article](https://cmsc426.github.io/sfm/).
@@ -15,8 +17,6 @@ The overall process can be broken down into the following steps:
 - Estimating fundamental matrix
 - Estimating essential matrix (from fundamental matrix)
 - Recovering pose (from essential matrix)
-
-## toc
 
 ## Problem
 

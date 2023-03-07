@@ -4,9 +4,9 @@ tags:
   - deep learning
 ---
 
-对 RNN 系成员的一些总结。
-
 ## toc
+
+对 RNN 系成员的一些总结。
 
 ## RNN
 

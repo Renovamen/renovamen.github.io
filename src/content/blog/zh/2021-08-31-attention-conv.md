@@ -4,11 +4,11 @@ tags:
   - deep learning
 ---
 
+## toc
+
 长期记录和实现看过的各种论文里的自注意力和卷积机制，咕咕咕，实现地址在：[<span i-gg:link></span> Github](https://github.com/Renovamen/torchop)
 
 提前定义，$F \in \Reals^{N \times d}$ 是一个特征，在文本任务里，$N$ 是文本长度，$d$ 是词向量维度；在视觉任务里，$N$ 是特征图的 $W \times H$，$d$ 是通道数量。
-
-## toc
 
 ## Attention
 

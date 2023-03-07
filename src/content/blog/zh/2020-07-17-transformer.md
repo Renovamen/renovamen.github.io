@@ -4,6 +4,8 @@ tags:
   - deep learning
 ---
 
+## toc
+
 **Attention Is All You Need.** _Ashish Vaswani, et al._ NIPS 2017. [[Paper]](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) [[Code]](https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/models/transformer.py)
 
 考虑到 RNN 只能单向依次计算，所以存在以下问题：
@@ -21,8 +23,6 @@ tags:
 Transformer 整体结构如下：
 
 ![Transformer](/img/posts/zh/2020-07-17/transformer.png) <!-- w=400 -->
-
-## toc
 
 ## Position Embedding
 

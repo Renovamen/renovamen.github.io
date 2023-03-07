@@ -6,9 +6,9 @@ tags:
   - bayesian
 ---
 
-基于正则（regularization-based）的持续学习：用一个表示参数重要程度的正则项来控制参数在未来的任务中的更新幅度。
-
 ## toc
+
+基于正则（regularization-based）的持续学习：用一个表示参数重要程度的正则项来控制参数在未来的任务中的更新幅度。
 
 ## 持续学习
 

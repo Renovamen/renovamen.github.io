@@ -7,13 +7,13 @@ tags:
   - bayesian
 ---
 
+## toc
+
 :::tip
 Radford Neal: I don't necessarily think that the Bayesian method is the best thing to do in all cases..
 
 Geoff Hinton: Sorry Radford, my prior probability for you saying this is zero, so I couldn't hear what you said.
 :::
-
-## toc
 
 ## 关于贝叶斯估计
 

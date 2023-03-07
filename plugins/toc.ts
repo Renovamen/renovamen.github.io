@@ -25,10 +25,11 @@ export const remarkToc: RemarkPlugin = (options = {}) => {
       child.url = "#" + child.url.substring(1).replace(/^(\d)/, "_$1");
     });
 
-    node.children = [
-      ...node.children.slice(0, result.index),
-      result.map,
-      ...node.children.slice(result.endIndex)
-    ];
+    // add class "table-of-contents" to the generated toc element
+    const data = result.map.data || (result.map.data = {});
+    data.hProperties = { class: "table-of-contents" };
+
+    // replace "toc" heading with the generated toc element
+    node.children.splice(result.index - 1, 1, result.map);
   };
 };

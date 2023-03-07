@@ -4,9 +4,9 @@ tags:
   - math
 ---
 
-MIT 18.06 / Stanford CS229 (Linear Algebra 部分)
-
 ## toc
+
+MIT 18.06 / Stanford CS229 (Linear Algebra 部分)
 
 ## 1.矩阵乘法
 

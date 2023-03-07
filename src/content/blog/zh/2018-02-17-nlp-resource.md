@@ -4,9 +4,9 @@ tags:
   - nlp
 ---
 
-来源：[Melanie Tosik（Twitter:@meltomene）列出的 NLP 学习资源清单](https://towardsdatascience.com/how-to-get-started-in-nlp-6a62aa4eaeff)
-
 ## toc
+
+来源：[Melanie Tosik（Twitter:@meltomene）列出的 NLP 学习资源清单](https://towardsdatascience.com/how-to-get-started-in-nlp-6a62aa4eaeff)
 
 ## Online courses
 
