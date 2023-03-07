@@ -101,7 +101,7 @@ $$
 KL \Big ( p(x \mid \theta) \| p(x \mid \theta + d) \Big ) \approx \frac{1}{2} d^T F d
 $$
 
-::: details 证明过程
+:::details[证明]
 为了方便，用 $p(\theta)$ 来表示 $p(x \mid \theta)$，用 $p(\theta + d)$ 来表示 $p(x \mid \theta + d)$。
 
 $$

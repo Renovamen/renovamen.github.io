@@ -112,12 +112,12 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply border rounded-md px-4 py-0 my-6;
 }
 
-.prose .custom-block summary {
-  @apply font-normal text-base;
-}
-
 .prose .custom-block.details {
   @apply border-c-dark py-4;
+}
+
+.prose .custom-block.details summary {
+  @apply font-normal text-base;
 }
 
 .prose .custom-block.info {

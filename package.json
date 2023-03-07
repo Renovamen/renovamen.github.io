@@ -35,6 +35,7 @@
     "rehype-external-links": "^2.0.1",
     "rehype-katex": "^6.0.2",
     "rehype-pretty-code": "^0.9.4",
+    "remark-directive": "^2.0.1",
     "remark-math": "^5.1.1",
     "remark-toc": "^8.0.1",
     "taze": "^0.9.0",
@@ -47,7 +48,8 @@
       "ignoreMissing": [
         "@babel/core",
         "typescript",
-        "vite"
+        "vite",
+        "shiki"
       ]
     }
   }

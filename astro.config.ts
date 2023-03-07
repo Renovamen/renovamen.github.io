@@ -8,7 +8,8 @@ import rehypeExternalLinks from "rehype-external-links";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypePrettyCode from "rehype-pretty-code";
-import { remarkCodeBlock, remarkImage } from "./remark";
+import remarkDirective from "remark-directive";
+import { remarkCodeBlock, remarkImage, remarkContainer } from "./remark";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,6 +33,8 @@ export default defineConfig({
       remarkMath,
       remarkCodeBlock,
       remarkImage,
+      remarkDirective,
+      remarkContainer,
       [remarkToc, { maxDepth: 3 }]
     ],
     rehypePlugins: [

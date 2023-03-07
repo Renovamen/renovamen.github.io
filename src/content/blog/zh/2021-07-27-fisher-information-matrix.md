@@ -43,11 +43,11 @@ $$
 
 ### Score Function 的方差
 
-::: info 断言
+:::info[断言]
 Fisher 信息矩阵就是 score function 的方差
 :::
 
-::: tip 证明
+:::tip[证明]
 首先可以证明的是 score function 的期望为 0，即：
 
 $$
@@ -82,7 +82,7 @@ $$
 
 ### 海森矩阵的期望
 
-::: info 断言
+:::info[断言]
 Fisher 信息矩阵等于对数似然函数的海森矩阵（Hessian Metrix）的期望取负，即：
 
 $$
@@ -91,7 +91,7 @@ $$
 
 :::
 
-::: tip 证明
+:::tip[证明]
 参考博客 [Fisher Information Matrix](https://wiseodd.github.io/techblog/2018/03/11/fisher-information/)
 :::
 

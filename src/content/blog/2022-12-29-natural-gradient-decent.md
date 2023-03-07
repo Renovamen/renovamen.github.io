@@ -91,7 +91,7 @@ $$
 KL \Big ( p(x \mid \theta) \| p(x \mid \theta + d) \Big ) \approx \frac{1}{2} d^T F d
 $$
 
-:::details Proof
+:::details[Proof]
 For convenience, we denote $p(x \mid \theta)$ and $p(x \mid \theta + d)$ as $p(\theta)$ and $p(\theta + d)$, respectively.
 
 $$
