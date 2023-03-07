@@ -40,7 +40,7 @@ Previously, she received her master's degree in [Computer Science](https://www.b
 
 ## Publications
 
-::: pub /img/about/tokenflow-1.png /img/about/tokenflow-2.png
+:::paper[/img/about/tokenflow-1.png /img/about/tokenflow-2.png]
 **TokenFlow: Rethinking Fine-grained Cross-modal Alignment in Vision-Language Retrieval**
 
 <u>Xiaohan Zou</u>, Changqiao Wu, Lele Cheng, and Zhongyuan Wang
@@ -50,7 +50,7 @@ Preprint, 2022
 [paper](http://arxiv.org/abs/2209.13822)
 :::
 
-::: pub
+:::paper
 **Efficient Meta-Learning for Continual Learning with Taylor Expansion Approximation**
 
 <u>Xiaohan Zou</u>, and Tong Lin
@@ -62,7 +62,7 @@ International Joint Conference on Neural Networks (IJCNN), 2022
 [paper](https://arxiv.org/abs/2210.00713) / [slide](/files/papers/ijcnn2022/slide.pdf)
 :::
 
-::: pub /img/about/ictai2020.png
+:::paper[/img/about/ictai2020.png]
 **To be an Artist: Automatic Generation on Food Image Aesthetic Captioning**
 
 <u>Xiaohan Zou</u>, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
@@ -74,7 +74,7 @@ International Conference on Tools with Artificial Intelligence (ICTAI), 2020
 [paper](https://ieeexplore.ieee.org/document/9288208) / [code](https://github.com/Renovamen/Food-IAC) / [slide](/files/papers/ictai2020/slide.pdf)
 :::
 
-::: pub
+:::paper
 **A Survey on Application of Knowledge Graph**
 
 <u>Xiaohan Zou</u>

@@ -152,31 +152,31 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply text-red-600 dark:text-red-400;
 }
 
-.prose .pub-block {
+.prose .paper-block {
   @apply flex py-3 space-x-5 lt-sm:space-x-0 border-t border-c-dark;
 }
 
-.prose .pub-block .pub-images {
+.prose .paper-block .paper-images {
   @apply w-1/4 flex-center p-1 rounded lt-sm:hidden;
 }
 
-.prose .pub-block .pub-images:not(.no-image) {
+.prose .paper-block .paper-images:not(.no-image) {
   @apply bg-white;
 }
 
-.prose .pub-block .pub-images > div {
+.prose .paper-block .paper-images > div {
   @apply space-y-1;
 }
 
-.prose .pub-block .pub-images > div img {
+.prose .paper-block .paper-images > div img {
   @apply my-0;
 }
 
-.prose .pub-block .pub-details {
+.prose .paper-block .paper-details {
   @apply flex-1;
 }
 
-.prose .pub-block .pub-details p {
+.prose .paper-block .paper-details p {
   @apply my-1 leading-snug;
 }
 
