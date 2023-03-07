@@ -35,7 +35,7 @@
     
   <link rel="stylesheet" href="/_astro/404.48f1b9b6.css" />
 <link rel="stylesheet" href="/_astro/_slug_.6ea23a96.css" />
-<link rel="stylesheet" href="/_astro/index.a73328e0.css" />
+<link rel="stylesheet" href="/_astro/index.782dd28f.css" />
 <link rel="stylesheet" href="/_astro/index.4f915957.css" /><script type="module" src="/_astro/hoisted.a42a77e7.js"></script></head>
 
   <body class="font-sans">
@@ -58,30 +58,29 @@
           </span>
     </p>
   </div><div class="post prose prose-lg mx-auto mb-16 astro-GVPN4U4B">
-    <p>阅读论文 <a href="https://link.jianshu.com/?t=http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank" rel="noopener noreferrer">Dynamo: Amazon’s Highly Available Key-value Store</a> 后的一些总结。</p>
-<h2 id="toc">toc<a href="#toc" class="header-anchor" aria-hidden="true">#</a></h2>
-<ul>
+    <ul class="table-of-contents">
 <li>
-<p><a href="#1-background">1. Background</a></p>
+<p><a href="#_1-background">1. Background</a></p>
 </li>
 <li>
-<p><a href="#2-introduction">2. Introduction</a></p>
+<p><a href="#_2-introduction">2. Introduction</a></p>
 </li>
 <li>
-<p><a href="#3-system-architecture">3. System Architecture</a></p>
+<p><a href="#_3-system-architecture">3. System Architecture</a></p>
 <ul>
-<li><a href="#31-system-interface">3.1 System Interface</a></li>
-<li><a href="#32-%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87partitioning">3.2 数据分片（Partitioning）</a></li>
-<li><a href="#33-%E5%88%86%E7%89%87%E5%A4%87%E4%BB%BDreplication">3.3 分片备份（Replication）</a></li>
-<li><a href="#34-%E6%95%B0%E6%8D%AE%E7%89%88%E6%9C%ACdata-versioning">3.4 数据版本（Data Versioning）</a></li>
-<li><a href="#35-%E8%AF%BB%E5%86%99%E8%BF%87%E7%A8%8B">3.5 读写过程</a></li>
-<li><a href="#36-%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86handling-failures-hinted-handoff">3.6 故障处理（Handling Failures: Hinted Handoff）</a></li>
-<li><a href="#37-%E5%89%AF%E6%9C%AC%E5%90%8C%E6%AD%A5handling-permanent-failures-replica-synchronization">3.7 副本同步（Handling permanent failures: Replica synchronization）</a></li>
-<li><a href="#38-%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF%E5%8F%8A%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8Bmembership-and-failure-detection">3.8 成员信息及故障检测（Membership and Failure Detection）</a></li>
+<li><a href="#_31-system-interface">3.1 System Interface</a></li>
+<li><a href="#_32-%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87partitioning">3.2 数据分片（Partitioning）</a></li>
+<li><a href="#_33-%E5%88%86%E7%89%87%E5%A4%87%E4%BB%BDreplication">3.3 分片备份（Replication）</a></li>
+<li><a href="#_34-%E6%95%B0%E6%8D%AE%E7%89%88%E6%9C%ACdata-versioning">3.4 数据版本（Data Versioning）</a></li>
+<li><a href="#_35-%E8%AF%BB%E5%86%99%E8%BF%87%E7%A8%8B">3.5 读写过程</a></li>
+<li><a href="#_36-%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86handling-failures-hinted-handoff">3.6 故障处理（Handling Failures: Hinted Handoff）</a></li>
+<li><a href="#_37-%E5%89%AF%E6%9C%AC%E5%90%8C%E6%AD%A5handling-permanent-failures-replica-synchronization">3.7 副本同步（Handling permanent failures: Replica synchronization）</a></li>
+<li><a href="#_38-%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF%E5%8F%8A%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8Bmembership-and-failure-detection">3.8 成员信息及故障检测（Membership and Failure Detection）</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="1-background">1. Background<a href="#1-background" class="header-anchor" aria-hidden="true">#</a></h2>
+<p>阅读论文 <a href="https://link.jianshu.com/?t=http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank" rel="noopener noreferrer">Dynamo: Amazon’s Highly Available Key-value Store</a> 后的一些总结。</p>
+<h2 id="_1-background"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_1-background">#</a>1. Background</h2>
 <p>Dynamo 是 Amazon 开发的分布式存储系统，它在 Amazon 所处的应用环境中面对的问题和场景：</p>
 <ul>
 <li>大多数场景并不需要复杂的查询功能；</li>
@@ -97,7 +96,7 @@
 <li>易扩展性</li>
 </ul>
 <p>因此 Dynamo 在设计中会舍弃掉许多负担，如关系型数据库复杂的查询模型、对 ACID 的支持，对强一致性的追求，以及复杂的存储结构等。同时，Dynamo 认为其面对的是相对安全的内部网络环境，所以并没有处理安全或权限问题。</p>
-<h2 id="2-introduction">2. Introduction<a href="#2-introduction" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_2-introduction"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-introduction">#</a>2. Introduction</h2>
 <ul>
 <li>客户端使用 put、get 接口读写指定 key 所对应的数据；</li>
 <li>将整个数据空间划分为不同分片后存储在不同节点上；</li>
@@ -105,8 +104,8 @@
 <li>为了可用性损失了一些一致性，可能发生的数据冲突有可能需要应用程序处理；</li>
 <li>去中心化的维护整个集群的成员及故障信息，并用 gossip 同步。</li>
 </ul>
-<h2 id="3-system-architecture">3. System Architecture<a href="#3-system-architecture" class="header-anchor" aria-hidden="true">#</a></h2>
-<h3 id="31-system-interface">3.1 System Interface<a href="#31-system-interface" class="header-anchor" aria-hidden="true">#</a></h3>
+<h2 id="_3-system-architecture"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_3-system-architecture">#</a>3. System Architecture</h2>
+<h3 id="_31-system-interface"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_31-system-interface">#</a>3.1 System Interface</h3>
 <p>将对象与 key 相关联：</p>
 <ul>
 <li>
@@ -116,7 +115,7 @@
 <p><code>put(key, context, object)</code>：基于对象（<code>object</code>）的 <code>key</code> 决定将对象的副本放在哪，并将副本写入到磁盘。<code>context</code> 包含对象的系统元数据且对调用者不透明，包括对象的版本信息等。</p>
 </li>
 </ul>
-<h3 id="32-数据分片partitioning">3.2 数据分片（Partitioning）<a href="#32-%E6%95%B0%E6%8D%AE%E5%88%86%E7%89%87partitioning" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_32-数据分片partitioning"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_32-数据分片partitioning">#</a>3.2 数据分片（Partitioning）</h3>
 <p>为了更好更灵活的操作管理存储的数据，考虑对数据空间进行分片并将分片分配到不同存储机器。Dynamo 采用类似一致性哈希的方式进行分片的划分和分配。关于数据分片的算法，Dynamo 经历了几个阶段的选择和进化：</p>
 <ol>
 <li>
@@ -149,13 +148,13 @@
 <p></p><figure alt="strategy2"><img src="/img/posts/zh/2018-11-30/strategy2.png" alt="strategy2" width="300"></figure><p></p>
 </li>
 </ol>
-<h3 id="33-分片备份replication">3.3 分片备份（Replication）<a href="#33-%E5%88%86%E7%89%87%E5%A4%87%E4%BB%BDreplication" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_33-分片备份replication"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_33-分片备份replication">#</a>3.3 分片备份（Replication）</h3>
 <p>为了系统的高可用性，Dynamo 的每个分片都有 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个副本，存储在哈希环上顺时针方向的 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个节点上。这 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个节点称为该数据的 <strong>preference list</strong>。其中的每一个节点都可以对接受针对该数据的操作请求。</p>
 <p></p><figure alt="replication"><img src="/img/posts/zh/2018-11-30/replication.png" alt="replication" width="450"><figcaption><p>对于 key K: preference list = B, C, D</p></figcaption></figure><p></p>
 <p><strong>Coordinator 协调器</strong>：每个 key 被分配到一个 coordinator 节点，coordinator 节点复制这些 key 到环上顺时针方向的 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span> 个后继节点。这样的结果是，系统中每个节点负责环上的从其自己到第 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个前继节点间的一段区域。</p>
 <p>考虑节点故障：preference list 可以包含超过 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个节点。其他的节点可以是这个环上的，也可以时其他数据中心的，可以根据需要配置。</p>
 <p>考虑虚拟节点：由于使用了虚拟节点，key 的前 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个后继位置可能属于少于 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span> 个物理节点，因此 preference list 将跳过一些虚拟节点位置，以保证 list 中只包含不同的物理节点。</p>
-<h3 id="34-数据版本data-versioning">3.4 数据版本（Data Versioning）<a href="#34-%E6%95%B0%E6%8D%AE%E7%89%88%E6%9C%ACdata-versioning" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_34-数据版本data-versioning"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_34-数据版本data-versioning">#</a>3.4 数据版本（Data Versioning）</h3>
 <p><strong>强一致性</strong>：假如 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span></span> 先写入了一个值到存储系统，存储系统保证后续 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span></span>、<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span></span>、<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span> 的读取操作都将返回最新值。如果不能保证，写操作就会失败。</p>
 <p>Dynamo 根据 CAP 原理（在一个分布式系统中，Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可兼得），在一致性上做出让步，在任何时刻用户都可以进行写操作，提供<strong>最终一致性</strong>：过程松，结果紧，最终结果必须保持一致性。</p>
 <p>最终一致性允许更新操作可以异步地传播到所有副本。</p>
@@ -198,7 +197,7 @@
 <p>可能的问题：如果许多服务器协调对一个对象的写，vector clock 的大小可能会增长。因为写入通常是 Coordinator（也就是 Preference list 的第一个节点）执行，所以这个问题一般不会发生。但在多个服务器故障时，写请求可能会被不是 coordinator 的节点执行，导致 vector clock 的大小增长。</p>
 <p>因此需要限制 vector clock 的大小，Dynamo 采用了以下方案：对每个 (node, counter) 对，Dynamo 存储一个时间戳表示最后一次更新的时间。当 vector clock 中 (node, counter) 对的数目达到一个阈值(如 10)，最早的一对将从时钟中删除。</p>
 <p>显然，这个方案会导至在协调时效率低下，因为后代关系不能准确得到。但这个问题还没有出现在生产环境，因此这个问题没有得到彻底研究。</p>
-<h3 id="35-读写过程">3.5 读写过程<a href="#35-%E8%AF%BB%E5%86%99%E8%BF%87%E7%A8%8B" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_35-读写过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_35-读写过程">#</a>3.5 读写过程</h3>
 <p>Dynamo 采用类似 Quorum 的方式保证数据正确，即 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>+</mo><mi>R</mi><mo>></mo><mi>N</mi></mrow><annotation encoding="application/x-tex">W+R>N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span>。</p>
 <p>Put 流程：</p>
 <ul>
@@ -214,7 +213,7 @@
 <li>coodinator 通过 vector clock 处理有因果关系的数据版本</li>
 <li>将没有因果关系的所有数据版本返回给用户</li>
 </ul>
-<h3 id="36-故障处理handling-failures-hinted-handoff">3.6 故障处理（Handling Failures: Hinted Handoff）<a href="#36-%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86handling-failures-hinted-handoff" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_36-故障处理handling-failures-hinted-handoff"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_36-故障处理handling-failures-hinted-handoff">#</a>3.6 故障处理（Handling Failures: Hinted Handoff）</h3>
 <p>Dynamo 中用 <strong>hinted handoff</strong> 的方式保证在出现暂时的节点或网络故障时，集群依然可以正常提供服务。</p>
 <p>流程：</p>
 <p></p><figure alt="replication"><img src="/img/posts/zh/2018-11-30/replication.png" alt="replication" width="400"></figure><p></p>
@@ -226,7 +225,7 @@
 <p>优点：确保读取和写入操作不会因为节点临时或网络故障而失败</p>
 <p>由于一个 key 的 preference list 的构造可以是基于跨多个数据中心的节点的，这种跨多个数据中心的复制方案甚至能够处理整个数据中心都故障的情况。</p>
 <p>某些情况下仍然会导致数据丢失：如果 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span></span> 发现 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span></span> 重新上线了，会将本应该属于 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span></span> 的分片传送回去，如果这期间 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span></span> 发生故障，该分片就会丢失。</p>
-<h3 id="37-副本同步handling-permanent-failures-replica-synchronization">3.7 副本同步（Handling permanent failures: Replica synchronization）<a href="#37-%E5%89%AF%E6%9C%AC%E5%90%8C%E6%AD%A5handling-permanent-failures-replica-synchronization" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_37-副本同步handling-permanent-failures-replica-synchronization"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_37-副本同步handling-permanent-failures-replica-synchronization">#</a>3.7 副本同步（Handling permanent failures: Replica synchronization）</h3>
 <p>当故障发生或者有新节点加入、离开集群时，都涉及分片的拷贝和传输。因此希望能够快速检查分片中内容是否相同，并通过仅发送不同的部分来减少数据传输量。Dynamo 采用 <strong>Merkle Tree</strong> 来解决这个问题。</p>
 <p>Merkle tree 是一个哈希树（hash tree）：</p>
 <ul>
@@ -257,7 +256,7 @@
 <li>时间：Merkle Tree 利用树形结构迅速定位到不同的分片，时间复杂度为 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\lg n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span></li>
 <li>空间：在分布式情况下，空间可以理解为相应的网络传输数据量。Merkle Tree 不必传输所有的节点，只需传输不同的节点。</li>
 </ul>
-<h3 id="38-成员信息及故障检测membership-and-failure-detection">3.8 成员信息及故障检测（Membership and Failure Detection）<a href="#38-%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF%E5%8F%8A%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8Bmembership-and-failure-detection" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_38-成员信息及故障检测membership-and-failure-detection"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_38-成员信息及故障检测membership-and-failure-detection">#</a>3.8 成员信息及故障检测（Membership and Failure Detection）</h3>
 <p>考虑到节点失败无法恢复的情况并不常见，Dynamo 加入或离开集群都需要手动通过命令完成。</p>
 <ul>
 <li>当有用户请求时，coordinator 会发现不可达的节点，并用其他节点代替之，之后开始周期性探测其是否恢复；</li>

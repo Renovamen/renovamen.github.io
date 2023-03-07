@@ -35,7 +35,7 @@
     
   <link rel="stylesheet" href="/_astro/404.48f1b9b6.css" />
 <link rel="stylesheet" href="/_astro/_slug_.6ea23a96.css" />
-<link rel="stylesheet" href="/_astro/index.a73328e0.css" />
+<link rel="stylesheet" href="/_astro/index.782dd28f.css" />
 <link rel="stylesheet" href="/_astro/index.4f915957.css" /><script type="module" src="/_astro/hoisted.a42a77e7.js"></script></head>
 
   <body class="font-sans">
@@ -49,81 +49,80 @@
       
     </p>
   </div><div class="post prose prose-lg mx-auto mb-16 astro-GVPN4U4B">
-    <p>对我认为的本科最难的课（2333）第一次实验的流水账式记录。</p>
+    <ul class="table-of-contents">
+<li>
+<p><a href="#_1-%E5%88%9B%E5%BB%BA%E7%BB%84">1. 创建组</a></p>
+<ul>
+<li><a href="#_11-%E7%BB%84%E7%9A%84%E7%BB%93%E6%9E%84">1.1 组的结构</a></li>
+<li><a href="#_12-%E7%99%BB%E9%99%86-tso">1.2 登陆 TSO</a></li>
+<li><a href="#_13-%E5%9C%A8-racflab-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84">1.3 在 RACFLAB 下定义子组</a></li>
+<li><a href="#_14-%E5%9C%A8-div16fun-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E5%8A%9F%E8%83%BD%E7%BB%84">1.4 在 DIV16FUN 下定义子组（功能组）</a></li>
+<li><a href="#_15-%E5%9C%A8-div16res-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E8%B5%84%E6%BA%90%E7%BB%84">1.5 在 DIV16RES 下定义子组（资源组）</a></li>
+<li><a href="#_16-%E6%9F%A5%E6%89%BE%E7%BB%84-profile">1.6 查找组 Profile</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_2-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86">2. 用户管理</a></p>
+<ul>
+<li><a href="#_21-%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7">2.1 新建用户</a></li>
+<li><a href="#_22-%E9%87%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81">2.2 重置用户密码</a></li>
+<li><a href="#_23-revoke-%E7%94%A8%E6%88%B7">2.3 Revoke 用户</a></li>
+<li><a href="#_24-resume-%E7%94%A8%E6%88%B7">2.4 Resume 用户</a></li>
+<li><a href="#_25-search-%E6%9F%A5%E6%89%BE">2.5 Search 查找</a></li>
+<li><a href="#_26-%E5%B0%86%E7%94%A8%E6%88%B7%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84">2.6 将用户关联到组</a></li>
+<li><a href="#_27-%E9%AA%8C%E8%AF%81%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84">2.7 验证用户是否关联到组</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_3-%E5%88%86%E6%95%A3%E5%BC%8F-racf-%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86">3. 分散式 RACF 安全管理</a></p>
+<ul>
+<li><a href="#_31-%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E5%AE%9A%E4%BD%8D">3.1 用户身份定位</a></li>
+<li><a href="#_32-%E6%B5%8B%E8%AF%95">3.2 测试</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_4-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-i">4. 数据集保护 I</a></p>
+<ul>
+<li><a href="#_41-%E4%BF%9D%E6%8A%A4%E6%95%B0%E6%8D%AE%E9%9B%86">4.1 保护数据集</a></li>
+<li><a href="#_42-%E6%9F%A5%E7%9C%8B-profile">4.2 查看 PROFILE</a></li>
+<li><a href="#_43-%E5%AE%9A%E4%B9%89-rpofile--%E8%B5%8B-alter-%E6%9D%83">4.3 定义 RPOFILE + 赋 ALTER 权</a></li>
+<li><a href="#_44-%E9%AA%8C%E8%AF%81">4.4 验证</a></li>
+<li><a href="#_45-%E5%88%9B%E5%BB%BA%E7%BB%84%E6%95%B0%E6%8D%AE%E9%9B%86">4.5 创建组数据集</a></li>
+<li><a href="#_46-%E9%AA%8C%E8%AF%81">4.6 验证</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_5-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-ii">5. 数据集保护 II</a></p>
+<ul>
+<li><a href="#_51-%E5%88%9B%E5%BB%BA%E5%85%A8%E5%8C%B9%E9%85%8D-profile">5.1 创建全匹配 PROFILE</a></li>
+<li><a href="#_52-%E6%89%93%E5%BC%80-warning-%E7%8A%B6%E6%80%81">5.2 打开 Warning 状态</a></li>
+<li><a href="#_53-%E5%85%B3%E9%97%AD-warning-%E7%8A%B6%E6%80%81">5.3 关闭 Warning 状态</a></li>
+<li><a href="#_54-update-%E6%9D%83%E9%99%90">5.4 UPDATE 权限</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_6-%E4%BF%9D%E6%8A%A4-tso-%E8%B5%84%E6%BA%90">6. 保护 TSO 资源</a></p>
+<ul>
+<li><a href="#_61-%E5%88%9B%E5%BB%BA%E7%BB%84%E7%BB%93%E6%9E%84">6.1 创建组结构</a></li>
+<li><a href="#_62-%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7">6.2 新增用户</a></li>
+<li><a href="#_63-%E5%88%9B%E5%BB%BA%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B">6.3 创建登陆过程</a></li>
+<li><a href="#_64-%E4%BF%9D%E6%8A%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B">6.4 保护登录过程</a></li>
+<li><a href="#_65-%E4%BF%9D%E6%8A%A4-acctnum">6.5 保护 ACCTNUM</a></li>
+<li><a href="#_66-%E4%BF%9D%E6%8A%A4-tsoauth">6.6 保护 TSOAUTH</a></li>
+<li><a href="#_67-%E4%BF%9D%E6%8A%A4%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E9%9B%86">6.7 保护用户数据集</a></li>
+<li><a href="#_68-%E5%88%9B%E5%BB%BA-alias">6.8 创建 ALIAS</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#_7-%E4%BD%BF%E7%94%A8-jcl-%E6%89%A7%E8%A1%8C-racf-%E5%91%BD%E4%BB%A4">7. 使用 JCL 执行 RACF 命令</a></p>
+</li>
+</ul>
+<p>对我认为的本科最难的课（2333）第一次实验的流水账式记录。</p>
 <p>希望早日脱离大型机的苦海，阿门。</p>
-<h2 id="toc">toc<a href="#toc" class="header-anchor" aria-hidden="true">#</a></h2>
-<ul>
-<li>
-<p><a href="#1-%E5%88%9B%E5%BB%BA%E7%BB%84">1. 创建组</a></p>
-<ul>
-<li><a href="#11-%E7%BB%84%E7%9A%84%E7%BB%93%E6%9E%84">1.1 组的结构</a></li>
-<li><a href="#12-%E7%99%BB%E9%99%86-tso">1.2 登陆 TSO</a></li>
-<li><a href="#13-%E5%9C%A8-racflab-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84">1.3 在 RACFLAB 下定义子组</a></li>
-<li><a href="#14-%E5%9C%A8-div16fun-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E5%8A%9F%E8%83%BD%E7%BB%84">1.4 在 DIV16FUN 下定义子组（功能组）</a></li>
-<li><a href="#15-%E5%9C%A8-div16res-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E8%B5%84%E6%BA%90%E7%BB%84">1.5 在 DIV16RES 下定义子组（资源组）</a></li>
-<li><a href="#16-%E6%9F%A5%E6%89%BE%E7%BB%84-profile">1.6 查找组 Profile</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#2-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86">2. 用户管理</a></p>
-<ul>
-<li><a href="#21-%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7">2.1 新建用户</a></li>
-<li><a href="#22-%E9%87%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81">2.2 重置用户密码</a></li>
-<li><a href="#23-revoke-%E7%94%A8%E6%88%B7">2.3 Revoke 用户</a></li>
-<li><a href="#24-resume-%E7%94%A8%E6%88%B7">2.4 Resume 用户</a></li>
-<li><a href="#25-search-%E6%9F%A5%E6%89%BE">2.5 Search 查找</a></li>
-<li><a href="#26-%E5%B0%86%E7%94%A8%E6%88%B7%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84">2.6 将用户关联到组</a></li>
-<li><a href="#27-%E9%AA%8C%E8%AF%81%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84">2.7 验证用户是否关联到组</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#3-%E5%88%86%E6%95%A3%E5%BC%8F-racf-%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86">3. 分散式 RACF 安全管理</a></p>
-<ul>
-<li><a href="#31-%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E5%AE%9A%E4%BD%8D">3.1 用户身份定位</a></li>
-<li><a href="#32-%E6%B5%8B%E8%AF%95">3.2 测试</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#4-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-i">4. 数据集保护 I</a></p>
-<ul>
-<li><a href="#41-%E4%BF%9D%E6%8A%A4%E6%95%B0%E6%8D%AE%E9%9B%86">4.1 保护数据集</a></li>
-<li><a href="#42-%E6%9F%A5%E7%9C%8B-profile">4.2 查看 PROFILE</a></li>
-<li><a href="#43-%E5%AE%9A%E4%B9%89-rpofile--%E8%B5%8B-alter-%E6%9D%83">4.3 定义 RPOFILE + 赋 ALTER 权</a></li>
-<li><a href="#44-%E9%AA%8C%E8%AF%81">4.4 验证</a></li>
-<li><a href="#45-%E5%88%9B%E5%BB%BA%E7%BB%84%E6%95%B0%E6%8D%AE%E9%9B%86">4.5 创建组数据集</a></li>
-<li><a href="#46-%E9%AA%8C%E8%AF%81">4.6 验证</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#5-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-ii">5. 数据集保护 II</a></p>
-<ul>
-<li><a href="#51-%E5%88%9B%E5%BB%BA%E5%85%A8%E5%8C%B9%E9%85%8D-profile">5.1 创建全匹配 PROFILE</a></li>
-<li><a href="#52-%E6%89%93%E5%BC%80-warning-%E7%8A%B6%E6%80%81">5.2 打开 Warning 状态</a></li>
-<li><a href="#53-%E5%85%B3%E9%97%AD-warning-%E7%8A%B6%E6%80%81">5.3 关闭 Warning 状态</a></li>
-<li><a href="#54-update-%E6%9D%83%E9%99%90">5.4 UPDATE 权限</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#6-%E4%BF%9D%E6%8A%A4-tso-%E8%B5%84%E6%BA%90">6. 保护 TSO 资源</a></p>
-<ul>
-<li><a href="#61-%E5%88%9B%E5%BB%BA%E7%BB%84%E7%BB%93%E6%9E%84">6.1 创建组结构</a></li>
-<li><a href="#62-%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7">6.2 新增用户</a></li>
-<li><a href="#63-%E5%88%9B%E5%BB%BA%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B">6.3 创建登陆过程</a></li>
-<li><a href="#64-%E4%BF%9D%E6%8A%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B">6.4 保护登录过程</a></li>
-<li><a href="#65-%E4%BF%9D%E6%8A%A4-acctnum">6.5 保护 ACCTNUM</a></li>
-<li><a href="#66-%E4%BF%9D%E6%8A%A4-tsoauth">6.6 保护 TSOAUTH</a></li>
-<li><a href="#67-%E4%BF%9D%E6%8A%A4%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E9%9B%86">6.7 保护用户数据集</a></li>
-<li><a href="#68-%E5%88%9B%E5%BB%BA-alias">6.8 创建 ALIAS</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#7-%E4%BD%BF%E7%94%A8-jcl-%E6%89%A7%E8%A1%8C-racf-%E5%91%BD%E4%BB%A4">7. 使用 JCL 执行 RACF 命令</a></p>
-</li>
-</ul>
-<h2 id="1-创建组">1. 创建组<a href="#1-%E5%88%9B%E5%BB%BA%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h2>
-<h3 id="11-组的结构">1.1 组的结构<a href="#11-%E7%BB%84%E7%9A%84%E7%BB%93%E6%9E%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h2 id="_1-创建组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_1-创建组">#</a>1. 创建组</h2>
+<h3 id="_11-组的结构"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_11-组的结构">#</a>1.1 组的结构</h3>
 <p><img src="/img/posts/zh/2019-04-03/racf-2.1.png" alt=""></p>
-<h3 id="12-登陆-tso">1.2 登陆 TSO<a href="#12-%E7%99%BB%E9%99%86-tso" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_12-登陆-tso"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_12-登陆-tso">#</a>1.2 登陆 TSO</h3>
 <p>以 RACFLAB 组管理员身份登陆 TSO：</p>
 <ol>
 <li>
@@ -140,7 +139,7 @@
 <pre><code>LU ST016
 </code></pre>
 </div>
-<h3 id="13-在-racflab-下定义子组">1.3 在 RACFLAB 下定义子组<a href="#13-%E5%9C%A8-racflab-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_13-在-racflab-下定义子组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_13-在-racflab-下定义子组">#</a>1.3 在 RACFLAB 下定义子组</h3>
 <p>利用 RACF 命令定义以下子组：</p>
 <ul>
 <li>
@@ -172,7 +171,7 @@ LG DIV16FUN
 LG DIV16RES
 </code></pre>
 </div>
-<h3 id="14-在-div16fun-下定义子组功能组">1.4 在 DIV16FUN 下定义子组（功能组）<a href="#14-%E5%9C%A8-div16fun-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E5%8A%9F%E8%83%BD%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_14-在-div16fun-下定义子组功能组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_14-在-div16fun-下定义子组功能组">#</a>1.4 在 DIV16FUN 下定义子组（功能组）</h3>
 <p>利用 RACF 命令定义以下子组：</p>
 <ul>
 <li>
@@ -190,7 +189,7 @@ LG DIV16RES
 </div>
 </li>
 </ul>
-<h3 id="15-在-div16res-下定义子组资源组">1.5 在 DIV16RES 下定义子组（资源组）<a href="#15-%E5%9C%A8-div16res-%E4%B8%8B%E5%AE%9A%E4%B9%89%E5%AD%90%E7%BB%84%E8%B5%84%E6%BA%90%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_15-在-div16res-下定义子组资源组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_15-在-div16res-下定义子组资源组">#</a>1.5 在 DIV16RES 下定义子组（资源组）</h3>
 <p>利用 RACF 命令定义以下子组（RACF 中数据集 Profile 的 HLQ 必须是 RACF 系统中的一个用户或者组，这里为即将要保护的数据集 RES16PRD.* 和 RES16TST 定义 2 个子组）：</p>
 <ul>
 <li>
@@ -208,15 +207,15 @@ LG DIV16RES
 </div>
 </li>
 </ul>
-<h3 id="16-查找组-profile">1.6 查找组 Profile<a href="#16-%E6%9F%A5%E6%89%BE%E7%BB%84-profile" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_16-查找组-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_16-查找组-profile">#</a>1.6 查找组 Profile</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>SEARCH CLASS(GROUP) MASK(DIV16)
 </code></pre>
 </div>
 <p> </p>
-<h2 id="2-用户管理">2. 用户管理<a href="#2-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_2-用户管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-用户管理">#</a>2. 用户管理</h2>
 <p><img src="/img/posts/zh/2019-04-03/racf-3.1.png" alt=""></p>
-<h3 id="21-新建用户">2.1 新建用户<a href="#21-%E6%96%B0%E5%BB%BA%E7%94%A8%E6%88%B7" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_21-新建用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_21-新建用户">#</a>2.1 新建用户</h3>
 <ol>
 <li>
 <p>在不太了解用户需要什么权限的情况下，一般只给出最低权限，利用 RACF 命令完成以下设置：</p>
@@ -281,34 +280,34 @@ LG DIV16RES
 </div>
 </li>
 </ol>
-<h3 id="22-重置用户密码">2.2 重置用户密码<a href="#22-%E9%87%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_22-重置用户密码"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_22-重置用户密码">#</a>2.2 重置用户密码</h3>
 <p>当用户忘记密码的时后需要管理员 ST016 为该用户重新指定一个初始密码。</p>
 <p>场景：Janet Smith（TSO1601）遗忘了密码：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ALU TSO1601 PASSWORD(PASS)
 </code></pre>
 </div>
-<h3 id="23-revoke-用户">2.3 Revoke 用户<a href="#23-revoke-%E7%94%A8%E6%88%B7" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_23-revoke-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_23-revoke-用户">#</a>2.3 Revoke 用户</h3>
 <p>当用户帐号暂时不用的时候，安全起见应该将该帐号挂起（Revoke）。
 场景：Arthur Fielding（TSO1604）将会出差一段时间，在这段时间应将该用户的帐号挂起：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ALU TSO1601 REVOKE
 </code></pre>
 </div>
-<h3 id="24-resume-用户">2.4 Resume 用户<a href="#24-resume-%E7%94%A8%E6%88%B7" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_24-resume-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_24-resume-用户">#</a>2.4 Resume 用户</h3>
 <p>当挂起的用户帐号需要重新启用的时候，应该及时地将帐号 Resume。
 场景：Arthur Fielding（TSO1604）出差回来，希望能够继续使用以前的帐号：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ALU TSO1601 RESUME
 </code></pre>
 </div>
-<h3 id="25-search-查找">2.5 Search 查找<a href="#25-search-%E6%9F%A5%E6%89%BE" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_25-search-查找"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_25-search-查找">#</a>2.5 Search 查找</h3>
 <p>使用 Search 命令查找以上新建的用户 Profile</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>SEARCH CLASS(USER) MASK(TSO1601)
 </code></pre>
 </div>
-<h3 id="26-将用户关联到组">2.6 将用户关联到组<a href="#26-%E5%B0%86%E7%94%A8%E6%88%B7%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_26-将用户关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_26-将用户关联到组">#</a>2.6 将用户关联到组</h3>
 <p>RACF 中给用户访问资源权限的最佳方法是将用户关联到可以访问这些资源的组中，这些组称为功能组（Functional Group）。</p>
 <ul>
 <li>
@@ -326,7 +325,7 @@ LG DIV16RES
 </div>
 </li>
 </ul>
-<h3 id="27-验证用户是否关联到组">2.7 验证用户是否关联到组<a href="#27-%E9%AA%8C%E8%AF%81%E7%94%A8%E6%88%B7%E6%98%AF%E5%90%A6%E5%85%B3%E8%81%94%E5%88%B0%E7%BB%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_27-验证用户是否关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_27-验证用户是否关联到组">#</a>2.7 验证用户是否关联到组</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>LU TSO1604
 LU TSO1605
@@ -335,7 +334,7 @@ LG FUN16TST
 </code></pre>
 </div>
 <p> </p>
-<h2 id="3-分散式-racf-安全管理">3. 分散式 RACF 安全管理<a href="#3-%E5%88%86%E6%95%A3%E5%BC%8F-racf-%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_3-分散式-racf-安全管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_3-分散式-racf-安全管理">#</a>3. 分散式 RACF 安全管理</h2>
 <p><strong>目的</strong>：实现 RACF 中的管理权限下放（Delegation）</p>
 <p><strong>内容</strong>：新建几个管理员用户，其中一个管理员负责用户安全的管理，一个管理员负 责将用户连接到功能组，另外一个管理员管控制对数据集资源的访问：</p>
 
@@ -361,7 +360,7 @@ LG FUN16TST
 
 <table><thead><tr><th>USER</th><th>AUTHORITY</th></tr></thead><tbody><tr><td>TSO1601</td><td>group special for DIV16ADM</td></tr><tr><td>TSO1602</td><td>connect authority for FUN16PRD &#x26; FUN16TST</td></tr><tr><td>TSO1603</td><td>create authority for RES16PRD &#x26; RES16TST</td></tr></tbody></table>
 <p><img src="/img/posts/zh/2019-04-03/racf-4.1.png" alt=""></p>
-<h3 id="31-用户身份定位">3.1 用户身份定位<a href="#31-%E7%94%A8%E6%88%B7%E8%BA%AB%E4%BB%BD%E5%AE%9A%E4%BD%8D" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_31-用户身份定位"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_31-用户身份定位">#</a>3.1 用户身份定位</h3>
 <ul>
 <li>
 <p>TSO1601（Janet Smith）：该管理员将对 DIV16ADM 组用户的安全进行管理，包括为用户重置密码，挂起和启用用户：</p>
@@ -387,7 +386,7 @@ CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)
 </div>
 </li>
 </ul>
-<h3 id="32-测试">3.2 测试<a href="#32-%E6%B5%8B%E8%AF%95" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_32-测试"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_32-测试">#</a>3.2 测试</h3>
 <p>测试步骤 1 的功能是否实现：</p>
 <ol>
 <li>
@@ -415,11 +414,11 @@ REMOVE TSO1601 GROUP(FUN16TST)
 </li>
 </ol>
 <p> </p>
-<h2 id="4-数据集保护-i">4. 数据集保护 I<a href="#4-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-i" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_4-数据集保护-i"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_4-数据集保护-i">#</a>4. 数据集保护 I</h2>
 <p><strong>目的</strong>：实现对用户数据集和组数据集的保护。</p>
 <p><strong>内容</strong>：首先保护用户数据集，然后对生产数据集和测试数据集进行保护，然后进行授权后的验证。</p>
 <p>为了简化实验，RES16PRD 和 RES16TST 组既是 Data Control Group，也是 Resource Onwership Group。</p>
-<h3 id="41-保护数据集">4.1 保护数据集<a href="#41-%E4%BF%9D%E6%8A%A4%E6%95%B0%E6%8D%AE%E9%9B%86" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_41-保护数据集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_41-保护数据集">#</a>4.1 保护数据集</h3>
 <p>保护以下用户的数据集，保护准则：只有用户本身可以访问自己的数据集，其他人都不能访问。（用户的数据集是指以用户名为 HLQ 的所有数据集）</p>
 <ul>
 <li>
@@ -447,7 +446,7 @@ ADDSD 'TSO1604.**' UACC(NONE)
 ADDSD 'TSO1605.**' UACC(NONE)
 </code></pre>
 </div>
-<h3 id="42-查看-profile">4.2 查看 PROFILE<a href="#42-%E6%9F%A5%E7%9C%8B-profile" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_42-查看-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_42-查看-profile">#</a>4.2 查看 PROFILE</h3>
 <p>查看步骤 1 创建的用户数据集 PROFILE：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>LISTDSD DA('TSO1601.**') ALL
@@ -457,7 +456,7 @@ LISTDSD DA('TSO1604.**') ALL
 LISTDSD DA('TSO1605.**') ALL
 </code></pre>
 </div>
-<h3 id="43-定义-rpofile--赋-alter-权">4.3 定义 RPOFILE + 赋 ALTER 权<a href="#43-%E5%AE%9A%E4%B9%89-rpofile--%E8%B5%8B-alter-%E6%9D%83" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_43-定义-rpofile--赋-alter-权"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_43-定义-rpofile--赋-alter-权">#</a>4.3 定义 RPOFILE + 赋 ALTER 权</h3>
 <p>定义 RES16TST 组数据集的 RPOFILE。在前面的实验中，TSO1603 被指定为 RES16PRD 和 RES16TST 的 Create 用户，以拥有对这 2 个组的数据集的保护权限。</p>
 <ol>
 <li>
@@ -510,14 +509,14 @@ LISTDSD DA('TSO1605.**') ALL
 </div>
 </li>
 </ol>
-<h3 id="44-验证">4.4 验证<a href="#44-%E9%AA%8C%E8%AF%81" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_44-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_44-验证">#</a>4.4 验证</h3>
 <p>确定组数据集 PROFIEL 是否创建并按照预定的要求保护成功</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>LISTDSD DATASET('RES16TST.**') ALL
 LISTDSD DATASET('RES16PRD.**') ALL
 </code></pre>
 </div>
-<h3 id="45-创建组数据集">4.5 创建组数据集<a href="#45-%E5%88%9B%E5%BB%BA%E7%BB%84%E6%95%B0%E6%8D%AE%E9%9B%86" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_45-创建组数据集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_45-创建组数据集">#</a>4.5 创建组数据集</h3>
 <p>以 ST016 用户登陆 TSO，创建 RES16TST 和 RES16PRD 组数据集：</p>
 <ol>
 <li>
@@ -562,7 +561,7 @@ Enter "/" to select option    DDDD for retention period in days
 ( ** Only one of these fields may be specified)
 </code></pre>
 </div>
-<h3 id="46-验证">4.6 验证<a href="#46-%E9%AA%8C%E8%AF%81" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_46-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_46-验证">#</a>4.6 验证</h3>
 <ul>
 <li>
 <p>验证 TSO1604 访问 RES16PRD 组数据集：成功访问；</p>
@@ -588,30 +587,30 @@ Enter "/" to select option    DDDD for retention period in days
 </li>
 </ul>
 <p> </p>
-<h2 id="5-数据集保护-ii">5. 数据集保护 II<a href="#5-%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%9D%E6%8A%A4-ii" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_5-数据集保护-ii"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_5-数据集保护-ii">#</a>5. 数据集保护 II</h2>
 <p>目的：实现对用户数据集和组数据集的保护</p>
 <p>内容：创建数据集，确定创建数据集需要的权限，然后建立 Generic PROFILE 对数据集进行保护，最后对 PROFILE 的 Warning 状态进行理解和配置，并使用 LISTDSD 命令确定最佳匹配 PROFILE 和确定 Generic PROFILE 所保护的数据集范围。</p>
-<h3 id="51-创建全匹配-profile">5.1 创建全匹配 PROFILE<a href="#51-%E5%88%9B%E5%BB%BA%E5%85%A8%E5%8C%B9%E9%85%8D-profile" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_51-创建全匹配-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_51-创建全匹配-profile">#</a>5.1 创建全匹配 PROFILE</h3>
 <p>为 RES16PRD.DATA 创建全匹配 PROFILE。以 TSO1603 登陆（RES16PRD 组 CREATE 特权人员，即数据管理人员），为 <code>RES16PRD.DATA</code> 创建一个全匹配的 PROFILE 进行保护：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ADDSD 'RES16PRD.DATA' UACC(READ)
 </code></pre>
 </div>
-<h3 id="52-打开-warning-状态">5.2 打开 Warning 状态<a href="#52-%E6%89%93%E5%BC%80-warning-%E7%8A%B6%E6%80%81" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_52-打开-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_52-打开-warning-状态">#</a>5.2 打开 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态打开：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ALTDSD 'RES16TST.**' WARNING
 </code></pre>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
-<h3 id="53-关闭-warning-状态">5.3 关闭 Warning 状态<a href="#53-%E5%85%B3%E9%97%AD-warning-%E7%8A%B6%E6%80%81" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_53-关闭-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_53-关闭-warning-状态">#</a>5.3 关闭 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态关闭：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ALTDSD 'RES16TST.**' NOWARNING
 </code></pre>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
-<h3 id="54-update-权限">5.4 UPDATE 权限<a href="#54-update-%E6%9D%83%E9%99%90" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_54-update-权限"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_54-update-权限">#</a>5.4 UPDATE 权限</h3>
 <p>TSO1603 登陆。假设 <code>RES16PRD.NEWAPPL.FINANCE.DATA</code> 和 <code>RES16PRD.NEWAPPL.HR.DATA</code> 是一个新应用系统的 2 个数据集，FUN16TST 组需要对这 2 个数据集有 UPDATE 权限，而不能对其他应用系统的数据集有操作权限。注意，FUN16PRD 组仍然需要对所有的 RES16PRD 数据集保留原有的操作权限。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')
@@ -630,12 +629,12 @@ LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
 </code></pre>
 </div>
 <p> </p>
-<h2 id="6-保护-tso-资源">6. 保护 TSO 资源<a href="#6-%E4%BF%9D%E6%8A%A4-tso-%E8%B5%84%E6%BA%90" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_6-保护-tso-资源"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_6-保护-tso-资源">#</a>6. 保护 TSO 资源</h2>
 <p>目的：授权用户登录 TSO</p>
 <p>内容：该实验将首先为 AP（Application Programmer）和 SP（System Programmer）用户建立组结构，然后为 TSO 的登陆过程（TSOPROC）和用户帐号（ACCTNUM 建立一些通用资源 PROFILE 进行保护，接着新增 AP/SP 用户 PROFILE，对 TSO 段进行赋值，并对他们授权访问 TSO。</p>
 <p>组结构：</p>
 <p><img src="/img/posts/zh/2019-04-03/racf-7.1.png" alt=""></p>
-<h3 id="61-创建组结构">6.1 创建组结构<a href="#61-%E5%88%9B%E5%BB%BA%E7%BB%84%E7%BB%93%E6%9E%84" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_61-创建组结构"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_61-创建组结构">#</a>6.1 创建组结构</h3>
 <ol>
 <li>
 <p>在 DIV16FUN 下创建子组 FUN16AP</p>
@@ -659,7 +658,7 @@ LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
 </div>
 </li>
 </ol>
-<h3 id="62-新增用户">6.2 新增用户<a href="#62-%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_62-新增用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_62-新增用户">#</a>6.2 新增用户</h3>
 <p>新增 AP 和 SP 用户，这些用户需要访问 TSO</p>
 <ol>
 <li>
@@ -711,14 +710,14 @@ CONNECT TSO1608 GROUP(FUN16AP)
 </div>
 </li>
 </ol>
-<h3 id="63-创建登陆过程">6.3 创建登陆过程<a href="#63-%E5%88%9B%E5%BB%BA%E7%99%BB%E9%99%86%E8%BF%87%E7%A8%8B" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_63-创建登陆过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_63-创建登陆过程">#</a>6.3 创建登陆过程</h3>
 <p>为 TSO 用户创建一个新的登陆过程 PROC#Sxx 和 PROC#Axx。打开文件 VENDOR.PROCLIB ，在 Command 中输入：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>S PROC#S16;COPY IKJDB2
 S PROC#A16;COPY IKJDB2
 </code></pre>
 </div>
-<h3 id="64-保护登录过程">6.4 保护登录过程<a href="#64-%E4%BF%9D%E6%8A%A4%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_64-保护登录过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_64-保护登录过程">#</a>6.4 保护登录过程</h3>
 <p>保护 PROC#Sxx 登陆过程（TSOPROC 类）。</p>
 <ol>
 <li>
@@ -750,7 +749,7 @@ RLIST TSOPROC PROC#A16 AUTHUSER
 <p>可能会提示不需要刷新。</p>
 </li>
 </ol>
-<h3 id="65-保护-acctnum">6.5 保护 ACCTNUM<a href="#65-%E4%BF%9D%E6%8A%A4-acctnum" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_65-保护-acctnum"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_65-保护-acctnum">#</a>6.5 保护 ACCTNUM</h3>
 <p>创建两个 TSO 账户（ACCTNUM），并创建一个通用资源 RPOFILE 保护该 ACCTNUM。</p>
 <ol>
 <li>
@@ -780,7 +779,7 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 </div>
 </li>
 </ol>
-<h3 id="66-保护-tsoauth">6.6 保护 TSOAUTH<a href="#66-%E4%BF%9D%E6%8A%A4-tsoauth" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_66-保护-tsoauth"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_66-保护-tsoauth">#</a>6.6 保护 TSOAUTH</h3>
 <p>TSOAUTH 通用资源类提供保护 TSO 权限的功能，TSO 权限主要包括：ACCT，JCL，MOUNT， OPER，RECOVER 等。系统已经定义了一个 JCL PROFILE 用于保护 TSO 的 JCL 权限，该权限允许通过 TSO 向 JES 提交 JCL 批量作业。</p>
 <ol>
 <li>
@@ -798,7 +797,7 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 </div>
 </li>
 </ol>
-<h3 id="67-保护用户数据集">6.7 保护用户数据集<a href="#67-%E4%BF%9D%E6%8A%A4%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E9%9B%86" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_67-保护用户数据集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_67-保护用户数据集">#</a>6.7 保护用户数据集</h3>
 <ol>
 <li>
 <p>保护 TSO1607 的用户数据集</p>
@@ -815,7 +814,7 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 </div>
 </li>
 </ol>
-<h3 id="68-创建-alias">6.8 创建 ALIAS<a href="#68-%E5%88%9B%E5%BB%BA-alias" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="_68-创建-alias"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_68-创建-alias">#</a>6.8 创建 ALIAS</h3>
 <p>为 TSOxx07 和 TSOxx08 创建 ALIAS（普通用户不能修改 Master Catalog，所以为了让用户可以创建自己的编目数据集，必须为用户创建 ALIAS，ALIAS 指向 User Catalog）。</p>
 <ol>
 <li>
@@ -834,7 +833,7 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 </li>
 </ol>
 <p> </p>
-<h2 id="7-使用-jcl-执行-racf-命令">7. 使用 JCL 执行 RACF 命令<a href="#7-%E4%BD%BF%E7%94%A8-jcl-%E6%89%A7%E8%A1%8C-racf-%E5%91%BD%E4%BB%A4" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="_7-使用-jcl-执行-racf-命令"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_7-使用-jcl-执行-racf-命令">#</a>7. 使用 JCL 执行 RACF 命令</h2>
 <p>编写 JCL 作业，然后 SUBMIT：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,

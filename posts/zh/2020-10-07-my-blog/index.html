@@ -35,7 +35,7 @@
     
   <link rel="stylesheet" href="/_astro/404.48f1b9b6.css" />
 <link rel="stylesheet" href="/_astro/_slug_.6ea23a96.css" />
-<link rel="stylesheet" href="/_astro/index.a73328e0.css" />
+<link rel="stylesheet" href="/_astro/index.782dd28f.css" />
 <link rel="stylesheet" href="/_astro/index.4f915957.css" /><script type="module" src="/_astro/hoisted.a42a77e7.js"></script></head>
 
   <body class="font-sans">
@@ -60,8 +60,8 @@
   </div><div class="post prose prose-lg mx-auto mb-16 astro-GVPN4U4B">
     <p>“虽然研究进度堪忧，但鱼还是要摸的”，在这样的理念的驱动下，菜鸡最终折腾出了一个目前看上去还算可以的方案。</p>
 <p>我的博客最初 fork 自 <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener noreferrer">Huxpro/huxpro.github.io</a>，用了一段时间之后开始瞎改，把别人干净的代码改得乱七八糟。博客用的是 Jekyll 框架，而 Jekyll 就是 Github Pages 的默认引擎，所以在部署的时候 Github Pages 连 build 这一步都帮你省了。于是在很长一段时间内，作为一只懒惰的菜鸡，我并没有什么动力来折腾这些东西。而现在之所以要折腾，是因为不折腾的确不行了。</p>
-<div class="custom-block warning"><p class="custom-block-title">WARNING</p><p>不过这版博客已经是用 Vitesse 写的全新的版本了，所以这篇文章中的某些部分已经并不适用了…</p></div>
-<h2 id="奇怪的起因">奇怪的起因<a href="#%E5%A5%87%E6%80%AA%E7%9A%84%E8%B5%B7%E5%9B%A0" class="header-anchor" aria-hidden="true">#</a></h2>
+<div class="custom-block warning"><p class="custom-block-title">WARNING</p><p>不过这版博客已经是用 <a href="https://astro.build/" target="_blank" rel="noopener noreferrer">Astro</a> 写的全新的版本了，所以这篇文章中的某些部分已经并不适用了…</p></div>
+<h2 id="奇怪的起因"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#奇怪的起因">#</a>奇怪的起因</h2>
 <p>说起来这还是一个漫长的故事。首先我的博客的公式渲染引擎用的是 <a href="https://katex.org/" target="_blank" rel="noopener noreferrer">Katex</a>，因为它快，比 Mathjax 快多了（可以参考<a href="https://katex.org/" target="_blank" rel="noopener noreferrer">这里</a>）。</p>
 <p>kramdown 的默认数学公式渲染引擎是 Mathjax，而从 <code>v2.0.0</code> 开始 kramdown 似乎引入了一些插件来支持 Katex，比如 <a href="https://github.com/kramdown/math-katex" target="_blank" rel="noopener noreferrer">kramdown-math-katex</a>。那么问题来了，Github Pages 的 Jekyll 是不支持除了<a href="https://pages.github.com/versions/" target="_blank" rel="noopener noreferrer">这些插件</a>以外的插件的。那么唯一的办法就只有在本地 build 网站，然后把 build 好的文件 push 到 <code>gh-pages</code> 分支上去。</p>
 <p>不行，这样多麻烦，Jekyll 的天生优势不就没了吗，不然我为啥不用 Hexo 或者 Hugo，它们还比 Jekyll 快，不行不行。</p>
@@ -110,9 +110,9 @@
 <p>搜了一下发现 Github Pages 把 kramdown 的版本更新到了 <code>v2.2.0</code>，从这一版开始，为了兼容 Mathjax <code>v3.x</code>，kramdown 会把 inline math 转换成 <code>\(a + b\)</code> 的形式，把 block math 转换成 <code>\[a + b\]</code> 的形式（参考<a href="https://github.com/gettalong/kramdown/commit/c3acf8df1db49d2456050f4456f3f542294e2e8f" target="_blank" rel="noopener noreferrer">这个 commit</a>），于是上面那段脚本就坏掉了。</p>
 <p>于是一切都回到了最初的起点，摆在面前的办法只剩下把在本地用 kramdown <code>v2.1.0</code> build 好的网站扔 <code>gh-pages</code> 上去。这样干了几个月后懒惰的我实在忍不了了，并决定让 Github Actions 来帮我干这件事。</p>
 <p>所以我当初为啥不选 Hexo…</p>
-<h2 id="github-actions">Github Actions<a href="#github-actions" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="github-actions"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#github-actions">#</a>Github Actions</h2>
 <p>在 repo 下建一个目录 <code>.github/workflow</code>，在这个目录下放一个 <code>.yaml</code> 格式的 workflow 文件。GitHub 只要发现 <code>.github/workflows</code> 下有 <code>.yaml</code> 文件，就会自动运行它们。<a href="https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions" target="_blank" rel="noopener noreferrer">这里</a>是 workflow 文件的详细文档。</p>
-<h3 id="jekyll">Jekyll<a href="#jekyll" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="jekyll"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#jekyll">#</a>Jekyll</h3>
 <p><a href="https://jekyllrb.com/docs/continuous-integration/github-actions/" target="_blank" rel="noopener noreferrer">Jekyll 官方</a>已经给了一个现成的 <a href="https://github.com/helaili/jekyll-action" target="_blank" rel="noopener noreferrer">action</a>，直接引用它就好：</p>
 <p></p><div class="language-yaml"><span class="lang">yaml</span><p></p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="yaml" data-theme="light"><code data-language="yaml" data-theme="light"><span class="line"><span style="color: #116329">name</span><span style="color: #24292F">: </span><span style="color: #0A3069">build Jekyll site and deploy it to GitHub Pages</span></span>
@@ -199,9 +199,9 @@
 <span class="line"><span style="color: #C9D1D9">gem </span><span style="color: #A5D6FF">'jekyll-paginate'</span><span style="color: #C9D1D9">, </span><span style="color: #A5D6FF">'~> 1.1.0'</span></span></code></pre></div>
 </div>
 <p>如果用了自定义域名，那就还需要在 <code>master</code> 分支放一个 <code>CNAME</code>，这样 <a href="https://github.com/helaili/jekyll-action" target="_blank" rel="noopener noreferrer">helaili/jekyll-action</a> 就会把 <code>CNAME</code> 也推到 <code>gh-pages</code> 分支去。直接在 <code>gh-pages</code> 分支加 <code>CNAME</code> 是没有什么用的，因为下次自动推送时它就会被清掉…</p>
-<h3 id="nodejs">Node.js<a href="#nodejs" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="nodejs"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#nodejs">#</a>Node.js</h3>
 <p>所有能用 Node.js 搞定的东西（比如这个基于 VuePress 的博客）都能用以下工作流处理：</p>
-<h4 id="npm">npm<a href="#npm" class="header-anchor" aria-hidden="true">#</a></h4>
+<h4 id="npm"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#npm">#</a>npm</h4>
 <p></p><div class="language-yaml"><span class="lang">yaml</span><p></p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="yaml" data-theme="light"><code data-language="yaml" data-theme="light"><span class="line"><span style="color: #116329">name</span><span style="color: #24292F">: </span><span style="color: #0A3069">build and deploy</span></span>
 <span class="line"></span>
@@ -292,7 +292,7 @@
 <span class="line"><span style="color: #C9D1D9">          </span><span style="color: #7EE787">cname</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">zxh.io</span><span style="color: #C9D1D9"> </span><span style="color: #8B949E"># 如果用了自定义域名，在这里设置</span></span></code></pre></div>
 </div>
 <p>其中 <a href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener noreferrer">peaceiris/actions-gh-pages</a> 也是一个别人写好的 action，能把指定路径的文件推到 <code>gh-pages</code> 分支。</p>
-<h4 id="yarn">yarn<a href="#yarn" class="header-anchor" aria-hidden="true">#</a></h4>
+<h4 id="yarn"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#yarn">#</a>yarn</h4>
 <p>如果包管理工具用的 <code>yarn</code>：</p>
 <p></p><div class="language-yaml"><span class="lang">yaml</span><p></p>
 <div data-rehype-pretty-code-fragment=""><pre data-language="yaml" data-theme="light"><code data-language="yaml" data-theme="light"><span class="line"><span style="color: #116329">name</span><span style="color: #24292F">: </span><span style="color: #0A3069">build and deploy</span></span>
@@ -383,10 +383,10 @@
 <span class="line"><span style="color: #C9D1D9">          </span><span style="color: #7EE787">publish_dir</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">dist</span></span>
 <span class="line"><span style="color: #C9D1D9">          </span><span style="color: #7EE787">cname</span><span style="color: #C9D1D9">: </span><span style="color: #A5D6FF">zxh.io</span></span></code></pre></div>
 </div>
-<h2 id="优化">优化<a href="#%E4%BC%98%E5%8C%96" class="header-anchor" aria-hidden="true">#</a></h2>
-<h3 id="减少依赖">减少依赖<a href="#%E5%87%8F%E5%B0%91%E4%BE%9D%E8%B5%96" class="header-anchor" aria-hidden="true">#</a></h3>
+<h2 id="优化"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#优化">#</a>优化</h2>
+<h3 id="减少依赖"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#减少依赖">#</a>减少依赖</h3>
 <p>通过砍掉一些觉得用不太上的功能，和直接手写一些比较简单的功能，去掉了一些依赖。但我已经忘了去掉了哪些了…</p>
-<h3 id="合并依赖">合并依赖<a href="#%E5%90%88%E5%B9%B6%E4%BE%9D%E8%B5%96" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="合并依赖"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#合并依赖">#</a>合并依赖</h3>
 <p>为了减少请求次数，可以尽量把多个 JS 或 CSS 文件合并压缩成一个。上 Gulp 之类的工具当然也可以，不过 jsDelivr 自带了合并功能，比如要合并以下两个库：</p>
 <ul>
 <li><a href="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" target="_blank" rel="noopener noreferrer">https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js</a></li>
@@ -398,7 +398,7 @@
 </code></pre>
 </div>
 <p>于是我把除了 Katex 和 Mathjax（因为这俩涉及到引用字体的问题）以外的文件都合并成了一个 <code>lib.min.js</code>。</p>
-<h3 id="cdn">CDN<a href="#cdn" class="header-anchor" aria-hidden="true">#</a></h3>
+<h3 id="cdn"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#cdn">#</a>CDN</h3>
 <p>又一次喜闻乐见的白嫖 jsDelivr，对于托管在 Github 上的博客来说，在静态资源路径前加上以下 URL 即可：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
 <pre><code>https://cdn.jsdelivr.net/gh/{{ 用户名 }}/{{ 仓库名 }}@{{ 分支名 }}
@@ -409,7 +409,7 @@
 <pre><code>https://cdn.jsdelivr.net/gh/Renovamen/renovamen.github.io@master/js/lib.min.js
 </code></pre>
 </div>
-<h2 id="vercel">Vercel<a href="#vercel" class="header-anchor" aria-hidden="true">#</a></h2>
+<h2 id="vercel"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#vercel">#</a>Vercel</h2>
 <p>我一直以来都在听说双线部署甚至多线部署这种提高访问速度的操作，但一直没有去折腾。因为 Github Pages 虽然境内访问慢了点，但至少还是能访问的，那么能用就行了。直到几个月前，我发现 Github Pages 境内完全访问不上了…</p>
 <p>间歇性抽风想想还是很让人不安，那行吧行吧双线部署我来了…</p>
 <p>那时候我所知的有境内节点的静态网站托管服务就 <a href="https://gitee.com/help/articles/4136" target="_blank" rel="noopener noreferrer">Gitee Pages</a> 和 <a href="https://help.coding.net/docs/devops/cd/static-website.html" target="_blank" rel="noopener noreferrer">Coding Pages</a> 俩，而 Gitee Pages 不能免费自定义域名，于是就把境内的线路解析到了 Coding Pages 上。</p>
