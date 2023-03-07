@@ -80,3 +80,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </main>
   </body>
 </html>
+
+<script>
+  import mediumZoom from "medium-zoom";
+
+  const zoom = mediumZoom();
+  zoom.attach(":not(a) > img:not(.no-zoom)");
+</script>

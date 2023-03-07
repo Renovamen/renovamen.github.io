@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
-    "dayjs": "^1.11.7"
+    "dayjs": "^1.11.7",
+    "medium-zoom": "^1.0.8"
   },
   "devDependencies": {
     "@astrojs/rss": "^2.1.1",

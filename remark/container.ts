@@ -9,7 +9,7 @@ const getImages = (info: string) => {
       info
         .split(" ")
         .map((src) => {
-          const alt = src.match(/(?=[^\/]+$).*(?=\.)/);
+          const alt = src.match(/(?=[^]+$).*(?=\.)/);
           return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
         })
         .join("") +
