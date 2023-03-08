@@ -1,8 +1,8 @@
 # Hi! 🤔
 
-This is my personal website, built with [Astro](https://astro.build/) and [Vue 3](https://vuejs.org/).
+This is my personal website, built with [Astro](https://astro.build/), [Vue](https://vuejs.org/) and [UnoCSS](https://github.com/antfu/unocss).
 
-[Previous version](https://github.com/Renovamen/renovamen.github.io/tree/vitesse) is built on [Vitesse](https://github.com/antfu/vitesse).
+The [previous version](https://github.com/Renovamen/renovamen.github.io/tree/vitesse) is built with [Vitesse](https://github.com/antfu/vitesse).
 
 Anyway, just have fun: [zxh.io](https://zxh.io)
 
