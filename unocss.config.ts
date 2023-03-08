@@ -4,10 +4,12 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup
 } from "unocss";
+
+const DEFAULT_FONTS =
+  "system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif";
 
 export default defineConfig({
   shortcuts: [
@@ -31,7 +33,8 @@ export default defineConfig({
   ],
   theme: {
     fontFamily: {
-      sans: `"Computer Modern Sans", system-ui, -apple-system, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif`
+      sans: `Computer Modern Sans, ${DEFAULT_FONTS}`,
+      ui: DEFAULT_FONTS
     },
     boxShadow: {
       nav: "0 1px 8px 0 rgba(27, 35, 47, .1)"
@@ -54,12 +57,7 @@ export default defineConfig({
         "vertical-align": "sub"
       }
     }),
-    presetTypography(),
-    presetWebFonts({
-      fonts: {
-        ui: "DM Sans:400,700"
-      }
-    })
+    presetTypography()
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: "prose prose-lg mx-auto".split(" ")
