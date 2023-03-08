@@ -25,7 +25,7 @@ module.exports = {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"]
       },
-      extends: ["plugin:astro/recommended"]
+      extends: ["plugin:astro/recommended", "prettier"]
     },
     {
       files: ["*.vue"],
