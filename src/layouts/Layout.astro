@@ -11,6 +11,7 @@ export interface Props {
   author?: string;
   description?: string;
   activePage?: string;
+  class?: string;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const className = Astro.props.class || "";
 ---
 
 <!DOCTYPE html>
@@ -67,12 +69,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
 
   <body class="font-sans">
-    <main class="flex flex-col min-h-full text-c px-4 pt-24 pb-6">
+    <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-6`}>
       <Navbar client:only activePage={activePage}>
         <slot name="navbar" />
       </Navbar>
       <div class="flex-1 mb-6">
-        <slot />
+        <div class="prose prose-lg mx-auto">
+          <slot />
+        </div>
       </div>
       <Footer />
     </main>

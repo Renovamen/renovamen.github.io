@@ -18,6 +18,7 @@ export default defineConfig({
     ["vstack", "flex flex-col justify-center"],
     ["border-c", "border-gray-200 dark:border-gray-600"],
     ["border-c-dark", "border-gray-300 dark:border-gray-500"],
+    ["border-c-active", "border-brand dark:border-blue-300"],
     ["bg-c", "bg-white dark:bg-gray-700"],
     ["text-c", "text-gray-800 dark:text-gray-200"],
     ["text-c-light", "text-c opacity-85"],

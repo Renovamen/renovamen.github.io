@@ -29,47 +29,45 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
 ---
 
 <Layout title={`${title} - ${SITE.title}`} activePage={"posts"}>
-  <div class="prose prose-lg mx-auto">
-    <h1>{title} <ToggleLang /></h1>
+  <h1>{title} <ToggleLang /></h1>
 
-    <!-- tag list -->
-    <span class="mr-1.5">
-      <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light"></span>
-      <a href={allURL} class="-mr-0.5 !text-c-light">all</a>
-      <sup>{numPostsPerTag["all"]}</sup>
-    </span>
+  <!-- tag list -->
+  <span class="mr-1.5">
+    <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light"></span>
+    <a href={allURL} class="-mr-0.5 !text-c-light">all</a>
+    <sup>{numPostsPerTag["all"]}</sup>
+  </span>
 
-    {
-      tags.map((tag) => (
-        <span class="mr-1.5">
-          <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light" />
-          <a href={tagURL + slugify(tag)} class="-mr-0.5 !text-c-light">
-            {tag}
-          </a>
-          <sup>{numPostsPerTag[tag]}</sup>
-        </span>
-      ))
-    }
+  {
+    tags.map((tag) => (
+      <span class="mr-1.5">
+        <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light" />
+        <a href={tagURL + slugify(tag)} class="-mr-0.5 !text-c-light">
+          {tag}
+        </a>
+        <sup>{numPostsPerTag[tag]}</sup>
+      </span>
+    ))
+  }
 
-    <!-- blog list -->
-    {
-      Object.keys(sortedPostsByYear)
-        .sort((a, b) => b.localeCompare(a))
-        .map((year) => (
-          <div>
-            <h3>{year}</h3>
-            {sortedPostsByYear[year].map((item) => (
-              <div class="font-normal my-1 mx-0.5 flex">
-                <div class="w-14 h-6 leading-6 opacity-50 text-sm mr-2">
-                  {formatDate(getPostDate(item), false)}
-                </div>
-                <a class="flex-1 !text-c" href={`/posts/${item.slug}`}>
-                  {item.data.title}
-                </a>
+  <!-- blog list -->
+  {
+    Object.keys(sortedPostsByYear)
+      .sort((a, b) => b.localeCompare(a))
+      .map((year) => (
+        <div>
+          <h3>{year}</h3>
+          {sortedPostsByYear[year].map((item) => (
+            <div class="font-normal my-1 mx-0.5 flex">
+              <div class="w-14 h-6 leading-6 opacity-50 text-sm mr-2">
+                {formatDate(getPostDate(item.id), 1)}
               </div>
-            ))}
-          </div>
-        ))
-    }
-  </div>
+              <a class="flex-1 !text-c" href={`/posts/${item.slug}`}>
+                {item.data.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      ))
+  }
 </Layout>

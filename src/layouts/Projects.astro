@@ -14,20 +14,18 @@ const { projects } = Astro.props.frontmatter;
 ---
 
 <Layout title={`Projects - ${SITE.title}`} activePage="projects">
-  <div class="prose prose-lg mx-auto">
-    <h1>Projects</h1>
-    <slot />
-    {
-      Object.keys(projects).map((key) => (
-        <>
-          <h3>{key}</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 py-2 gap-2">
-            {projects[key].map((project) => (
-              <Project client:only project={project} />
-            ))}
-          </div>
-        </>
-      ))
-    }
-  </div>
+  <h1>Projects</h1>
+  <slot />
+  {
+    Object.keys(projects).map((key) => (
+      <>
+        <h3>{key}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 py-2 gap-2">
+          {projects[key].map((project) => (
+            <Project client:only project={project} />
+          ))}
+        </div>
+      </>
+    ))
+  }
 </Layout>

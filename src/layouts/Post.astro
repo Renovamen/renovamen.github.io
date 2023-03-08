@@ -45,21 +45,26 @@ const prevPost =
       };
 
 // edit link
-const editURL = THEME.editLink.pattern.replace(/:path/g, `/${post.slug}.md`);
+const editURL = THEME.editLink.pattern.replace(/:path/g, `/${post.id}`);
 const editText = THEME.editLink.text;
 
 // last updated time
-const lastUpdatedTime = lastUpdated(post.slug);
+const lastUpdatedTime = lastUpdated(post.id);
 const lastUpdatedText = THEME.lastUpdatedText;
 ---
 
-<Layout title={`${title} - ${SITE.title}`} author={author} activePage="posts">
+<Layout
+  class="post"
+  title={`${title} - ${SITE.title}`}
+  author={author}
+  activePage="posts"
+>
   <ToggleToc client:only slot="navbar" />
 
-  <div prose-lg mx-auto mt-6 mb-8>
+  <div mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
     <p opacity-50 mt-2>
-      {formatDate(getPostDate(post))} · {readingTime(post.body).minutes} min
+      {formatDate(getPostDate(post.id))} · {readingTime(post.body).minutes} min
       {
         tags?.length && (
           <span>
@@ -67,7 +72,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
             <span i-uil:tag-alt text-sm />
             {tags.map((tag, i) => (
               <span>
-                <a href={tagURL + slugify(tag)} class="hover:underline">
+                <a href={tagURL + slugify(tag)} class="!text-c">
                   {tag}
                 </a>
                 {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
@@ -79,53 +84,51 @@ const lastUpdatedText = THEME.lastUpdatedText;
     </p>
   </div>
 
-  <div class="post prose prose-lg mx-auto mb-16">
+  <div class="content mb-16">
     <Content />
   </div>
 
-  <div prose-lg mx-auto>
-    <div class="grid md:grid-cols-2 text-[0.95em]">
-      <a
-        href={editURL}
-        title="Edit link"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:underline text-c-active"
-      >
-        <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
-        {editText}
-      </a>
-      <span md:text-right text-c-light>
-        <span class="i-ic:round-update w-4.5 h-4.5"></span>
-        {lastUpdatedText}
-        {lastUpdatedTime}
-      </span>
-    </div>
+  <div class="grid md:grid-cols-2 text-[0.95em]">
+    <a
+      href={editURL}
+      title="Edit link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:underline"
+    >
+      <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
+      {editText}
+    </a>
+    <span md:text-right text-c-light>
+      <span class="i-ic:round-update w-4.5 h-4.5"></span>
+      {lastUpdatedText}
+      {lastUpdatedTime}
+    </span>
+  </div>
 
-    {
-      (prevPost || nextPost) && (
-        <div class="grid md:grid-cols-2 mt-3 pt-3 text-[0.95em] border-t border-c">
-          <span class="prev">
-            {prevPost && (
-              <a href={`/posts/${prevPost.path}`} class="hover:underline">
-                {prevPost.title}
-              </a>
-            )}
-          </span>
-          <span class="next text-right">
-            {nextPost && (
-              <a href={`/posts/${nextPost.path}`} class="hover:underline">
-                {nextPost.title}
-              </a>
-            )}
-          </span>
-        </div>
-      )
-    }
+  {
+    (prevPost || nextPost) && (
+      <div class="grid md:grid-cols-2 mt-3 pt-3 text-[0.95em] border-t border-c">
+        <span class="prev">
+          {prevPost && (
+            <a href={`/posts/${prevPost.path}`} class="!text-c">
+              {prevPost.title}
+            </a>
+          )}
+        </span>
+        <span class="next text-right">
+          {nextPost && (
+            <a href={`/posts/${nextPost.path}`} class="!text-c">
+              {nextPost.title}
+            </a>
+          )}
+        </span>
+      </div>
+    )
+  }
 
-    <div mt-20>
-      <Giscus client:only />
-    </div>
+  <div mt-20>
+    <Giscus client:only />
   </div>
 </Layout>
 
@@ -176,6 +179,6 @@ const lastUpdatedText = THEME.lastUpdatedText;
     }
   };
 
-  const content = document.querySelector(".post");
+  const content = document.querySelector(".post .content");
   useEventListener(content, "click", handleAnchors, { passive: false });
 </script>

@@ -11,6 +11,7 @@
   "dependencies": {
     "@vueuse/core": "^9.13.0",
     "dayjs": "^1.11.7",
+    "fuse.js": "^6.6.2",
     "medium-zoom": "^1.0.8"
   },
   "devDependencies": {

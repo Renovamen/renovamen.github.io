@@ -1,32 +1,32 @@
-.about.prose thead {
+.about .prose thead {
   @apply hidden;
 }
 
-.about.prose tbody {
+.about .prose tbody {
   @apply w-full block;
 }
 
-.about.prose tr {
+.about .prose tr {
   @apply flex;
 }
 
-.about.prose tr:last-child {
+.about .prose tr:last-child {
   @apply border-b-none;
 }
 
-.about.prose td,
-.about.prose th {
+.about .prose td,
+.about .prose th {
   @apply py-2 px-0.5;
 }
 
-.about.prose td p {
+.about .prose td p {
   @apply m-0;
 }
 
-.about.prose td:first-child {
+.about .prose td:first-child {
   @apply flex-1;
 }
 
-.about.prose td:last-child {
+.about .prose td:last-child {
   @apply text-right w-22;
 }

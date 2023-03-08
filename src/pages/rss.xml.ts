@@ -13,7 +13,7 @@ export async function get() {
     items: posts.map((item) => ({
       link: `posts/${item.slug}`,
       title: item.data.title,
-      pubDate: new Date(getPostDate(item))
+      pubDate: new Date(getPostDate(item.id))
     }))
   });
 }

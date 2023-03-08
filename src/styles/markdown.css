@@ -28,7 +28,7 @@ html.dark .prose hr {
   border-top: 1px solid #4b5563; /* border-c */
 }
 
-.prose:not(.post) a.header-anchor {
+main:not(.post) a.header-anchor {
   @apply hidden;
 }
 

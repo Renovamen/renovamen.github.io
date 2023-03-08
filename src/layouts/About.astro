@@ -17,28 +17,26 @@ export interface Props {
 const { name, subname, avatar, socials } = Astro.props.frontmatter;
 ---
 
-<Layout title={`About - ${SITE.title}`}>
-  <div class="about prose prose-lg mx-auto">
-    <div class="flex items-end justify-between">
-      <div>
-        <h1>
-          {name}
-          {subname && <span class="text-base text-c-light">{subname}</span>}
-        </h1>
-        <Links socials={socials} />
-      </div>
-      {
-        avatar && (
-          <div
-            class="p-1 mb-1 border border-c rounded-md lt-md:hidden"
-            shadow="[inset_0_0_10px_#000000] slate-200 dark:slate-800"
-          >
-            <FlipImage className="w-24 h-24" src={avatar} alt="avatar" />
-          </div>
-        )
-      }
+<Layout class="about" title={`About - ${SITE.title}`}>
+  <div class="flex items-end justify-between">
+    <div>
+      <h1>
+        {name}
+        {subname && <span class="text-base text-c-light">{subname}</span>}
+      </h1>
+      <Links socials={socials} />
     </div>
-
-    <slot />
+    {
+      avatar && (
+        <div
+          class="p-1 mb-1 border border-c rounded-md lt-md:hidden"
+          shadow="[inset_0_0_10px_#000000] slate-200 dark:slate-800"
+        >
+          <FlipImage className="w-24 h-24" src={avatar} alt="avatar" />
+        </div>
+      )
+    }
   </div>
+
+  <slot />
 </Layout>

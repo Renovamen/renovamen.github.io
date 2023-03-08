@@ -30,6 +30,10 @@
         </span>
       </a>
 
+      <a nav-item href="/search" title="Search">
+        <span i-uil:search />
+      </a>
+
       <a nav-item href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer">
         <div i-jam:rss-feed />
       </a>
