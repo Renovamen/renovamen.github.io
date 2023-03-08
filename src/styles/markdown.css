@@ -28,10 +28,6 @@ html.dark .prose hr {
   border-top: 1px solid #4b5563; /* border-c */
 }
 
-.prose hr.footnotes-sep {
-  @apply hidden;
-}
-
 .prose:not(.post) a.header-anchor {
   @apply hidden;
 }

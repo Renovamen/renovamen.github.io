@@ -20,8 +20,8 @@ export interface Props {
 const { lang, tag } = Astro.props;
 
 const title = lang === "en" ? "Blog" : "博客";
-const tagURL = `/posts/${lang === "en" ? "" : lang + "/"}tags/`;
 const allURL = `/posts/${lang === "en" ? "" : lang + "/"}`;
+const tagURL = `${allURL}tags/`;
 
 const posts = await getPosts(lang);
 const { tags, numPostsPerTag } = getTags(posts);

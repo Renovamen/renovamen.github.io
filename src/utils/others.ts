@@ -10,6 +10,7 @@ export const formatDate = (date: string | Date, year = true) => {
   return year ? dayjs(date).format("MMM D, YYYY") : dayjs(date).format("MMM D");
 };
 
+// Modified from: https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
 export const lastUpdated = (slug: string) => {
   const file = path.resolve(__dirname, "../content/blog", slug + ".md");
   const child = sync("git", ["log", "-1", '--pretty="%ci"', file]);

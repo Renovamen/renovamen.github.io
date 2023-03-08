@@ -34,7 +34,7 @@ export const remarkContainer: RemarkPlugin = () => {
 
         if (children[0]?.data?.directiveLabel) {
           title = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
-          children.splice(0, 1);
+          children.shift();
         }
 
         const titleNode: mdast.Paragraph = {
@@ -51,7 +51,7 @@ export const remarkContainer: RemarkPlugin = () => {
           ]
         };
 
-        children.splice(0, 0, titleNode);
+        children.unshift(titleNode);
       }
 
       if (node.name === "paper") {
@@ -61,7 +61,7 @@ export const remarkContainer: RemarkPlugin = () => {
 
         if (children[0]?.data?.directiveLabel) {
           info = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
-          children.splice(0, 1);
+          children.shift();
         }
 
         const images = getImages(info);
