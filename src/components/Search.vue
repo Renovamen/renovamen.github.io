@@ -59,7 +59,7 @@ const fuse = new Fuse(props.searchList, {
   threshold: 0.5
 });
 
-const isFocus = ref(false);
+const isFocus = ref(true);
 const input = ref<HTMLInputElement>();
 const searchText = ref("");
 
@@ -76,11 +76,8 @@ onMounted(() => {
   }, 50);
 });
 
-const searchResults = computed(() => {
-  // add search result only if input value is more than one character
-  const inputResult = searchText.value.length > 1 ? fuse.search(searchText.value) : [];
-
-  // update search string in URL
+// update search string in URL
+watch(searchText, () => {
   if (searchText.value.length > 0) {
     const searchParams = new URLSearchParams(window.location.search);
     searchParams.set("q", searchText.value);
@@ -89,9 +86,12 @@ const searchResults = computed(() => {
   } else {
     history.pushState(null, "", window.location.pathname);
   }
-
-  return inputResult;
 });
+
+// add search result only if input value is more than one character
+const searchResults = computed(() =>
+  searchText.value.length > 1 ? fuse.search(searchText.value) : []
+);
 </script>
 
 <style scoped>

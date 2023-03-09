@@ -59,7 +59,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
   author={author}
   activePage="posts"
 >
-  <ToggleToc client:only slot="navbar" />
+  <ToggleToc client:only="vue" slot="navbar" />
 
   <div mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
@@ -128,7 +128,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
   }
 
   <div mt-20>
-    <Giscus client:only />
+    <Giscus client:visible />
   </div>
 </Layout>
 

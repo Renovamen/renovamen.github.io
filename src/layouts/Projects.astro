@@ -22,7 +22,7 @@ const { projects } = Astro.props.frontmatter;
         <h3>{key}</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 py-2 gap-2">
           {projects[key].map((project) => (
-            <Project client:only project={project} />
+            <Project client:load project={project} />
           ))}
         </div>
       </>

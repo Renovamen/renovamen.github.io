@@ -70,7 +70,7 @@ const className = Astro.props.class || "";
 
   <body class="font-sans">
     <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-6`}>
-      <Navbar client:only activePage={activePage}>
+      <Navbar client:only="vue" activePage={activePage}>
         <slot name="navbar" />
       </Navbar>
       <div class="flex-1 mb-6">

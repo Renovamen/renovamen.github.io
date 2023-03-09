@@ -20,7 +20,6 @@ const getScriptElement = () => {
   element.setAttribute("data-mapping", "pathname");
   element.setAttribute("data-reactions-enabled", "1");
   element.setAttribute("data-emit-metadata", "0");
-  element.setAttribute("data-loading", "lazy");
   element.setAttribute("crossorigin", "anonymous");
   element.setAttribute("async", "true");
 
@@ -41,14 +40,8 @@ const updateGiscus = () => {
   );
 };
 
-const scriptElement = ref<HTMLScriptElement>(getScriptElement());
-
 onMounted(() => {
-  document.head.appendChild(scriptElement.value);
-});
-
-onBeforeUnmount(() => {
-  document.head.removeChild(scriptElement.value);
+  document.head.appendChild(getScriptElement());
 });
 
 watch(theme, updateGiscus);
