@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { sync } from "cross-spawn";
+import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
 
@@ -19,7 +20,11 @@ export const formatDate = (date: string | Date, type: 0 | 1 | 2 = 0) => {
 
 // Modified from: https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
 export const lastUpdated = (id: string) => {
-  const file = path.resolve(__dirname, "../content/blog", id);
+  // a workaround to find absolute path for a blog file
+  const fileDev = path.resolve(__dirname, "../content/blog", id);
+  const fileProd = path.resolve(__dirname, "../../../src/content/blog", id);
+  const file = fs.existsSync(fileDev) ? fileDev : fileProd;
+
   const child = sync("git", ["log", "-1", '--pretty="%ci"', file]);
   const output = child.stdout.toString();
   return new Date(output).toLocaleString();
