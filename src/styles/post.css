@@ -16,7 +16,7 @@
 }
 
 .table-of-contents {
-  @apply hidden fixed z-30 w-55 top-20 right-0 bottom-0 pl-0 pt-18 pr-5.5 overflow-y-auto text-[0.8em] text-right lt-xl:(top-0 bg-c border-l border-c shadow);
+  @apply hidden fixed z-30 w-55 top-20 right-0 bottom-0 pl-2 pt-18 pr-5.5 overflow-y-auto text-[0.8em] text-right lt-xl:(top-0 bg-c border-l border-c shadow);
 }
 
 .toc-open .table-of-contents {
@@ -34,6 +34,10 @@
 .table-of-contents > li > p::before,
 .table-of-contents > li > a::before {
   @apply content-["#"] opacity-60 mr-1;
+}
+
+.table-of-contents > li > ul {
+  @apply pl-0;
 }
 
 .table-of-contents > li > ul > li {
