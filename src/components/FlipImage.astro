@@ -2,10 +2,11 @@
 export interface Props {
   src: string;
   alt?: string;
-  className?: string;
+  class?: string;
 }
 
-const { src, className = "", alt = "" } = Astro.props;
+const { src, alt = "" } = Astro.props;
+const className = Astro.props.class || "";
 ---
 
 <div class={`flip-image perspective-600 ${className}`}>

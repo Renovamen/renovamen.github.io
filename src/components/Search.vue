@@ -32,10 +32,10 @@
       my-4
     >
       <p flex items-start my-1>
-        <span text-sm text-c-lighter w-16 mt-0.5>{{ item.date }}</span>
+        <span w-16 mt-0.5 text="sm c-lighter">{{ item.date }}</span>
         <a :href="`/posts/${item.slug}`">{{ item.title }}</a>
       </p>
-      <p text-sm text-c-light pl-16 my-1>{{ item.excerpt }}...</p>
+      <p pl-16 my-1 text="sm c-light">{{ item.excerpt }}...</p>
     </div>
   </ul>
 </template>

@@ -33,7 +33,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
 
   <!-- tag list -->
   <span class="mr-1.5">
-    <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light"></span>
+    <span class="i-uil:tag-alt -mr-0.5" text="sm c-light"></span>
     <a href={allURL} class="-mr-0.5 !text-c-light">all</a>
     <sup>{numPostsPerTag["all"]}</sup>
   </span>
@@ -41,7 +41,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
   {
     tags.map((tag) => (
       <span class="mr-1.5">
-        <span class="i-uil:tag-alt -mr-0.5 text-sm text-c-light" />
+        <span class="i-uil:tag-alt -mr-0.5" text="sm c-light" />
         <a href={tagURL + slugify(tag)} class="-mr-0.5 !text-c-light">
           {tag}
         </a>
@@ -58,7 +58,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
         <div>
           <h3>{year}</h3>
           {sortedPostsByYear[year].map((item) => (
-            <div class="font-normal my-1 mx-0.5 flex">
+            <div class="font-normal flex" m="y-1 x-0.5">
               <div class="w-14 h-6 leading-6 opacity-50 text-sm mr-2">
                 {formatDate(getPostDate(item.id), 1)}
               </div>
