@@ -3,8 +3,8 @@ import { slugify } from "@renovamen/utils";
 import type { CollectionEntry } from "astro:content";
 import { SITE, THEME } from "@config";
 import Layout from "@layouts/Layout.astro";
-import ToggleToc from "@components/ToggleToc.vue";
-import Giscus from "@components/Giscus.vue";
+import ToggleToc from "@components/ToggleToc";
+import Giscus from "@components/Giscus";
 import {
   getPostDate,
   getPosts,
@@ -59,7 +59,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
   author={author}
   activePage="posts"
 >
-  <ToggleToc client:only="vue" slot="navbar" />
+  <ToggleToc client:load slot="navbar" />
 
   <div mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
@@ -150,25 +150,26 @@ const lastUpdatedText = THEME.lastUpdatedText;
     }
   };
 
-  const handleAnchors = (event: MouseEvent & { target: HTMLElement }) => {
-    const link = event.target.closest("a");
+  const handleAnchors = (event: Event) => {
+    const evt = event as MouseEvent & { target: HTMLElement };
+    const link = evt.target.closest("a");
 
     if (
-      !event.defaultPrevented &&
+      !evt.defaultPrevented &&
       link &&
-      event.button === 0 &&
+      evt.button === 0 &&
       link.target !== "_blank" &&
       link.rel !== "external" &&
       !link.download &&
-      !event.metaKey &&
-      !event.ctrlKey &&
-      !event.shiftKey &&
-      !event.altKey
+      !evt.metaKey &&
+      !evt.ctrlKey &&
+      !evt.shiftKey &&
+      !evt.altKey
     ) {
       const url = new URL(link.href);
       if (url.origin !== window.location.origin) return;
 
-      event.preventDefault();
+      evt.preventDefault();
       const { pathname, hash } = url;
       if (hash && (!pathname || pathname === location.pathname)) {
         window.history.replaceState({}, "", hash);
@@ -180,5 +181,5 @@ const lastUpdatedText = THEME.lastUpdatedText;
   };
 
   const content = document.querySelector(".post .content");
-  useEventListener(content, "click", handleAnchors, { passive: false });
+  content?.addEventListener("click", handleAnchors, { passive: false });
 </script>

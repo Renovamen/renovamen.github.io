@@ -1,5 +1,5 @@
 ---
-import Navbar from "@components/Navbar.vue";
+import Navbar from "@components/Navbar";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
 
@@ -61,7 +61,7 @@ const className = Astro.props.class || "";
       (function () {
         const prefersDark =
           window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const setting = localStorage.getItem("vueuse-color-scheme") || "auto";
+        const setting = localStorage.getItem("solidjs-use-color-scheme") || "auto";
         if (setting === "dark" || (prefersDark && setting !== "light"))
           document.documentElement.classList.toggle("dark", true);
       })();
@@ -70,7 +70,7 @@ const className = Astro.props.class || "";
 
   <body class="font-sans">
     <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-6`}>
-      <Navbar client:only="vue" activePage={activePage}>
+      <Navbar client:load activePage={activePage}>
         <slot name="navbar" />
       </Navbar>
       <div class="flex-1 mb-6">

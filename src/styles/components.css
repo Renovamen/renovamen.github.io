@@ -1,0 +1,26 @@
+/* Navbar */
+
+header .prompt {
+  vertical-align: -0.2em;
+  font-size: 0.85em;
+}
+
+header .blink {
+  animation: blinker 1s none infinite;
+}
+
+header nav span.active {
+  @apply underline decoration-wavy decoration underline-offset-4;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Search */
+
+.search.focus .icon {
+  @apply text-c-active opacity-100;
+}

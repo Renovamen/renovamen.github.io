@@ -8,11 +8,7 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: "module"
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "./.eslintrc-auto-import.json"
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/triple-slash-reference": "off"
@@ -28,16 +24,13 @@ module.exports = {
       extends: ["plugin:astro/recommended", "prettier"]
     },
     {
-      files: ["*.vue"],
-      parser: "vue-eslint-parser",
-      parserOptions: {
-        parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".vue"]
-      },
-      extends: ["plugin:vue/vue3-recommended"],
+      files: ["*.tsx"],
+      parser: "@typescript-eslint/parser",
+      plugins: ["solid"],
+      extends: ["plugin:solid/typescript"],
       rules: {
-        "vue/no-v-html": "off",
-        "vue/multi-word-component-names": "off"
+        "prefer-const": "off",
+        "solid/no-innerhtml": "off"
       }
     },
     {
@@ -45,7 +38,7 @@ module.exports = {
       parser: "@typescript-eslint/parser"
     },
     {
-      files: ["*.{ts,js,vue}"],
+      files: ["*.{ts,tsx,js}"],
       extends: ["plugin:prettier/recommended"]
     },
     {

@@ -1,6 +1,6 @@
 # Hi! 🤔
 
-This is my personal website, built with [Astro](https://astro.build/), [Vue](https://vuejs.org/) and [UnoCSS](https://github.com/antfu/unocss).
+This is my personal website, built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss).
 
 The [previous version](https://github.com/Renovamen/renovamen.github.io/tree/vitesse) is built with [Vitesse](https://github.com/antfu/vitesse).
 

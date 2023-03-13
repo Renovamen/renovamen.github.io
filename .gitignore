@@ -4,4 +4,3 @@ node_modules
 *.log*
 .astro
 .vscode
-.eslintrc-auto-import.json

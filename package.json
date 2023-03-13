@@ -4,33 +4,33 @@
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
-    "serve": "astro preview",
+    "serve": "astro preview --host",
     "format": "prettier --plugin-search-dir=. -w src/**/*.astro src/pages/posts/*",
-    "lint": "pnpm format && eslint --ext .js,.ts,.astro,.vue ."
+    "lint": "pnpm format && eslint --ext .js,.ts,.tsx,.astro ."
   },
   "dependencies": {
-    "@vueuse/core": "^9.13.0",
     "dayjs": "^1.11.7",
     "fuse.js": "^6.6.2",
-    "medium-zoom": "^1.0.8"
+    "medium-zoom": "^1.0.8",
+    "solidjs-use": "^1.2.0"
   },
   "devDependencies": {
     "@astrojs/rss": "^2.2.0",
     "@astrojs/sitemap": "^1.2.0",
-    "@astrojs/vue": "^2.1.0",
-    "@iconify/json": "^2.2.31",
+    "@astrojs/solid-js": "^2.1.0",
+    "@iconify/json": "^2.2.34",
     "@renovamen/utils": "^0.1.0",
     "@types/cross-spawn": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
-    "astro": "^2.1.0",
-    "astro-eslint-parser": "^0.11.0",
+    "astro": "^2.1.2",
+    "astro-eslint-parser": "^0.12.0",
     "cross-spawn": "^7.0.3",
-    "eslint": "^8.35.0",
+    "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-astro": "^0.24.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-solid": "^0.11.0",
     "mdast-util-toc": "^6.1.1",
     "pnpm": "^7.29.1",
     "prettier": "^2.8.4",
@@ -41,10 +41,9 @@
     "rehype-pretty-code": "^0.9.4",
     "remark-directive": "^2.0.1",
     "remark-math": "^5.1.1",
+    "solid-js": "^1.6.14",
     "taze": "^0.9.0",
-    "unocss": "^0.50.4",
-    "unplugin-auto-import": "^0.15.1",
-    "vue": "^3.2.47"
+    "unocss": "^0.50.4"
   },
   "pnpm": {
     "peerDependencyRules": {

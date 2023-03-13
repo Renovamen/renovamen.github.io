@@ -2,7 +2,7 @@
 import { SITE } from "@config";
 import { getPosts, getPostDate, formatDate } from "@utils";
 import Layout from "@layouts/Layout.astro";
-import Search from "@components/Search.vue";
+import Search from "@components/Search";
 
 const posts = await getPosts();
 const searchList = posts.map(({ id, slug, body, data }) => ({

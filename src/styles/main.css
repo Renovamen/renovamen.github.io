@@ -2,6 +2,7 @@
 @import "./about.css";
 @import "./fonts.css";
 @import "./post.css";
+@import "./components.css";
 
 html,
 body {
