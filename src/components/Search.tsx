@@ -53,26 +53,32 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
   return (
     <>
       <div
-        class={`search hstack h-14 w-full rounded border border-c-dark ${
-          isFocus() && "focus !border-c-active"
-        }`}
+        class={`search h-14 w-full -mx-0.5 rounded-lg border-2 ${
+          isFocus() && "focus border-brand/70 dark:border-blue-300/70"
+        } ${!isFocus() && "border-transparent"}`}
       >
-        <span w-12 h-14 flex-center>
-          <span class="icon i-uil:search w-5 h-5 text-c-lighter" />
-        </span>
-        <input
-          ref={input}
-          class="flex-1 h-full bg-transparent pr-2 placeholder:text-c-lighter focus:outline-none"
-          placeholder="Search for articles ..."
-          type="text"
-          name="search"
-          autocomplete="off"
-          autofocus
-          value={searchText()}
-          onInput={(e) => setSearchText((e.target as HTMLInputElement).value)}
-          onFocus={() => setIsFocus(true)}
-          onBlur={() => setIsFocus(false)}
-        />
+        <div
+          class={`hstack h-full border rounded ${isFocus() && "border-transparent"} ${
+            !isFocus() && "border-c-dark"
+          }`}
+        >
+          <span w-12 h-full flex-center>
+            <span class="icon i-uil:search w-5 h-5 text-c-lighter" />
+          </span>
+          <input
+            ref={input}
+            class="flex-1 h-full bg-transparent pr-2 placeholder:text-c-lighter focus:outline-none"
+            placeholder="Search for articles ..."
+            type="text"
+            name="search"
+            autocomplete="off"
+            autofocus
+            value={searchText()}
+            onInput={(e) => setSearchText((e.target as HTMLInputElement).value)}
+            onFocus={() => setIsFocus(true)}
+            onBlur={() => setIsFocus(false)}
+          />
+        </div>
       </div>
       {searchText().length > 1 && (
         <div mt-8 text-c-light>
