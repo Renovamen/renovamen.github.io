@@ -16,7 +16,7 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
   return (
     <a
       class="relative hstack space-x-5 p-4 !no-underline !text-c"
-      border="1 c hover:transparent"
+      border="~ c hover:transparent"
       bg="hover:gray-100 dark:hover:gray-600"
       href={props.project.link}
       title={props.project.name}
@@ -30,16 +30,16 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
             props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
 
           {star() && (
-            <span class="hstack space-x-1">
+            <span hstack space-x-1>
               <span i-noto-v1:star text-xs />
               <span class="text-sm mt-0.5">{star()}</span>
             </span>
           )}
         </div>
-        <div class="text-sm opacity-50 font-normal mt-1" innerHTML={props.project.desc} />
+        <div font-normal mt-1 text="sm c-lighter" innerHTML={props.project.desc} />
       </div>
 
-      <div class="pt-2 text-3xl opacity-50">
+      <div pt-2 text="3xl c-lighter">
         {props.project.icon === "oh-vue-icons" ? (
           <OhVueIcons />
         ) : props.project.icon === "oh-my-cv" ? (

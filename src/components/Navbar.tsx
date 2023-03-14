@@ -39,8 +39,8 @@ export const Navbar: Component<{
         !isFixed() && !isVisible() && "absolute top-0 left-0"
       }`}
     >
-      <a class="font-bold" un-text="c-light hover:c-dark" href="/">
-        <span text="lg">hi@zxh</span>
+      <a font-bold text="c-light hover:c-dark" href="/">
+        <span text-lg>hi@zxh</span>
         <div i-fa6-solid:angle-right class="prompt inline-block" />
         <span class="blink">_</span>
       </a>
@@ -62,10 +62,6 @@ export const Navbar: Component<{
 
         <a nav-item href="/search" title="Search">
           <span i-uil:search />
-        </a>
-
-        <a nav-item href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer">
-          <div i-jam:rss-feed />
         </a>
 
         <button nav-item title="Toggle dark" onClick={() => setDark(!isDark())}>

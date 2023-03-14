@@ -1,4 +1,47 @@
-<footer font="ui" text="sm center c-lighter" mt-20>
-  © Xiaohan Zou 2023 <br />
-  A dragon lost in human world
+<footer
+  class="max-w-content w-full hstack justify-between font-ui mx-auto mt-20"
+  text="xs lg:sm"
+>
+  <span text-c-lighter>
+    <span>© Xiaohan Zou 2023</span>
+    <span lt-sm:hidden>· A dragon lost in human world</span>
+  </span>
+  <span hstack space-x-3>
+    <a
+      class="footer-item"
+      href="https://github.com/Renovamen/renovamen.github.io"
+      title="Source code"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div i-lucide:code-2></div>
+      <span lt-sm:hidden>Code</span>
+    </a>
+    <a
+      class="footer-item"
+      href="/rss.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div i-heroicons:rss-20-solid></div>
+      <span lt-sm:hidden>RSS</span>
+    </a>
+    <a
+      class="footer-item"
+      href="/sitemap-index.xml"
+      title="Sitemap"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div i-bx:map-alt></div>
+      <span lt-sm:hidden>Sitemap</span>
+    </a>
+  </span>
 </footer>
+
+<style scoped>
+  .footer-item {
+    @apply hstack space-x-1 text-c-lighter hover:text-c-light;
+  }
+</style>

@@ -7,17 +7,19 @@
 
 import type { AttributifyAttributes } from "@unocss/preset-attributify";
 
+interface Attributes extends AttributifyAttributes {
+  hstack?: boolean;
+  i?: string;
+}
+
 declare global {
   namespace astroHTML.JSX {
-    interface HTMLAttributes extends AttributifyAttributes { }
+    interface HTMLAttributes extends Attributes {}
   }
 }
 
-declare module 'solid-js' {
+declare module "solid-js" {
   namespace JSX {
-    interface HTMLAttributes<T> extends AttributifyAttributes {
-      hstack?: boolean;
-      i?: string;
-    }
+    interface HTMLAttributes<T> extends Attributes {}
   }
 }
