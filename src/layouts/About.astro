@@ -40,3 +40,10 @@ const { name, subname, avatar, socials } = Astro.props.frontmatter;
 
   <slot />
 </Layout>
+
+<script>
+  import mediumZoom from "medium-zoom";
+
+  const zoom = mediumZoom();
+  zoom.attach(":not(a) > img:not(.no-zoom)");
+</script>

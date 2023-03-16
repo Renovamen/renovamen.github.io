@@ -142,6 +142,12 @@ const lastUpdatedText = THEME.lastUpdatedText;
 </style>
 
 <script>
+  import mediumZoom from "medium-zoom";
+
+  const zoom = mediumZoom();
+  zoom.attach(":not(a) > img:not(.no-zoom)");
+
+  // scroll to anchor smoothly
   const navigate = () => {
     if (location.hash) {
       document

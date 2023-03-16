@@ -69,7 +69,7 @@ const className = Astro.props.class || "";
   </head>
 
   <body class="font-sans">
-    <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-6`}>
+    <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6`}>
       <Navbar client:load activePage={activePage}>
         <slot name="navbar" />
       </Navbar>
@@ -82,10 +82,3 @@ const className = Astro.props.class || "";
     </main>
   </body>
 </html>
-
-<script>
-  import mediumZoom from "medium-zoom";
-
-  const zoom = mediumZoom();
-  zoom.attach(":not(a) > img:not(.no-zoom)");
-</script>
