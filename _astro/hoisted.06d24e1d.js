@@ -1,0 +1,1 @@
+import"./Layout.astro_astro_type_script_index_0_lang.d750298c.js";const o=["\\(o_o)/","(o^^)o","(˚Δ˚)b","(^-^*)","(^_^)b","(╯‵□′)╯","(='X'=)","(>_<)","\\(°ˊДˋ°)/","ㄟ(▔▽▔)ㄏ"],e=document.querySelector("#emoji");e&&(e.innerHTML=o[Math.floor(Math.random()*o.length)]);
