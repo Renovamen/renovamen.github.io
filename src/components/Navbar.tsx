@@ -1,9 +1,10 @@
-import { onMount, createEffect, createSignal, JSX, type Component } from "solid-js";
+import { onMount, createEffect, createSignal, type Component } from "solid-js";
 import { useScroll, useDark } from "solidjs-use";
+import ToggleToc from "@components/ToggleToc";
 
 export const Navbar: Component<{
   activePage?: string;
-  children?: JSX.Element;
+  hasToc?: boolean;
 }> = (props) => {
   const [isDark, setDark] = useDark();
   const [isFixed, setIsFixed] = createSignal(false);
@@ -68,7 +69,7 @@ export const Navbar: Component<{
           <div i="carbon-sun dark:carbon-moon" />
         </button>
 
-        {props.children}
+        {props.hasToc && <ToggleToc />}
       </nav>
     </header>
   );

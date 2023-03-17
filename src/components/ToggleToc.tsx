@@ -3,14 +3,7 @@ import { useWindowSize } from "solidjs-use";
 
 export const ToggleToc: Component = () => {
   const { width } = useWindowSize();
-  const [isToc, setIsToc] = createSignal(false);
   const [isTocOpen, setIsTocOpen] = createSignal(width() > 1200);
-
-  onMount(() => {
-    const toc = document.querySelector(".table-of-contents");
-    setIsToc(toc ? true : false);
-    handleClass();
-  });
 
   const toggleToc = () => {
     setIsTocOpen(!isTocOpen());
@@ -23,14 +16,12 @@ export const ToggleToc: Component = () => {
     else html.classList.remove("toc-open");
   };
 
+  onMount(handleClass);
+
   return (
-    <>
-      {isToc() && (
-        <button class="nav-item ml-4" title="Toggle toc" onClick={toggleToc}>
-          {isTocOpen() ? <div i-ri:menu-3-line /> : <div i-ri:menu-fold-line />}
-        </button>
-      )}
-    </>
+    <button class="nav-item ml-4" title="Toggle toc" onClick={toggleToc}>
+      {isTocOpen() ? <div i-ri:menu-3-line /> : <div i-ri:menu-fold-line />}
+    </button>
   );
 };
 

@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 
@@ -14,12 +12,14 @@ interface Attributes extends AttributifyAttributes {
 
 declare global {
   namespace astroHTML.JSX {
+    /* eslint-disable-next-line @typescript-eslint/no-empty-interface */
     interface HTMLAttributes extends Attributes {}
   }
 }
 
 declare module "solid-js" {
   namespace JSX {
+    /* eslint-disable-next-line @typescript-eslint/no-empty-interface */
     interface HTMLAttributes<T> extends Attributes {}
   }
 }

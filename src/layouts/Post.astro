@@ -3,7 +3,6 @@ import { slugify } from "@renovamen/utils";
 import type { CollectionEntry } from "astro:content";
 import { SITE, THEME } from "@config";
 import Layout from "@layouts/Layout.astro";
-import ToggleToc from "@components/ToggleToc";
 import Giscus from "@components/Giscus";
 import {
   getPostDate,
@@ -24,6 +23,9 @@ const { title, author, tags } = post.data;
 
 const { Content } = await post.render();
 const tagURL = `/posts/${lang === "en" ? "" : lang + "/"}tags/`;
+
+// does this post has table of contents enabled?
+const hasToc = /## toc\n/.test(post.body);
 
 // previous and next post
 const posts = getSortedPosts(await getPosts(lang));
@@ -57,10 +59,9 @@ const lastUpdatedText = THEME.lastUpdatedText;
   class="post"
   title={`${title} - ${SITE.title}`}
   author={author}
+  hasToc={hasToc}
   activePage="posts"
 >
-  <ToggleToc client:load slot="navbar" />
-
   <div mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
     <p text-c-lighter mt-2>

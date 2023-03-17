@@ -10,6 +10,7 @@ export interface Props {
   title?: string;
   author?: string;
   description?: string;
+  hasToc?: boolean;
   activePage?: string;
   class?: string;
 }
@@ -18,11 +19,12 @@ const {
   title = SITE.title,
   author = SITE.author,
   description = SITE.desc,
+  hasToc = false,
   activePage
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const className = Astro.props.class || "";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -70,9 +72,7 @@ const className = Astro.props.class || "";
 
   <body class="font-sans">
     <main class={`${className} flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6`}>
-      <Navbar client:load activePage={activePage}>
-        <slot name="navbar" />
-      </Navbar>
+      <Navbar client:load activePage={activePage} hasToc={hasToc} />
       <div class="flex-1 mb-6">
         <div class="prose prose-lg mx-auto">
           <slot />
