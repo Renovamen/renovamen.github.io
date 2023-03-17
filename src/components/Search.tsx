@@ -10,6 +10,7 @@ export type SearchItem = {
 };
 
 export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
+  /* eslint-disable-next-line solid/reactivity */
   const fuse = new Fuse(props.searchList, {
     keys: ["title", "excerpt"],
     includeMatches: true,

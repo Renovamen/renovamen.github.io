@@ -3,7 +3,7 @@ import { useDark } from "solidjs-use";
 import { GISCUS } from "@config";
 
 export const Giscus: Component = () => {
-  const [isDark, _] = useDark();
+  const [isDark] = useDark();
   const getTheme = () => (isDark() ? GISCUS.dark : GISCUS.light);
 
   const getScriptElement = (theme: string) => {

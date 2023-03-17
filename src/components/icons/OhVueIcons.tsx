@@ -2,7 +2,7 @@ import type { Component } from "solid-js";
 import { useDark } from "solidjs-use";
 
 export const OhVueIcons: Component = () => {
-  const [isDark, _] = useDark();
+  const [isDark] = useDark();
   const color = () => (isDark() ? "#ff6562" : "#e1190e");
 
   return (

@@ -12,14 +12,14 @@ interface Attributes extends AttributifyAttributes {
 
 declare global {
   namespace astroHTML.JSX {
-    /* eslint-disable-next-line @typescript-eslint/no-empty-interface */
+    /* eslint-disable-next-line */
     interface HTMLAttributes extends Attributes {}
   }
 }
 
 declare module "solid-js" {
   namespace JSX {
-    /* eslint-disable-next-line @typescript-eslint/no-empty-interface */
+    /* eslint-disable-next-line */
     interface HTMLAttributes<T> extends Attributes {}
   }
 }

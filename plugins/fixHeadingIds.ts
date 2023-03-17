@@ -7,7 +7,7 @@ export const rehypeFixHeadingIds: RehypePlugin = () => {
       const { tagName } = node;
       if (tagName[0] !== "h") return;
 
-      const [_, level] = tagName.match(/h([0-6])/) ?? [];
+      const [, level] = tagName.match(/h([0-6])/) ?? [];
       if (!level) return;
 
       if (!node.properties?.id || typeof node.properties.id !== "string") return;

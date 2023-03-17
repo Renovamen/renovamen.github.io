@@ -3,6 +3,7 @@ import { OhVueIcons, OhMyCV } from "./icons";
 import type { ProjectItem } from "@types";
 
 export const Project: Component<{ project: ProjectItem }> = (props) => {
+  /* eslint-disable-next-line solid/reactivity */
   const api = "https://api.github.com/repos/" + props.project.repo;
   const [star, setStar] = createSignal<string>();
 
