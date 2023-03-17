@@ -16,10 +16,16 @@
 }
 
 .table-of-contents {
-  @apply hidden fixed z-30 w-55 top-20 right-0 bottom-0 pl-2 pt-18 pr-5.5 overflow-y-auto text-[0.8em] text-right lt-xl:(top-0 bg-c border-l border-c shadow);
+  @apply fixed z-10 bottom-0 pt-28 pl-2 overflow-y-auto text-[0.8em] text-right lt-xl:(bg-c border-l border-c shadow);
 }
 
-.toc-open .table-of-contents {
+.table-of-contents,
+.table-of-contents-btns {
+  @apply hidden w-55 pr-5.5 top-0 xl:top-13 right-0;
+}
+
+.toc-open .table-of-contents,
+.toc-open .table-of-contents-btns {
   @apply block;
 }
 
@@ -28,7 +34,7 @@
 }
 
 .table-of-contents li {
-  @apply list-none truncate;
+  @apply truncate;
 }
 
 .table-of-contents > li > p::before,
@@ -46,4 +52,32 @@
 
 .table-of-contents::-webkit-scrollbar {
   @apply hidden;
+}
+
+@media print {
+  .post header,
+  .post footer,
+  .post .table-of-contents-btns,
+  .post .content + div,
+  .post .content + div + div,
+  .post .content + div + div + div {
+    @apply !hidden;
+  }
+
+  .post {
+    @apply py-0;
+  }
+
+  .table-of-contents {
+    @apply relative w-full border-none shadow-none p-0 pb-10 text-left;
+  }
+
+  .table-of-contents > li > ul {
+    @apply pl-5;
+  }
+
+  .table-of-contents > li > p::before,
+  .table-of-contents > li > a::before {
+    @apply content-none mr-0;
+  }
 }

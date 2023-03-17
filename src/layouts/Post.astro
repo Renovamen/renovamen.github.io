@@ -3,6 +3,7 @@ import { slugify } from "@renovamen/utils";
 import type { CollectionEntry } from "astro:content";
 import { SITE, THEME } from "@config";
 import Layout from "@layouts/Layout.astro";
+import TocButtons from "@components/TocButtons";
 import Giscus from "@components/Giscus";
 import {
   getPostDate,
@@ -86,6 +87,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
   </div>
 
   <div class="content mb-16">
+    {hasToc && <TocButtons client:load prev={prevPost?.path} next={nextPost?.path} />}
     <Content />
   </div>
 
@@ -109,7 +111,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
 
   {
     (prevPost || nextPost) && (
-      <div class="grid md:grid-cols-2 mt-3 pt-3 text-[0.95em]" border="t c">
+      <div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c">
         <span class="prev">
           {prevPost && (
             <a href={`/posts/${prevPost.path}`} class="!text-c">

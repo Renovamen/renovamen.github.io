@@ -34,7 +34,7 @@ export const Navbar: Component<{
   return (
     <header
       ref={navbar}
-      class={`z-40 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 ${
+      class={`z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 ${
         isFixed() && "fixed -top-14 left-0 transition duration-300 border-b border-c"
       } ${isVisible() && "translate-y-full shadow-nav"} ${
         !isFixed() && !isVisible() && "absolute top-0 left-0"
