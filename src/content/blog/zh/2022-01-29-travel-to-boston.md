@@ -1,7 +1,7 @@
 ---
 title: 波士顿漫游指南
 tags:
-  - others
+  - life
 ---
 
 ## toc

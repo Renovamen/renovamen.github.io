@@ -1,7 +1,7 @@
 ---
 title: 「译」游戏中的游吟诗人的神秘魅力
 tags:
-  - others
+  - game
 ---
 
 翻译自 [EGM](https://egmnow.com/) 上的文章：[<span i-gg:link></span> _Toss a Coin: The Enigmatic Appeal of Gaming’s Greatest Bards_](https://egmnow.com/toss-a-coin-the-enigmatic-appeal-of-video-games-greatest-bards/)。

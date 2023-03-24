@@ -1,7 +1,7 @@
 ---
 title: 对过去三年的碎碎念：像样的麻婆豆腐是这个令人讨厌的世界上的唯一的光
 tags:
-  - others
+  - life
 ---
 
 封面图是《塞尔达传说：荒野之息》里的利特族族长 Kaneli，来自 [@wroage (tumblr)](https://wroage.tumblr.com/image/185206416422)。利特族真是一个毛茸茸的好族。
