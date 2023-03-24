@@ -102,11 +102,15 @@ const lastUpdatedText = THEME.lastUpdatedText;
       <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
       {editText}
     </a>
-    <span md:text-right text-c-light>
-      <span class="i-ic:round-update w-4.5 h-4.5"></span>
-      {lastUpdatedText}
-      {lastUpdatedTime}
-    </span>
+    {
+      lastUpdatedTime !== "Invalid Date" && (
+        <span md:text-right text-c-light>
+          <span class="i-ic:round-update w-4.5 h-4.5"></span>
+          {lastUpdatedText}
+          {lastUpdatedTime}
+        </span>
+      )
+    }
   </div>
 
   {
