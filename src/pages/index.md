@@ -23,7 +23,7 @@ socials:
     name: Portfolio
 ---
 
-Xiaohan's current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models.
+Xiaohan is a incoming PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models. 
 
 Previously, she received her master's degree in [Computer Science](https://www.bu.edu/cs/) at [Boston University](https://www.bu.edu/) and bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/). She was fortunate to work with Prof. [Bryan Plummer](https://bryanplummer.com/) (BU) on continual learning and parameter sharing, Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation, and Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html) (Tongji) on image aesthetic captioning.
 
@@ -90,10 +90,10 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 |                                                                                                                                                             |           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | **Machine Learning Engineer Intern**, _[Kuaishou](https://www.kuaishou.com/en)_, Beijing, China                                                             | 2021–2022 |
-| **Research Intern**, _[Peking University](https://english.pku.edu.cn/)_, Beijing, China (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2020–2022 |
+| **Research Assistant**, _[Peking University](https://english.pku.edu.cn/)_, Remote (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2020–2022 |
 | **Software Engineer Intern**, _China Electronics Technology Group Corporation_                                                                              | 2020–2021 |
 | **Game Engineer Intern**, _[Banana Interactive](https://banana.games/)_, Shanghai, China                                                                    | 2019–2020 |
-| **Research Intern**, _[Peking University](https://english.pku.edu.cn/)_, Beijing, China (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2018      |
+| **Research Assistant**, _[Peking University](https://english.pku.edu.cn/)_, Beijing, China (with Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm)) | 2018      |
 
 
 ## Talks
