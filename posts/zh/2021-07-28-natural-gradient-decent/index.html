@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="canonical" href="https://zxh.io/posts/zh/2021-07-28-natural-gradient-decent/">
-    <meta name="generator" content="Astro v2.1.6">
+    <meta name="generator" content="Astro v2.3.2">
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <title>自然梯度下降 - Xiaohan Zou</title>
@@ -31,16 +31,17 @@
     <meta property="twitter:url" content="https://zxh.io/posts/zh/2021-07-28-natural-gradient-decent/">
 
     
-  <link rel="stylesheet" href="/_astro/404.1c8eace0.css" />
-<link rel="stylesheet" href="/_astro/index.cddb3ee2.css" />
-<link rel="stylesheet" href="/_astro/_slug_.6ea23a96.css" /><script type="module" src="/_astro/hoisted.9ed01677.js"></script></head>
+  <link rel="stylesheet" href="/_astro/404.875c9bc4.css" />
+<link rel="stylesheet" href="/_astro/index.1a5494c9.css" />
+<link rel="stylesheet" href="/_astro/_slug_.8db38b5a.css" /><script type="module" src="/_astro/hoisted.9ed01677.js"></script></head>
 
   <body class="font-sans">
     <main class="post astro-GVPN4U4B flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6">
-      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Z1czaHP" data-solid-render-id="s0" component-url="/_astro/Navbar.042b4a86.js" component-export="default" renderer-url="/_astro/client.eef9f61c.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s00-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@zxh</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--#--><button data-hk="s00-1-0" class="nav-item ml-4" title="Toggle toc"><div data-hk="s00-1-1" i-ri:menu-3-line></div></button><!--/--></nav></header></astro-island>
+      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Z1kQxaa" data-solid-render-id="s2" component-url="/_astro/Navbar.2b26d4f1.js" component-export="default" renderer-url="/_astro/client.b240d84d.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s20-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@zxh</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--#--><button data-hk="s20-1-0" class="nav-item ml-4" title="Toggle toc"><div data-hk="s20-1-1" i-ri:menu-3-line></div></button><!--/--></nav></header></astro-island>
       <div class="flex-1 mb-6">
         <div class="prose prose-lg mx-auto">
-          <script>(self.Astro=self.Astro||{}).visible=(s,c,n)=>{const r=async()=>{await(await s())()};let i=new IntersectionObserver(e=>{for(const t of e)if(t.isIntersecting){i.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];i.observe(t)}},window.dispatchEvent(new Event("astro:visible"));</script><div mt-6 mb-8 class="astro-GVPN4U4B">
+          
+  <div mt-6 mb-8 class="astro-GVPN4U4B">
     <h1 text-4xl font-bold leading-12 my-0 class="astro-GVPN4U4B">自然梯度下降</h1>
     <p text-c-lighter mt-2 class="astro-GVPN4U4B">
       Jul 28, 2021 · 11 min
@@ -60,8 +61,10 @@
               </span>
           </span>
     </p>
-  </div><div class="content mb-16 astro-GVPN4U4B">
-    <astro-island uid="Z1OM4kT" data-solid-render-id="s0" component-url="/_astro/TocButtons.65ab26da.js" component-export="default" renderer-url="/_astro/client.eef9f61c.js" props="{&quot;prev&quot;:[0,&quot;zh/2021-07-27-fisher-information-matrix&quot;],&quot;next&quot;:[0,&quot;zh/2021-08-31-attention-conv&quot;],&quot;class&quot;:[0,&quot;astro-GVPN4U4B&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TocButtons&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="table-of-contents-btns fixed z-20"><div hstack justify-end pt-18 pb-2 bg-c><!--#--><span data-hk="s00-1" text="sm c-light" italic mr-3></span><!--/--><!--#--><a data-hk="s00-2" class="flex-center !text-c hover:opacity-60" href="/posts/zh/2021-07-27-fisher-information-matrix"><span i-ic:round-keyboard-arrow-left text-xl></span></a><!--/--><!--#--><a data-hk="s00-3" href="/posts/zh/2021-08-31-attention-conv" class="flex-center !text-c hover:opacity-60"><span i-ic:round-keyboard-arrow-right text-xl></span></a><!--/--><button flex-center hover:opacity-60><span i-ic:round-keyboard-arrow-up text-xl></span></button><button class="flex-center hover:opacity-60 ml-1.5"><span i-mi:print text-sm></span></button></div></div></astro-island>
+  </div>
+
+  <div class="content mb-16 astro-GVPN4U4B">
+    <astro-island uid="Z1OM4kT" data-solid-render-id="s0" component-url="/_astro/TocButtons.56b20cac.js" component-export="default" renderer-url="/_astro/client.b240d84d.js" props="{&quot;prev&quot;:[0,&quot;zh/2021-07-27-fisher-information-matrix&quot;],&quot;next&quot;:[0,&quot;zh/2021-08-31-attention-conv&quot;],&quot;class&quot;:[0,&quot;astro-GVPN4U4B&quot;]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TocButtons&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="table-of-contents-btns fixed z-20"><div hstack justify-end pt-18 pb-2 bg-c><!--#--><span data-hk="s00-1" text="sm c-light" italic mr-3></span><!--/--><!--#--><a data-hk="s00-2" class="flex-center !text-c hover:opacity-60" href="/posts/zh/2021-07-27-fisher-information-matrix"><span i-ic:round-keyboard-arrow-left text-xl></span></a><!--/--><!--#--><a data-hk="s00-3" href="/posts/zh/2021-08-31-attention-conv" class="flex-center !text-c hover:opacity-60"><span i-ic:round-keyboard-arrow-right text-xl></span></a><!--/--><button flex-center hover:opacity-60><span i-ic:round-keyboard-arrow-up text-xl></span></button><button class="flex-center hover:opacity-60 ml-1.5"><span i-mi:print text-sm></span></button></div></div></astro-island>
     <ul class="table-of-contents">
 <li>
 <p><a href="#%E5%9F%BA%E7%A1%80">基础</a></p>
@@ -314,7 +317,9 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 <li><a href="https://www.ime.usp.br/~gorodski" target="_blank" rel="noopener noreferrer">[课件] Riemannian Metrics.</a> <em>Claudio Gorodski.</em> University of São Paulo.</li>
 <li><a href="https://maths-people.anu.edu.au/~andrews/DG/" target="_blank" rel="noopener noreferrer">[论文] Geometric Deep Learning: Going beyond Euclidean Data.</a> IEEE Signal Processing Magazine 2017. <em>Michael M. Bronstein, et al.</em></li>
 </ul>
-  </div><div class="grid md:grid-cols-2 text-[0.95em] astro-GVPN4U4B">
+  </div>
+
+  <div class="grid md:grid-cols-2 text-[0.95em] astro-GVPN4U4B">
     <a href="https://github.com/Renovamen/renovamen.github.io/edit/main/src/content/blog/zh/2021-07-28-natural-gradient-decent.md" title="Edit link" target="_blank" rel="noopener noreferrer" class="hover:underline astro-GVPN4U4B">
       <span class="i-tabler:edit w-4.5 h-4.5 align-text-top astro-GVPN4U4B"></span>
       Edit this page on GitHub
@@ -324,7 +329,9 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
           Last updated:
           3/7/2023, 2:57:21 PM
         </span>
-  </div><div class="mt-3 pt-3 text-[0.95em] astro-GVPN4U4B" grid="~ md:cols-2" border="t c">
+  </div>
+
+  <div class="mt-3 pt-3 text-[0.95em] astro-GVPN4U4B" grid="~ md:cols-2" border="t c">
         <span class="prev astro-GVPN4U4B">
           <a href="/posts/zh/2021-07-27-fisher-information-matrix" class="!text-c astro-GVPN4U4B">
               Fisher 信息矩阵
@@ -336,8 +343,9 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
             </a>
         </span>
       </div><div mt-20 class="astro-GVPN4U4B">
-    <astro-island uid="2ofSuY" data-solid-render-id="s1" component-url="/_astro/Giscus.17778624.js" component-export="default" renderer-url="/_astro/client.eef9f61c.js" props="{&quot;class&quot;:[0,&quot;astro-GVPN4U4B&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s10-0" class="giscus"></div></astro-island>
+    <script>(self.Astro=self.Astro||{}).visible=(s,c,n)=>{const r=async()=>{await(await s())()};let i=new IntersectionObserver(e=>{for(const t of e)if(t.isIntersecting){i.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];i.observe(t)}},window.dispatchEvent(new Event("astro:visible"));</script><astro-island uid="2ofSuY" data-solid-render-id="s1" component-url="/_astro/Giscus.d0d2d8a9.js" component-export="default" renderer-url="/_astro/client.b240d84d.js" props="{&quot;class&quot;:[0,&quot;astro-GVPN4U4B&quot;]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s10-0" class="giscus"></div></astro-island>
   </div>
+
         </div>
       </div>
       <footer class="max-w-content w-full hstack justify-between font-ui mx-auto mt-20 astro-SZ7XMLTE" text="xs lg:sm">
