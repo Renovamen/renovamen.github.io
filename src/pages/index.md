@@ -23,9 +23,9 @@ socials:
     name: Portfolio
 ---
 
-Xiaohan is a incoming PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models. 
+Xiaohan is a incoming PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models. 
 
-Previously, she received her master's degree in [Computer Science](https://www.bu.edu/cs/) at [Boston University](https://www.bu.edu/) and bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/). She was fortunate to work with Prof. [Bryan Plummer](https://bryanplummer.com/) (BU) on continual learning and parameter sharing, Prof. [Tong Lin](http://www.cis.pku.edu.cn/jzyg/szdw/lt.htm) (PKU) on continual learning and machine translation, and Prof. [Qinpei Zhao](https://dblp.org/pid/22/6705.html) (Tongji) on image aesthetic captioning.
+Previously, she received her master's degree in [Computer Science](https://www.bu.edu/cs/) at [Boston University](https://www.bu.edu/) and bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/). She has also interned in Kuaishou and PKU.
 
 [Curriculum Vitae](/files/cv/en.pdf) / renovamenzxh@gmail.com
 
