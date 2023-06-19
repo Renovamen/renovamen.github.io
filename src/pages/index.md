@@ -38,7 +38,7 @@ Previously, she received her master's degree in [Computer Science](https://www.b
 | **B.Eng. in Software Engineering**, Tongji University <p>Thesis: _Food Image Aesthetic Assessment and Captioning_</p> | 2016-2020 |
 
 
-## Publications
+## Publications <span text-base>(also see <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
 :::paper[/img/about/tokenflow-1.png /img/about/tokenflow-2.png]
 **TokenFlow: Rethinking Fine-grained Cross-modal Alignment in Vision-Language Retrieval**
@@ -118,6 +118,6 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🌭 My dream: `while(sleeping){money++;}`
 
-- 🕹️ Currently interested in constructing buildings in Minecraft
+- 🕹️ Currently interested in *Minecraft* and *Monster Hunter: World*
 
 - 📜 大概率更新不及时的[中文简历](/files/cv/cn.pdf)
