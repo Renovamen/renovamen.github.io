@@ -1,5 +1,4 @@
 import type { RemarkPlugins, RehypePlugins } from "astro";
-import type * as hast from "hast";
 import remarkDirective from "remark-directive";
 import remarkMath from "remark-math";
 import { remarkToc } from "./toc";
@@ -31,9 +30,6 @@ export const rehypePlugins: RehypePlugins = [
       theme: {
         light: "github-light",
         dark: "github-dark"
-      },
-      onVisitHighlightedLine: (node: hast.Element) => {
-        (node.properties!.className as string[]).push("highlighted");
       }
     }
   ],

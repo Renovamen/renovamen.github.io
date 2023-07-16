@@ -70,7 +70,9 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 
 .prose div[class*="language-"]::before {
   @apply content-[""] absolute w-2.5 h-2.5 top-3.5 left-4 rounded-full bg-[#fd5f57];
-  box-shadow: 16px 0 0 0 #febb2f, 32px 0 0 0 #2ec841;
+  box-shadow:
+    16px 0 0 0 #febb2f,
+    32px 0 0 0 #2ec841;
 }
 
 .prose div[class*="language-"] > span.lang {
@@ -82,23 +84,31 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
 }
 
 .prose div[class*="language-"] pre {
-  @apply leading-6 text-[0.925em] m-0 p-4;
+  @apply leading-6 text-[0.925em] m-0 p-4 !bg-transparent;
 }
 
 .prose div[class*="language-"] pre > code {
   @apply block w-fit min-w-full;
 }
 
-.prose div[class*="language-"] pre > code > span.highlighted {
+.prose div[class*="language-"] pre > code > span[data-highlighted-line] {
   @apply -mx-4 px-4 inline-block;
   width: calc(100% + 2 * 16px);
 }
 
-.prose div[class*="language-"] pre[data-theme="light"] > code > span.highlighted {
+.prose
+  div[class*="language-"]
+  pre[data-theme="light"]
+  > code
+  > span[data-highlighted-line] {
   @apply bg-slate-100;
 }
 
-.prose div[class*="language-"] pre[data-theme="dark"] > code > span.highlighted {
+.prose
+  div[class*="language-"]
+  pre[data-theme="dark"]
+  > code
+  > span[data-highlighted-line] {
   @apply bg-slate-600;
 }
 
