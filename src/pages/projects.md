@@ -6,7 +6,7 @@ projects:
       link: https://github.com/Renovamen/flint
       desc: A toy deep learning framework implemented in Numpy from scratch
       icon: i-heroicons-solid:fire
-      tech: 
+      tech:
         - i-logos:python
         - i-logos:numpy
       repo: Renovamen/flint
@@ -48,7 +48,7 @@ projects:
       link: https://github.com/Renovamen/pcalg-py
       desc: Implement PC algorithm in Python
       icon: i-ph:graph
-      tech: 
+      tech:
         - i-logos:python
       repo: Renovamen/pcalg-py
   JavaScript Libraries:
