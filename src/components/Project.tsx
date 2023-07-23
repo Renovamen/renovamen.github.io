@@ -25,19 +25,21 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
       rel="noopener noreferrer"
     >
       <div class="flex-auto">
-        <div class="text-normal hstack space-x-2">
-          <span mr-1>{props.project.name}</span>
-          {props.project.tech &&
-            props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
+        <div class="hstack flex-wrap">
+          <div whitespace-nowrap mr-3>{props.project.name}</div>
+          <div hstack space-x-2>
+            {props.project.tech &&
+              props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
 
-          {star() && (
-            <span hstack space-x-1>
-              <span i-noto-v1:star text-xs />
-              <span class="text-sm mt-0.5">{star()}</span>
-            </span>
-          )}
+            {star() && (
+              <span hstack space-x-1>
+                <span i-noto-v1:star text-xs />
+                <span class="text-sm mt-0.5">{star()}</span>
+              </span>
+            )}
+          </div>
         </div>
-        <div font-normal mt-1 text="sm c-lighter" innerHTML={props.project.desc} />
+        <div mt-1 text="sm c-lighter" innerHTML={props.project.desc} />
       </div>
 
       <div pt-2 text="3xl c-lighter">

@@ -13,7 +13,7 @@ const { socials } = Astro.props;
   {
     socials.map((item) => (
       <a
-        class="btn font-normal px-3 h-9 mr-1 mb-1"
+        class="btn px-3 h-9 mr-1 mb-1"
         title={item.name || item.link}
         href={item.link}
         target={isExternal(item.link) ? "_blank" : "_self"}

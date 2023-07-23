@@ -69,7 +69,7 @@ projects:
         - i-logos:typescript-icon
         - i-logos:rollupjs
       repo: Renovamen/oh-vue-icons
-  Websites / Online Tools:
+  Websites:
     - name: Portfolio
       link: https://portfolio.zxh.io
       desc: My portfolio website simulating macOS's GUI
@@ -80,6 +80,36 @@ projects:
         - i-logos:unocss
         - i-logos:vitejs
       repo: Renovamen/playground-macos
+    - name: Interesting Resume
+      link: https://resume.zxh.io
+      desc: Hey adventurer! Why not help me with retrieving my resume fragments back!
+      icon: i-et:compass
+      tech:
+        - i-logos:vue
+        - i-logos:typescript-icon
+        - i-logos:unocss
+        - i-logos:pinia
+        - i-logos:vitejs
+      repo: Renovamen/midgard
+    - name: zxh.io
+      link: https://zxh.io
+      desc: My personal website
+      icon: i-solar:planet-linear
+      tech:
+        - i-logos:astro-icon
+        - i-logos:solidjs-icon
+        - i-logos:unocss
+      repo: Renovamen/renovamen.github.io
+    - name: Fishmail
+      link: https://fishmail.vercel.app
+      desc: 装作在 Gmail 上查邮件的样子看知乎摸鱼
+      icon: i-game-icons:fish-escape
+      tech:
+        - i-logos:vue
+        - i-vscode-icons:file-type-nuxt
+        - i-logos:ant-design
+      repo: Renovamen/fishmail
+  Online Tools:
     - name: Oh My CV!
       link: https://ohmycv.app
       desc: Write your curriculum vitae / resume in Markdown
@@ -88,27 +118,10 @@ projects:
         - i-logos:vue
         - i-logos:typescript-icon
         - i-logos:unocss
+        - i-logos:pinia
         - i-logos:vitejs
         - i-simple-icons:pwa
       repo: Renovamen/oh-my-cv
-    - name: Wordle Helper
-      link: https://wordle.zxh.io
-      desc: Help you solve the Wordle puzzles when your vocabulary fails you
-      icon: i-icon-park-outline:game-ps
-      tech:
-        - i-logos:vue
-        - i-logos:typescript-icon
-        - i-logos:tailwindcss-icon
-        - i-logos:vitejs
-    - name: Midgard
-      link: https://resume.zxh.io
-      desc: Hey adventurer! Why not help me with retrieving my resume fragments back!
-      icon: i-et:compass
-      tech:
-        - i-logos:vue
-        - i-logos:typescript-icon
-        - i-file-icons:stylus-s
-        - i-logos:vitejs
     - name: Cube Solver
       link: https://cube.zxh.io
       desc: A rubik's cube solver
@@ -118,15 +131,16 @@ projects:
         - i-vscode-icons:file-type-html
         - i-vscode-icons:file-type-css
       repo: Renovamen/Just-a-Cube
-    - name: Fishmail
-      link: https://fishmail.vercel.app
-      desc: 装作在 Gmail 上查邮件的样子看知乎摸鱼
-      icon: i-mdi:fishbowl-outline
+    - name: Wordle Helper
+      link: https://wordle.zxh.io
+      desc: Help you solve the Wordle puzzles when your vocabulary fails you
+      icon: i-icon-park-outline:game-ps
       tech:
         - i-logos:vue
-        - i-vscode-icons:file-type-nuxt
-        - i-logos:ant-design
-      repo: Renovamen/fishmail
+        - i-logos:typescript-icon
+        - i-logos:tailwindcss-icon
+        - i-logos:vitejs
+      repo: Renovamen/wordle-helper
 ---
 
 I'm trying to find a balance between research and engineering.
