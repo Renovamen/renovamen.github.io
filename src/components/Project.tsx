@@ -26,7 +26,9 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
     >
       <div class="flex-auto">
         <div class="hstack flex-wrap">
-          <div whitespace-nowrap mr-3>{props.project.name}</div>
+          <div whitespace-nowrap mr-3>
+            {props.project.name}
+          </div>
           <div hstack space-x-2>
             {props.project.tech &&
               props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
