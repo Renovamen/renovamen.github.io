@@ -24,6 +24,7 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
     searchText().length > 1 ? fuse.search(searchText()) : []
   );
 
+  // eslint-disable-next-line prefer-const
   let input: HTMLInputElement | undefined = undefined;
 
   onMount(() => {

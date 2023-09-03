@@ -10,6 +10,7 @@ export const Navbar: Component<{
   const [isFixed, setIsFixed] = createSignal(false);
   const [isVisible, setIsVisible] = createSignal(false);
 
+  // eslint-disable-next-line prefer-const
   let navbar: HTMLElement | undefined = undefined;
 
   onMount(() => {
