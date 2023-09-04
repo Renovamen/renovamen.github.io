@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="canonical" href="https://zxh.io/posts/zh/2018-11-30-dynamo/">
-    <meta name="generator" content="Astro v2.10.12">
+    <meta name="generator" content="Astro v2.10.15">
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <title>Dynamo 论文总结 - Xiaohan Zou</title>
@@ -31,7 +31,7 @@
     <meta property="twitter:url" content="https://zxh.io/posts/zh/2018-11-30-dynamo/">
 
     
-  <link rel="stylesheet" href="/_astro/404.ddc5a17b.css" />
+  <link rel="stylesheet" href="/_astro/404.c6d3719d.css" />
 <link rel="stylesheet" href="/_astro/index.7d6c6ef4.css" />
 <link rel="stylesheet" href="/_astro/_slug_.8db38b5a.css" /><script type="module" src="/_astro/hoisted.aef143c1.js"></script></head>
 
@@ -81,7 +81,7 @@
 </ul>
 </li>
 </ul>
-<p>阅读论文 <a href="https://link.jianshu.com/?t=http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank" rel="noopener noreferrer">Dynamo: Amazon’s Highly Available Key-value Store</a> 后的一些总结。</p>
+<p>阅读论文 <a href="https://link.jianshu.com/?t=http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" rel="noopener noreferrer" target="_blank">Dynamo: Amazon’s Highly Available Key-value Store</a> 后的一些总结。</p>
 <h2 id="_1-background"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_1-background">#</a>1. Background</h2>
 <p>Dynamo 是 Amazon 开发的分布式存储系统，它在 Amazon 所处的应用环境中面对的问题和场景：</p>
 <ul>
@@ -166,9 +166,9 @@
 <p>为了保留所有版本的信息，Dynamo 将每次数据修改的结果当作一个新的且不可改变的数据版本。这造成一份数据会存在多个版本，分布在不同的节点上。多数情况下，系统会自动合并这些版本，一旦合并尝试失败，冲突的解决就交给应用端来解决。</p>
 <p>Dynamo 引入 <strong>vector clock</strong> 来缓解冲突的发生，这时 get(key) 操作返回的不是单一的数据，而是一个多版本的数据列表，最终由应用端对冲突进行合并。</p>
 <p></p><div class="language-python"><span class="lang">python</span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="python" data-theme="light"><code data-language="python" data-theme="light"><span data-line=""><span style="color: #24292E">vector clock </span><span style="color: #D73A49">:=</span><span style="color: #24292E"> </span><span style="color: #005CC5">list</span><span style="color: #24292E">{ (node, counter), </span><span style="color: #005CC5">...</span><span style="color: #24292E">}</span></span>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="python" data-theme="light"><code data-language="python" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292E">vector clock </span><span style="color: #D73A49">:=</span><span style="color: #24292E"> </span><span style="color: #005CC5">list</span><span style="color: #24292E">{ (node, counter), </span><span style="color: #005CC5">...</span><span style="color: #24292E">}</span></span>
 <span data-line=""><span style="color: #24292E">node </span><span style="color: #D73A49">:=</span><span style="color: #24292E"> 节点编号</span></span>
-<span data-line=""><span style="color: #24292E">counter </span><span style="color: #D73A49">:=</span><span style="color: #24292E"> 该数据在节点上的处理序序号</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="python" data-theme="dark"><code data-language="python" data-theme="dark"><span data-line=""><span style="color: #E1E4E8">vector clock </span><span style="color: #F97583">:=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">list</span><span style="color: #E1E4E8">{ (node, counter), </span><span style="color: #79B8FF">...</span><span style="color: #E1E4E8">}</span></span>
+<span data-line=""><span style="color: #24292E">counter </span><span style="color: #D73A49">:=</span><span style="color: #24292E"> 该数据在节点上的处理序序号</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="python" data-theme="dark"><code data-language="python" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #E1E4E8">vector clock </span><span style="color: #F97583">:=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">list</span><span style="color: #E1E4E8">{ (node, counter), </span><span style="color: #79B8FF">...</span><span style="color: #E1E4E8">}</span></span>
 <span data-line=""><span style="color: #E1E4E8">node </span><span style="color: #F97583">:=</span><span style="color: #E1E4E8"> 节点编号</span></span>
 <span data-line=""><span style="color: #E1E4E8">counter </span><span style="color: #F97583">:=</span><span style="color: #E1E4E8"> 该数据在节点上的处理序序号</span></span></code></pre></div>
 </div>

@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="canonical" href="https://zxh.io/posts/zh/2019-04-03-racf-experiment/">
-    <meta name="generator" content="Astro v2.10.12">
+    <meta name="generator" content="Astro v2.10.15">
     <meta name="msapplication-TileColor" content="#ffffff">
 
     <title>RACF 实验 - Xiaohan Zou</title>
@@ -31,7 +31,7 @@
     <meta property="twitter:url" content="https://zxh.io/posts/zh/2019-04-03-racf-experiment/">
 
     
-  <link rel="stylesheet" href="/_astro/404.ddc5a17b.css" />
+  <link rel="stylesheet" href="/_astro/404.c6d3719d.css" />
 <link rel="stylesheet" href="/_astro/index.7d6c6ef4.css" />
 <link rel="stylesheet" href="/_astro/_slug_.8db38b5a.css" /><script type="module" src="/_astro/hoisted.aef143c1.js"></script></head>
 
@@ -138,8 +138,7 @@
 </li>
 </ol>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LU ST016
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU ST016</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU ST016</span></span></code></pre></div>
 </div>
 <h3 id="_13-在-racflab-下定义子组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_13-在-racflab-下定义子组">#</a>1.3 在 RACFLAB 下定义子组</h3>
 <p>利用 RACF 命令定义以下子组：</p>
@@ -147,31 +146,29 @@
 <li>
 <p>定义 DIV16ADM 用户管理组（相当于公司人事部门），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>定义 DIV16FUN 功能组（相当于公司各职能部门），后继实验将在该组下定义各个子功能组，RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>定义 DIV16RES 资源组（为有机组织和保护系统资源—包括数据集 / CICS 交易 / 系统和用户程序等资源—而设立的组），后继实验将在该组下定义各个子资源组，RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
 <p>利用 RACF 命令查看新建的组进行验证：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LG DIV16ADM
-LG DIV16FUN
-LG DIV16RES
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LG DIV16ADM</span></span>
+<span data-line=""><span style="color: #24292e">LG DIV16FUN</span></span>
+<span data-line=""><span style="color: #24292e">LG DIV16RES</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LG DIV16ADM</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG DIV16FUN</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG DIV16RES</span></span></code></pre></div>
 </div>
 <h3 id="_14-在-div16fun-下定义子组功能组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_14-在-div16fun-下定义子组功能组">#</a>1.4 在 DIV16FUN 下定义子组（功能组）</h3>
 <p>利用 RACF 命令定义以下子组：</p>
@@ -179,15 +176,13 @@ LG DIV16RES
 <li>
 <p>定义 FUN16PRD 功能组，该组将用于对生产系统数据集（Production Data Sets）的访问进行集中授权（即如果该组对生产系统数据集有访问权限，该组的成员将自动继承这一权限），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>定义 FUN16TST 功能组，该组将用于对测试系统数据集（Test Data Sets）的访问进行集中授权（即如果该组对测试系统数据集有访问权限，该组的成员将自动继承这一权限），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
@@ -197,22 +192,19 @@ LG DIV16RES
 <li>
 <p>定义 RES16PRD 资源组，该组将用于保护生产系统的数据集。RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>定义 RES16TST 资源组，该组将用于保护测试系统的数据集。RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
 <h3 id="_16-查找组-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_16-查找组-profile">#</a>1.6 查找组 Profile</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>SEARCH CLASS(GROUP) MASK(DIV16)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(DIV16)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(DIV16)</span></span></code></pre></div>
 </div>
 <p> </p>
 <h2 id="_2-用户管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-用户管理">#</a>2. 用户管理</h2>
@@ -236,44 +228,40 @@ LG DIV16RES
 </li>
 </ol>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)
-# 以此类推
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)</span></span>
+<span data-line=""><span style="color: #24292e"># 以此类推</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)</span></span>
+<span data-line=""><span style="color: #e1e4e8"># 以此类推</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>查看用户是否建立成功</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LU TSO1601
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1601</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1601</span></span></code></pre></div>
 </div>
 <p>查看用户的 TSO 段是否有内容</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LU TSO1601 TSO
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1601 TSO</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1601 TSO</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>如果用户 Profile 没有指定 TSO 段的内容，用户将无法顺利登陆 TSO 系统，需要为用户指定 TSO 段信息</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>用户登陆 TSO 之后，如果要进入 ISPF 面板系统，首次进入 ISPF 系统时系统会自动为用户建立几个编目的数据集，通常普通用户的文件无法在主机系统主目录（Master Catalog）中进行编目，所以，要实现为新用户创建好用户目录（User Catalog）和别名（Alias）。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
 </div>
 <p>在 OPTION3.4 中 DSN Level 输入 TSO1601 回车，看是否显示其 “ALIAS”，如果出现类似下面的结果则表明 ALIAS 创建成功：</p>
 <p></p><div class="language-bash"><span class="lang">bash</span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="bash" data-theme="light"><code data-language="bash" data-theme="light"><span data-line=""><span style="color: #6F42C1">DSLIST</span><span style="color: #24292E"> </span><span style="color: #032F62">-</span><span style="color: #24292E"> </span><span style="color: #032F62">Data</span><span style="color: #24292E"> </span><span style="color: #032F62">Sets</span><span style="color: #24292E"> </span><span style="color: #032F62">Matching</span><span style="color: #24292E"> </span><span style="color: #032F62">TSO1601</span><span style="color: #24292E">                       </span><span style="color: #032F62">Row</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E"> </span><span style="color: #032F62">of</span><span style="color: #24292E"> </span><span style="color: #005CC5">3</span></span>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="bash" data-theme="light"><code data-language="bash" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #6F42C1">DSLIST</span><span style="color: #24292E"> </span><span style="color: #032F62">-</span><span style="color: #24292E"> </span><span style="color: #032F62">Data</span><span style="color: #24292E"> </span><span style="color: #032F62">Sets</span><span style="color: #24292E"> </span><span style="color: #032F62">Matching</span><span style="color: #24292E"> </span><span style="color: #032F62">TSO1601</span><span style="color: #24292E">                       </span><span style="color: #032F62">Row</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E"> </span><span style="color: #032F62">of</span><span style="color: #24292E"> </span><span style="color: #005CC5">3</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color: #6F42C1">Command</span><span style="color: #24292E"> </span><span style="color: #032F62">-</span><span style="color: #24292E"> </span><span style="color: #032F62">Enter</span><span style="color: #24292E"> </span><span style="color: #032F62">"/"</span><span style="color: #24292E"> </span><span style="color: #032F62">to</span><span style="color: #24292E"> </span><span style="color: #032F62">select</span><span style="color: #24292E"> </span><span style="color: #032F62">action</span><span style="color: #24292E">           </span><span style="color: #032F62">Message</span><span style="color: #24292E">        </span><span style="color: #032F62">Volume</span></span>
 <span data-line=""><span style="color: #6F42C1">---------------------------------------------------------------------</span></span>
 <span data-line=""><span style="color: #6F42C1">TSO1601</span><span style="color: #24292E">                                                 </span><span style="color: #005CC5">*</span><span style="color: #032F62">ALIAS</span></span>
-<span data-line=""><span style="color: #D73A49">************************</span><span style="color: #24292E"> End of Data Set list </span><span style="color: #D73A49">***********************</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="bash" data-theme="dark"><code data-language="bash" data-theme="dark"><span data-line=""><span style="color: #B392F0">DSLIST</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">-</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Data</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Sets</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Matching</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">TSO1601</span><span style="color: #E1E4E8">                       </span><span style="color: #9ECBFF">Row</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">of</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">3</span></span>
+<span data-line=""><span style="color: #D73A49">************************</span><span style="color: #24292E"> End of Data Set list </span><span style="color: #D73A49">***********************</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="bash" data-theme="dark"><code data-language="bash" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #B392F0">DSLIST</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">-</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Data</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Sets</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Matching</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">TSO1601</span><span style="color: #E1E4E8">                       </span><span style="color: #9ECBFF">Row</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">of</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">3</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="color: #B392F0">Command</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">-</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Enter</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">"/"</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">to</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">select</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">action</span><span style="color: #E1E4E8">           </span><span style="color: #9ECBFF">Message</span><span style="color: #E1E4E8">        </span><span style="color: #9ECBFF">Volume</span></span>
 <span data-line=""><span style="color: #B392F0">---------------------------------------------------------------------</span></span>
@@ -286,28 +274,24 @@ LG DIV16RES
 <p>当用户忘记密码的时后需要管理员 ST016 为该用户重新指定一个初始密码。</p>
 <p>场景：Janet Smith（TSO1601）遗忘了密码：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALU TSO1601 PASSWORD(PASS)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 PASSWORD(PASS)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 PASSWORD(PASS)</span></span></code></pre></div>
 </div>
 <h3 id="_23-revoke-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_23-revoke-用户">#</a>2.3 Revoke 用户</h3>
 <p>当用户帐号暂时不用的时候，安全起见应该将该帐号挂起（Revoke）。
 场景：Arthur Fielding（TSO1604）将会出差一段时间，在这段时间应将该用户的帐号挂起：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALU TSO1601 REVOKE
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 REVOKE</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 REVOKE</span></span></code></pre></div>
 </div>
 <h3 id="_24-resume-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_24-resume-用户">#</a>2.4 Resume 用户</h3>
 <p>当挂起的用户帐号需要重新启用的时候，应该及时地将帐号 Resume。
 场景：Arthur Fielding（TSO1604）出差回来，希望能够继续使用以前的帐号：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALU TSO1601 RESUME
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 RESUME</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 RESUME</span></span></code></pre></div>
 </div>
 <h3 id="_25-search-查找"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_25-search-查找">#</a>2.5 Search 查找</h3>
 <p>使用 Search 命令查找以上新建的用户 Profile</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>SEARCH CLASS(USER) MASK(TSO1601)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SEARCH CLASS(USER) MASK(TSO1601)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(USER) MASK(TSO1601)</span></span></code></pre></div>
 </div>
 <h3 id="_26-将用户关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_26-将用户关联到组">#</a>2.6 将用户关联到组</h3>
 <p>RACF 中给用户访问资源权限的最佳方法是将用户关联到可以访问这些资源的组中，这些组称为功能组（Functional Group）。</p>
@@ -315,25 +299,25 @@ LG DIV16RES
 <li>
 <p>将用户 Arthur Fielding（TSO1604）连接到组 FUN16PRD，实现其对生产数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1604 GROUP(FUN16PRD)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1604 GROUP(FUN16PRD)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1604 GROUP(FUN16PRD)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>将用户 Susan Johnson（TSOxx05）连接到组 FUN16TST，实现其对测试数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1605 GROUP(FUN16TST)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1605 GROUP(FUN16TST)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1605 GROUP(FUN16TST)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
 <h3 id="_27-验证用户是否关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_27-验证用户是否关联到组">#</a>2.7 验证用户是否关联到组</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LU TSO1604
-LU TSO1605
-LG FUN16PRD
-LG FUN16TST
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1604</span></span>
+<span data-line=""><span style="color: #24292e">LU TSO1605</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16PRD</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16TST</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1604</span></span>
+<span data-line=""><span style="color: #e1e4e8">LU TSO1605</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16PRD</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16TST</span></span></code></pre></div>
 </div>
 <p> </p>
 <h2 id="_3-分散式-racf-安全管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_3-分散式-racf-安全管理">#</a>3. 分散式 RACF 安全管理</h2>
@@ -367,24 +351,23 @@ LG FUN16TST
 <li>
 <p>TSO1601（Janet Smith）：该管理员将对 DIV16ADM 组用户的安全进行管理，包括为用户重置密码，挂起和启用用户：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>TSO1602（Robert Anderson）：该管理员可以将用户关联到 DIV16FUN 组下的子功能组中，以实现用户对特定数据的访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)
-CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)</span></span>
+<span data-line=""><span style="color: #24292e">CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)</span></span>
+<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>TSO1603（Leslie Brown）：该管理员可以为 RES16PRD 和 RES16TST 组数据集创建数据集 PROFILE，以控制用户对组数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)
-CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)</span></span>
+<span data-line=""><span style="color: #24292e">CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)</span></span></code></pre></div>
 </div>
 </li>
 </ul>
@@ -394,24 +377,23 @@ CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)
 <li>
 <p>以 TSO1601 身份登陆 TSO，尝试修改用户密码等</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALU TSO1602 PASSWORD(PASS)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1602 PASSWORD(PASS)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1602 PASSWORD(PASS)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>以 TSO1602 身份登陆 TSO，将 TSO1601 用户关联到 FUN16PRD 和 FUN16TST：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>CONNECT TSO1601 GROUP(FUN16PRD)
-CONNECT TSO1601 GROUP(FUN16TST)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(FUN16PRD)</span></span>
+<span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(FUN16TST)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(FUN16PRD)</span></span>
+<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(FUN16TST)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>以 TSOxx02 身份登陆 TSO，将 TSO1601 从 FUN16PRD 和 FUN16TST 组中移走：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>REMOVE TSO1601 GROUP(FUN16PRD)
-REMOVE TSO1601 GROUP(FUN16TST)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">REMOVE TSO1601 GROUP(FUN16PRD)</span></span>
+<span data-line=""><span style="color: #24292e">REMOVE TSO1601 GROUP(FUN16TST)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">REMOVE TSO1601 GROUP(FUN16PRD)</span></span>
+<span data-line=""><span style="color: #e1e4e8">REMOVE TSO1601 GROUP(FUN16TST)</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -441,22 +423,28 @@ REMOVE TSO1601 GROUP(FUN16TST)
 </ul>
 <p>以 TSO1601 身份登陆 TSO 然后执行 RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'TSO1601.**' UACC(NONE)
-ADDSD 'TSO1602.**' UACC(NONE)
-ADDSD 'TSO1603.**' UACC(NONE)
-ADDSD 'TSO1604.**' UACC(NONE)
-ADDSD 'TSO1605.**' UACC(NONE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1601.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">ADDSD 'TSO1602.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">ADDSD 'TSO1603.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">ADDSD 'TSO1604.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">ADDSD 'TSO1605.**' UACC(NONE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1601.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1602.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1603.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1604.**' UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1605.**' UACC(NONE)</span></span></code></pre></div>
 </div>
 <h3 id="_42-查看-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_42-查看-profile">#</a>4.2 查看 PROFILE</h3>
 <p>查看步骤 1 创建的用户数据集 PROFILE：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LISTDSD DA('TSO1601.**') ALL
-LISTDSD DA('TSO1602.**') ALL
-LISTDSD DA('TSO1603.**') ALL
-LISTDSD DA('TSO1604.**') ALL
-LISTDSD DA('TSO1605.**') ALL
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1601.**') ALL</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1602.**') ALL</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1603.**') ALL</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1604.**') ALL</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1605.**') ALL</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1601.**') ALL</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1602.**') ALL</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1603.**') ALL</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1604.**') ALL</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1605.**') ALL</span></span></code></pre></div>
 </div>
 <h3 id="_43-定义-rpofile--赋-alter-权"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_43-定义-rpofile--赋-alter-权">#</a>4.3 定义 RPOFILE + 赋 ALTER 权</h3>
 <p>定义 RES16TST 组数据集的 RPOFILE。在前面的实验中，TSO1603 被指定为 RES16PRD 和 RES16TST 的 Create 用户，以拥有对这 2 个组的数据集的保护权限。</p>
@@ -475,13 +463,11 @@ LISTDSD DA('TSO1605.**') ALL
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)</span></span></code></pre></div>
 </div>
 <p>修改上面定义的 <code>RES16TST.**</code> PORFILE 的访问列表，给 FUN16TST 组赋予 ALTER 访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)</span></span></code></pre></div>
 </div>
 </li>
 <li>
@@ -501,22 +487,20 @@ LISTDSD DA('TSO1605.**') ALL
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)</span></span></code></pre></div>
 </div>
 <p>修改上面定义的 <code>RESxxPRD.**</code> PORFILE 的访问列表，给 FUN16PRD 组赋予 ALTER 访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)</span></span></code></pre></div>
 </div>
 </li>
 </ol>
 <h3 id="_44-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_44-验证">#</a>4.4 验证</h3>
 <p>确定组数据集 PROFIEL 是否创建并按照预定的要求保护成功</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LISTDSD DATASET('RES16TST.**') ALL
-LISTDSD DATASET('RES16PRD.**') ALL
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16TST.**') ALL</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.**') ALL</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16TST.**') ALL</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.**') ALL</span></span></code></pre></div>
 </div>
 <h3 id="_45-创建组数据集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_45-创建组数据集">#</a>4.5 创建组数据集</h3>
 <p>以 ST016 用户登陆 TSO，创建 RES16TST 和 RES16PRD 组数据集：</p>
@@ -524,9 +508,9 @@ LISTDSD DATASET('RES16PRD.**') ALL
 <li>
 <p>创建 ALIAS：RES16TST 和 RES16PRD</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))
-DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))</span></span>
+<span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))</span></span>
+<span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))</span></span></code></pre></div>
 </div>
 </li>
 <li>
@@ -537,31 +521,53 @@ DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))
 <p>以 TSO1603 登陆 TSO 并创建组数据集：</p>
 <p>创建一个顺序数据集 RES16PRD.DATA (RECFM=FB, LRECL=80) 和 RES16TST.DATA (RECFM=FB, LRECL=80)</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>                        Allocate New Data Set
-Data Set Name  . . . : RESxxPRD.DATA
-Management class . . .       (Blank for default management class)
-Storage class  . . . .       (Blank for default storage class)
- Volume serial . . . .       (Blank for system default volume) **
- Device type . . . . .       (Generic unit or device address) **
-Data class . . . . . .       (Blank for default data class)
- Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)
- Average record unit         (M, K, or U)
- Primary quantity  . . 1     (In above units)
- Secondary quantity    1     (In above units)
- Directory blocks  . .       (Zero for sequential data set) *
- Record format . . . . FB
- Record length . . . . 80
- Blocksize   . . . . .
- Data set name type :        (LIBRARY, HFS, PDS, or blank)  *
-                             (YY/MM/DD, YYYY/MM/DD
- Expiration date . . .        YY.DDD, YYYY.DDD in Julian form
-Enter "/" to select option    DDDD for retention period in days
-   Allocate Multiple Volumes  or blank)
-
-( * Specifying LIBRARY may override zero directory block)
-
-( ** Only one of these fields may be specified)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">                        Allocate New Data Set</span></span>
+<span data-line=""><span style="color: #24292e">Data Set Name  . . . : RESxxPRD.DATA</span></span>
+<span data-line=""><span style="color: #24292e">Management class . . .       (Blank for default management class)</span></span>
+<span data-line=""><span style="color: #24292e">Storage class  . . . .       (Blank for default storage class)</span></span>
+<span data-line=""><span style="color: #24292e"> Volume serial . . . .       (Blank for system default volume) **</span></span>
+<span data-line=""><span style="color: #24292e"> Device type . . . . .       (Generic unit or device address) **</span></span>
+<span data-line=""><span style="color: #24292e">Data class . . . . . .       (Blank for default data class)</span></span>
+<span data-line=""><span style="color: #24292e"> Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)</span></span>
+<span data-line=""><span style="color: #24292e"> Average record unit         (M, K, or U)</span></span>
+<span data-line=""><span style="color: #24292e"> Primary quantity  . . 1     (In above units)</span></span>
+<span data-line=""><span style="color: #24292e"> Secondary quantity    1     (In above units)</span></span>
+<span data-line=""><span style="color: #24292e"> Directory blocks  . .       (Zero for sequential data set) *</span></span>
+<span data-line=""><span style="color: #24292e"> Record format . . . . FB</span></span>
+<span data-line=""><span style="color: #24292e"> Record length . . . . 80</span></span>
+<span data-line=""><span style="color: #24292e"> Blocksize   . . . . .</span></span>
+<span data-line=""><span style="color: #24292e"> Data set name type :        (LIBRARY, HFS, PDS, or blank)  *</span></span>
+<span data-line=""><span style="color: #24292e">                             (YY/MM/DD, YYYY/MM/DD</span></span>
+<span data-line=""><span style="color: #24292e"> Expiration date . . .        YY.DDD, YYYY.DDD in Julian form</span></span>
+<span data-line=""><span style="color: #24292e">Enter "/" to select option    DDDD for retention period in days</span></span>
+<span data-line=""><span style="color: #24292e">   Allocate Multiple Volumes  or blank)</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">( * Specifying LIBRARY may override zero directory block)</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">( ** Only one of these fields may be specified)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">                        Allocate New Data Set</span></span>
+<span data-line=""><span style="color: #e1e4e8">Data Set Name  . . . : RESxxPRD.DATA</span></span>
+<span data-line=""><span style="color: #e1e4e8">Management class . . .       (Blank for default management class)</span></span>
+<span data-line=""><span style="color: #e1e4e8">Storage class  . . . .       (Blank for default storage class)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Volume serial . . . .       (Blank for system default volume) **</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Device type . . . . .       (Generic unit or device address) **</span></span>
+<span data-line=""><span style="color: #e1e4e8">Data class . . . . . .       (Blank for default data class)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Average record unit         (M, K, or U)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Primary quantity  . . 1     (In above units)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Secondary quantity    1     (In above units)</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Directory blocks  . .       (Zero for sequential data set) *</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Record format . . . . FB</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Record length . . . . 80</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Blocksize   . . . . .</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Data set name type :        (LIBRARY, HFS, PDS, or blank)  *</span></span>
+<span data-line=""><span style="color: #e1e4e8">                             (YY/MM/DD, YYYY/MM/DD</span></span>
+<span data-line=""><span style="color: #e1e4e8"> Expiration date . . .        YY.DDD, YYYY.DDD in Julian form</span></span>
+<span data-line=""><span style="color: #e1e4e8">Enter "/" to select option    DDDD for retention period in days</span></span>
+<span data-line=""><span style="color: #e1e4e8">   Allocate Multiple Volumes  or blank)</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">( * Specifying LIBRARY may override zero directory block)</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">( ** Only one of these fields may be specified)</span></span></code></pre></div>
 </div>
 <h3 id="_46-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_46-验证">#</a>4.6 验证</h3>
 <ul>
@@ -578,8 +584,7 @@ Enter "/" to select option    DDDD for retention period in days
 <p>以 TSO1601 登陆，删除 RES16PRD 打头的数据集（如 <code>RES16PRD.DATA</code>）</p>
 <p>保留 TSO1601 登陆的 Session，再打开一个新的 Session，以 TSO1603 登陆 TSO，修改 <code>RESxxPRD.**</code> Profile，给 TSO1601 赋 ALTER 权：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)</span></span></code></pre></div>
 </div>
 <p>测试：</p>
 <ul>
@@ -595,40 +600,36 @@ Enter "/" to select option    DDDD for retention period in days
 <h3 id="_51-创建全匹配-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_51-创建全匹配-profile">#</a>5.1 创建全匹配 PROFILE</h3>
 <p>为 RES16PRD.DATA 创建全匹配 PROFILE。以 TSO1603 登陆（RES16PRD 组 CREATE 特权人员，即数据管理人员），为 <code>RES16PRD.DATA</code> 创建一个全匹配的 PROFILE 进行保护：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'RES16PRD.DATA' UACC(READ)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.DATA' UACC(READ)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.DATA' UACC(READ)</span></span></code></pre></div>
 </div>
 <h3 id="_52-打开-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_52-打开-warning-状态">#</a>5.2 打开 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态打开：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALTDSD 'RES16TST.**' WARNING
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALTDSD 'RES16TST.**' WARNING</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALTDSD 'RES16TST.**' WARNING</span></span></code></pre></div>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
 <h3 id="_53-关闭-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_53-关闭-warning-状态">#</a>5.3 关闭 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态关闭：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ALTDSD 'RES16TST.**' NOWARNING
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALTDSD 'RES16TST.**' NOWARNING</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALTDSD 'RES16TST.**' NOWARNING</span></span></code></pre></div>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
 <h3 id="_54-update-权限"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_54-update-权限">#</a>5.4 UPDATE 权限</h3>
 <p>TSO1603 登陆。假设 <code>RES16PRD.NEWAPPL.FINANCE.DATA</code> 和 <code>RES16PRD.NEWAPPL.HR.DATA</code> 是一个新应用系统的 2 个数据集，FUN16TST 组需要对这 2 个数据集有 UPDATE 权限，而不能对其他应用系统的数据集有操作权限。注意，FUN16PRD 组仍然需要对所有的 RES16PRD 数据集保留原有的操作权限。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')
-PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')</span></span>
+<span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')</span></span>
+<span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)</span></span></code></pre></div>
 </div>
 <p>检测哪一个 PROFILE 在保护 <code>RES16PRD.NEWAPPL.FINANCE.DATA</code> 和 <code>RES16PRD.NEWAPPL.HR.DATA</code>：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN
-LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN</span></span></code></pre></div>
 </div>
 <p>检测一个 Generic PROFILE <code>RES16PRD.**</code> 保护了那些数据集：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>LISTDSD DATASET('RES16PRD.**') DSNS
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.**') DSNS</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.**') DSNS</span></span></code></pre></div>
 </div>
 <p> </p>
 <h2 id="_6-保护-tso-资源"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_6-保护-tso-资源">#</a>6. 保护 TSO 资源</h2>
@@ -641,22 +642,19 @@ LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
 <li>
 <p>在 DIV16FUN 下创建子组 FUN16AP</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>在 DIV16FUN 下创建子组 FUN16SP</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>在 DIV16RES 下创建子组 RES16TSO，用以管理 TSO 资源授权</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -679,12 +677,15 @@ LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)
-
-ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))
-
-CONNECT TSO1607 GROUP(FUN16SP)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">CONNECT TSO1607 GROUP(FUN16SP)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1607 GROUP(FUN16SP)</span></span></code></pre></div>
 </div>
 </li>
 <li>
@@ -703,21 +704,24 @@ CONNECT TSO1607 GROUP(FUN16SP)
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)
-
-ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))
-
-CONNECT TSO1608 GROUP(FUN16AP)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">CONNECT TSO1608 GROUP(FUN16AP)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1608 GROUP(FUN16AP)</span></span></code></pre></div>
 </div>
 </li>
 </ol>
 <h3 id="_63-创建登陆过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_63-创建登陆过程">#</a>6.3 创建登陆过程</h3>
 <p>为 TSO 用户创建一个新的登陆过程 PROC#Sxx 和 PROC#Axx。打开文件 VENDOR.PROCLIB ，在 Command 中输入：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>S PROC#S16;COPY IKJDB2
-S PROC#A16;COPY IKJDB2
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">S PROC#S16;COPY IKJDB2</span></span>
+<span data-line=""><span style="color: #24292e">S PROC#A16;COPY IKJDB2</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">S PROC#S16;COPY IKJDB2</span></span>
+<span data-line=""><span style="color: #e1e4e8">S PROC#A16;COPY IKJDB2</span></span></code></pre></div>
 </div>
 <h3 id="_64-保护登录过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_64-保护登录过程">#</a>6.4 保护登录过程</h3>
 <p>保护 PROC#Sxx 登陆过程（TSOPROC 类）。</p>
@@ -726,27 +730,29 @@ S PROC#A16;COPY IKJDB2
 <p>创建通用资源 TSOPROC 的 RPOFILE，保护 AP 和 SP 的 TSO 登陆过程。</p>
 <p>授权规则：PROC#Sxx 只有 SP 才能使用（READ 权限），其他人不可以使用；PROC#Axx 只有 AP 才能使用（READ 权限），其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)
-PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)
-
-RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)
-PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)</span></span>
+<span data-line=""><span style="color: #24292e"></span></span>
+<span data-line=""><span style="color: #24292e">RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)</span></span>
+<span data-line=""><span style="color: #e1e4e8"></span></span>
+<span data-line=""><span style="color: #e1e4e8">RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>浏览 PROC#Sxx 和 PROC#Axx PROFILE，它们用于保护不同的 TSO 登陆服务：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RLIST TSOPROC PROC#S16 AUTHUSER
-RLIST TSOPROC PROC#A16 AUTHUSER
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#S16 AUTHUSER</span></span>
+<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#A16 AUTHUSER</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#S16 AUTHUSER</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#A16 AUTHUSER</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>刷新 TSOPROC 类在内存中的 PROFILE</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>SETROPTS RACLIST(TSOPROC) REFRESH
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SETROPTS RACLIST(TSOPROC) REFRESH</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SETROPTS RACLIST(TSOPROC) REFRESH</span></span></code></pre></div>
 </div>
 <p>可能会提示不需要刷新。</p>
 </li>
@@ -758,26 +764,26 @@ RLIST TSOPROC PROC#A16 AUTHUSER
 <p>创建 RPOFILE：ACCT#Sxx 该 ACCTNUM 为 SP 提供 TSO 登陆服务。</p>
 <p>授权规则：ACCT#Sxx 只有 SP 才能使用(READ 权限)，其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)
-PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>创建 PROFILE：ACCT#Axx 该 ACCTNUM 为 AP 提供 TSO 登陆服务。</p>
 <p>授权规则：ACCT#Axx 只有 AP 才能使用(READ 权限)，其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)
-PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #24292e">PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
+<span data-line=""><span style="color: #e1e4e8">PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>浏览 PROFILE：ACCT#Sxx 和 ACCT#Axx</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RLIST ACCTNUM ACCT#S16 AUTHUSER
-RLIST ACCTNUM ACCT#A16 AUTHUSER
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#S16 AUTHUSER</span></span>
+<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#A16 AUTHUSER</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#S16 AUTHUSER</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#A16 AUTHUSER</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -787,15 +793,13 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 <li>
 <p>（不做）为 SP 和 AP 用户赋权访问 JCL 权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>查看 SP 和 AP 用户是否拥有提交 JCL 作业的权利：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>RLIST TSOAUTH JCL
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST TSOAUTH JCL</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST TSOAUTH JCL</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -804,15 +808,13 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 <li>
 <p>保护 TSO1607 的用户数据集</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'TSO1607.**' UACC(NONE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1607.**' UACC(NONE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1607.**' UACC(NONE)</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>保护 TSO1608 的用户数据集</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>ADDSD 'TSO1608.**' UACC(NONE)
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1608.**' UACC(NONE)</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1608.**' UACC(NONE)</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -822,15 +824,13 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 <li>
 <p>为 TSOxx07 创建别名</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
 </div>
 </li>
 <li>
 <p>为 TSOxx08 创建别名</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
 </div>
 </li>
 </ol>
@@ -838,30 +838,51 @@ RLIST ACCTNUM ACCT#A16 AUTHUSER
 <h2 id="_7-使用-jcl-执行-racf-命令"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_7-使用-jcl-执行-racf-命令">#</a>7. 使用 JCL 执行 RACF 命令</h2>
 <p>编写 JCL 作业，然后 SUBMIT：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<pre><code>//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,
-// NOTIFY=ST016
-//SEND EXEC PGM=IKJEFT01
-//SYSPRINT DD DUMMY
-//SYSTSPRT DD SYSOUT=*
-//SYSTSIN DD *
-SEARCH CLASS(GROUP) MASK(DIV16)
-SEARCH CLASS(GROUP) MASK(FUN16)
-SEARCH CLASS(GROUP) MASK(RES16)
-SEARCH CLASS(USER) MASK(TSO16)
-LG FUN16PRD
-LG FUN16TST
-LG FUN16SP
-LG FUN16AP
-SEARCH CLASS(DATASET) MASK(TSO16)
-SEARCH CLASS(DATASET) MASK(RES16)
-LISTDSD DA(TSO1601.**) AU
-SEARCH CLASS(TSOPROC) FILTER(PROC#%16)
-RLIST TSOPROC PROC#S16 AU
-RLIST TSOPROC PROC#A16 AU
-SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)
-RLIST ACCTNUM ACCT#S16 AU
-RLIST ACCTNUM ACCT#A16 AU
-</code></pre>
+<div data-rehype-pretty-code-fragment=""><pre style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,</span></span>
+<span data-line=""><span style="color: #24292e">// NOTIFY=ST016</span></span>
+<span data-line=""><span style="color: #24292e">//SEND EXEC PGM=IKJEFT01</span></span>
+<span data-line=""><span style="color: #24292e">//SYSPRINT DD DUMMY</span></span>
+<span data-line=""><span style="color: #24292e">//SYSTSPRT DD SYSOUT=*</span></span>
+<span data-line=""><span style="color: #24292e">//SYSTSIN DD *</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(DIV16)</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(FUN16)</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(RES16)</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(USER) MASK(TSO16)</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16PRD</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16TST</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16SP</span></span>
+<span data-line=""><span style="color: #24292e">LG FUN16AP</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(DATASET) MASK(TSO16)</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(DATASET) MASK(RES16)</span></span>
+<span data-line=""><span style="color: #24292e">LISTDSD DA(TSO1601.**) AU</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(TSOPROC) FILTER(PROC#%16)</span></span>
+<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#S16 AU</span></span>
+<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#A16 AU</span></span>
+<span data-line=""><span style="color: #24292e">SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)</span></span>
+<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#S16 AU</span></span>
+<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#A16 AU</span></span></code></pre><pre style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,</span></span>
+<span data-line=""><span style="color: #e1e4e8">// NOTIFY=ST016</span></span>
+<span data-line=""><span style="color: #e1e4e8">//SEND EXEC PGM=IKJEFT01</span></span>
+<span data-line=""><span style="color: #e1e4e8">//SYSPRINT DD DUMMY</span></span>
+<span data-line=""><span style="color: #e1e4e8">//SYSTSPRT DD SYSOUT=*</span></span>
+<span data-line=""><span style="color: #e1e4e8">//SYSTSIN DD *</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(DIV16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(FUN16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(RES16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(USER) MASK(TSO16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16PRD</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16TST</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16SP</span></span>
+<span data-line=""><span style="color: #e1e4e8">LG FUN16AP</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(DATASET) MASK(TSO16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(DATASET) MASK(RES16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">LISTDSD DA(TSO1601.**) AU</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(TSOPROC) FILTER(PROC#%16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#S16 AU</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#A16 AU</span></span>
+<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#S16 AU</span></span>
+<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#A16 AU</span></span></code></pre></div>
 </div>
   </div>
 
