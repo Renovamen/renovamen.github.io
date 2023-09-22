@@ -22,7 +22,13 @@ const { name, subname, avatar, socials } = Astro.props.frontmatter;
     <div>
       <h1>
         {name}
-        {subname && <span text="base c-light">{subname}</span>}
+        {
+          subname && (
+            <span text="base c-light" ml-3>
+              {subname}
+            </span>
+          )
+        }
       </h1>
       <Links socials={socials} />
     </div>

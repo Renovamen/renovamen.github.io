@@ -11,7 +11,7 @@ export const THEME = {
       "https://github.com/Renovamen/renovamen.github.io/edit/main/src/content/blog:path",
     text: "Edit this page on GitHub"
   },
-  lastUpdatedText: "Last updated:"
+  lastUpdatedText: "Last updated: "
 };
 
 export const GISCUS = {

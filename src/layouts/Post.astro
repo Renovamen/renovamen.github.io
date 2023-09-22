@@ -71,13 +71,13 @@ const lastUpdatedText = THEME.lastUpdatedText;
         tags?.length && (
           <span>
             ·
-            <span i-uil:tag-alt text-sm />
+            <span i-uil:tag-alt text-sm mr-1 />
             {tags.map((tag, i) => (
               <span>
                 <a href={tagURL + slugify(tag)} class="!text-c">
                   {tag}
                 </a>
-                {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
+                {i !== tags.length - 1 && <span>, </span>}
               </span>
             ))}
           </span>
@@ -99,13 +99,13 @@ const lastUpdatedText = THEME.lastUpdatedText;
       rel="noopener noreferrer"
       class="hover:underline"
     >
-      <span class="i-tabler:edit w-4.5 h-4.5 align-text-top"></span>
+      <span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1"></span>
       {editText}
     </a>
     {
       lastUpdatedTime !== "Invalid Date" && (
         <span md:text-right text-c-light>
-          <span class="i-ic:round-update w-4.5 h-4.5" />
+          <span class="i-ic:round-update w-4.5 h-4.5 mr-1" />
           {lastUpdatedText}
           {lastUpdatedTime}
         </span>
