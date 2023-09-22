@@ -3,14 +3,14 @@ import { fromMarkdown } from "mdast-util-from-markdown";
 import type * as mdast from "mdast";
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkImage: RemarkPlugin = () => {
+export const remarkImage = (): RemarkPlugin => {
   const imageRE = /^<!-- (w=(?<width>\d+))? ?(desc="(?<desc>.*)")? -->/i;
 
   return (tree) => {
     visit(tree, "image", (node, index, parent) => {
       if (!parent || typeof index !== "number") return;
 
-      const content = (parent.children[index + 2] as mdast.HTML)?.value;
+      const content = (parent.children[index + 2] as mdast.Html)?.value;
       const match = content ? content.match(imageRE) : null;
 
       if (match) {
@@ -18,7 +18,7 @@ export const remarkImage: RemarkPlugin = () => {
           ? `<img src="${node.url}" alt="${node.alt}" width="${match.groups.width}" />`
           : `<img src="${node.url}" alt="${node.alt}" />`;
 
-        const figNodes: mdast.Content[] = [
+        const figNodes: mdast.RootContent[] = [
           {
             type: "html",
             value: `<figure alt="${node.alt}">${image}`
@@ -30,7 +30,7 @@ export const remarkImage: RemarkPlugin = () => {
         ];
 
         if (match.groups?.desc) {
-          const capNodes: mdast.Content[] = [
+          const capNodes: mdast.RootContent[] = [
             {
               type: "html",
               value: "<figcaption>"

@@ -20,7 +20,7 @@ const getImages = (info: string) => {
   }
 };
 
-export const remarkContainer: RemarkPlugin = () => {
+export const remarkContainer = (): RemarkPlugin => {
   return (tree) => {
     visit(tree, "containerDirective", (node) => {
       const data = node.data || (node.data = {});
@@ -66,11 +66,11 @@ export const remarkContainer: RemarkPlugin = () => {
 
         const images = getImages(info);
 
-        const prev: mdast.HTML = {
+        const prev: mdast.Html = {
           type: "html",
           value: `${images}<div class="paper-details">`
         };
-        const next: mdast.HTML = {
+        const next: mdast.Html = {
           type: "html",
           value: "</div>"
         };
