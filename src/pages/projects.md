@@ -88,7 +88,6 @@ projects:
         - i-logos:vue
         - i-logos:typescript-icon
         - i-logos:unocss
-        - i-logos:pinia
         - i-logos:vitejs
       repo: Renovamen/midgard
     - name: zxh.io
@@ -98,6 +97,7 @@ projects:
       tech:
         - i-logos:astro-icon
         - i-logos:solidjs-icon
+        - i-logos:typescript-icon
         - i-logos:unocss
       repo: Renovamen/renovamen.github.io
     - name: Fishmail
@@ -105,8 +105,7 @@ projects:
       desc: 装作在 Gmail 上查邮件的样子看知乎摸鱼
       icon: i-game-icons:fish-escape
       tech:
-        - i-logos:vue
-        - i-vscode-icons:file-type-nuxt
+        - i-logos:nuxt-icon
         - i-logos:ant-design
       repo: Renovamen/fishmail
   Online Tools:
@@ -115,11 +114,9 @@ projects:
       desc: Write your curriculum vitae / resume in Markdown
       icon: oh-my-cv
       tech:
-        - i-logos:vue
+        - i-logos:nuxt-icon
         - i-logos:typescript-icon
         - i-logos:unocss
-        - i-logos:pinia
-        - i-logos:vitejs
         - i-simple-icons:pwa
       repo: Renovamen/oh-my-cv
     - name: Cube Solver
