@@ -58,7 +58,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
         <div>
           <h3>{year}</h3>
           {sortedPostsByYear[year].map((item) => (
-            <div hstack m="y-1 x-0.5">
+            <div flex items-start m="y-1 x-0.5">
               <div class="w-14 h-6 leading-6 mr-2" text="c-lighter sm">
                 {formatDate(getPostDate(item.id), 1)}
               </div>
