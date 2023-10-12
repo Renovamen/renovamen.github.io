@@ -1,7 +1,6 @@
 ---
 import { SITE } from "@config";
 import type { SocialItem } from "@types";
-import FlipImage from "@components/FlipImage.astro";
 import Links from "@components/Links.astro";
 import Layout from "./Layout.astro";
 
@@ -20,7 +19,7 @@ const { name, subname, avatar, socials } = Astro.props.frontmatter;
 <Layout class="about" title={`About - ${SITE.title}`}>
   <div class="flex items-end justify-between">
     <div>
-      <h1>
+      <h1 mb-0>
         {name}
         {
           subname && (
@@ -30,15 +29,16 @@ const { name, subname, avatar, socials } = Astro.props.frontmatter;
           )
         }
       </h1>
+      <p m="t-0 b-3" text-c-light font-bold>PhD Student at Pennsylvania State University</p>
       <Links socials={socials} />
     </div>
     {
       avatar && (
         <div
-          class="p-1 mb-1 border border-c rounded-md lt-md:hidden"
-          shadow="[inset_0_0_10px_#000000] slate-200 dark:slate-800"
+          class="w-34 h-34 p-1 mb-1 border border-c-dark rounded-md lt-md:hidden"
+          shadow="[inset_0_0_5px_#000000] slate-200 dark:slate-800"
         >
-          <FlipImage class="w-24 h-24" src={avatar} alt="avatar" />
+          <img class="no-zoom rounded !my-0" src={avatar} alt="avatar" />
         </div>
       )
     }

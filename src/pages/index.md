@@ -2,7 +2,7 @@
 layout: ../layouts/About.astro
 name: Xiaohan Zou
 subname: 邹笑寒
-avatar: img/avatar.jpg
+avatar: img/me.jpg
 socials:
   - icon: i-academicons:cv
     link: /files/cv/en.pdf
