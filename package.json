@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "pnpm@8.9.0",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
@@ -8,26 +8,23 @@
     "format": "prettier -w src/**/*.astro src/pages/posts/*.astro src/pages/posts/**/*.astro src/pages/posts/**/**/*.astro",
     "lint": "pnpm format && eslint --ext .js,.ts,.tsx,.astro ."
   },
-  "dependencies": {
-    "dayjs": "^1.11.10",
-    "fuse.js": "^6.6.2",
-    "medium-zoom": "^1.0.8",
-    "solidjs-use": "^2.3.0"
-  },
   "devDependencies": {
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/solid-js": "^3.0.1",
-    "@iconify/json": "^2.2.121",
+    "@astrojs/sitemap": "^3.0.1",
+    "@astrojs/solid-js": "^3.0.2",
+    "@iconify/json": "^2.2.128",
     "@renovamen/eslint-config-astro": "^0.1.3",
     "@renovamen/eslint-config-solid": "^0.1.3",
     "@renovamen/utils": "^0.1.1",
     "@types/cross-spawn": "^6.0.3",
-    "astro": "^3.2.0",
+    "astro": "^3.3.0",
     "cross-spawn": "^7.0.3",
-    "eslint": "^8.50.0",
+    "dayjs": "^1.11.10",
+    "eslint": "^8.51.0",
+    "fuse.js": "^6.6.2",
     "mdast-util-toc": "^7.0.0",
-    "pnpm": "^8.8.0",
+    "medium-zoom": "^1.0.8",
+    "pnpm": "^8.9.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "rehype-autolink-headings": "^7.0.0",
@@ -36,10 +33,12 @@
     "rehype-pretty-code": "^0.10.1",
     "remark-directive": "^3.0.0",
     "remark-math": "^5.1.1",
-    "solid-js": "^1.7.12",
+    "shiki": "^0.14.5",
+    "solid-js": "^1.8.1",
+    "solidjs-use": "^2.3.0",
     "taze": "^0.11.3",
     "typescript": "^5.2.2",
-    "unocss": "^0.56.4"
+    "unocss": "^0.56.5"
   },
   "pnpm": {
     "peerDependencyRules": {
