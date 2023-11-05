@@ -2,47 +2,41 @@
 import { SITE } from "@config";
 import type { SocialItem } from "@types";
 import Links from "@components/Links.astro";
+import FlipImage from "@components/FlipImage.astro";
 import Layout from "./Layout.astro";
 
 export interface Props {
   frontmatter: {
     name: string;
     subname?: string;
-    avatar?: string;
+    avatarFront?: string;
+    avatarBack?: string;
     socials: SocialItem[];
   };
 }
 
-const { name, subname, avatar, socials } = Astro.props.frontmatter;
+const { name, subname, avatarFront, avatarBack, socials } = Astro.props.frontmatter;
 ---
 
 <Layout class="about" title={`About - ${SITE.title}`}>
-  <div class="flex items-end justify-between">
-    <div>
-      <h1 mb-0>
-        {name}
-        {
-          subname && (
-            <span text="base c-light" ml-3>
-              {subname}
-            </span>
-          )
-        }
-      </h1>
-      <p m="t-0 b-3" text-c-light font-bold>PhD Student at Pennsylvania State University</p>
-      <Links socials={socials} />
-    </div>
-    {
-      avatar && (
-        <div
-          class="w-34 h-34 p-1 mb-1 border border-c-dark rounded-md lt-md:hidden"
-          shadow="[inset_0_0_5px_#000000] slate-200 dark:slate-800"
-        >
-          <img class="no-zoom rounded !my-0" src={avatar} alt="avatar" />
-        </div>
-      )
-    }
-  </div>
+  {
+    avatarFront && (
+      <div class="ml-auto w-30 h-30 mb-4 mr-1 sm:(w-40 h-40 -mb-20 mr-2) rotate-3">
+        <FlipImage front={avatarFront} back={avatarBack} alt="avatar" />
+      </div>
+    )
+  }
+
+  <h3 my-0 text-c-light>Hello, this is</h3>
+
+  <h1 my-1.5>
+    {name}
+    {subname && <font text="base c-light"> ({subname})</font>}.
+  </h1>
+
+  <h5 mb-4 text-c-light>I'm a PhD student at Pennsylvania State University.</h5>
+
+  <Links socials={socials} />
 
   <slot />
 </Layout>

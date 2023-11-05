@@ -2,7 +2,8 @@
 layout: ../layouts/About.astro
 name: Xiaohan Zou
 subname: 邹笑寒
-avatar: img/me.jpg
+avatarFront: img/me.jpg
+avatarBack: img/avatar.jpg
 socials:
   - icon: i-academicons:cv
     link: /files/cv/en.pdf
@@ -22,6 +23,9 @@ socials:
     link: https://portfolio.zxh.io
     name: Portfolio
 ---
+
+
+## Bio
 
 Xiaohan is a PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models. 
 
@@ -110,9 +114,9 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🎃 _Renovamen_ is a Latin word means _renewal_
 
-- 🖥 Ex-OIer/ACMer
+- 🛠 Machine learning researcher by day time, web developer by night time
 
-- 🛠 Like to contribute to open-source machine learning and frontend projects in spare time
+- 🖥 Ex-OIer/ACMer
 
 - 🥎 Used to be a member of the softball team of Tongji University
 
