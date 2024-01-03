@@ -2,7 +2,7 @@ import { visit } from "unist-util-visit";
 import type * as mdast from "mdast";
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkCodeBlock = (): RemarkPlugin => {
+export const remarkCodeBlock = (): ReturnType<RemarkPlugin> => {
   return (tree) => {
     visit(tree, "code", (node, index, parent) => {
       if (!parent || typeof index !== "number") return;

@@ -56,12 +56,14 @@ main:not(.post) a.header-anchor {
 
 /** Code blocks **/
 
-html.dark .prose div[class*="language-"] pre[data-theme="light"] {
-  @apply hidden;
+.prose div[class*="language-"] code span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
 }
 
-html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
-  @apply hidden;
+html.dark .prose div[class*="language-"] code span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
 }
 
 .prose div[class*="language-"] {
@@ -81,32 +83,24 @@ html:not(.dark) .prose div[class*="language-"] pre[data-theme="dark"] {
   @apply hidden;
 }
 
-.prose div[class*="language-"] pre {
-  @apply leading-6 text-[0.925em] m-0 p-4 !bg-transparent;
+.prose div[class*="language-"] figure {
+  @apply m-0;
 }
 
-.prose div[class*="language-"] pre > code {
+.prose div[class*="language-"] pre {
+  @apply m-0 p-4 leading-6 text-[0.925em];
+}
+
+.prose div[class*="language-"] code {
   @apply block w-fit min-w-full;
 }
 
-.prose div[class*="language-"] pre > code > span[data-highlighted-line] {
-  @apply -mx-4 px-4 inline-block;
+.prose div[class*="language-"] code > span[data-highlighted-line] {
+  @apply -mx-4 px-4 inline-block bg-slate-100;
   width: calc(100% + 2 * 16px);
 }
 
-.prose
-  div[class*="language-"]
-  pre[data-theme="light"]
-  > code
-  > span[data-highlighted-line] {
-  @apply bg-slate-100;
-}
-
-.prose
-  div[class*="language-"]
-  pre[data-theme="dark"]
-  > code
-  > span[data-highlighted-line] {
+html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
   @apply bg-slate-600;
 }
 

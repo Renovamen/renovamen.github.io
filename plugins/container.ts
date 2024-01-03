@@ -20,8 +20,9 @@ const getImages = (info: string) => {
   }
 };
 
-export const remarkContainer = (): RemarkPlugin => {
-  return (tree) => {
+export const remarkContainer = (): ReturnType<RemarkPlugin> => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (tree: any) => {
     visit(tree, "containerDirective", (node) => {
       const data = node.data || (node.data = {});
       const children = node.children;

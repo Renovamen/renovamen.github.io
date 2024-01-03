@@ -71,13 +71,13 @@ const lastUpdatedText = THEME.lastUpdatedText;
         tags?.length && (
           <span>
             ·
-            <span i-uil:tag-alt text-sm mr-1 />
+            <span i-uil:tag-alt text-sm />
             {tags.map((tag, i) => (
               <span>
                 <a href={tagURL + slugify(tag)} class="!text-c">
                   {tag}
                 </a>
-                {i !== tags.length - 1 && <span>, </span>}
+                {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
               </span>
             ))}
           </span>

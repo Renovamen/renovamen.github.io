@@ -3,7 +3,7 @@ import { fromMarkdown } from "mdast-util-from-markdown";
 import type * as mdast from "mdast";
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkImage = (): RemarkPlugin => {
+export const remarkImage = (): ReturnType<RemarkPlugin> => {
   const imageRE = /^<!-- (w=(?<width>\d+))? ?(desc="(?<desc>.*)")? -->/i;
 
   return (tree) => {

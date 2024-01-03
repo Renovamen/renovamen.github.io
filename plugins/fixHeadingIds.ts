@@ -1,7 +1,7 @@
 import { visit } from "unist-util-visit";
 import type { RehypePlugin } from "@astrojs/markdown-remark";
 
-export const rehypeFixHeadingIds = (): RehypePlugin => {
+export const rehypeFixHeadingIds = (): ReturnType<RehypePlugin> => {
   return (tree) => {
     visit(tree, "element", (node) => {
       const { tagName } = node;

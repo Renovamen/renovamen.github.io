@@ -2,7 +2,9 @@ import { toc } from "mdast-util-toc";
 import { visit } from "unist-util-visit";
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
-export const remarkToc = (options = {} as { heading?: string }): RemarkPlugin => {
+export const remarkToc = (
+  options = {} as { heading?: string }
+): ReturnType<RemarkPlugin> => {
   return (node) => {
     const result = toc(
       node,
@@ -20,8 +22,7 @@ export const remarkToc = (options = {} as { heading?: string }): RemarkPlugin =>
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    visit(result.map, "link", (child: any) => {
+    visit(result.map, "link", (child) => {
       // ensure it doesn't start with a number
       child.url = "#" + child.url.substring(1).replace(/^(\d)/, "_$1");
     });
