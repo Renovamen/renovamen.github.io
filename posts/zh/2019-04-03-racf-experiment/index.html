@@ -1,8 +1,8 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><meta name="generator" content="Astro v3.4.3"><meta name="msapplication-TileColor" content="#ffffff"><title>RACF 实验 - Xiaohan Zou</title><!-- General Meta Tags --><meta name="title" content="RACF 实验 - Xiaohan Zou"><meta name="description" content="A dragon lost in human world."><meta name="author" content="Xiaohan Zou"><!-- Open Graph / Facebook --><meta property="og:title" content="RACF 实验 - Xiaohan Zou"><meta property="og:description" content="A dragon lost in human world."><meta property="og:url" content="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><!-- Twitter --><meta property="twitter:title" content="RACF 实验 - Xiaohan Zou"><meta property="twitter:description" content="A dragon lost in human world."><meta property="twitter:url" content="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><link rel="stylesheet" href="/_astro/index.92f7865d.css" />
-<link rel="stylesheet" href="/_astro/index.860e3f05.css" />
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><meta name="generator" content="Astro v4.0.8"><meta name="msapplication-TileColor" content="#ffffff"><title>RACF 实验 - Xiaohan Zou</title><!-- General Meta Tags --><meta name="title" content="RACF 实验 - Xiaohan Zou"><meta name="description" content="A dragon lost in human world."><meta name="author" content="Xiaohan Zou"><!-- Open Graph / Facebook --><meta property="og:title" content="RACF 实验 - Xiaohan Zou"><meta property="og:description" content="A dragon lost in human world."><meta property="og:url" content="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><!-- Twitter --><meta property="twitter:title" content="RACF 实验 - Xiaohan Zou"><meta property="twitter:description" content="A dragon lost in human world."><meta property="twitter:url" content="https://zxh.io/posts/zh/2019-04-03-racf-experiment/"><link rel="stylesheet" href="/_astro/index.lM4Plj1r.css" />
+<link rel="stylesheet" href="/_astro/index.Ib3kOwLy.css" />
 <style>.prev[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:before{content:"← "}.next[data-astro-cid-gvpn4u4b] a[data-astro-cid-gvpn4u4b]:after{content:" →"}
-</style><script type="module" src="/_astro/hoisted.aef143c1.js"></script></head><body class="font-sans"><main class="post flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6"><style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var b=Object.defineProperty;var f=(c,o,i)=>o in c?b(c,o,{enumerable:!0,configurable:!0,writable:!0,value:i}):c[o]=i;var l=(c,o,i)=>(f(c,typeof o!="symbol"?o+"":o,i),i);var p;{let c={0:t=>m(t),1:t=>i(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(i(t)),5:t=>new Set(i(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[e,r]=t;return e in c?c[e](r):void 0},i=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,r])=>[e,o(r)]));customElements.get("astro-island")||customElements.define("astro-island",(p=class extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var d;if(!this.hydrator||!this.isConnected)return;let e=(d=this.parentElement)==null?void 0:d.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),a={},h=this.querySelectorAll("template[data-astro-template]");for(let n of h){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("data-astro-template")||"default"]=n.innerHTML,n.remove())}for(let n of r){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("name")||"default"]=n.innerHTML)}let u;try{u=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(n){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),n),n}await this.hydrator(this)(this.Component,u,a,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var a;((a=this.lastChild)==null?void 0:a.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let a=this.getAttribute("renderer-url"),[h,{default:u}]=await Promise.all([import(this.getAttribute("component-url")),a?import(a):()=>()=>{}]),d=this.getAttribute("component-export")||"default";if(!d.includes("."))this.Component=h[d];else{this.Component=h;for(let n of d.split("."))this.Component=this.Component[n]}return this.hydrator=u,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},l(p,"observedAttributes",["props"]),p))}})();</script><astro-island uid="19zquw" data-solid-render-id="s2" component-url="/_astro/Navbar.3a11bff5.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s20-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@zxh</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--$--><button data-hk="s20-1-0" class="nav-item ml-4" title="Toggle toc"><div data-hk="s20-1-1" i-ri:menu-3-line></div></button><!--/--></nav></header><!--astro:end--></astro-island><div class="flex-1 mb-6"><div class="prose prose-lg mx-auto"><div mt-6 mb-8 data-astro-cid-gvpn4u4b><h1 text-4xl font-bold leading-12 my-0 data-astro-cid-gvpn4u4b>RACF 实验</h1><p text-c-lighter mt-2 data-astro-cid-gvpn4u4b>Apr 3, 2019 · 16 min
-</p></div><div class="content mb-16" data-astro-cid-gvpn4u4b><astro-island uid="ZhexrO" data-solid-render-id="s0" component-url="/_astro/TocButtons.7cea6ebf.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;prev&quot;:[0,&quot;zh/2019-02-15-rnn-with-its-friends&quot;],&quot;next&quot;:[0,&quot;zh/2019-07-06-last-three-years&quot;],&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TocButtons&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="table-of-contents-btns fixed z-20"><div hstack justify-end pt-18 pb-2 bg-c><!--$--><span data-hk="s00-1" text="sm c-light" italic mr-3></span><!--/--><!--$--><a data-hk="s00-2" class="flex-center !text-c hover:opacity-60" href="/posts/zh/2019-02-15-rnn-with-its-friends"><span i-ic:round-keyboard-arrow-left text-xl></span></a><!--/--><!--$--><a data-hk="s00-3" href="/posts/zh/2019-07-06-last-three-years" class="flex-center !text-c hover:opacity-60"><span i-ic:round-keyboard-arrow-right text-xl></span></a><!--/--><button flex-center hover:opacity-60><span i-ic:round-keyboard-arrow-up text-xl></span></button><button class="flex-center hover:opacity-60 ml-1.5"><span i-mi:print text-sm></span></button></div></div><!--astro:end--></astro-island><ul class="table-of-contents">
+</style><script type="module" src="/_astro/hoisted.232UYFQl.js"></script></head> <body class="font-sans"> <main class="post flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var b=Object.defineProperty;var f=(c,o,i)=>o in c?b(c,o,{enumerable:!0,configurable:!0,writable:!0,value:i}):c[o]=i;var l=(c,o,i)=>(f(c,typeof o!="symbol"?o+"":o,i),i);var p;{let c={0:t=>m(t),1:t=>i(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(i(t)),5:t=>new Set(i(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[e,r]=t;return e in c?c[e](r):void 0},i=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,r])=>[e,o(r)]));customElements.get("astro-island")||customElements.define("astro-island",(p=class extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var d;if(!this.hydrator||!this.isConnected)return;let e=(d=this.parentElement)==null?void 0:d.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),a={},h=this.querySelectorAll("template[data-astro-template]");for(let n of h){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("data-astro-template")||"default"]=n.innerHTML,n.remove())}for(let n of r){let s=n.closest(this.tagName);s!=null&&s.isSameNode(this)&&(a[n.getAttribute("name")||"default"]=n.innerHTML)}let u;try{u=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(n){let s=this.getAttribute("component-url")||"<unknown>",y=this.getAttribute("component-export");throw y&&(s+=` (export ${y})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),n),n}await this.hydrator(this)(this.Component,u,a,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var a;((a=this.lastChild)==null?void 0:a.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let a=this.getAttribute("renderer-url"),[h,{default:u}]=await Promise.all([import(this.getAttribute("component-url")),a?import(a):()=>()=>{}]),d=this.getAttribute("component-export")||"default";if(!d.includes("."))this.Component=h[d];else{this.Component=h;for(let n of d.split("."))this.Component=this.Component[n]}return this.hydrator=u,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},l(p,"observedAttributes",["props"]),p))}})();</script><astro-island uid="19zquw" data-solid-render-id="s2" component-url="/_astro/Navbar.QUFNL5yP.js" component-export="default" renderer-url="/_astro/client.DKOYneLd.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s20-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>hi@zxh</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" title="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">Projects</span></a><a nav-item href="/posts" title="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">Blog</span></a><a nav-item href="/search" title="Search"><span i-uil:search></span></a><button nav-item title="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--$--><button data-hk="s20-1-0" class="nav-item ml-4" title="Toggle toc"><div data-hk="s20-1-1" i-ri:menu-3-line></div></button><!--/--></nav></header><!--astro:end--></astro-island> <div class="flex-1 mb-6"> <div class="prose prose-lg mx-auto">  <div mt-6 mb-8 data-astro-cid-gvpn4u4b> <h1 text-4xl font-bold leading-12 my-0 data-astro-cid-gvpn4u4b>RACF 实验</h1> <p text-c-lighter mt-2 data-astro-cid-gvpn4u4b> Apr 3, 2019 · 16 min
+ </p> </div> <div class="content mb-16" data-astro-cid-gvpn4u4b> <astro-island uid="ZhexrO" data-solid-render-id="s0" component-url="/_astro/TocButtons.ZyDlpHY1.js" component-export="default" renderer-url="/_astro/client.DKOYneLd.js" props="{&quot;prev&quot;:[0,&quot;zh/2019-02-15-rnn-with-its-friends&quot;],&quot;next&quot;:[0,&quot;zh/2019-07-06-last-three-years&quot;],&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TocButtons&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" class="table-of-contents-btns fixed z-20"><div hstack justify-end pt-18 pb-2 bg-c><!--$--><span data-hk="s00-1" text="sm c-light" italic mr-3></span><!--/--><!--$--><a data-hk="s00-2" class="flex-center !text-c hover:opacity-60" href="/posts/zh/2019-02-15-rnn-with-its-friends"><span i-ic:round-keyboard-arrow-left text-xl></span></a><!--/--><!--$--><a data-hk="s00-3" href="/posts/zh/2019-07-06-last-three-years" class="flex-center !text-c hover:opacity-60"><span i-ic:round-keyboard-arrow-right text-xl></span></a><!--/--><button flex-center hover:opacity-60><span i-ic:round-keyboard-arrow-up text-xl></span></button><button class="flex-center hover:opacity-60 ml-1.5"><span i-mi:print text-sm></span></button></div></div><!--astro:end--></astro-island> <ul class="table-of-contents">
 <li>
 <p><a href="#_1-%E5%88%9B%E5%BB%BA%E7%BB%84">1. 创建组</a></p>
 <ul>
@@ -89,7 +89,8 @@
 </li>
 </ol>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU ST016</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU ST016</span></span></code></pre></div>
+<pre><code>LU ST016
+</code></pre>
 </div>
 <h3 id="_13-在-racflab-下定义子组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_13-在-racflab-下定义子组">#</a>1.3 在 RACFLAB 下定义子组</h3>
 <p>利用 RACF 命令定义以下子组：</p>
@@ -97,29 +98,31 @@
 <li>
 <p>定义 DIV16ADM 用户管理组（相当于公司人事部门），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
+<pre><code>ADDGROUP DIV16ADM OWNER(RACFLAB) SUPGROUP(RACFLAB)
+</code></pre>
 </div>
 </li>
 <li>
 <p>定义 DIV16FUN 功能组（相当于公司各职能部门），后继实验将在该组下定义各个子功能组，RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
+<pre><code>ADDGROUP DIV16FUN OWNER(RACFLAB) SUPGROUP(RACFLAB)
+</code></pre>
 </div>
 </li>
 <li>
 <p>定义 DIV16RES 资源组（为有机组织和保护系统资源—包括数据集 / CICS 交易 / 系统和用户程序等资源—而设立的组），后继实验将在该组下定义各个子资源组，RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)</span></span></code></pre></div>
+<pre><code>ADDGROUP DIV16RES OWNER(RACFLAB) SUPGROUP(RACFLAB)
+</code></pre>
 </div>
 </li>
 </ul>
 <p>利用 RACF 命令查看新建的组进行验证：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LG DIV16ADM</span></span>
-<span data-line=""><span style="color: #24292e">LG DIV16FUN</span></span>
-<span data-line=""><span style="color: #24292e">LG DIV16RES</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LG DIV16ADM</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG DIV16FUN</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG DIV16RES</span></span></code></pre></div>
+<pre><code>LG DIV16ADM
+LG DIV16FUN
+LG DIV16RES
+</code></pre>
 </div>
 <h3 id="_14-在-div16fun-下定义子组功能组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_14-在-div16fun-下定义子组功能组">#</a>1.4 在 DIV16FUN 下定义子组（功能组）</h3>
 <p>利用 RACF 命令定义以下子组：</p>
@@ -127,13 +130,15 @@
 <li>
 <p>定义 FUN16PRD 功能组，该组将用于对生产系统数据集（Production Data Sets）的访问进行集中授权（即如果该组对生产系统数据集有访问权限，该组的成员将自动继承这一权限），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
+<pre><code>ADDGROUP FUN16PRD OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
+</code></pre>
 </div>
 </li>
 <li>
 <p>定义 FUN16TST 功能组，该组将用于对测试系统数据集（Test Data Sets）的访问进行集中授权（即如果该组对测试系统数据集有访问权限，该组的成员将自动继承这一权限），RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
+<pre><code>ADDGROUP FUN16TST OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
+</code></pre>
 </div>
 </li>
 </ul>
@@ -143,19 +148,22 @@
 <li>
 <p>定义 RES16PRD 资源组，该组将用于保护生产系统的数据集。RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
+<pre><code>ADDGROUP RES16PRD OWNER(DIV16RES) SUPGROUP(DIV16RES)
+</code></pre>
 </div>
 </li>
 <li>
 <p>定义 RES16TST 资源组，该组将用于保护测试系统的数据集。RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
+<pre><code>ADDGROUP RES16TST OWNER(DIV16RES) SUPGROUP(DIV16RES)
+</code></pre>
 </div>
 </li>
 </ul>
 <h3 id="_16-查找组-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_16-查找组-profile">#</a>1.6 查找组 Profile</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(DIV16)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(DIV16)</span></span></code></pre></div>
+<pre><code>SEARCH CLASS(GROUP) MASK(DIV16)
+</code></pre>
 </div>
 <p> </p>
 <h2 id="_2-用户管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_2-用户管理">#</a>2. 用户管理</h2>
@@ -179,45 +187,44 @@
 </li>
 </ol>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)</span></span>
-<span data-line=""><span style="color: #24292e"># 以此类推</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)</span></span>
-<span data-line=""><span style="color: #e1e4e8"># 以此类推</span></span></code></pre></div>
+<pre><code>ADDUSER TSO1601 OWNER(DIV16ADM) DFLTGRP(DIV16ADM) PASSWORD(PASS)
+# 以此类推
+</code></pre>
 </div>
 </li>
 <li>
 <p>查看用户是否建立成功</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1601</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1601</span></span></code></pre></div>
+<pre><code>LU TSO1601
+</code></pre>
 </div>
 <p>查看用户的 TSO 段是否有内容</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1601 TSO</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1601 TSO</span></span></code></pre></div>
+<pre><code>LU TSO1601 TSO
+</code></pre>
 </div>
 </li>
 <li>
 <p>如果用户 Profile 没有指定 TSO 段的内容，用户将无法顺利登陆 TSO 系统，需要为用户指定 TSO 段信息</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))</span></span></code></pre></div>
+<pre><code>ALU TSO1601 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096))
+</code></pre>
 </div>
 </li>
 <li>
 <p>用户登陆 TSO 之后，如果要进入 ISPF 面板系统，首次进入 ISPF 系统时系统会自动为用户建立几个编目的数据集，通常普通用户的文件无法在主机系统主目录（Master Catalog）中进行编目，所以，要实现为新用户创建好用户目录（User Catalog）和别名（Alias）。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
+<pre><code>DEFINE ALIAS(NAME(TSO1601) RELATE('CATALOG.UCAT.STGRP'))
+</code></pre>
 </div>
 <p>在 OPTION3.4 中 DSN Level 输入 TSO1601 回车，看是否显示其 “ALIAS”，如果出现类似下面的结果则表明 ALIAS 创建成功：</p>
 <p></p><div class="language-bash"><span class="lang">bash</span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="bash" data-theme="light"><code data-language="bash" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #6F42C1">DSLIST</span><span style="color: #24292E"> </span><span style="color: #032F62">-</span><span style="color: #24292E"> </span><span style="color: #032F62">Data</span><span style="color: #24292E"> </span><span style="color: #032F62">Sets</span><span style="color: #24292E"> </span><span style="color: #032F62">Matching</span><span style="color: #24292E"> </span><span style="color: #032F62">TSO1601</span><span style="color: #24292E">                       </span><span style="color: #032F62">Row</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E"> </span><span style="color: #032F62">of</span><span style="color: #24292E"> </span><span style="color: #005CC5">3</span></span>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">DSLIST</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Data</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Sets</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Matching</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TSO1601</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">                       Row</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> of</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span></span>
 <span data-line=""> </span>
-<span data-line=""><span style="color: #6F42C1">Command</span><span style="color: #24292E"> </span><span style="color: #032F62">-</span><span style="color: #24292E"> </span><span style="color: #032F62">Enter</span><span style="color: #24292E"> </span><span style="color: #032F62">"/"</span><span style="color: #24292E"> </span><span style="color: #032F62">to</span><span style="color: #24292E"> </span><span style="color: #032F62">select</span><span style="color: #24292E"> </span><span style="color: #032F62">action</span><span style="color: #24292E">           </span><span style="color: #032F62">Message</span><span style="color: #24292E">        </span><span style="color: #032F62">Volume</span></span>
-<span data-line=""><span style="color: #6F42C1">---------------------------------------------------------------------</span></span>
-<span data-line=""><span style="color: #6F42C1">TSO1601</span><span style="color: #24292E">                                                 </span><span style="color: #005CC5">*</span><span style="color: #032F62">ALIAS</span></span>
-<span data-line=""><span style="color: #D73A49">************************</span><span style="color: #24292E"> End of Data Set list </span><span style="color: #D73A49">***********************</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="bash" data-theme="dark"><code data-language="bash" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #B392F0">DSLIST</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">-</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Data</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Sets</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Matching</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">TSO1601</span><span style="color: #E1E4E8">                       </span><span style="color: #9ECBFF">Row</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">of</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">3</span></span>
-<span data-line=""> </span>
-<span data-line=""><span style="color: #B392F0">Command</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">-</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">Enter</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">"/"</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">to</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">select</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">action</span><span style="color: #E1E4E8">           </span><span style="color: #9ECBFF">Message</span><span style="color: #E1E4E8">        </span><span style="color: #9ECBFF">Volume</span></span>
-<span data-line=""><span style="color: #B392F0">---------------------------------------------------------------------</span></span>
-<span data-line=""><span style="color: #B392F0">TSO1601</span><span style="color: #E1E4E8">                                                 </span><span style="color: #79B8FF">*</span><span style="color: #9ECBFF">ALIAS</span></span>
-<span data-line=""><span style="color: #F97583">************************</span><span style="color: #E1E4E8"> End of Data Set list </span><span style="color: #F97583">***********************</span></span></code></pre></div>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Command</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Enter</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> select</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> action</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">           Message</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        Volume</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">---------------------------------------------------------------------</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">TSO1601</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                                                 *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">ALIAS</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">************************</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> End of Data Set list </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">***********************</span></span></code></pre></figure>
 </div>
 </li>
 </ol>
@@ -225,24 +232,28 @@
 <p>当用户忘记密码的时后需要管理员 ST016 为该用户重新指定一个初始密码。</p>
 <p>场景：Janet Smith（TSO1601）遗忘了密码：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 PASSWORD(PASS)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 PASSWORD(PASS)</span></span></code></pre></div>
+<pre><code>ALU TSO1601 PASSWORD(PASS)
+</code></pre>
 </div>
 <h3 id="_23-revoke-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_23-revoke-用户">#</a>2.3 Revoke 用户</h3>
 <p>当用户帐号暂时不用的时候，安全起见应该将该帐号挂起（Revoke）。
 场景：Arthur Fielding（TSO1604）将会出差一段时间，在这段时间应将该用户的帐号挂起：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 REVOKE</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 REVOKE</span></span></code></pre></div>
+<pre><code>ALU TSO1601 REVOKE
+</code></pre>
 </div>
 <h3 id="_24-resume-用户"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_24-resume-用户">#</a>2.4 Resume 用户</h3>
 <p>当挂起的用户帐号需要重新启用的时候，应该及时地将帐号 Resume。
 场景：Arthur Fielding（TSO1604）出差回来，希望能够继续使用以前的帐号：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1601 RESUME</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1601 RESUME</span></span></code></pre></div>
+<pre><code>ALU TSO1601 RESUME
+</code></pre>
 </div>
 <h3 id="_25-search-查找"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_25-search-查找">#</a>2.5 Search 查找</h3>
 <p>使用 Search 命令查找以上新建的用户 Profile</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SEARCH CLASS(USER) MASK(TSO1601)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(USER) MASK(TSO1601)</span></span></code></pre></div>
+<pre><code>SEARCH CLASS(USER) MASK(TSO1601)
+</code></pre>
 </div>
 <h3 id="_26-将用户关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_26-将用户关联到组">#</a>2.6 将用户关联到组</h3>
 <p>RACF 中给用户访问资源权限的最佳方法是将用户关联到可以访问这些资源的组中，这些组称为功能组（Functional Group）。</p>
@@ -250,25 +261,25 @@
 <li>
 <p>将用户 Arthur Fielding（TSO1604）连接到组 FUN16PRD，实现其对生产数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1604 GROUP(FUN16PRD)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1604 GROUP(FUN16PRD)</span></span></code></pre></div>
+<pre><code>CONNECT TSO1604 GROUP(FUN16PRD)
+</code></pre>
 </div>
 </li>
 <li>
 <p>将用户 Susan Johnson（TSOxx05）连接到组 FUN16TST，实现其对测试数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1605 GROUP(FUN16TST)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1605 GROUP(FUN16TST)</span></span></code></pre></div>
+<pre><code>CONNECT TSO1605 GROUP(FUN16TST)
+</code></pre>
 </div>
 </li>
 </ul>
 <h3 id="_27-验证用户是否关联到组"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_27-验证用户是否关联到组">#</a>2.7 验证用户是否关联到组</h3>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LU TSO1604</span></span>
-<span data-line=""><span style="color: #24292e">LU TSO1605</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16PRD</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16TST</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LU TSO1604</span></span>
-<span data-line=""><span style="color: #e1e4e8">LU TSO1605</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16PRD</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16TST</span></span></code></pre></div>
+<pre><code>LU TSO1604
+LU TSO1605
+LG FUN16PRD
+LG FUN16TST
+</code></pre>
 </div>
 <p> </p>
 <h2 id="_3-分散式-racf-安全管理"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_3-分散式-racf-安全管理">#</a>3. 分散式 RACF 安全管理</h2>
@@ -302,23 +313,24 @@
 <li>
 <p>TSO1601（Janet Smith）：该管理员将对 DIV16ADM 组用户的安全进行管理，包括为用户重置密码，挂起和启用用户：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL</span></span></code></pre></div>
+<pre><code>CONNECT TSO1601 GROUP(DIV16ADM) SPECIAL
+</code></pre>
 </div>
 </li>
 <li>
 <p>TSO1602（Robert Anderson）：该管理员可以将用户关联到 DIV16FUN 组下的子功能组中，以实现用户对特定数据的访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)</span></span>
-<span data-line=""><span style="color: #24292e">CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)</span></span>
-<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)</span></span></code></pre></div>
+<pre><code>CONNECT TSO1602 GROUP(FUN16PRD) AUTHORITY(CONNECT)
+CONNECT TSO1602 GROUP(FUN16TST) AUTHORITY(CONNECT)
+</code></pre>
 </div>
 </li>
 <li>
 <p>TSO1603（Leslie Brown）：该管理员可以为 RES16PRD 和 RES16TST 组数据集创建数据集 PROFILE，以控制用户对组数据集的访问：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)</span></span>
-<span data-line=""><span style="color: #24292e">CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)</span></span></code></pre></div>
+<pre><code>CONNECT TSO1603 GROUP(RES16PRD) AUTHORITY(CREATE)
+CONNECT TSO1603 GROUP(RES16TST) AUTHORITY(CREATE)
+</code></pre>
 </div>
 </li>
 </ul>
@@ -328,23 +340,24 @@
 <li>
 <p>以 TSO1601 身份登陆 TSO，尝试修改用户密码等</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALU TSO1602 PASSWORD(PASS)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALU TSO1602 PASSWORD(PASS)</span></span></code></pre></div>
+<pre><code>ALU TSO1602 PASSWORD(PASS)
+</code></pre>
 </div>
 </li>
 <li>
 <p>以 TSO1602 身份登陆 TSO，将 TSO1601 用户关联到 FUN16PRD 和 FUN16TST：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(FUN16PRD)</span></span>
-<span data-line=""><span style="color: #24292e">CONNECT TSO1601 GROUP(FUN16TST)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(FUN16PRD)</span></span>
-<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1601 GROUP(FUN16TST)</span></span></code></pre></div>
+<pre><code>CONNECT TSO1601 GROUP(FUN16PRD)
+CONNECT TSO1601 GROUP(FUN16TST)
+</code></pre>
 </div>
 </li>
 <li>
 <p>以 TSOxx02 身份登陆 TSO，将 TSO1601 从 FUN16PRD 和 FUN16TST 组中移走：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">REMOVE TSO1601 GROUP(FUN16PRD)</span></span>
-<span data-line=""><span style="color: #24292e">REMOVE TSO1601 GROUP(FUN16TST)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">REMOVE TSO1601 GROUP(FUN16PRD)</span></span>
-<span data-line=""><span style="color: #e1e4e8">REMOVE TSO1601 GROUP(FUN16TST)</span></span></code></pre></div>
+<pre><code>REMOVE TSO1601 GROUP(FUN16PRD)
+REMOVE TSO1601 GROUP(FUN16TST)
+</code></pre>
 </div>
 </li>
 </ol>
@@ -374,28 +387,22 @@
 </ul>
 <p>以 TSO1601 身份登陆 TSO 然后执行 RACF 命令：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1601.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">ADDSD 'TSO1602.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">ADDSD 'TSO1603.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">ADDSD 'TSO1604.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">ADDSD 'TSO1605.**' UACC(NONE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1601.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1602.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1603.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1604.**' UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1605.**' UACC(NONE)</span></span></code></pre></div>
+<pre><code>ADDSD 'TSO1601.**' UACC(NONE)
+ADDSD 'TSO1602.**' UACC(NONE)
+ADDSD 'TSO1603.**' UACC(NONE)
+ADDSD 'TSO1604.**' UACC(NONE)
+ADDSD 'TSO1605.**' UACC(NONE)
+</code></pre>
 </div>
 <h3 id="_42-查看-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_42-查看-profile">#</a>4.2 查看 PROFILE</h3>
 <p>查看步骤 1 创建的用户数据集 PROFILE：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1601.**') ALL</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1602.**') ALL</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1603.**') ALL</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1604.**') ALL</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DA('TSO1605.**') ALL</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1601.**') ALL</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1602.**') ALL</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1603.**') ALL</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1604.**') ALL</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DA('TSO1605.**') ALL</span></span></code></pre></div>
+<pre><code>LISTDSD DA('TSO1601.**') ALL
+LISTDSD DA('TSO1602.**') ALL
+LISTDSD DA('TSO1603.**') ALL
+LISTDSD DA('TSO1604.**') ALL
+LISTDSD DA('TSO1605.**') ALL
+</code></pre>
 </div>
 <h3 id="_43-定义-rpofile--赋-alter-权"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_43-定义-rpofile--赋-alter-权">#</a>4.3 定义 RPOFILE + 赋 ALTER 权</h3>
 <p>定义 RES16TST 组数据集的 RPOFILE。在前面的实验中，TSO1603 被指定为 RES16PRD 和 RES16TST 的 Create 用户，以拥有对这 2 个组的数据集的保护权限。</p>
@@ -414,11 +421,13 @@
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)</span></span></code></pre></div>
+<pre><code>ADDSD 'RES16TST.**' AUDIT(FAILURES) OWNER(TSO1603) UACC(NONE)
+</code></pre>
 </div>
 <p>修改上面定义的 <code>RES16TST.**</code> PORFILE 的访问列表，给 FUN16TST 组赋予 ALTER 访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)</span></span></code></pre></div>
+<pre><code>PERMIT 'RES16TST.**' ID(FUN16TST) ACCESS(ALTER)
+</code></pre>
 </div>
 </li>
 <li>
@@ -438,20 +447,22 @@
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)</span></span></code></pre></div>
+<pre><code>ADDSD 'RES16PRD.**' AUDIT(FAILURES SUCCESS(UPDATE)) OWNER(TSO1603) UACC(NONE)
+</code></pre>
 </div>
 <p>修改上面定义的 <code>RESxxPRD.**</code> PORFILE 的访问列表，给 FUN16PRD 组赋予 ALTER 访问权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)</span></span></code></pre></div>
+<pre><code>PERMIT 'RES16PRD.**' ID(FUN16PRD) ACCESS(ALTER)
+</code></pre>
 </div>
 </li>
 </ol>
 <h3 id="_44-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_44-验证">#</a>4.4 验证</h3>
 <p>确定组数据集 PROFIEL 是否创建并按照预定的要求保护成功</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16TST.**') ALL</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.**') ALL</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16TST.**') ALL</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.**') ALL</span></span></code></pre></div>
+<pre><code>LISTDSD DATASET('RES16TST.**') ALL
+LISTDSD DATASET('RES16PRD.**') ALL
+</code></pre>
 </div>
 <h3 id="_45-创建组数据集"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_45-创建组数据集">#</a>4.5 创建组数据集</h3>
 <p>以 ST016 用户登陆 TSO，创建 RES16TST 和 RES16PRD 组数据集：</p>
@@ -459,9 +470,9 @@
 <li>
 <p>创建 ALIAS：RES16TST 和 RES16PRD</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))</span></span>
-<span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))</span></span>
-<span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))</span></span></code></pre></div>
+<pre><code>DEFINE ALIAS(NAME(RES16TST) RELATE(CATALOG.UCAT.STGRP))
+DEFINE ALIAS(NAME(RES16PRD) RELATE(CATALOG.UCAT.STGRP))
+</code></pre>
 </div>
 </li>
 <li>
@@ -472,53 +483,31 @@
 <p>以 TSO1603 登陆 TSO 并创建组数据集：</p>
 <p>创建一个顺序数据集 RES16PRD.DATA (RECFM=FB, LRECL=80) 和 RES16TST.DATA (RECFM=FB, LRECL=80)</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">                        Allocate New Data Set</span></span>
-<span data-line=""><span style="color: #24292e">Data Set Name  . . . : RESxxPRD.DATA</span></span>
-<span data-line=""><span style="color: #24292e">Management class . . .       (Blank for default management class)</span></span>
-<span data-line=""><span style="color: #24292e">Storage class  . . . .       (Blank for default storage class)</span></span>
-<span data-line=""><span style="color: #24292e"> Volume serial . . . .       (Blank for system default volume) **</span></span>
-<span data-line=""><span style="color: #24292e"> Device type . . . . .       (Generic unit or device address) **</span></span>
-<span data-line=""><span style="color: #24292e">Data class . . . . . .       (Blank for default data class)</span></span>
-<span data-line=""><span style="color: #24292e"> Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)</span></span>
-<span data-line=""><span style="color: #24292e"> Average record unit         (M, K, or U)</span></span>
-<span data-line=""><span style="color: #24292e"> Primary quantity  . . 1     (In above units)</span></span>
-<span data-line=""><span style="color: #24292e"> Secondary quantity    1     (In above units)</span></span>
-<span data-line=""><span style="color: #24292e"> Directory blocks  . .       (Zero for sequential data set) *</span></span>
-<span data-line=""><span style="color: #24292e"> Record format . . . . FB</span></span>
-<span data-line=""><span style="color: #24292e"> Record length . . . . 80</span></span>
-<span data-line=""><span style="color: #24292e"> Blocksize   . . . . .</span></span>
-<span data-line=""><span style="color: #24292e"> Data set name type :        (LIBRARY, HFS, PDS, or blank)  *</span></span>
-<span data-line=""><span style="color: #24292e">                             (YY/MM/DD, YYYY/MM/DD</span></span>
-<span data-line=""><span style="color: #24292e"> Expiration date . . .        YY.DDD, YYYY.DDD in Julian form</span></span>
-<span data-line=""><span style="color: #24292e">Enter "/" to select option    DDDD for retention period in days</span></span>
-<span data-line=""><span style="color: #24292e">   Allocate Multiple Volumes  or blank)</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">( * Specifying LIBRARY may override zero directory block)</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">( ** Only one of these fields may be specified)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">                        Allocate New Data Set</span></span>
-<span data-line=""><span style="color: #e1e4e8">Data Set Name  . . . : RESxxPRD.DATA</span></span>
-<span data-line=""><span style="color: #e1e4e8">Management class . . .       (Blank for default management class)</span></span>
-<span data-line=""><span style="color: #e1e4e8">Storage class  . . . .       (Blank for default storage class)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Volume serial . . . .       (Blank for system default volume) **</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Device type . . . . .       (Generic unit or device address) **</span></span>
-<span data-line=""><span style="color: #e1e4e8">Data class . . . . . .       (Blank for default data class)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Average record unit         (M, K, or U)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Primary quantity  . . 1     (In above units)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Secondary quantity    1     (In above units)</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Directory blocks  . .       (Zero for sequential data set) *</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Record format . . . . FB</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Record length . . . . 80</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Blocksize   . . . . .</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Data set name type :        (LIBRARY, HFS, PDS, or blank)  *</span></span>
-<span data-line=""><span style="color: #e1e4e8">                             (YY/MM/DD, YYYY/MM/DD</span></span>
-<span data-line=""><span style="color: #e1e4e8"> Expiration date . . .        YY.DDD, YYYY.DDD in Julian form</span></span>
-<span data-line=""><span style="color: #e1e4e8">Enter "/" to select option    DDDD for retention period in days</span></span>
-<span data-line=""><span style="color: #e1e4e8">   Allocate Multiple Volumes  or blank)</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">( * Specifying LIBRARY may override zero directory block)</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">( ** Only one of these fields may be specified)</span></span></code></pre></div>
+<pre><code>                        Allocate New Data Set
+Data Set Name  . . . : RESxxPRD.DATA
+Management class . . .       (Blank for default management class)
+Storage class  . . . .       (Blank for default storage class)
+ Volume serial . . . .       (Blank for system default volume) **
+ Device type . . . . .       (Generic unit or device address) **
+Data class . . . . . .       (Blank for default data class)
+ Space units . . . . . TRKS  (BLKS, TRKS, CYLS, KB, MB, BYTES or RECORDS)
+ Average record unit         (M, K, or U)
+ Primary quantity  . . 1     (In above units)
+ Secondary quantity    1     (In above units)
+ Directory blocks  . .       (Zero for sequential data set) *
+ Record format . . . . FB
+ Record length . . . . 80
+ Blocksize   . . . . .
+ Data set name type :        (LIBRARY, HFS, PDS, or blank)  *
+                             (YY/MM/DD, YYYY/MM/DD
+ Expiration date . . .        YY.DDD, YYYY.DDD in Julian form
+Enter "/" to select option    DDDD for retention period in days
+   Allocate Multiple Volumes  or blank)
+
+( * Specifying LIBRARY may override zero directory block)
+
+( ** Only one of these fields may be specified)
+</code></pre>
 </div>
 <h3 id="_46-验证"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_46-验证">#</a>4.6 验证</h3>
 <ul>
@@ -535,7 +524,8 @@
 <p>以 TSO1601 登陆，删除 RES16PRD 打头的数据集（如 <code>RES16PRD.DATA</code>）</p>
 <p>保留 TSO1601 登陆的 Session，再打开一个新的 Session，以 TSO1603 登陆 TSO，修改 <code>RESxxPRD.**</code> Profile，给 TSO1601 赋 ALTER 权：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)</span></span></code></pre></div>
+<pre><code>PERMIT 'RES16PRD.**' ID(TSO1601) ACCESS(ALTER)
+</code></pre>
 </div>
 <p>测试：</p>
 <ul>
@@ -551,36 +541,40 @@
 <h3 id="_51-创建全匹配-profile"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_51-创建全匹配-profile">#</a>5.1 创建全匹配 PROFILE</h3>
 <p>为 RES16PRD.DATA 创建全匹配 PROFILE。以 TSO1603 登陆（RES16PRD 组 CREATE 特权人员，即数据管理人员），为 <code>RES16PRD.DATA</code> 创建一个全匹配的 PROFILE 进行保护：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.DATA' UACC(READ)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.DATA' UACC(READ)</span></span></code></pre></div>
+<pre><code>ADDSD 'RES16PRD.DATA' UACC(READ)
+</code></pre>
 </div>
 <h3 id="_52-打开-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_52-打开-warning-状态">#</a>5.2 打开 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态打开：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALTDSD 'RES16TST.**' WARNING</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALTDSD 'RES16TST.**' WARNING</span></span></code></pre></div>
+<pre><code>ALTDSD 'RES16TST.**' WARNING
+</code></pre>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
 <h3 id="_53-关闭-warning-状态"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_53-关闭-warning-状态">#</a>5.3 关闭 Warning 状态</h3>
 <p>以 TSO1603 登陆，把 <code>RES16TST.**</code> PROFILE 的 Warning 状态关闭：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ALTDSD 'RES16TST.**' NOWARNING</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ALTDSD 'RES16TST.**' NOWARNING</span></span></code></pre></div>
+<pre><code>ALTDSD 'RES16TST.**' NOWARNING
+</code></pre>
 </div>
 <p>测试：以 TSO1604 登陆，浏览 <code>RES16TST.DATA</code> 数据集</p>
 <h3 id="_54-update-权限"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_54-update-权限">#</a>5.4 UPDATE 权限</h3>
 <p>TSO1603 登陆。假设 <code>RES16PRD.NEWAPPL.FINANCE.DATA</code> 和 <code>RES16PRD.NEWAPPL.HR.DATA</code> 是一个新应用系统的 2 个数据集，FUN16TST 组需要对这 2 个数据集有 UPDATE 权限，而不能对其他应用系统的数据集有操作权限。注意，FUN16PRD 组仍然需要对所有的 RES16PRD 数据集保留原有的操作权限。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')</span></span>
-<span data-line=""><span style="color: #24292e">PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')</span></span>
-<span data-line=""><span style="color: #e1e4e8">PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)</span></span></code></pre></div>
+<pre><code>ADDSD 'RES16PRD.NEWAPPL.**' UACC(NONE) FROM('RES16PRD.**')
+PERMIT 'RES16PRD.NEWAPPL.**' ID(FUN16TST) ACC(UPDATE)
+</code></pre>
 </div>
 <p>检测哪一个 PROFILE 在保护 <code>RES16PRD.NEWAPPL.FINANCE.DATA</code> 和 <code>RES16PRD.NEWAPPL.HR.DATA</code>：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN</span></span></code></pre></div>
+<pre><code>LISTDSD DATASET('RES16PRD.NEWAPPL.FINANCE.DATA') GEN
+LISTDSD DATASET('RES16PRD.NEWAPPL.HR.DATA') GEN
+</code></pre>
 </div>
 <p>检测一个 Generic PROFILE <code>RES16PRD.**</code> 保护了那些数据集：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">LISTDSD DATASET('RES16PRD.**') DSNS</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">LISTDSD DATASET('RES16PRD.**') DSNS</span></span></code></pre></div>
+<pre><code>LISTDSD DATASET('RES16PRD.**') DSNS
+</code></pre>
 </div>
 <p> </p>
 <h2 id="_6-保护-tso-资源"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_6-保护-tso-资源">#</a>6. 保护 TSO 资源</h2>
@@ -593,19 +587,22 @@
 <li>
 <p>在 DIV16FUN 下创建子组 FUN16AP</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
+<pre><code>ADDGROUP FUN16AP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
+</code></pre>
 </div>
 </li>
 <li>
 <p>在 DIV16FUN 下创建子组 FUN16SP</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)</span></span></code></pre></div>
+<pre><code>ADDGROUP FUN16SP OWNER(DIV16FUN) SUPGROUP(DIV16FUN)
+</code></pre>
 </div>
 </li>
 <li>
 <p>在 DIV16RES 下创建子组 RES16TSO，用以管理 TSO 资源授权</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)</span></span></code></pre></div>
+<pre><code>ADDGROUP RES16TSO OWNER(DIV16RES) SUPGROUP(DIV16RES)
+</code></pre>
 </div>
 </li>
 </ol>
@@ -628,15 +625,12 @@
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">CONNECT TSO1607 GROUP(FUN16SP)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1607 GROUP(FUN16SP)</span></span></code></pre></div>
+<pre><code>ADDUSER TSO1607 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)
+
+ALU TSO1607 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))
+
+CONNECT TSO1607 GROUP(FUN16SP)
+</code></pre>
 </div>
 </li>
 <li>
@@ -655,24 +649,21 @@
 </li>
 </ul>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">CONNECT TSO1608 GROUP(FUN16AP)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">CONNECT TSO1608 GROUP(FUN16AP)</span></span></code></pre></div>
+<pre><code>ADDUSER TSO1608 OWNER(DIV16ADM) NAME('SYSTEM PROGRAMMER') DFLTGRP(DIV16ADM) PASSWORD(123456)
+
+ALU TSO1608 TSO(PROC(IKJDB2) ACCTNUM(#ACCT) SIZE(4096) COMMAN(ISPF))
+
+CONNECT TSO1608 GROUP(FUN16AP)
+</code></pre>
 </div>
 </li>
 </ol>
 <h3 id="_63-创建登陆过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_63-创建登陆过程">#</a>6.3 创建登陆过程</h3>
 <p>为 TSO 用户创建一个新的登陆过程 PROC#Sxx 和 PROC#Axx。打开文件 VENDOR.PROCLIB ，在 Command 中输入：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">S PROC#S16;COPY IKJDB2</span></span>
-<span data-line=""><span style="color: #24292e">S PROC#A16;COPY IKJDB2</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">S PROC#S16;COPY IKJDB2</span></span>
-<span data-line=""><span style="color: #e1e4e8">S PROC#A16;COPY IKJDB2</span></span></code></pre></div>
+<pre><code>S PROC#S16;COPY IKJDB2
+S PROC#A16;COPY IKJDB2
+</code></pre>
 </div>
 <h3 id="_64-保护登录过程"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_64-保护登录过程">#</a>6.4 保护登录过程</h3>
 <p>保护 PROC#Sxx 登陆过程（TSOPROC 类）。</p>
@@ -681,29 +672,27 @@
 <p>创建通用资源 TSOPROC 的 RPOFILE，保护 AP 和 SP 的 TSO 登陆过程。</p>
 <p>授权规则：PROC#Sxx 只有 SP 才能使用（READ 权限），其他人不可以使用；PROC#Axx 只有 AP 才能使用（READ 权限），其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)</span></span>
-<span data-line=""><span style="color: #24292e"></span></span>
-<span data-line=""><span style="color: #24292e">RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)</span></span>
-<span data-line=""><span style="color: #e1e4e8"></span></span>
-<span data-line=""><span style="color: #e1e4e8">RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)</span></span></code></pre></div>
+<pre><code>RDEFINE TSOPROC PROC#S16 OWNER(DIV16FUN) UACC(NONE)
+PE PROC#S16 CLASS(TSOPROC) ID(FUN16SP) AC(READ)
+
+RDEFINE TSOPROC PROC#A16 OWNER(DIV16FUN) UACC(NONE)
+PE PROC#A16 CLASS(TSOPROC) ID(FUN16AP) AC(READ)
+</code></pre>
 </div>
 </li>
 <li>
 <p>浏览 PROC#Sxx 和 PROC#Axx PROFILE，它们用于保护不同的 TSO 登陆服务：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#S16 AUTHUSER</span></span>
-<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#A16 AUTHUSER</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#S16 AUTHUSER</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#A16 AUTHUSER</span></span></code></pre></div>
+<pre><code>RLIST TSOPROC PROC#S16 AUTHUSER
+RLIST TSOPROC PROC#A16 AUTHUSER
+</code></pre>
 </div>
 </li>
 <li>
 <p>刷新 TSOPROC 类在内存中的 PROFILE</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">SETROPTS RACLIST(TSOPROC) REFRESH</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">SETROPTS RACLIST(TSOPROC) REFRESH</span></span></code></pre></div>
+<pre><code>SETROPTS RACLIST(TSOPROC) REFRESH
+</code></pre>
 </div>
 <p>可能会提示不需要刷新。</p>
 </li>
@@ -715,26 +704,26 @@
 <p>创建 RPOFILE：ACCT#Sxx 该 ACCTNUM 为 SP 提供 TSO 登陆服务。</p>
 <p>授权规则：ACCT#Sxx 只有 SP 才能使用(READ 权限)，其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)</span></span></code></pre></div>
+<pre><code>RDEFINE ACCTNUM ACCT#S16 OWNER(DIV16FUN) UACC(NONE)
+PE ACCT#S16 CLASS(ACCTNUM) ID(FUN16SP) AC(READ)
+</code></pre>
 </div>
 </li>
 <li>
 <p>创建 PROFILE：ACCT#Axx 该 ACCTNUM 为 AP 提供 TSO 登陆服务。</p>
 <p>授权规则：ACCT#Axx 只有 AP 才能使用(READ 权限)，其他人不可以使用。</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #24292e">PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)</span></span>
-<span data-line=""><span style="color: #e1e4e8">PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)</span></span></code></pre></div>
+<pre><code>RDEFINE ACCTNUM ACCT#A16 OWNER(DIV16FUN) UACC(NONE)
+PE ACCT#A16 CLASS(ACCTNUM) ID(FUN16AP) AC(READ)
+</code></pre>
 </div>
 </li>
 <li>
 <p>浏览 PROFILE：ACCT#Sxx 和 ACCT#Axx</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#S16 AUTHUSER</span></span>
-<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#A16 AUTHUSER</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#S16 AUTHUSER</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#A16 AUTHUSER</span></span></code></pre></div>
+<pre><code>RLIST ACCTNUM ACCT#S16 AUTHUSER
+RLIST ACCTNUM ACCT#A16 AUTHUSER
+</code></pre>
 </div>
 </li>
 </ol>
@@ -744,13 +733,15 @@
 <li>
 <p>（不做）为 SP 和 AP 用户赋权访问 JCL 权限：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)</span></span></code></pre></div>
+<pre><code>PE JCL CLASS(TSOAUTH) ID(FUN16AP FUN16SP) ACCESS(READ)
+</code></pre>
 </div>
 </li>
 <li>
 <p>查看 SP 和 AP 用户是否拥有提交 JCL 作业的权利：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">RLIST TSOAUTH JCL</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">RLIST TSOAUTH JCL</span></span></code></pre></div>
+<pre><code>RLIST TSOAUTH JCL
+</code></pre>
 </div>
 </li>
 </ol>
@@ -759,13 +750,15 @@
 <li>
 <p>保护 TSO1607 的用户数据集</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1607.**' UACC(NONE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1607.**' UACC(NONE)</span></span></code></pre></div>
+<pre><code>ADDSD 'TSO1607.**' UACC(NONE)
+</code></pre>
 </div>
 </li>
 <li>
 <p>保护 TSO1608 的用户数据集</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">ADDSD 'TSO1608.**' UACC(NONE)</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">ADDSD 'TSO1608.**' UACC(NONE)</span></span></code></pre></div>
+<pre><code>ADDSD 'TSO1608.**' UACC(NONE)
+</code></pre>
 </div>
 </li>
 </ol>
@@ -775,13 +768,15 @@
 <li>
 <p>为 TSOxx07 创建别名</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
+<pre><code>DEFINE ALIAS(NAME(TSO1607) RELATE('CATALOG.UCAT.STGRP'))
+</code></pre>
 </div>
 </li>
 <li>
 <p>为 TSOxx08 创建别名</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))</span></span></code></pre></div>
+<pre><code>DEFINE ALIAS(NAME(TSO1608) RELATE('CATALOG.UCAT.STGRP'))
+</code></pre>
 </div>
 </li>
 </ol>
@@ -789,49 +784,28 @@
 <h2 id="_7-使用-jcl-执行-racf-命令"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#_7-使用-jcl-执行-racf-命令">#</a>7. 使用 JCL 执行 RACF 命令</h2>
 <p>编写 JCL 作业，然后 SUBMIT：</p>
 <p></p><div class="language-"><span class="lang"></span><p></p>
-<div data-rehype-pretty-code-fragment=""><pre class="github-light" style="background-color: #fff" tabindex="0" data-language="" data-theme="light"><code data-language="" data-theme="light" style="display: grid;"><span data-line=""><span style="color: #24292e">//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,</span></span>
-<span data-line=""><span style="color: #24292e">// NOTIFY=ST016</span></span>
-<span data-line=""><span style="color: #24292e">//SEND EXEC PGM=IKJEFT01</span></span>
-<span data-line=""><span style="color: #24292e">//SYSPRINT DD DUMMY</span></span>
-<span data-line=""><span style="color: #24292e">//SYSTSPRT DD SYSOUT=*</span></span>
-<span data-line=""><span style="color: #24292e">//SYSTSIN DD *</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(DIV16)</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(FUN16)</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(GROUP) MASK(RES16)</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(USER) MASK(TSO16)</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16PRD</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16TST</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16SP</span></span>
-<span data-line=""><span style="color: #24292e">LG FUN16AP</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(DATASET) MASK(TSO16)</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(DATASET) MASK(RES16)</span></span>
-<span data-line=""><span style="color: #24292e">LISTDSD DA(TSO1601.**) AU</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(TSOPROC) FILTER(PROC#%16)</span></span>
-<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#S16 AU</span></span>
-<span data-line=""><span style="color: #24292e">RLIST TSOPROC PROC#A16 AU</span></span>
-<span data-line=""><span style="color: #24292e">SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)</span></span>
-<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#S16 AU</span></span>
-<span data-line=""><span style="color: #24292e">RLIST ACCTNUM ACCT#A16 AU</span></span></code></pre><pre class="github-dark" style="background-color: #24292e" tabindex="0" data-language="" data-theme="dark"><code data-language="" data-theme="dark" style="display: grid;"><span data-line=""><span style="color: #e1e4e8">//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,</span></span>
-<span data-line=""><span style="color: #e1e4e8">// NOTIFY=ST016</span></span>
-<span data-line=""><span style="color: #e1e4e8">//SEND EXEC PGM=IKJEFT01</span></span>
-<span data-line=""><span style="color: #e1e4e8">//SYSPRINT DD DUMMY</span></span>
-<span data-line=""><span style="color: #e1e4e8">//SYSTSPRT DD SYSOUT=*</span></span>
-<span data-line=""><span style="color: #e1e4e8">//SYSTSIN DD *</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(DIV16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(FUN16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(GROUP) MASK(RES16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(USER) MASK(TSO16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16PRD</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16TST</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16SP</span></span>
-<span data-line=""><span style="color: #e1e4e8">LG FUN16AP</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(DATASET) MASK(TSO16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(DATASET) MASK(RES16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">LISTDSD DA(TSO1601.**) AU</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(TSOPROC) FILTER(PROC#%16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#S16 AU</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST TSOPROC PROC#A16 AU</span></span>
-<span data-line=""><span style="color: #e1e4e8">SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#S16 AU</span></span>
-<span data-line=""><span style="color: #e1e4e8">RLIST ACCTNUM ACCT#A16 AU</span></span></code></pre></div>
-</div></div><div class="grid md:grid-cols-2 text-[0.95em]" data-astro-cid-gvpn4u4b><a href="https://github.com/Renovamen/renovamen.github.io/edit/main/src/content/blog/zh/2019-04-03-racf-experiment.md" title="Edit link" target="_blank" rel="noopener noreferrer" class="hover:underline" data-astro-cid-gvpn4u4b><span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1" data-astro-cid-gvpn4u4b></span>Edit this page on GitHub</a><span md:text-right text-c-light data-astro-cid-gvpn4u4b><span class="i-ic:round-update w-4.5 h-4.5 mr-1" data-astro-cid-gvpn4u4b></span>Last updated: 3/7/2023, 2:57:21 PM</span></div><div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c" data-astro-cid-gvpn4u4b><span class="prev" data-astro-cid-gvpn4u4b><a href="/posts/zh/2019-02-15-rnn-with-its-friends" class="!text-c" data-astro-cid-gvpn4u4b>RNN 和它的朋友们</a></span><span class="next text-right" data-astro-cid-gvpn4u4b><a href="/posts/zh/2019-07-06-last-three-years" class="!text-c" data-astro-cid-gvpn4u4b>对过去三年的碎碎念：像样的麻婆豆腐是这个令人讨厌的世界上的唯一的光</a></span></div><div mt-20 data-astro-cid-gvpn4u4b><script>(()=>{var r=(i,c,s)=>{let n=async()=>{await(await i())()},t=new IntersectionObserver(e=>{for(let o of e)if(o.isIntersecting){t.disconnect(),n();break}});for(let e of s.children)t.observe(e)};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="Zm61JN" data-solid-render-id="s1" component-url="/_astro/Giscus.ddaeb44b.js" component-export="default" renderer-url="/_astro/client.5a17342c.js" props="{&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s10-0" class="giscus"></div><!--astro:end--></astro-island></div></div></div><footer class="max-w-content w-full hstack justify-between font-ui mx-auto mt-20" text="xs lg:sm" data-astro-cid-sz7xmlte><span text-c-lighter data-astro-cid-sz7xmlte><span data-astro-cid-sz7xmlte>© Xiaohan Zou 2023</span><span lt-sm:hidden data-astro-cid-sz7xmlte> · A dragon lost in human world</span></span><span hstack space-x-3 data-astro-cid-sz7xmlte><a class="footer-item" href="https://github.com/Renovamen/renovamen.github.io" title="Source code" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-lucide:code-2 data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Code</span></a><a class="footer-item" href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-heroicons:rss-20-solid data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>RSS</span></a><a class="footer-item" href="/sitemap-index.xml" title="Sitemap" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte><div i-bx:map-alt data-astro-cid-sz7xmlte></div><span lt-sm:hidden data-astro-cid-sz7xmlte>Sitemap</span></a></span></footer></main></body></html>
+<pre><code>//ST016R1 JOB CLASS=A,MSGLEVEL=(1,1),MSGCLASS=H,
+// NOTIFY=ST016
+//SEND EXEC PGM=IKJEFT01
+//SYSPRINT DD DUMMY
+//SYSTSPRT DD SYSOUT=*
+//SYSTSIN DD *
+SEARCH CLASS(GROUP) MASK(DIV16)
+SEARCH CLASS(GROUP) MASK(FUN16)
+SEARCH CLASS(GROUP) MASK(RES16)
+SEARCH CLASS(USER) MASK(TSO16)
+LG FUN16PRD
+LG FUN16TST
+LG FUN16SP
+LG FUN16AP
+SEARCH CLASS(DATASET) MASK(TSO16)
+SEARCH CLASS(DATASET) MASK(RES16)
+LISTDSD DA(TSO1601.**) AU
+SEARCH CLASS(TSOPROC) FILTER(PROC#%16)
+RLIST TSOPROC PROC#S16 AU
+RLIST TSOPROC PROC#A16 AU
+SEARCH CLASS(ACCTNUM) FILTER(ACCT#%16)
+RLIST ACCTNUM ACCT#S16 AU
+RLIST ACCTNUM ACCT#A16 AU
+</code></pre>
+</div> </div> <div class="grid md:grid-cols-2 text-[0.95em]" data-astro-cid-gvpn4u4b> <a href="https://github.com/Renovamen/renovamen.github.io/edit/main/src/content/blog/zh/2019-04-03-racf-experiment.md" title="Edit link" target="_blank" rel="noopener noreferrer" class="hover:underline" data-astro-cid-gvpn4u4b> <span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1" data-astro-cid-gvpn4u4b></span> Edit this page on GitHub </a> <span md:text-right text-c-light data-astro-cid-gvpn4u4b> <span class="i-ic:round-update w-4.5 h-4.5 mr-1" data-astro-cid-gvpn4u4b></span> Last updated:  3/7/2023, 2:57:21 PM </span> </div> <div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c" data-astro-cid-gvpn4u4b> <span class="prev" data-astro-cid-gvpn4u4b> <a href="/posts/zh/2019-02-15-rnn-with-its-friends" class="!text-c" data-astro-cid-gvpn4u4b> RNN 和它的朋友们 </a> </span> <span class="next text-right" data-astro-cid-gvpn4u4b> <a href="/posts/zh/2019-07-06-last-three-years" class="!text-c" data-astro-cid-gvpn4u4b> 对过去三年的碎碎念：像样的麻婆豆腐是这个令人讨厌的世界上的唯一的光 </a> </span> </div><div mt-20 data-astro-cid-gvpn4u4b> <script>(()=>{var r=(i,c,s)=>{let n=async()=>{await(await i())()},t=new IntersectionObserver(e=>{for(let o of e)if(o.isIntersecting){t.disconnect(),n();break}});for(let e of s.children)t.observe(e)};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="Zm61JN" data-solid-render-id="s1" component-url="/_astro/Giscus.tVqIKjcE.js" component-export="default" renderer-url="/_astro/client.DKOYneLd.js" props="{&quot;data-astro-cid-gvpn4u4b&quot;:[0,true]}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s10-0" class="giscus"></div><!--astro:end--></astro-island> </div>  </div> </div> <footer class="max-w-content w-full hstack justify-between font-ui mx-auto mt-20" text="xs lg:sm" data-astro-cid-sz7xmlte> <span text-c-lighter data-astro-cid-sz7xmlte> <span data-astro-cid-sz7xmlte>© Xiaohan Zou 2023</span> <span lt-sm:hidden data-astro-cid-sz7xmlte>· A dragon lost in human world</span> </span> <span hstack space-x-3 data-astro-cid-sz7xmlte> <a class="footer-item" href="https://github.com/Renovamen/renovamen.github.io" title="Source code" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-lucide:code-2 data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>Code</span> </a> <a class="footer-item" href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-heroicons:rss-20-solid data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>RSS</span> </a> <a class="footer-item" href="/sitemap-index.xml" title="Sitemap" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-bx:map-alt data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>Sitemap</span> </a> </span> </footer>  </main> </body></html>  
