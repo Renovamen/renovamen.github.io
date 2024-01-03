@@ -27,7 +27,7 @@ socials:
 
 ## Bio
 
-Xiaohan is a PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in vision-language and video models. 
+Xiaohan is a PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). Her current research interests lie primarily in understanding and improving continuity, generalizability, efficiency and other key properties of machine learning. She is also interested in prompt learning for vision-language and video models. 
 
 Previously, she received her master's degree in [Computer Science](https://www.bu.edu/cs/) at [Boston University](https://www.bu.edu/) and bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) at [Tongji University](https://www.tongji.edu.cn/). She has also interned in Kuaishou and PKU.
 
@@ -38,6 +38,7 @@ Previously, she received her master's degree in [Computer Science](https://www.b
 
 |                                                                                                                       |           |
 | --------------------------------------------------------------------------------------------------------------------- | --------- |
+| **Ph.D. in Computer Science and Engineering**, Pennsylvania State University                                          | 2023      |
 | **M.S. in Computer Science**, Boston University                                                                       | 2021-2023 |
 | **B.Eng. in Software Engineering**, Tongji University <p>Thesis: _Food Image Aesthetic Assessment and Captioning_</p> | 2016-2020 |
 
