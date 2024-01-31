@@ -15,7 +15,7 @@ export default defineConfig({
   shortcuts: [
     ["flex-center", "flex items-center justify-center"],
     ["hstack", "flex items-center"],
-    ["vstack", "flex flex-col justify-center"],
+    ["vstack", "hstack flex-col"],
     ["border-c", "border-gray-200 dark:border-gray-600"],
     ["border-c-dark", "border-gray-300 dark:border-gray-500"],
     ["bg-c", "bg-white dark:bg-gray-700"],
@@ -24,6 +24,7 @@ export default defineConfig({
     ["text-c-lighter", "text-c opacity-50"],
     ["text-c-dark", "text-black dark:text-white"],
     ["text-c-active", "text-brand dark:text-blue-300"],
+    ["shadow-c", "shadow-gray-400 dark:shadow-gray-800/70"],
     ["nav-item", "hstack space-x-1 text-c-light hover:text-c-dark"],
     [
       "btn",
@@ -35,9 +36,6 @@ export default defineConfig({
     fontFamily: {
       sans: `Computer Modern Sans, ${DEFAULT_FONTS}`,
       ui: DEFAULT_FONTS
-    },
-    boxShadow: {
-      nav: "0 1px 8px 0 rgba(27, 35, 47, .1)"
     },
     colors: {
       brand: "#1772d0"

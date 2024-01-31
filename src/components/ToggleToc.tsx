@@ -19,7 +19,7 @@ export const ToggleToc: Component = () => {
   onMount(handleClass);
 
   return (
-    <button class="nav-item ml-4" title="Toggle toc" onClick={toggleToc}>
+    <button class="nav-item ml-4" aria-label="Toggle toc" onClick={toggleToc}>
       {isTocOpen() ? <div i-ri:menu-3-line /> : <div i-ri:menu-fold-line />}
     </button>
   );

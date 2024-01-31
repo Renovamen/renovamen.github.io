@@ -37,7 +37,7 @@ export const Navbar: Component<{
       ref={navbar}
       class={`z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 ${
         isFixed() && "fixed -top-14 left-0 transition duration-300 border-b border-c"
-      } ${isVisible() && "translate-y-full shadow-nav"} ${
+      } ${isVisible() && "translate-y-full shadow"} ${
         !isFixed() && !isVisible() && "absolute top-0 left-0"
       }`}
     >
@@ -48,25 +48,25 @@ export const Navbar: Component<{
       </a>
 
       <nav hstack space-x-4>
-        <a nav-item href="/projects" title="Projects">
+        <a nav-item href="/projects" aria-label="Projects">
           <div i-ph:rocket-launch-duotone class="md:hidden" />
           <span class={`lt-md:hidden ${props.activePage === "projects" && "active"}`}>
             Projects
           </span>
         </a>
 
-        <a nav-item href="/posts" title="Blog">
+        <a nav-item href="/posts" aria-label="Blog">
           <div i-majesticons:pencil-line class="md:hidden" />
           <span class={`lt-md:hidden ${props.activePage === "posts" && "active"}`}>
             Blog
           </span>
         </a>
 
-        <a nav-item href="/search" title="Search">
+        <a nav-item href="/search" aria-label="Search">
           <span i-uil:search />
         </a>
 
-        <button nav-item title="Toggle dark" onClick={() => setDark(!isDark())}>
+        <button nav-item aria-label="Toggle dark" onClick={() => setDark(!isDark())}>
           <div i="carbon-sun dark:carbon-moon" />
         </button>
 
