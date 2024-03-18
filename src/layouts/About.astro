@@ -11,11 +11,12 @@ export interface Props {
     subname?: string;
     avatarFront?: string;
     avatarBack?: string;
+    tltr?: string;
     socials: SocialItem[];
   };
 }
 
-const { name, subname, avatarFront, avatarBack, socials } = Astro.props.frontmatter;
+const { name, subname, avatarFront, avatarBack, tltr, socials } = Astro.props.frontmatter;
 ---
 
 <Layout class="about" title={`About - ${SITE.title}`}>
@@ -34,7 +35,13 @@ const { name, subname, avatarFront, avatarBack, socials } = Astro.props.frontmat
     {subname && <font text="base c-light"> ({subname})</font>}.
   </h1>
 
-  <h5 mb-4 text-c-light>I'm a PhD student at Pennsylvania State University.</h5>
+  {
+    tltr && (
+      <h5 mb-4 text-c-light>
+        {tltr}
+      </h5>
+    )
+  }
 
   <Links socials={socials} />
 

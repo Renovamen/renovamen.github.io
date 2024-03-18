@@ -4,8 +4,8 @@ projects:
   Websites / Online Tools:
     - name: Portfolio
       link: https://portfolio.zxh.io
-      desc: My portfolio website simulating macOS's GUI
-      icon: i-ic:baseline-laptop-mac
+      desc: A portfolio website simulating macOS's GUI
+      icon: i-ic:twotone-laptop-mac
       tech:
         - i-logos:preact
         - i-logos:typescript-icon
@@ -22,19 +22,18 @@ projects:
         - i-logos:unocss
         - i-simple-icons:pwa
       repo: Renovamen/oh-my-cv
-    - name: Midgard
-      link: https://resume.zxh.io
-      desc: An interesting resume of mine
-      icon: i-et:compass
+    - name: Dashboard
+      link: https://dashboard.zxh.io
+      desc: A personal dashboard in pixel style
+      icon: i-mingcute:dashboard-4-line
       tech:
-        - i-logos:vue
+        - i-logos:solidjs-icon
         - i-logos:typescript-icon
         - i-logos:unocss
         - i-logos:vitejs
-      repo: Renovamen/midgard
     - name: zxh.io
       link: https://zxh.io
-      desc: My personal website
+      desc: A personal website
       icon: i-solar:planet-linear
       tech:
         - i-logos:astro-icon
@@ -42,9 +41,19 @@ projects:
         - i-logos:typescript-icon
         - i-logos:unocss
       repo: Renovamen/renovamen.github.io
+    - name: Midgard
+      link: https://resume.zxh.io
+      desc: An interactive resume
+      icon: i-game-icons:ancient-sword
+      tech:
+        - i-logos:vue
+        - i-logos:typescript-icon
+        - i-logos:unocss
+        - i-logos:vitejs
+      repo: Renovamen/midgard
     - name: Cube Solver
       link: https://cube.zxh.io
-      desc: A rubik's cube solver
+      desc: A solver for Rubik's Cube
       icon: i-fluent:cube-24-regular
       tech:
         - i-logos:javascript
@@ -73,7 +82,7 @@ projects:
     - name: VuePress Theme Gungnir
       link: https://github.com/Renovamen/vuepress-theme-gungnir
       desc: A blog theme for VuePress 2
-      icon: i-akar-icons:sword
+      icon: i-game-icons:spear-hook
       tech:
         - i-logos:vue
         - i-logos:typescript-icon

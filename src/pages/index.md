@@ -4,6 +4,7 @@ name: Xiaohan Zou
 subname: 邹笑寒
 avatarFront: img/me.jpg
 avatarBack: img/avatar.jpg
+tltr: I do machine learning by day and build things for the web by night.
 socials:
   - icon: i-academicons:cv
     link: /files/cv/en.pdf
@@ -15,7 +16,7 @@ socials:
     link: https://www.linkedin.com/in/xiaohan-zou
   - icon: i-academicons:google-scholar
     link: https://scholar.google.com/citations?user=RuW6xgMAAAAJ
-  - icon: i-ri:twitter-fill
+  - icon: i-carbon:logo-x
     link: https://www.twitter.com/renovamen_zxh
   - icon: i-ant-design:zhihu-outlined
     link: https://www.zhihu.com/people/chao-neng-gui-su
@@ -34,9 +35,7 @@ I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
 
----
-
-I do machine learning by day and build things for web by night. Currently, I am working mostly on [ohmycv.app](https://ohmycv.app), a smooth, privacy-first online resume builder. If you would like to see a more "web developer" homepage of mine, please see [portfolio.zxh.io](https://portfolio.zxh.io/) or [dashboard.zxh.io](https://dashboard.zxh.io/).
+By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, privacy-first online resume builder.
 
 
 ## Education
