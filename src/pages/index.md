@@ -31,7 +31,7 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). My current research interests primarily focus on understanding and enhancing the continuity, generalizability, efficiency, and other key properties of machine learning. I am also interested in large multimodal models.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). My current research interests primarily focus on understanding and enhancing the generalizability, efficiency, robustness, and other crucial aspects of machine learning. I am also interested in large multimodal models.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
 
@@ -48,6 +48,16 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 
 
 ## Publications <span text-base>(also see <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
+
+:::paper[/img/about/rebq.png]
+**Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
+
+Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
+
+Under review
+
+[paper](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
+:::
 
 :::paper[/img/about/tokenflow-1.png /img/about/tokenflow-2.png]
 **TokenFlow: Rethinking Fine-grained Cross-modal Alignment in Vision-Language Retrieval**
@@ -92,15 +102,6 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 [paper](https://iopscience.iop.org/article/10.1088/1742-6596/1487/1/012016/pdf)
 :::
-
-
-## Industry Experience
-
-|                                                                                                     |           |
-| --------------------------------------------------------------------------------------------------- | --------- |
-| **Machine Learning Engineer Intern**, _[Kuaishou](https://www.kuaishou.com/en)_, Beijing, China     | 2021–2022 |
-| **Software Engineer Intern**, _China Electronics Technology Group Corporation_                      | 2020–2021 |
-| **Game Engineer Intern**, _[Banana Interactive](https://banana.games/)_, Shanghai, China            | 2019–2020 |
 
 
 ## Talks

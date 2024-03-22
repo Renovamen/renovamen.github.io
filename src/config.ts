@@ -1,7 +1,7 @@
 export const SITE = {
   website: "https://zxh.io/",
   title: "Xiaohan Zou",
-  desc: "A dragon lost in human world.",
+  desc: "PhD student at Penn State",
   author: "Xiaohan Zou"
 };
 
