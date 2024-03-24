@@ -104,6 +104,12 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
   @apply bg-slate-600;
 }
 
+/** Inline code **/
+
+.prose :not(pre) > code {
+  @apply text-sm;
+}
+
 /** Containers **/
 
 .prose .custom-block {
