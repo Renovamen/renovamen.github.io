@@ -22,7 +22,7 @@ export const formatDate = (date: string | Date, type: 0 | 1 | 2 = 0) => {
 export const lastUpdated = (id: string) => {
   // a workaround to find absolute path for a blog file
   const fileDev = path.resolve(__dirname, "../content/blog", id);
-  const fileProd = path.resolve(__dirname, "../../../src/content/blog", id);
+  const fileProd = path.resolve(__dirname, "../../src/content/blog", id);
   const file = fs.existsSync(fileDev) ? fileDev : fileProd;
 
   const child = sync("git", ["log", "-1", '--pretty="%ci"', file]);
