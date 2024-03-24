@@ -65,7 +65,7 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
           }`}
         >
           <span w-12 h-full flex-center>
-            <span class="icon i-uil:search w-5 h-5 text-c-lighter" />
+            <span class="icon i-uil:search size-5 text-c-lighter" />
           </span>
           <input
             ref={input}

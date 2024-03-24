@@ -18,13 +18,13 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
     <a
       class="relative hstack space-x-5 p-4 !no-underline !text-c"
       border="~ c hover:transparent"
-      bg="hover:gray-100 dark:hover:gray-600"
+      bg="hover:(gray-100 dark:gray-600)"
       href={props.project.link}
       title={props.project.name}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="flex-auto">
+      <div flex-auto>
         <div class="hstack flex-wrap">
           <div whitespace-nowrap mr-3>
             {props.project.name}

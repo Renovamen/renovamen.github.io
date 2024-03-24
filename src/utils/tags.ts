@@ -1,20 +1,18 @@
 import type { CollectionEntry } from "astro:content";
 
 export const getTags = (posts: CollectionEntry<"blog">[]) => {
-  const map: Record<string, number> = {};
-
-  posts.forEach((post) => {
+  const numPostsPerTag = posts.reduce<Record<string, number>>((acc, post) => {
     post.data.tags?.forEach((tag) => {
-      map[tag] = map[tag] ? map[tag] + 1 : 1;
+      acc[tag] = (acc[tag] || 0) + 1;
     });
-  });
+    return acc;
+  }, {});
 
-  const tags = Object.keys(map).sort((a, b) => {
-    if (map[a] === map[b]) return a.localeCompare(b);
-    return map[b] - map[a];
-  });
+  const tags = Object.keys(numPostsPerTag).sort(
+    (a, b) => numPostsPerTag[b] - numPostsPerTag[a] || a.localeCompare(b)
+  );
 
-  map["all"] = posts.length;
+  numPostsPerTag["all"] = posts.length;
 
-  return { tags, numPostsPerTag: map };
+  return { tags, numPostsPerTag };
 };

@@ -9,7 +9,6 @@
   </span>
   <span hstack space-x-3>
     <a
-      class="footer-item"
       href="https://github.com/Renovamen/renovamen.github.io"
       aria-label="Source code"
       target="_blank"
@@ -18,18 +17,11 @@
       <div i-lucide:code-2></div>
       <span lt-sm:hidden>Code</span>
     </a>
-    <a
-      class="footer-item"
-      href="/rss.xml"
-      aria-label="RSS"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a href="/rss.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
       <div i-heroicons:rss-20-solid></div>
       <span lt-sm:hidden>RSS</span>
     </a>
     <a
-      class="footer-item"
       href="/sitemap-index.xml"
       aria-label="Sitemap"
       target="_blank"
@@ -42,7 +34,7 @@
 </footer>
 
 <style scoped>
-  .footer-item {
+  footer a {
     @apply hstack space-x-1 text-c-lighter hover:text-c-light;
   }
 </style>

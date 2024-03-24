@@ -9,7 +9,7 @@ export interface Props {
 const { socials } = Astro.props;
 ---
 
-<div class="flex flex-wrap">
+<div flex="~ wrap">
   {
     socials.map((item) => (
       <a
@@ -19,7 +19,7 @@ const { socials } = Astro.props;
         target={isExternal(item.link) ? "_blank" : "_self"}
         rel="noopener noreferrer"
       >
-        <div class={item.icon} w-5 h-5 />
+        <div class={item.icon} size-5 />
         {item.name && <div>{item.name}</div>}
       </a>
     ))

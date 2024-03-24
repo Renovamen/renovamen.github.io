@@ -15,14 +15,12 @@ export const getSortedPosts = (posts: CollectionEntry<"blog">[]) =>
 
 export const getSortedPostsByYear = (posts: CollectionEntry<"blog">[]) => {
   const sortedPosts = getSortedPosts(posts);
-  const map: Record<string, CollectionEntry<"blog">[]> = {};
 
-  for (const p of sortedPosts) {
-    const y = getPostDate(p.id).substring(0, 4);
-    map[y] ? map[y].push(p) : (map[y] = [p]);
-  }
-
-  return map;
+  return sortedPosts.reduce<Record<string, CollectionEntry<"blog">[]>>((acc, post) => {
+    const year = getPostDate(post.id).substring(0, 4);
+    acc[year] ? acc[year].push(post) : (acc[year] = [post]);
+    return acc;
+  }, {});
 };
 
 export const getPostsByTag = (posts: CollectionEntry<"blog">[], tag: string) =>

@@ -2,7 +2,7 @@
 import { SITE } from "@config";
 import { getPosts, getPostDate, formatDate } from "@utils";
 import Layout from "@layouts/Layout.astro";
-import Search from "@components/Search";
+import SearchComponent from "@components/Search";
 
 const posts = await getPosts();
 const searchList = posts.map(({ id, slug, body, data }) => ({
@@ -15,5 +15,5 @@ const searchList = posts.map(({ id, slug, body, data }) => ({
 
 <Layout title={`Search - ${SITE.title}`}>
   <h1 pb-2>Search</h1>
-  <Search client:load searchList={searchList} />
+  <SearchComponent client:load searchList={searchList} />
 </Layout>

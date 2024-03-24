@@ -93,13 +93,13 @@ const lastUpdatedText = THEME.lastUpdatedText;
 
   <div class="grid md:grid-cols-2 text-[0.95em]">
     <a href={editURL} target="_blank" rel="noopener noreferrer" class="hover:underline">
-      <span class="i-tabler:edit w-4.5 h-4.5 align-text-top mr-1"></span>
+      <span class="i-tabler:edit size-4.5 align-text-top mr-1"></span>
       {editText}
     </a>
     {
       lastUpdatedTime !== "Invalid Date" && (
         <span md:text-right text-c-light>
-          <span class="i-ic:round-update w-4.5 h-4.5 mr-1" />
+          <span class="i-ic:round-update size-4.5 mr-1" />
           {lastUpdatedText}
           {lastUpdatedTime}
         </span>
@@ -109,17 +109,17 @@ const lastUpdatedText = THEME.lastUpdatedText;
 
   {
     (prevPost || nextPost) && (
-      <div class="mt-3 pt-3 text-[0.95em]" grid="~ md:cols-2" border="t c">
-        <span class="prev">
+      <div class="flex justify-between mt-3 pt-3 text-[0.95em]" border="t c">
+        <span>
           {prevPost && (
-            <a href={`/posts/${prevPost.path}`} class="!text-c">
+            <a href={`/posts/${prevPost.path}`} class="!text-c before:content-['←']">
               {prevPost.title}
             </a>
           )}
         </span>
-        <span class="next text-right">
+        <span text-right>
           {nextPost && (
-            <a href={`/posts/${nextPost.path}`} class="!text-c">
+            <a href={`/posts/${nextPost.path}`} class="!text-c after:content-['→']">
               {nextPost.title}
             </a>
           )}
@@ -132,15 +132,6 @@ const lastUpdatedText = THEME.lastUpdatedText;
     <Giscus client:visible />
   </div>
 </Layout>
-
-<style scoped>
-  .prev a::before {
-    content: "← ";
-  }
-  .next a::after {
-    content: " →";
-  }
-</style>
 
 <script>
   import mediumZoom from "medium-zoom";

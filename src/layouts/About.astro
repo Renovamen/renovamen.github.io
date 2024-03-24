@@ -22,7 +22,7 @@ const { name, subname, avatarFront, avatarBack, tltr, socials } = Astro.props.fr
 <Layout class="about" title={`About - ${SITE.title}`}>
   {
     avatarFront && (
-      <div class="ml-auto w-30 h-30 mb-4 mr-1 sm:(w-40 h-40 -mb-20 mr-2) rotate-3">
+      <div class="size-30 ml-auto mb-4 mr-1 rotate-3" sm="size-40 -mb-20 mr-2">
         <FlipImage front={avatarFront} back={avatarBack} alt="avatar" />
       </div>
     )

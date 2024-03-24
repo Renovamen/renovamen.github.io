@@ -39,11 +39,11 @@ export interface ReadingTime {
   words: number;
 }
 
-const getNumCN = (text: string): number => {
+const getNumCN = (text: string) => {
   return (text.match(/[\u4E00-\u9FA5]/g) || []).length;
 };
 
-const getNumEN = (text: string): number => {
+const getNumEN = (text: string) => {
   return (
     text
       .replace(/[\u4E00-\u9FA5]/g, "")
@@ -53,11 +53,11 @@ const getNumEN = (text: string): number => {
   ).length;
 };
 
-const excludeCodeBlock = (text: string): string => {
+const excludeCodeBlock = (text: string) => {
   return text.replace(/```[\s\S]*?```/g, "");
 };
 
-const excludeTexBlock = (text: string): string => {
+const excludeTexBlock = (text: string) => {
   return text.replace(/\$\$[\s\S]*?\$\$/g, "");
 };
 
