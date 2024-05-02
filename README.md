@@ -4,7 +4,7 @@ This is my personal website, built with [Astro](https://astro.build/), [Solid](h
 
 The [previous version](https://github.com/Renovamen/renovamen.github.io/tree/vitesse) is built with [Vitesse](https://github.com/antfu/vitesse).
 
-Anyway, just have fun: [zxh.io](https://zxh.io)
+Anyway, just have fun: [zxh.me](https://zxh.me)
 
 
 &nbsp;

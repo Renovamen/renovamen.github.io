@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://zxh.io/",
+  website: "https://zxh.me/",
   title: "Xiaohan Zou",
   desc: "PhD student at Penn State",
   author: "Xiaohan Zou"

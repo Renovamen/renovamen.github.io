@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_VERSION: 18
-      PNPM_VERSION: 8
+      NODE_VERSION: 20
+      PNPM_VERSION: 9
 
     steps:
       - uses: actions/checkout@v3
@@ -41,4 +41,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-          cname: zxh.io
+          cname: zxh.me
