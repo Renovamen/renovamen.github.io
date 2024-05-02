@@ -2,8 +2,8 @@
 layout: ../layouts/About.astro
 name: Xiaohan Zou
 subname: 邹笑寒
-avatarFront: img/me.jpg
-avatarBack: img/avatar.jpg
+avatarFront: img/avatar.jpg
+avatarBack: img/me.jpg
 tltr: I do machine learning by day and build things for the web by night.
 socials:
   - icon: i-academicons:cv
@@ -31,7 +31,7 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [Huijuan Xu](https://visionlanguagelab.github.io/). My current research interests primarily focus on understanding and enhancing the generalizability, efficiency, robustness, and other crucial aspects of machine learning. I am also interested in large multimodal models.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/). My current research interests primarily focus on understanding and enhancing the generalizability, efficiency, robustness, and other crucial aspects of machine learning. I am also interested in large multimodal models.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
 
