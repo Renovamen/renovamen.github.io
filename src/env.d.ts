@@ -12,7 +12,6 @@ interface Attributes extends AttributifyAttributes {
 
 declare global {
   namespace astroHTML.JSX {
-    /* eslint-disable-next-line */
     interface HTMLAttributes extends Attributes {}
   }
 }
