@@ -21,10 +21,10 @@ socials:
   - icon: i-ant-design:zhihu-outlined
     link: https://www.zhihu.com/people/chao-neng-gui-su
   - icon: i-ic:twotone-catching-pokemon
-    link: https://portfolio.zxh.io
+    link: https://portfolio.zxh.me
     name: Portfolio
   - icon: i-mingcute:dashboard-4-line
-    link: https://dashboard.zxh.io
+    link: https://dashboard.zxh.me
     name: Dashboard
 ---
 
@@ -35,7 +35,7 @@ I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
 
-By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, privacy-first online resume builder.
+By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
 
 
 ## Education

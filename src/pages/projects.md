@@ -3,7 +3,7 @@ layout: ../layouts/Projects.astro
 projects:
   Websites / Online Tools:
     - name: Portfolio
-      link: https://portfolio.zxh.io
+      link: https://portfolio.zxh.me
       desc: A portfolio website simulating macOS's GUI
       icon: i-ic:twotone-laptop-mac
       tech:
@@ -14,7 +14,7 @@ projects:
       repo: Renovamen/playground-macos
     - name: Oh My CV!
       link: https://ohmycv.app
-      desc: Write your curriculum vitae / resume in Markdown
+      desc: An in-browser, local-first Markdown resume builder
       icon: oh-my-cv
       tech:
         - i-logos:nuxt-icon
@@ -23,16 +23,16 @@ projects:
         - i-simple-icons:pwa
       repo: Renovamen/oh-my-cv
     - name: Dashboard
-      link: https://dashboard.zxh.io
-      desc: A personal dashboard in pixel style
+      link: https://dashboard.zxh.me
+      desc: A bento box style personal dashboard
       icon: i-mingcute:dashboard-4-line
       tech:
         - i-logos:solidjs-icon
         - i-logos:typescript-icon
         - i-logos:unocss
         - i-logos:vitejs
-    - name: zxh.io
-      link: https://zxh.io
+    - name: zxh.me
+      link: https://zxh.me
       desc: A personal website
       icon: i-solar:planet-linear
       tech:
