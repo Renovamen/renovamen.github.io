@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@9.1.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev --host",
@@ -12,20 +12,20 @@
   "devDependencies": {
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",
-    "@astrojs/solid-js": "^4.1.0",
-    "@iconify/json": "^2.2.205",
+    "@astrojs/solid-js": "^4.2.0",
+    "@iconify/json": "^2.2.208",
     "@renovamen/eslint-config": "^0.1.7",
     "@renovamen/prettier-config": "^0.1.7",
     "@renovamen/utils": "^0.1.1",
     "@types/cross-spawn": "^6.0.6",
-    "astro": "^4.7.0",
+    "astro": "^4.8.2",
     "cross-spawn": "^7.0.3",
     "dayjs": "^1.11.11",
-    "eslint": "^9.1.1",
+    "eslint": "^9.2.0",
     "fuse.js": "^7.0.0",
     "mdast-util-toc": "^7.0.1",
     "medium-zoom": "^1.1.0",
-    "pnpm": "^9.0.6",
+    "pnpm": "^9.1.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-external-links": "^3.0.0",
     "rehype-katex": "^7.0.0",
@@ -37,15 +37,13 @@
     "solidjs-use": "^2.3.0",
     "taze": "^0.13.8",
     "typescript": "^5.4.5",
-    "unocss": "^0.59.4"
+    "unocss": "^0.60.0"
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": [
-        "@babel/core",
-        "typescript",
-        "vite"
-      ]
+      "allowedVersions": {
+        "eslint": "9"
+      }
     }
   }
 }
