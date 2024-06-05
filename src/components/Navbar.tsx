@@ -42,7 +42,7 @@ export const Navbar: Component<{
       }`}
     >
       <a font-bold text="c-light hover:c-dark" href="/">
-        <span text-lg>hi@zxh</span>
+        <span text-lg>Onela@胡邹不胡诌</span>
         <div i-fa6-solid:angle-right class="prompt inline-block" />
         <span class="blink">_</span>
       </a>
@@ -51,14 +51,14 @@ export const Navbar: Component<{
         <a nav-item href="/projects" aria-label="Projects">
           <div i-ph:rocket-launch-duotone class="md:hidden" />
           <span class={`lt-md:hidden ${props.activePage === "projects" && "active"}`}>
-            Projects
+            项目
           </span>
         </a>
 
-        <a nav-item href="/posts" aria-label="Blog">
+        <a nav-item href="/posts/zh" aria-label="Blog">
           <div i-majesticons:pencil-line class="md:hidden" />
           <span class={`lt-md:hidden ${props.activePage === "posts" && "active"}`}>
-            Blog
+            博客
           </span>
         </a>
 
