@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://onela.cn/posts/zh/2024-05-20-23-ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAbitcoin%E5%85%A8%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/"><meta name="generator" content="Astro v4.8.2"><meta name="msapplication-TileColor" content="#ffffff"><title>Ubuntu下搭建Bitcoin全节点安装部署 - Hu Zou</title><!-- General Meta Tags --><meta name="title" content="Ubuntu下搭建Bitcoin全节点安装部署 - Hu Zou"><meta name="description" content="搬运代码的农民工"><meta name="author" content="胡邹不胡诌"><!-- Open Graph / Facebook --><meta property="og:title" content="Ubuntu下搭建Bitcoin全节点安装部署 - Hu Zou"><meta property="og:description" content="搬运代码的农民工"><meta property="og:url" content="https://onela.cn/posts/zh/2024-05-20-23-ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAbitcoin%E5%85%A8%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/"><!-- Twitter --><meta property="twitter:title" content="Ubuntu下搭建Bitcoin全节点安装部署 - Hu Zou"><meta property="twitter:description" content="搬运代码的农民工"><meta property="twitter:url" content="https://onela.cn/posts/zh/2024-05-20-23-ubuntu%E4%B8%8B%E6%90%AD%E5%BB%BAbitcoin%E5%85%A8%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/"><link rel="stylesheet" href="/_astro/index.DfNy-dsd.css">
+<link rel="stylesheet" href="/_astro/index.BXS0PYvd.css"><script type="module" src="/_astro/hoisted.B2qAUXqB.js"></script></head> <body class="font-sans"> <main class="post flex flex-col min-h-full text-c px-4 pt-24 pb-4 md:pb-6"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><script>window._$HY||(e=>{let t=e=>e&&e.hasAttribute&&(e.hasAttribute("data-hk")?e:t(e.host&&e.host.nodeType?e.host:e.parentNode));["click", "input"].forEach((o=>document.addEventListener(o,(o=>{let a=o.composedPath&&o.composedPath()[0]||o.target,s=t(a);s&&!e.completed.has(s)&&e.events.push([s,o])}))))})(_$HY={events:[],completed:new WeakSet,r:{},fe(){}});</script><!--xs--><astro-island uid="Z1bc3mj" data-solid-render-id="s1" component-url="/_astro/Navbar.C8FgdC_x.js" component-export="default" renderer-url="/_astro/client.CQjYc-QB.js" props="{&quot;activePage&quot;:[0,&quot;posts&quot;],&quot;hasToc&quot;:[0,false]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;Navbar&quot;,&quot;value&quot;:true}" await-children=""><header data-hk="s10-0-0-0" class="z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 false false absolute top-0 left-0"><a font-bold text="c-light hover:c-dark" href="/"><span text-lg>Onela@胡邹不胡诌</span><div i-fa6-solid:angle-right class="prompt inline-block"></div><span class="blink">_</span></a><nav hstack space-x-4><a nav-item href="/projects" aria-label="Projects"><div i-ph:rocket-launch-duotone class="md:hidden"></div><span class="lt-md:hidden false">项目</span></a><a nav-item href="/posts/zh" aria-label="Blog"><div i-majesticons:pencil-line class="md:hidden"></div><span class="lt-md:hidden active">博客</span></a><a nav-item href="/search" aria-label="Search"><span i-uil:search></span></a><button nav-item aria-label="Toggle dark"><div i="carbon-sun dark:carbon-moon"></div></button><!--$--><!--/--></nav></header><!--astro:end--></astro-island> <div class="flex-1 mb-6"> <div class="prose prose-lg mx-auto">  <div mt-6 mb-8> <h1 text-4xl font-bold leading-12 my-0>Ubuntu下搭建Bitcoin全节点安装部署</h1> <p text-c-lighter mt-2> May 20, 2024 · 6 min
+<span>
+·
+<span i-uil:tag-alt text-sm></span> <span> <a href="/posts/zh/tags/ubuntu" class="!text-c"> Ubuntu </a>  </span> </span> </p> </div> <div class="content mb-16">  <blockquote>
+<p>需要准备大一点固态硬盘</p>
+<p>系统环境：Ubuntu 22.04.4 LTS</p>
+</blockquote>
+<h3 id="搭建btcoin全节点"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#搭建btcoin全节点">#</a>搭建Btcoin全节点</h3>
+<p>Btcoin Core：<code>https://bitcoincore.org/</code></p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 案例版本v27.0 最新版本去官网获取</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">wget</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://bitcoincore.org/bin/bitcoin-core-27.0/bitcoin-27.0-x86_64-linux-gnu.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -xzvf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bitcoin-27.0-x86_64-linux-gnu.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0755</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/bin</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bitcoin-27.0/bin/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">*</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mkdir</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data/bitcoin</span></span></code></pre></figure>
+</div>
+<p>添加配置文件</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 配置如下</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#testnet=0 # 连接主网还是测试网: 0 - 主网 1 - 测试网</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#regtest=0 # 是否以私有链模式运行: 0 - 否 1 - 是</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#proxy=127.0.0.1:9050 # 是否使用socks5代理,默认关闭</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#bind=&#x3C;addr> # 本地监听地址,注释此行，表示使用默认监听地址</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#whitebind=&#x3C;addr> # 本地白名单监听地址,注释此行，表示使用默认监听地址</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#addnode=69.164.218.197 # 添加种子节点,可添加多个</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#addnode=10.0.0.2:8333</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#connect=69.164.218.197 # 连接节点地址</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#listen=1 # 是否进入监听模式，默认启用，除非使用了connect配置</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#maxconnections=40 # 入站/出站最大连接数</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#server=1 # 是否启动JSON-RPC接口,0 - 不启动 1 - 启动</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcbind=&#x3C;addr> # rpc接口的监听地址，默认绑定到所有IP</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcport=8332 # rpc接口的监听端口</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcuser=alice  # rpc接口的访问用户名</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcpassword=DONT_USE_THIS_YOU_WILL_GET_ROBBED_OoDqBGMzPkxahm231434B2FRAxtl9m2 # rpc接口的访问密码</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcclienttimeout=30 # rpc客户端超时秒数</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcallowip=10.1.1.34/255.255.255.0 # rpc访问白名单</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcallowip=1.2.3.4/24 </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcallowip=2001:db8:85a3:0:0:8a2e:370:7334/96</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#rpcconnect=127.0.0.1 # bitcoin-cli的默认连接地址</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#txconfirmtarget=n # 交易最小确认数，默认值：6</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#paytxfee=0.000x # 每次发送比特币时的交易费</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#keypool=100 # 密钥池大小</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#prune=550 # 剪枝留存数量，超过此数量的历史区块将从内存中删除</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#min=1 # 是否启动后最小化</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#minimizetotray=1 # 是否最小化到系统托盘</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 参考配置样例，其他参数使用默认值</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'server=1</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">daemon=1</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"># 如果您想作为一个全节点运行，不需要钱包功能，可以设置disablewallet=1</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"># disablewallet=1</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#rpcuser=bitcoin_user</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#rpcpassword=bitcoin2024ToTheMoon</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"># 可选：设置比特币核心与网络的连接数</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">maxconnections=40</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">txindex=1'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ~/.bitcoin/bitcoin.conf</span></span></code></pre></figure>
+</div>
+<p>添加系统服务</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/systemd/system/bitcoind.service</span></span></code></pre></figure>
+</div>
+<p>执行完上个命令后，按英文字符 i 键进入编辑模式</p>
+<p>把如下内容贴进去</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[Unit]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Description</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Bitcoin's distributed currency daemon</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">After=network.target</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[Service]</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">User=root</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Group=root</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Type=forking</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">ExecStart=/usr/local/bin/bitcoin/bitcoind -conf=~/.bitcoin/bitcoin.conf -datadir=/data/bitcoin/data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">i[Install]</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">WantedBy=multi-user.target</span></span></code></pre></figure>
+</div>
+<p>贴进去之后按键盘上的 Esc键退出编辑模式，然后再按 shift + : 进入最底部的命令行模式，输入小写wq 回车退出</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 重新加载</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> daemon-reload</span></span></code></pre></figure>
+</div>
+<p>设置开机启动</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bitcoind</span></span></code></pre></figure>
+</div>
+<p>启动服务</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bitcoind</span></span></code></pre></figure>
+</div>
+<p>查看bic同步区块的日志</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data/bitcoin/data/debug.log</span></span></code></pre></figure>
+</div>
+<p><strong>添加环境变量使用bitcoin-cli命令</strong></p>
+<p>编辑环境变量配置文件<code>vim /etc/profile</code>，追加如下配置</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># bitcoin环境变量</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/usr/local/bin/bitcoin/:$PATH</span></span></code></pre></figure>
+</div>
+<p>让配置生效<code>source /etc/profile</code></p>
+<p><strong>一些常见的 Bitcoin Core 命令：</strong></p>
+<p>获取节点信息：（注意注意！！如果你需要查看同步进度使用以下命令则需要开启rpcuser=bitcoin_user
+rpcpassword=bitcoin2024ToTheMoon这两项配置，如果你同步完区块后要装runes节点，则 要注释掉这两项配置并重启服务来生成.cookie文件）</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 获取区块链信息</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> getblockchaininfo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 获得比特币核心客户端状态的信息</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> getinfo</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 命令将显示钱包当前的所有地址的余额总和</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> getbalance</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 查看我们钱包中所有剩余的从之前交易中已确认的支出；</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> listunspent</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 该命令用来创建交易，可以根据 listunspent 获取它的 txid ，amount 的数值不能太大，否则会提示昂贵的交易费。执行完成之后会生成一个 hexString，用来验证交易时使用。</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> createrawtransaction</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '[{"txid":"myid","vout":0}]'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '{"address":0.01}'</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># sighashtype该命令用来签名交易，注意：amount 应该是 listunspent 反应的 amount 的值，scriptPubKey 也是 listunspent 中的 scriptPubKey ，sighashtype 的默认值是 all，可以不写，redeemScript 是多重签名验证，没有特殊要求可以不写。执行完成之后会生成一个 signedhex 的签名验证码。</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> signrawtransaction</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "hexstring"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ‘[{"txid":"id","vout":n,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "amount":value,"scriptPubKey":"hex","redeemScript":"hex"},...]’</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ‘["privatekey1",...]’</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 该命令用来发送交易。</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sendrawtransaction</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "signedhex"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 密码 时间 walletpassphrase命令需要两个参数——密码，和多久钱包会再次被自动锁定的秒数数字（计时器）。该命令是用来解锁钱包的，执行完成什么也不会输出，代表解锁完成。</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> walletpassphrase</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 该命令用来获取 privateKey，在第五步中会需要。</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bitcoin-cli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dumpprivkey</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "address"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span></code></pre></figure>
+</div>
+<h3 id="安装runes节点"><a aria-hidden="true" tabindex="-1" class="header-anchor" href="#安装runes节点">#</a>安装runes节点</h3>
+<p>ordinals节点安装包</p>
+<p><code>https://github.com/ordinals/ord/releases</code></p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 最新节点安装包</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">wget</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://github.com/ordinals/ord/releases/download/0.18.5/ord-0.18.5-x86_64-unknown-linux-gnu.tar.gz</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 解压文件</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -zxvf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ord-0.18.5-x86_64-unknown-linux-gnu.tar.gz</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 复制到指定目录</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./ord-0.18.5-x86_64-unknown-linux-gnu</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data/btcoin/ord</span></span>
+<span data-line=""> </span></code></pre></figure>
+</div>
+<p>btcoin全节点配置文件需要配置<code>txindex=1</code>，如果已经配置过了可忽略此步骤</p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'txindex=1'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> >></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /root/.bitcoin/bitcoin.conf</span></span></code></pre></figure>
+</div>
+<p>更新配置之后需要重启服务<code>systemctl restart bitcoind</code></p>
+<p>ord 更新索引要快的话，可以去这个网站下载<code>https://ordstuff.info/indexes/0.18/</code></p>
+<p><strong>新增ord系统服务</strong></p>
+<p></p><div class="language-shell"><span class="lang">shell</span><p></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="shell" data-theme="github-light github-dark"><code data-language="shell" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '[Unit]</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Description=ORD Service</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">After=network.target</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[Service]</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">User=root</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">ExecStart=/usr/local/bin/ord-0.18.2/ord --bitcoin-data-dir=/data/bitcoin/data --cookie-file=/data/bitcoin/data/.cookie server</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Restart=always</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">RestartSec=10</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[Install]</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">WantedBy=multi-user.target'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/systemd/system/ord.service</span></span></code></pre></figure>
+</div> </div> <div class="grid md:grid-cols-2 text-[0.95em]"> <a href="https://github.com/zouwei/onela.github.io/edit/main/src/content/blog/zh/2024-05-20-23-Ubuntu下搭建Bitcoin全节点安装部署.md" target="_blank" rel="noopener noreferrer" class="hover:underline"> <span class="i-tabler:edit size-4.5 align-text-top mr-1"></span> Edit this page on GitHub </a> <span md:text-right text-c-light> <span class="i-ic:round-update size-4.5 mr-1"></span> Last updated:  2024/6/5 19:29:11 </span> </div> <div class="flex justify-between mt-3 pt-3 text-[0.95em]" border="t c"> <span> <a href="/posts/zh/2024-05-20-ubuntu-2204-安装-tesla-p100-驱动" class="!text-c before:content-['←']"> Ubuntu 22.04 安装 Tesla P100 驱动 </a> </span> <span text-right> <a href="/posts/zh/2024-05-20-22-ubuntu终端使用的proxy的设置" class="!text-c after:content-['→']"> Ubuntu终端使用的proxy的设置 </a> </span> </div><div mt-20> <script>(()=>{var l=(s,i,o)=>{let r=async()=>{await(await s())()},t=typeof i.value=="object"?i.value:void 0,c={rootMargin:t==null?void 0:t.rootMargin},n=new IntersectionObserver(e=>{for(let a of e)if(a.isIntersecting){n.disconnect(),r();break}},c);for(let e of o.children)n.observe(e)};(self.Astro||(self.Astro={})).visible=l;window.dispatchEvent(new Event("astro:visible"));})();</script><astro-island uid="orSAh" data-solid-render-id="s0" component-url="/_astro/Giscus.Cyzd-AaZ.js" component-export="default" renderer-url="/_astro/client.CQjYc-QB.js" props="{}" ssr="" client="visible" opts="{&quot;name&quot;:&quot;Giscus&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0-0-0" class="giscus"></div><!--astro:end--></astro-island> </div>  </div> </div> <footer class="max-w-[810px] w-full hstack justify-between font-ui" m="x-auto t-20" text="xs lg:sm" data-astro-cid-sz7xmlte> <span text-c-lighter data-astro-cid-sz7xmlte> <span data-astro-cid-sz7xmlte>© Hu Zou 2024</span> <span lt-sm:hidden data-astro-cid-sz7xmlte>· 写着玩玩儿</span> <span onclick="javascript:location.href='//beian.miit.gov.cn/'" style="cursor:pointer;" data-astro-cid-sz7xmlte>湘ICP备18014178号</span> </span> <span hstack space-x-3 data-astro-cid-sz7xmlte> <a href="https://github.com/zouwei/onela.github.io" aria-label="Source code" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-lucide:code-2 data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>Code</span> </a> <a href="/rss.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-heroicons:rss-20-solid data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>RSS</span> </a> <a href="/sitemap-index.xml" aria-label="Sitemap" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte> <div i-bx:map-alt data-astro-cid-sz7xmlte></div> <span lt-sm:hidden data-astro-cid-sz7xmlte>Sitemap</span> </a> </span> </footer>  </main> </body></html> 
