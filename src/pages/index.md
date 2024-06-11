@@ -108,7 +108,7 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 ## Miscellaneous
 
-- 🚀 前端代码是抄的一个本家妹子的开源项目 [personal website](https://github.com/Renovamen/renovamen.github.io) ，源作者是一个非常优秀人，前端大牛，作者有着强大的工程师的思维和细腻的审美，她的作品让我在万千作品中眼前一亮，就直接使用了她的开源博客代码改写了这套用于整理一些开发笔记的个人博客。
+- 🚀 前端代码是抄的一个本家妹子的开源项目 [personal website](https://github.com/Renovamen/renovamen.github.io) ，源作者是一个非常优秀的人，前端大牛，作者有着强大的工程师思维和细腻的审美，她的作品让我在万千作品中眼前一亮，就直接使用了她的开源博客代码改写了这套用于整理一些开发笔记的个人博客。
 
 - 🧐 _Onela_ 源自多年以前一个出于“纯粹性好玩”的想法构建， _玩啦_ 的意思。
 

@@ -1,1 +1,0 @@
-(function(){const t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("solidjs-use-color-scheme")||"auto";(e==="dark"||t&&e!=="light")&&document.documentElement.classList.toggle("dark",!0)})();
