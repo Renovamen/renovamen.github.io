@@ -28,16 +28,16 @@ const { name, subname, avatarFront, avatarBack, tltr, socials } = Astro.props.fr
     )
   }
 
-  <h3 my-0 text-c-light>Hello, this is</h3>
+  <h3 my-0 text-fg-light>Hello, this is</h3>
 
   <h1 my-1.5>
     {name}
-    {subname && <font text="base c-light"> ({subname})</font>}.
+    {subname && <font text="base fg-light"> ({subname})</font>}.
   </h1>
 
   {
     tltr && (
-      <h5 mb-4 text-c-light>
+      <h5 mb-4 text-fg-light>
         {tltr}
       </h5>
     )

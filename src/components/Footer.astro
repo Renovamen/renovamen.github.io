@@ -3,11 +3,12 @@
   m="x-auto t-20"
   text="xs lg:sm"
 >
-  <span text-c-lighter>
+  <span text-fg-light>
     <span>© Xiaohan Zou 2024</span>
     <span lt-sm:hidden>· A dragon lost in human world</span>
   </span>
-  <span hstack space-x-3>
+
+  <span hstack gap-x-3>
     <a
       href="https://github.com/Renovamen/renovamen.github.io"
       aria-label="Source code"
@@ -35,6 +36,6 @@
 
 <style scoped>
   footer a {
-    @apply hstack space-x-1 text-c-lighter hover:text-c-light;
+    @apply hstack gap-x-1 text-fg-light hover:(text-fg-dark underline);
   }
 </style>

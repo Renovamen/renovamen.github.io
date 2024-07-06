@@ -33,16 +33,16 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
 
   <!-- tag list -->
   <span class="mr-1.5 -space-x-0.5">
-    <span class="i-uil:tag-alt" text="sm c-light"></span>
-    <a href={allURL} class="!text-c-light">all</a>
+    <span class="i-uil:tag-alt" text="sm fg-light"></span>
+    <a href={allURL} class="!text-fg-light">all</a>
     <sup>{numPostsPerTag["all"]}</sup>
   </span>
 
   {
     tags.map((tag) => (
       <span class="mr-1.5 -space-x-0.5">
-        <span class="i-uil:tag-alt" text="sm c-light" />
-        <a href={tagURL + slugify(tag)} class="!text-c-light">
+        <span class="i-uil:tag-alt" text="sm fg-light" />
+        <a href={tagURL + slugify(tag)} class="!text-fg-light">
           {tag}
         </a>
         <sup>{numPostsPerTag[tag]}</sup>
@@ -59,10 +59,10 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
           <h3>{year}</h3>
           {sortedPostsByYear[year].map((item) => (
             <div flex items-start m="y-1 x-0.5">
-              <div class="w-14 h-6 leading-6 mr-2" text="c-lighter sm">
+              <div class="w-14 h-6 leading-6 mr-2" text="fg-light sm">
                 {formatDate(getPostDate(item.id), 1)}
               </div>
-              <a class="flex-1 !text-c" href={`/posts/${item.slug}`}>
+              <a class="flex-1 !text-fg" href={`/posts/${item.slug}`}>
                 {item.data.title}
               </a>
             </div>

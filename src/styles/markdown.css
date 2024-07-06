@@ -8,7 +8,7 @@
 }
 
 .prose a {
-  @apply no-underline hover:underline text-c-active font-normal;
+  @apply no-underline hover:underline text-primary font-normal;
 }
 
 .prose img,
@@ -17,15 +17,11 @@
 }
 
 .prose figure figcaption {
-  @apply text-sm text-c-light;
+  @apply text-sm text-fg-light;
 }
 
 .prose hr {
-  border-top: 1px solid #e5e7eb; /* border-c */
-}
-
-html.dark .prose hr {
-  border-top: 1px solid #4b5563; /* border-c */
+  border-top: 1px solid hsl(var(--border));
 }
 
 main:not(.post) a.header-anchor {
@@ -35,7 +31,7 @@ main:not(.post) a.header-anchor {
 /** Table **/
 
 .prose tr {
-  @apply border-t border-c-dark;
+  @apply border-t border-border;
 }
 
 .prose tr:last-child {
@@ -67,7 +63,7 @@ html.dark .prose div[class*="language-"] code span {
 }
 
 .prose div[class*="language-"] {
-  @apply relative my-2 border border-c-dark pt-6 rounded-md;
+  @apply relative my-2 border border-border pt-6 rounded-md;
 }
 
 .prose div[class*="language-"]::before {
@@ -76,7 +72,7 @@ html.dark .prose div[class*="language-"] code span {
 }
 
 .prose div[class*="language-"] > span.lang {
-  @apply absolute top-2.5 right-3 text-sm opacity-60;
+  @apply absolute top-2.5 right-3 text-sm opacity-75;
 }
 
 .prose div[class*="language-"] > p {
@@ -96,12 +92,12 @@ html.dark .prose div[class*="language-"] code span {
 }
 
 .prose div[class*="language-"] code > span[data-highlighted-line] {
-  @apply -mx-4 px-4 inline-block bg-slate-100;
+  @apply -mx-4 px-4 inline-block bg-bg-dark/70;
   width: calc(100% + 2 * 16px);
 }
 
 html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
-  @apply bg-slate-600;
+  @apply bg-bg-dark/70;
 }
 
 /** Inline code **/
@@ -117,7 +113,7 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 }
 
 .prose .custom-block.details {
-  @apply border-c-dark py-4;
+  @apply border-border py-4;
 }
 
 .prose .custom-block.details summary {
@@ -157,7 +153,7 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 }
 
 .prose .paper-block {
-  @apply flex py-3 space-x-5 lt-sm:space-x-0 border-t border-c-dark;
+  @apply flex py-3 gap-x-5 lt-sm:gap-x-0 border-t border-border;
 }
 
 .prose .paper-block .paper-images {
@@ -187,7 +183,7 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 /** Medium Zoom **/
 
 .medium-zoom-overlay {
-  @apply z-100 !bg-c;
+  @apply z-100 !bg-bg;
 }
 
 .medium-zoom-overlay ~ img {

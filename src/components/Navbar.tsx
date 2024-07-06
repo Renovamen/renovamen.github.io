@@ -10,8 +10,7 @@ export const Navbar: Component<{
   const [isFixed, setIsFixed] = createSignal(false);
   const [isVisible, setIsVisible] = createSignal(false);
 
-  // eslint-disable-next-line prefer-const
-  let navbar: HTMLElement | undefined = undefined;
+  const [navbar, setNavbar] = createSignal<HTMLDivElement>();
 
   onMount(() => {
     const { y, directions } = useScroll(document);
@@ -27,37 +26,37 @@ export const Navbar: Component<{
       } else if (directions.bottom) {
         // scrolling down
         setIsVisible(false);
-        if (navbar && y() > navbar.offsetHeight) setIsFixed(true);
+        if (y() > (navbar()?.offsetHeight ?? 0)) setIsFixed(true);
       }
     });
   });
 
   return (
     <header
-      ref={navbar}
-      class={`z-30 w-full h-14 hstack justify-between bg-c font-ui px-4 md:px-5 ${
-        isFixed() && "fixed -top-14 left-0 transition duration-300 border-b border-c"
+      ref={setNavbar}
+      class={`z-30 w-full h-14 hstack justify-between bg-bg font-ui px-4 md:px-5 ${
+        isFixed() && "fixed -top-14 left-0 transition duration-300 border-b border-border"
       } ${isVisible() && "translate-y-full shadow"} ${
         !isFixed() && !isVisible() && "absolute top-0 left-0"
       }`}
     >
-      <a font-bold text="c-light hover:c-dark" href="/">
+      <a font-bold text="fg-light hover:fg-dark" href="/">
         <span text-lg>hi@zxh</span>
-        <div i-fa6-solid:angle-right class="prompt inline-block" />
+        <div class="prompt i-fa6-solid:angle-right inline-block" />
         <span class="blink">_</span>
       </a>
 
-      <nav hstack space-x-4>
+      <nav hstack gap-x-4>
         <a nav-item href="/projects" aria-label="Projects">
           <div i-ph:rocket-launch-duotone class="md:hidden" />
-          <span class={`lt-md:hidden ${props.activePage === "projects" && "active"}`}>
+          <span class={`lt-md:hidden ${props.activePage === "projects" && "nav-active"}`}>
             Projects
           </span>
         </a>
 
         <a nav-item href="/posts" aria-label="Blog">
           <div i-majesticons:pencil-line class="md:hidden" />
-          <span class={`lt-md:hidden ${props.activePage === "posts" && "active"}`}>
+          <span class={`lt-md:hidden ${props.activePage === "posts" && "nav-active"}`}>
             Blog
           </span>
         </a>

@@ -1,5 +1,5 @@
 .post a.header-anchor {
-  @apply float-left ml-[-1.3em] text-[0.75em] opacity-0 text-c no-underline lt-sm:hidden;
+  @apply float-left ml-[-1.3em] text-[0.75em] opacity-0 text-fg no-underline lt-sm:hidden;
 }
 
 .post h2:hover .header-anchor,
@@ -16,7 +16,7 @@
 }
 
 .table-of-contents {
-  @apply fixed z-10 bottom-0 pt-28 pl-2 overflow-y-auto text-[0.8em] text-right lt-xl:(bg-c border-l border-c shadow);
+  @apply fixed z-10 bottom-0 pt-28 pb-2 pl-2 overflow-y-auto text-[0.8em] text-right lt-xl:(bg-bg border-l border-border shadow);
 }
 
 .table-of-contents,
@@ -30,7 +30,7 @@
 }
 
 .table-of-contents a {
-  @apply text-c;
+  @apply text-fg;
 }
 
 .table-of-contents li {

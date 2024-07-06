@@ -13,24 +13,43 @@ const DEFAULT_FONTS =
 
 export default defineConfig({
   shortcuts: [
-    ["flex-center", "flex items-center justify-center"],
-    ["hstack", "flex items-center"],
-    ["vstack", "hstack flex-col"],
-    ["border-c", "border-gray-200 dark:border-gray-600"],
-    ["border-c-dark", "border-gray-300 dark:border-gray-500"],
-    ["bg-c", "bg-white dark:bg-gray-700"],
-    ["text-c", "text-gray-800 dark:text-gray-200"],
-    ["text-c-light", "text-c opacity-85"],
-    ["text-c-lighter", "text-c opacity-50"],
-    ["text-c-dark", "text-black dark:text-white"],
-    ["text-c-active", "text-brand dark:text-blue-300"],
-    ["shadow-c", "shadow-gray-400 dark:shadow-gray-800/70"],
-    ["nav-item", "hstack space-x-1 text-c-light hover:text-c-dark"],
-    [
-      "btn",
-      "hstack space-x-1 rounded transition-colors decoration-none text-sm !text-c bg-gray-100/90 dark:bg-gray-50/10 hover:(!bg-gray-500 !text-white !no-underline)"
-    ],
-    ["prose-lg", "lg:text-lg max-w-content"]
+    {
+      "flex-center": "flex items-center justify-center",
+      hstack: "flex items-center",
+      vstack: "hstack flex-col",
+      "shadow-c": "shadow-neutral-400 dark:shadow-neutral-800",
+      "prose-lg": "lg:text-lg max-w-content",
+      "nav-item": "hstack gap-x-1 text-fg-light hover:text-fg-dark",
+      "nav-active": "underline decoration-wavy decoration underline-offset-4",
+      btn: "hstack gap-x-1 rounded transition-colors decoration-none text-sm !text-fg bg-bg-dark hover:(bg-neutral-500 !text-white !no-underline)",
+      "add-ring": "ring-offset-bg outline-none ring-2 ring-primary ring-offset-2",
+      "ring-when-focus": "focus-visible:add-ring"
+    }
+  ],
+  preflights: [
+    {
+      getCSS: () => `
+        :root {
+          --fg: 0 0% 20%;
+          --fg-light: 0 0% 35%;
+          --fg-dark: 0 0% 0%;
+          --bg: 0 0 100%;
+          --bg-dark: 0 0 92%;
+          --primary: 210 80% 45%;
+          --border: 0 0% 85%;
+        }
+
+        .dark {
+          --fg: 0 0% 85%;
+          --fg-light: 0 0% 75%;
+          --fg-dark: 0 0 100%;
+          --bg: 0 0% 17%;
+          --bg-dark: 0 0% 25%;
+          --primary: 210 70% 63%;
+          --border: 0 0% 35%;
+        }
+      `
+    }
   ],
   theme: {
     fontFamily: {
@@ -38,7 +57,13 @@ export default defineConfig({
       ui: DEFAULT_FONTS
     },
     colors: {
-      brand: "#1772d0"
+      fg: "hsl(var(--fg))",
+      "fg-light": "hsl(var(--fg-light))",
+      "fg-dark": "hsl(var(--fg-dark))",
+      bg: "hsl(var(--bg))",
+      "bg-dark": "hsl(var(--bg-dark))",
+      primary: "hsl(var(--primary))",
+      border: "hsl(var(--border))"
     },
     maxWidth: {
       content: "90ch"

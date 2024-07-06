@@ -2,13 +2,33 @@
 @import "./about.css";
 @import "./fonts.css";
 @import "./post.css";
-@import "./components.css";
 
-html,
-body {
-  @apply h-full m-0 p-0;
+* {
+  border-color: hsl(var(--border));
 }
 
-html.dark {
-  @apply bg-gray-700;
+body {
+  color: hsl(var(--fg));
+  background: hsl(var(--bg));
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Navbar */
+
+header .prompt {
+  vertical-align: -0.2em;
+  font-size: 0.85em;
+}
+
+header .blink {
+  animation: blinker 1s none infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

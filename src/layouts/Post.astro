@@ -65,7 +65,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
 >
   <div mt-6 mb-8>
     <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
-    <p text-c-lighter mt-2>
+    <p text-fg-light mt-2>
       {formatDate(getPostDate(post.id))} · {readingTime(post.body).minutes} min
       {
         tags?.length && (
@@ -74,7 +74,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
             <span i-uil:tag-alt text-sm />
             {tags.map((tag, i) => (
               <span>
-                <a href={tagURL + slugify(tag)} class="!text-c">
+                <a href={tagURL + slugify(tag)} class="!text-fg-light">
                   {tag}
                 </a>
                 {i !== tags.length - 1 && <span class="-ml-1.5">, </span>}
@@ -98,7 +98,7 @@ const lastUpdatedText = THEME.lastUpdatedText;
     </a>
     {
       lastUpdatedTime !== "Invalid Date" && (
-        <span md:text-right text-c-light>
+        <span md:text-right text-fg-light>
           <span class="i-ic:round-update size-4.5 mr-1" />
           {lastUpdatedText}
           {lastUpdatedTime}
@@ -109,17 +109,17 @@ const lastUpdatedText = THEME.lastUpdatedText;
 
   {
     (prevPost || nextPost) && (
-      <div class="flex justify-between mt-3 pt-3 text-[0.95em]" border="t c">
+      <div class="flex justify-between mt-3 pt-3 text-[0.95em]" border="t border">
         <span>
           {prevPost && (
-            <a href={`/posts/${prevPost.path}`} class="!text-c before:content-['←']">
+            <a href={`/posts/${prevPost.path}`} class="!text-fg before:content-['←']">
               {prevPost.title}
             </a>
           )}
         </span>
         <span text-right>
           {nextPost && (
-            <a href={`/posts/${nextPost.path}`} class="!text-c after:content-['→']">
+            <a href={`/posts/${nextPost.path}`} class="!text-fg after:content-['→']">
               {nextPost.title}
             </a>
           )}
