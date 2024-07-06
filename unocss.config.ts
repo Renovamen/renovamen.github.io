@@ -33,8 +33,8 @@ export default defineConfig({
           --fg: 0 0% 20%;
           --fg-light: 0 0% 35%;
           --fg-dark: 0 0% 0%;
-          --bg: 0 0 100%;
-          --bg-dark: 0 0 92%;
+          --bg: 0 0% 100%;
+          --bg-dark: 0 0% 92%;
           --primary: 210 80% 45%;
           --border: 0 0% 85%;
         }
@@ -42,7 +42,7 @@ export default defineConfig({
         .dark {
           --fg: 0 0% 85%;
           --fg-light: 0 0% 75%;
-          --fg-dark: 0 0 100%;
+          --fg-dark: 0 0% 100%;
           --bg: 0 0% 17%;
           --bg-dark: 0 0% 25%;
           --primary: 210 70% 63%;
