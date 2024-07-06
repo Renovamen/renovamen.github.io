@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
@@ -28,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -59,6 +60,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={canonicalURL} />
 
+    <!-- Color Theme -->
     <script>
       (function () {
         const prefersDark =
@@ -68,12 +70,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           document.documentElement.classList.toggle("dark", true);
       })();
     </script>
+
+    <!-- Page Transitions -->
+    <ViewTransitions />
   </head>
 
   <body class="font-sans">
     <main class={`${className} flex flex-col min-h-full px-4 pt-24 pb-4 md:pb-6`}>
       <Navbar client:load activePage={activePage} hasToc={hasToc} />
-      <div class="flex-1 mb-6">
+      <div class="flex-1 mb-6" transition:animate="fade">
         <div class="prose prose-lg mx-auto">
           <slot />
         </div>
