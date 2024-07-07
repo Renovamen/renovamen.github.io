@@ -1,21 +1,22 @@
 ---
+import { frontmatter, Content } from "@content/projects/index.md";
 import { SITE } from "@config";
 import type { ProjectItem } from "@types";
 import Project from "@components/Project";
-import Layout from "./Layout.astro";
+import Layout from "@layouts/Layout.astro";
 
-export interface Props {
-  frontmatter: {
-    projects: Record<string, ProjectItem[]>;
-  };
+interface Frontmatter {
+  projects: Record<string, ProjectItem[]>;
 }
 
-const { projects } = Astro.props.frontmatter;
+const { projects } = frontmatter as Frontmatter;
 ---
 
 <Layout title={`Projects - ${SITE.title}`} activePage="projects">
   <h1>Projects</h1>
-  <slot />
+
+  <Content />
+
   {
     Object.keys(projects).map((key) => (
       <>

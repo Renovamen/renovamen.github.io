@@ -1,22 +1,22 @@
 ---
+import { frontmatter, Content } from "@content/about/index.md";
 import { SITE } from "@config";
 import type { SocialItem } from "@types";
 import Links from "@components/Links.astro";
 import FlipImage from "@components/FlipImage.astro";
-import Layout from "./Layout.astro";
+import Layout from "@layouts/Layout.astro";
 
-export interface Props {
-  frontmatter: {
-    name: string;
-    subname?: string;
-    avatarFront?: string;
-    avatarBack?: string;
-    tltr?: string;
-    socials: SocialItem[];
-  };
+interface Frontmatter {
+  name: string;
+  subname?: string;
+  avatarFront?: string;
+  avatarBack?: string;
+  tltr?: string;
+  socials: SocialItem[];
 }
 
-const { name, subname, avatarFront, avatarBack, tltr, socials } = Astro.props.frontmatter;
+const { name, subname, avatarFront, avatarBack, tltr, socials } =
+  frontmatter as Frontmatter;
 ---
 
 <Layout class="about" title={`About - ${SITE.title}`}>
@@ -45,7 +45,7 @@ const { name, subname, avatarFront, avatarBack, tltr, socials } = Astro.props.fr
 
   <Links socials={socials} />
 
-  <slot />
+  <Content />
 </Layout>
 
 <script>

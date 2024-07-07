@@ -1,9 +1,8 @@
 ---
-layout: ../layouts/About.astro
 name: Xiaohan Zou
 subname: 邹笑寒
-avatarFront: img/avatar.jpg
-avatarBack: img/me.jpg
+avatarFront: /img/avatar.jpg
+avatarBack: /img/me.jpg
 tltr: I do machine learning by day and build things for the web by night.
 socials:
   - icon: i-academicons:cv

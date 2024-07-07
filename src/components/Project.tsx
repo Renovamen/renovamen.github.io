@@ -24,7 +24,7 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div flex-auto>
+      <div flex-auto h-full>
         <div class="hstack flex-wrap">
           <div whitespace-nowrap mr-3>
             {props.project.name}

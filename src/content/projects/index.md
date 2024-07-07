@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/Projects.astro
 projects:
   Websites / Online Tools:
     - name: Portfolio
