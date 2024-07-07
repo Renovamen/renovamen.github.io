@@ -17,12 +17,15 @@ export default defineConfig({
       "flex-center": "flex items-center justify-center",
       hstack: "flex items-center",
       vstack: "hstack flex-col",
-      "shadow-c": "shadow-neutral-400 dark:shadow-neutral-800",
       "prose-lg": "lg:text-lg max-w-content",
       "nav-item": "hstack gap-x-1 text-fg-light hover:text-fg-dark",
       "nav-active": "underline decoration-wavy decoration underline-offset-4",
       btn: "hstack gap-x-1 rounded transition-colors decoration-none text-sm !text-fg bg-bg-dark hover:(bg-neutral-500 !text-white !no-underline)",
-      "add-ring": "ring-offset-bg outline-none ring-2 ring-primary ring-offset-2"
+      "add-ring": "ring-offset-bg outline-none ring-2 ring-primary ring-offset-2",
+      "theme-icon": "absolute transition-transform",
+      "theme-icon-cur": "scale-100 rotate-0",
+      "theme-icon-prev": "scale-0 -rotate-90",
+      "theme-icon-next": "scale-0 rotate-90"
     }
   ],
   preflights: [
@@ -57,6 +60,22 @@ export default defineConfig({
           background: hsl(var(--bg));
         }
       `
+    }
+  ],
+  variants: [
+    (matcher) => {
+      const modes = ["theme-light:", "theme-auto:", "theme-dark:"];
+
+      for (const mode of modes) {
+        if (matcher.startsWith(mode)) {
+          return {
+            matcher: matcher.slice(mode.length),
+            selector: (s) => `html.${mode.slice(0, -1)} ${s}`
+          };
+        }
+      }
+
+      return matcher;
     }
   ],
   theme: {
@@ -94,6 +113,5 @@ export default defineConfig({
     }),
     presetTypography()
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: "prose prose-lg mx-auto".split(" ")
+  transformers: [transformerDirectives(), transformerVariantGroup()]
 });

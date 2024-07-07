@@ -1,12 +1,12 @@
 import { onMount, createEffect, createSignal, type Component } from "solid-js";
-import { useScroll, useDark } from "solidjs-use";
+import { useScroll } from "solidjs-use";
+import ToggleDark from "@components/ToggleDark";
 import ToggleToc from "@components/ToggleToc";
 
 export const Navbar: Component<{
   activePage?: string;
   hasToc?: boolean;
 }> = (props) => {
-  const [isDark, setDark] = useDark();
   const [isFixed, setIsFixed] = createSignal(false);
   const [isVisible, setIsVisible] = createSignal(false);
 
@@ -65,9 +65,7 @@ export const Navbar: Component<{
           <span i-uil:search />
         </a>
 
-        <button nav-item aria-label="Toggle dark" onClick={() => setDark(!isDark())}>
-          <div i="carbon-sun dark:carbon-moon" />
-        </button>
+        <ToggleDark />
 
         {props.hasToc && <ToggleToc />}
       </nav>
