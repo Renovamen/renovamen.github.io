@@ -16,7 +16,7 @@
 }
 
 .table-of-contents {
-  @apply fixed z-10 bottom-0 pt-28 pb-2 pl-2 overflow-y-auto text-[0.8em] text-right lt-xl:(bg-bg border-l border-border shadow);
+  @apply fixed z-10 bottom-0 pt-28 pb-2 pl-2 overflow-y-auto text-[0.8em] text-right lt-xl:(bg-bg border-l shadow);
 }
 
 .table-of-contents,

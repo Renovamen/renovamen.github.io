@@ -31,7 +31,7 @@ main:not(.post) a.header-anchor {
 /** Table **/
 
 .prose tr {
-  @apply border-t border-border;
+  @apply border-t;
 }
 
 .prose tr:last-child {
@@ -63,7 +63,7 @@ html.dark .prose div[class*="language-"] code span {
 }
 
 .prose div[class*="language-"] {
-  @apply relative my-2 border border-border pt-6 rounded-md;
+  @apply relative my-2 border pt-6 rounded-md;
 }
 
 .prose div[class*="language-"]::before {
@@ -113,7 +113,7 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 }
 
 .prose .custom-block.details {
-  @apply border-border py-4;
+  @apply py-4;
 }
 
 .prose .custom-block.details summary {
@@ -153,7 +153,7 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 }
 
 .prose .paper-block {
-  @apply flex py-3 gap-x-5 lt-sm:gap-x-0 border-t border-border;
+  @apply flex py-3 gap-x-5 lt-sm:gap-x-0 border-t;
 }
 
 .prose .paper-block .paper-images {

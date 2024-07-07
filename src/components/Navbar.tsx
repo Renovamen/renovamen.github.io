@@ -35,12 +35,12 @@ export const Navbar: Component<{
     <header
       ref={setNavbar}
       class={`z-30 w-full h-14 hstack justify-between bg-bg font-ui px-4 md:px-5 ${
-        isFixed() && "fixed -top-14 left-0 transition duration-300 border-b border-border"
+        isFixed() && "fixed -top-14 left-0 transition duration-300 border-b"
       } ${isVisible() && "translate-y-full shadow"} ${
         !isFixed() && !isVisible() && "absolute top-0 left-0"
       }`}
     >
-      <a font-bold text="fg-light hover:fg-dark" href="/">
+      <a class="font-bold text-fg-light hover:text-fg-dark" href="/">
         <span text-lg>hi@zxh</span>
         <div class="prompt i-fa6-solid:angle-right inline-block" />
         <span class="blink">_</span>

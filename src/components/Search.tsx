@@ -56,7 +56,7 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
   return (
     <>
       <div
-        class={`group h-14 w-full hstack border border-border rounded ${isFocus() && "focus add-ring"}`}
+        class={`group h-14 w-full hstack border rounded ${isFocus() && "focus add-ring"}`}
       >
         <span w-12 h-full flex-center>
           <span class="i-uil:search size-5" text="fg-light group-[.focus]:primary" />

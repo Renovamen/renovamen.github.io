@@ -47,6 +47,15 @@ export default defineConfig({
           --primary: 210 70% 63%;
           --border: 0 0% 35%;
         }
+
+        * {
+          border-color: hsl(var(--border));
+        }
+
+        body {
+          color: hsl(var(--fg));
+          background: hsl(var(--bg));
+        }
       `
     }
   ],
@@ -56,11 +65,15 @@ export default defineConfig({
       ui: DEFAULT_FONTS
     },
     colors: {
-      fg: "hsl(var(--fg))",
-      "fg-light": "hsl(var(--fg-light))",
-      "fg-dark": "hsl(var(--fg-dark))",
-      bg: "hsl(var(--bg))",
-      "bg-dark": "hsl(var(--bg-dark))",
+      fg: {
+        DEFAULT: "hsl(var(--fg))",
+        light: "hsl(var(--fg-light))",
+        dark: "hsl(var(--fg-dark))"
+      },
+      bg: {
+        DEFAULT: "hsl(var(--bg))",
+        dark: "hsl(var(--bg-dark))"
+      },
       primary: "hsl(var(--primary))",
       border: "hsl(var(--border))"
     },
