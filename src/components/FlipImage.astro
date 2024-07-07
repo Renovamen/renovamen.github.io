@@ -8,33 +8,14 @@ export interface Props {
 const { front, back = front, alt = "" } = Astro.props;
 ---
 
-<div class="flip-image perspective-600">
-  <div class="flip-image-card">
-    <img class="front no-zoom" src={front} alt={alt} />
-    <img class="back no-zoom" src={back} alt={alt} />
-  </div>
+<div class="group relative size-full perspective-600">
+  <img class="no-zoom group-hover:rotate-y-180" src={front} alt={alt} />
+  <img class="no-zoom -rotate-y-180 group-hover:rotate-y-0" src={back} alt={alt} />
 </div>
 
 <style scoped>
-  .flip-image-card {
-    @apply duration-800;
-    transform-style: preserve-3d;
-  }
-
-  img {
-    @apply absolute !my-0 rounded-md shadow shadow-c;
-    backface-visibility: hidden;
-  }
-
-  img.front {
-    @apply z-2 rotate-y-0;
-  }
-
-  img.back {
-    @apply z-1 rotate-y-180;
-  }
-
-  .flip-image:hover .flip-image-card {
-    @apply rotate-y-180;
-  }
+img {
+  @apply absolute !my-0 rounded-md shadow shadow-c transition-transform duration-700;
+  backface-visibility: hidden;
+}
 </style>
