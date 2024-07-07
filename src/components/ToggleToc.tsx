@@ -11,9 +11,8 @@ export const ToggleToc: Component = () => {
   };
 
   const handleClass = () => {
-    const html = document.querySelector("html") as HTMLElement;
-    if (isTocOpen()) html.classList.add("toc-open");
-    else html.classList.remove("toc-open");
+    if (isTocOpen()) document.documentElement.classList.add("toc-open");
+    else document.documentElement.classList.remove("toc-open");
   };
 
   onMount(handleClass);

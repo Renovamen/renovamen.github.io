@@ -1,4 +1,5 @@
-import { onMount, createSignal, type Component } from "solid-js";
+import { onMount, createSignal, Show, Switch, Match, For } from "solid-js";
+import type { Component } from "solid-js";
 import { OhVueIcons, OhMyCV } from "./icons";
 import type { ProjectItem } from "@types";
 
@@ -29,29 +30,31 @@ export const Project: Component<{ project: ProjectItem }> = (props) => {
           <div whitespace-nowrap mr-3>
             {props.project.name}
           </div>
-          <div hstack space-x-2>
-            {props.project.tech &&
-              props.project.tech.map((icon) => <span class={`text-xs ${icon}`} />)}
+          <div hstack gap-x-2>
+            <For each={props.project.tech}>
+              {(icon) => <span class={`text-xs ${icon}`} />}
+            </For>
 
-            {star() && (
+            <Show when={star()}>
               <span hstack gap-x-1>
                 <span i-noto-v1:star text-xs />
                 <span class="text-sm mt-0.5">{star()}</span>
               </span>
-            )}
+            </Show>
           </div>
         </div>
         <div mt-1 text="sm fg-light" innerHTML={props.project.desc} />
       </div>
 
       <div pt-2 text="3xl fg-light">
-        {props.project.icon === "oh-vue-icons" ? (
-          <OhVueIcons />
-        ) : props.project.icon === "oh-my-cv" ? (
-          <OhMyCV />
-        ) : (
-          <div class={props.project.icon || "i-carbon-unknown"} />
-        )}
+        <Switch fallback={<div class={props.project.icon || "i-carbon-unknown"} />}>
+          <Match when={props.project.icon === "oh-vue-icons"}>
+            <OhVueIcons />
+          </Match>
+          <Match when={props.project.icon === "oh-my-cv"}>
+            <OhMyCV />
+          </Match>
+        </Switch>
       </div>
     </a>
   );

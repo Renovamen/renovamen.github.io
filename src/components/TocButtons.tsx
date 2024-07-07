@@ -1,4 +1,4 @@
-import { createSignal, type Component } from "solid-js";
+import { createSignal, Show, type Component } from "solid-js";
 
 export const TocButtons: Component<{ prev?: string; next?: string }> = (props) => {
   const tips = ["Last Post", "Next Post", "Back to Top", "Print"];
@@ -10,12 +10,13 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
   return (
     <div class="table-of-contents-btns fixed z-20 pl-2">
       <div hstack justify-end pt-18 pb-2 bg-bg>
-        {tipId && (
+        <Show when={tipId}>
           <span text="sm fg-light" italic mr-3>
             {tips[tipId() - 1]}
           </span>
-        )}
-        {props.prev && (
+        </Show>
+
+        <Show when={props.prev}>
           <a
             class="flex-center text-fg! hover:opacity-75"
             href={`/posts/${props.prev}`}
@@ -24,8 +25,9 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
           >
             <span i-ic:round-keyboard-arrow-left text-xl />
           </a>
-        )}
-        {props.next && (
+        </Show>
+
+        <Show when={props.next}>
           <a
             href={`/posts/${props.next}`}
             class="flex-center text-fg! hover:opacity-75"
@@ -34,7 +36,8 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
           >
             <span i-ic:round-keyboard-arrow-right text-xl />
           </a>
-        )}
+        </Show>
+
         <button
           onClick={scrollTop}
           flex-center
@@ -44,6 +47,7 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
         >
           <span i-ic:round-keyboard-arrow-up text-xl />
         </button>
+
         <button
           onClick={print}
           class="flex-center hover:opacity-75 ml-1.5"

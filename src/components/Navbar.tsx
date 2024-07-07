@@ -1,4 +1,4 @@
-import { onMount, createEffect, createSignal, type Component } from "solid-js";
+import { onMount, createEffect, createSignal, Show, type Component } from "solid-js";
 import { useScroll } from "solidjs-use";
 import ToggleDark from "@components/ToggleDark";
 import ToggleToc from "@components/ToggleToc";
@@ -67,7 +67,9 @@ export const Navbar: Component<{
 
         <ToggleDark />
 
-        {props.hasToc && <ToggleToc />}
+        <Show when={props.hasToc}>
+          <ToggleToc />
+        </Show>
       </nav>
     </header>
   );

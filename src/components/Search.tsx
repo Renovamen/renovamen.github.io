@@ -1,4 +1,4 @@
-import { onMount, createSignal, createEffect, createMemo, For } from "solid-js";
+import { onMount, createSignal, createEffect, createMemo, For, Show } from "solid-js";
 import type { Component } from "solid-js";
 import Fuse from "fuse.js";
 
@@ -18,7 +18,7 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
     threshold: 0.5
   });
 
-  const [isFocus, setIsFocus] = createSignal(true);
+  const [isFocus, setIsFocus] = createSignal(false);
   const [searchText, setSearchText] = createSignal("");
   const searchResults = createMemo(() =>
     searchText().length > 1 ? fuse.search(searchText()) : []
@@ -31,15 +31,18 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
     const searchUrl = new URLSearchParams(window.location.search);
     const searchStr = searchUrl.get("q");
 
-    if (searchStr) {
-      setSearchText(searchStr);
+    if (searchStr) setSearchText(searchStr);
 
-      // Put focus cursor at the end of the string
-      setTimeout(() => {
-        const inputEl = input();
-        if (inputEl) inputEl.selectionStart = inputEl.selectionEnd = searchStr.length;
-      }, 50);
-    }
+    // Put focus cursor at the end of the string
+    setTimeout(() => {
+      const inputEl = input();
+
+      if (inputEl) {
+        inputEl.focus();
+        inputEl.selectionStart = inputEl.selectionEnd = searchStr?.length || 0;
+        setIsFocus(true);
+      }
+    }, 50);
   });
 
   createEffect(() => {
@@ -75,12 +78,14 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
           onBlur={() => setIsFocus(false)}
         />
       </div>
-      {searchText().length > 1 && (
+
+      <Show when={searchText().length > 1}>
         <div mt-8 text-fg-light>
           Found {searchResults().length}
           {searchResults().length === 1 ? " result" : " results"} for "{searchText()}"
         </div>
-      )}
+      </Show>
+
       <ul p-0>
         <For each={searchResults()}>
           {({ item }) => (
