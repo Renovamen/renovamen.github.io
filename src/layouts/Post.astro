@@ -64,7 +64,10 @@ const lastUpdatedText = THEME.lastUpdatedText;
   activePage="posts"
 >
   <div mt-6 mb-8>
-    <h1 text-4xl font-bold leading-12 my-0>{title}</h1>
+    <h1 class="text-4xl font-bold leading-12 my-0" transition:name={post.slug}>
+      {title}
+    </h1>
+
     <p text-fg-light mt-2>
       {formatDate(getPostDate(post.id))} · {readingTime(post.body).minutes} min
       {
