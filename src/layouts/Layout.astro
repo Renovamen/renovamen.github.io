@@ -60,17 +60,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={canonicalURL} />
 
-    <!-- Color Theme -->
-    <script>
-      (function () {
-        const prefersDark =
-          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const setting = localStorage.getItem("solidjs-use-color-scheme") || "auto";
-        if (setting === "dark" || (prefersDark && setting !== "light"))
-          document.documentElement.classList.toggle("dark", true);
-      })();
-    </script>
-
     <!-- Page Transitions -->
     <ViewTransitions />
   </head>
@@ -85,5 +74,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       </div>
       <Footer />
     </main>
+    <script>
+      // Astro's View Transitions feature deletes styles and class names injected by
+      // medium-zoom when navigating to a new page, which causes the zoom effect to
+      // disappear after page transition.
+      // So here I have to import css and js files separately and re-attach the zoom effect.
+      import mediumZoom from "medium-zoom/dist/pure";
+      import "medium-zoom/dist/style.css";
+
+      const zoom = mediumZoom();
+
+      document.addEventListener("astro:page-load", () => {
+        zoom.attach(":not(a) > img:not(.no-zoom)");
+      });
+    </script>
   </body>
 </html>
