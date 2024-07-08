@@ -8,7 +8,7 @@
 }
 
 .prose a {
-  @apply no-underline hover:underline text-primary font-normal;
+  @apply no-underline hover:underline underline-offset-4 text-primary font-normal;
 }
 
 .prose img,

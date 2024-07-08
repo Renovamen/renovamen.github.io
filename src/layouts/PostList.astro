@@ -39,13 +39,12 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
   </span>
 
   {
-    tags.map((tag) => (
+    tags.map((t) => (
       <span class="mr-1.5 -space-x-0.5">
         <span class="i-uil:tag-alt" text="sm fg-light" />
-        <a href={tagURL + slugify(tag)} class="!text-fg-light">
-          {tag}
-        </a>
-        <sup>{numPostsPerTag[tag]}</sup>
+        {/* eslint-disable-next-line format/prettier */}
+        <a href={tagURL + slugify(t)} class={`!text-fg-light ${t === tag && '!underline !decoration-wavy'}`}>{t}</a>
+        <sup>{numPostsPerTag[t]}</sup>
       </span>
     ))
   }
@@ -63,7 +62,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
                 {formatDate(getPostDate(item.id), 1)}
               </div>
               <a
-                class="flex-1 !text-fg"
+                class="flex-1 !text-fg underline-offset-4"
                 href={`/posts/${item.slug}`}
                 transition:name={item.slug}
               >
