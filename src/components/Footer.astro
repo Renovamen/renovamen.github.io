@@ -14,11 +14,18 @@
       aria-label="Source code"
       target="_blank"
       rel="noopener noreferrer"
+      nav-item
     >
       <div i-lucide:code-2></div>
       <span lt-sm:hidden>Code</span>
     </a>
-    <a href="/rss.xml" aria-label="RSS" target="_blank" rel="noopener noreferrer">
+    <a
+      href="/rss.xml"
+      aria-label="RSS"
+      target="_blank"
+      rel="noopener noreferrer"
+      nav-item
+    >
       <div i-heroicons:rss-20-solid></div>
       <span lt-sm:hidden>RSS</span>
     </a>
@@ -27,15 +34,10 @@
       aria-label="Sitemap"
       target="_blank"
       rel="noopener noreferrer"
+      nav-item
     >
       <div i-bx:map-alt></div>
       <span lt-sm:hidden>Sitemap</span>
     </a>
   </span>
 </footer>
-
-<style scoped>
-  footer a {
-    @apply hstack gap-x-1 text-fg-light hover:(text-fg-dark underline);
-  }
-</style>
