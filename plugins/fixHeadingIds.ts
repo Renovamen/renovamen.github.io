@@ -4,16 +4,17 @@ import type { RehypePlugin } from "@astrojs/markdown-remark";
 export const rehypeFixHeadingIds = (): ReturnType<RehypePlugin> => {
   return (tree) => {
     visit(tree, "element", (node) => {
-      const { tagName } = node;
-      if (tagName[0] !== "h") return;
+      const { tagName, properties } = node;
 
-      const [, level] = tagName.match(/h([0-6])/) ?? [];
-      if (!level) return;
+      if (
+        !/^h[1-6]$/.test(tagName) ||
+        !properties?.id ||
+        typeof properties.id !== "string"
+      )
+        return;
 
-      if (!node.properties?.id || typeof node.properties.id !== "string") return;
-
-      // ensure it doesn't start with a number
-      node.properties.id = node.properties.id.replace(/^(\d)/, "_$1");
+      // Ensure the id doesn't start with a number
+      properties.id = properties.id.replace(/^(\d)/, "_$1");
     });
   };
 };

@@ -3,21 +3,17 @@ import type * as mdast from "mdast";
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 
 const getImages = (info: string) => {
-  if (info !== "") {
-    const images =
-      "<div>" +
-      info
-        .split(" ")
-        .map((src) => {
-          const alt = src.match(/(?=[^]+$).*(?=\.)/);
-          return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
-        })
-        .join("") +
-      "</div>";
-    return `<div class="paper-images">${images}</div>`;
-  } else {
-    return `<div class="paper-images no-image"></div>`;
-  }
+  if (!info) return `<div class="paper-images no-image"></div>`;
+
+  const images = info
+    .split(" ")
+    .map((src) => {
+      const alt = src.substring(src.lastIndexOf("/") + 1, src.lastIndexOf("."));
+      return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
+    })
+    .join("");
+
+  return `<div class="paper-images"><div>${images}</div></div>`;
 };
 
 export const remarkContainer = (): ReturnType<RemarkPlugin> => {
@@ -67,17 +63,15 @@ export const remarkContainer = (): ReturnType<RemarkPlugin> => {
 
         const images = getImages(info);
 
-        const prev: mdast.Html = {
+        children.unshift({
           type: "html",
           value: `${images}<div class="paper-details">`
-        };
-        const next: mdast.Html = {
+        });
+
+        children.push({
           type: "html",
           value: "</div>"
-        };
-
-        children.unshift(prev);
-        children.push(next);
+        });
       }
     });
   };

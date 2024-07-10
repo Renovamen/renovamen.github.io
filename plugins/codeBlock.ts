@@ -9,7 +9,7 @@ export const remarkCodeBlock = (): ReturnType<RemarkPlugin> => {
 
       const lang = (node.lang ?? "").trim();
 
-      const prev: mdast.Paragraph = {
+      const start: mdast.Paragraph = {
         type: "paragraph",
         children: [
           {
@@ -26,13 +26,13 @@ export const remarkCodeBlock = (): ReturnType<RemarkPlugin> => {
           }
         ]
       };
-      const next: mdast.Html = {
+      const end: mdast.Html = {
         type: "html",
         value: "</div>"
       };
 
-      parent.children.splice(index, 0, prev);
-      parent.children.splice(index + 2, 0, next);
+      parent.children.splice(index, 0, start);
+      parent.children.splice(index + 2, 0, end);
 
       return index + 3;
     });

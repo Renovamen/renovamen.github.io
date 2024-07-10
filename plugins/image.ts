@@ -11,43 +11,31 @@ export const remarkImage = (): ReturnType<RemarkPlugin> => {
       if (!parent || typeof index !== "number") return;
 
       const content = (parent.children[index + 2] as mdast.Html)?.value;
-      const match = content ? content.match(imageRE) : null;
+      const match = content?.match(imageRE);
 
       if (match) {
-        const image = match.groups?.width
-          ? `<img src="${node.url}" alt="${node.alt}" width="${match.groups.width}" />`
-          : `<img src="${node.url}" alt="${node.alt}" />`;
+        const { width, desc } = match.groups || {};
+        const image = `<img src="${node.url}" alt="${node.alt}"${width ? ` width="${width}"` : ""} />`;
 
-        const figNodes: mdast.RootContent[] = [
+        const figNodes = [
           {
             type: "html",
             value: `<figure alt="${node.alt}">${image}`
           },
+          ...(desc
+            ? [
+                { type: "html", value: "<figcaption>" },
+                ...fromMarkdown(desc).children,
+                { type: "html", value: "</figcaption>" }
+              ]
+            : []),
           {
             type: "html",
             value: "</figure>"
           }
-        ];
+        ] as mdast.RootContent[];
 
-        if (match.groups?.desc) {
-          const capNodes: mdast.RootContent[] = [
-            {
-              type: "html",
-              value: "<figcaption>"
-            },
-            ...fromMarkdown(match.groups.desc).children,
-            {
-              type: "html",
-              value: "</figcaption>"
-            }
-          ];
-
-          figNodes.splice(1, 0, ...capNodes);
-        }
-
-        parent.children.splice(index, 3);
-        parent.children.splice(index, 0, ...figNodes);
-
+        parent.children.splice(index, 3, ...figNodes);
         return index + figNodes.length;
       }
     });
