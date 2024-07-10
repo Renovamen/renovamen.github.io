@@ -3,6 +3,10 @@
 @import "./fonts.css";
 @import "./post.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
 }

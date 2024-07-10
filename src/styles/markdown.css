@@ -121,35 +121,35 @@ html.dark .prose div[class*="language-"] code > span[data-highlighted-line] {
 }
 
 .prose .custom-block.info {
-  @apply border-blue-600 dark:border-sky-400;
+  @apply border-info;
 }
 
 .prose .custom-block.info .custom-block-title {
-  @apply text-blue-600 dark:text-sky-400;
+  @apply text-info;
 }
 
 .prose .custom-block.tip {
-  @apply border-green-600 dark:border-lime-500;
+  @apply border-success;
 }
 
 .prose .custom-block.tip .custom-block-title {
-  @apply text-green-600 dark:text-lime-500;
+  @apply text-success;
 }
 
 .prose .custom-block.warning {
-  @apply border-amber-600 dark:border-amber-500;
+  @apply border-warning;
 }
 
 .prose .custom-block.warning .custom-block-title {
-  @apply text-amber-600 dark:text-amber-500;
+  @apply text-warning;
 }
 
 .prose .custom-block.danger {
-  @apply border-red-600 dark:border-red-400;
+  @apply border-danger;
 }
 
 .prose .custom-block.danger .custom-block-title {
-  @apply text-red-600 dark:text-red-400;
+  @apply text-danger;
 }
 
 .prose .paper-block {

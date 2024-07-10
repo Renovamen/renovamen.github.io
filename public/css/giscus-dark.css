@@ -70,8 +70,8 @@ main {
   --color-canvas-subtle: hsl(0, 0%, 20%);
   --color-border-default: hsl(0, 0%, 35%);
   --color-border-muted: hsl(0, 0%, 40%);
-  --color-neutral-muted: rgb(110 118 129 / 5%);
-  --color-neutral-subtle: rgb(110 118 129 / 10%);
+  --color-neutral-muted: rgb(110 118 129 / 15%);
+  --color-neutral-subtle: rgb(110 118 129 / 20%);
   --color-accent-fg: #58a6ff;
   --color-accent-emphasis: #1f6feb;
   --color-accent-muted: rgb(56 139 253 / 40%);

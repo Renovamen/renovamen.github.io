@@ -31,15 +31,20 @@ export default defineConfig({
   ],
   preflights: [
     {
-      getCSS: () => `
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      getCSS: ({ theme }: { theme: any }) => `
         :root {
           --fg: 0 0% 20%;
           --fg-light: 0 0% 35%;
           --fg-dark: 0 0% 0%;
           --bg: 0 0% 100%;
           --bg-dark: 0 0% 92%;
-          --primary: 210 80% 45%;
           --border: 0 0% 85%;
+          --primary: 210 80% 45%;
+          --info: ${theme.colors.blue[600]};
+          --success: ${theme.colors.green[700]};
+          --warning: ${theme.colors.amber[600]};
+          --danger: ${theme.colors.red[600]};
         }
 
         .dark {
@@ -48,8 +53,12 @@ export default defineConfig({
           --fg-dark: 0 0% 100%;
           --bg: 0 0% 17%;
           --bg-dark: 0 0% 25%;
-          --primary: 210 70% 63%;
           --border: 0 0% 35%;
+          --primary: 210 70% 63%;
+          --info: ${theme.colors.sky[500]};
+          --success: ${theme.colors.green[500]};
+          --warning: ${theme.colors.amber[500]};
+          --danger: ${theme.colors.red[500]};
         }
 
         * {
@@ -94,8 +103,12 @@ export default defineConfig({
         DEFAULT: "hsl(var(--bg))",
         dark: "hsl(var(--bg-dark))"
       },
+      border: "hsl(var(--border))",
       primary: "hsl(var(--primary))",
-      border: "hsl(var(--border))"
+      info: "var(--info)",
+      success: "var(--success)",
+      warning: "var(--warning)",
+      danger: "var(--danger)"
     },
     maxWidth: {
       content: "90ch"

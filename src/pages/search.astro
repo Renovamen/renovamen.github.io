@@ -13,7 +13,7 @@ const searchList = posts.map(({ id, slug, body, data }) => ({
 }));
 ---
 
-<Layout title={`Search - ${SITE.title}`}>
+<Layout title={`Search - ${SITE.title}`} activePage="search">
   <h1 pb-2>Search</h1>
   <SearchComponent client:load searchList={searchList} />
 </Layout>

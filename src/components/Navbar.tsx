@@ -65,7 +65,11 @@ export const Navbar: Component<{
           <span lt-md:hidden>Blog</span>
         </a>
 
-        <a nav-item href="/search" aria-label="Search">
+        <a
+          class={`nav-item ${props.activePage === "search" && "nav-active"}`}
+          href="/search"
+          aria-label="Search"
+        >
           <span i-uil:search />
         </a>
 
