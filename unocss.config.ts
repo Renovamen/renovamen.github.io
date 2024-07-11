@@ -23,7 +23,7 @@ export default defineConfig({
       "nav-active": "underline decoration-wavy text-fg-dark",
       btn: "hstack gap-x-1 rounded transition-colors decoration-none text-sm !text-fg bg-bg-dark hover:(bg-neutral-500 !text-white !no-underline)",
       "add-ring": "ring-offset-bg outline-none ring-2 ring-primary ring-offset-2",
-      "theme-icon": "absolute transition-transform",
+      "theme-icon": "absolute transition-transform duration-500",
       "theme-icon-cur": "scale-100 rotate-0",
       "theme-icon-prev": "scale-0 -rotate-90",
       "theme-icon-next": "scale-0 rotate-90"

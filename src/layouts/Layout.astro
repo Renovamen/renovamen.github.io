@@ -60,6 +60,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={canonicalURL} />
 
+    <!-- Color Theme -->
+    <script>
+      const checkTheme = () => {
+        const prefersDark =
+          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const setting = localStorage.getItem("solidjs-use-color-scheme") || "auto";
+
+        document.documentElement.classList.toggle(`theme-${setting}`, true);
+
+        if (setting === "dark" || (setting !== "light" && prefersDark))
+          document.documentElement.classList.toggle("dark", true);
+      };
+
+      document.addEventListener("astro:after-swap", checkTheme);
+      checkTheme();
+    </script>
+
     <!-- Page Transitions -->
     <ViewTransitions />
   </head>
