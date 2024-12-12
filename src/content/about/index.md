@@ -1,8 +1,8 @@
 ---
 name: Xiaohan Zou
 subname: 邹笑寒
-avatarFront: /img/avatar.jpg
-avatarBack: /img/me.jpg
+avatarFront: /img/me.jpg
+avatarBack: /img/avatar.jpg
 tltr: I do machine learning by day and build things for the web by night.
 socials:
   - icon: i-academicons:cv
@@ -30,20 +30,11 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/). My current research interests primarily focus on understanding and enhancing the generalizability, efficiency, robustness, and other crucial aspects of machine learning. I am also interested in large multimodal models.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/). My current research focuses on trustworthiness and safety in multimodal foundation models. I aim to enhance multimodal AI systems to be robust, adaptable, and efficient in practical environments.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
 
 By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
-
-
-## Education
-
-|                                                                                                                       |           |
-| --------------------------------------------------------------------------------------------------------------------- | --------- |
-| **Ph.D. in Computer Science and Engineering**, Pennsylvania State University                                          | 2023      |
-| **M.S. in Computer Science**, Boston University                                                                       | 2021-2023 |
-| **B.Eng. in Software Engineering**, Tongji University <p>Thesis: _Food Image Aesthetic Assessment and Captioning_</p> | 2016-2020 |
 
 
 ## Publications <span text-base>(also see <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
@@ -53,7 +44,7 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 
 Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
-Under review
+In Submission, 2024
 
 [paper](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
 :::
@@ -121,6 +112,4 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
 - 🌭 My dream: `while(sleeping){money++;}`
 
-- 🕹️ Currently interested in *Minecraft* and *Monster Hunter: World*
-
-- 📜 大概率更新不及时的[中文简历](/files/cv/cn.pdf)
+- 🕹️ Currently interested in *No Man's Sky* and *Minecraft*
