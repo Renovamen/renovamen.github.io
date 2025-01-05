@@ -63,8 +63,8 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
               </div>
               <a
                 class="flex-1 !text-fg underline-offset-4"
-                href={`/posts/${item.slug}`}
-                transition:name={item.slug}
+                href={`/posts/${item.id}`}
+                transition:name={item.id}
               >
                 {item.data.title}
               </a>

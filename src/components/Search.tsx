@@ -3,7 +3,7 @@ import type { Component } from "solid-js";
 import Fuse from "fuse.js";
 
 export type SearchItem = {
-  slug: string;
+  id: string;
   title: string;
   date: string;
   excerpt: string;
@@ -94,7 +94,7 @@ export const Search: Component<{ searchList: SearchItem[] }> = (props) => {
                 <span class="w-16 mt-0.5" text="sm fg-light">
                   {item.date}
                 </span>
-                <a href={`/posts/${item.slug}`}>{item.title}</a>
+                <a href={`/posts/${item.id}`}>{item.title}</a>
               </p>
               <p pl-16 my-1 text="sm fg-light">
                 {item.excerpt}...

@@ -5,11 +5,11 @@ import Layout from "@layouts/Layout.astro";
 import SearchComponent from "@components/Search";
 
 const posts = await getPosts();
-const searchList = posts.map(({ id, slug, body, data }) => ({
-  slug,
+const searchList = posts.map(({ id, body, data }) => ({
+  id,
   title: data.title,
   date: formatDate(getPostDate(id), 2),
-  excerpt: body.substring(0, 100).replace("## toc", "")
+  excerpt: (body ?? "").substring(0, 100).replace("## toc", "")
 }));
 ---
 

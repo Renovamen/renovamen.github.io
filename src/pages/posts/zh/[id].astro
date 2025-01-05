@@ -7,13 +7,13 @@ export interface Props {
   post: CollectionEntry<"blog">;
 }
 
-const { post } = Astro.props;
-
 export const getStaticPaths = async () =>
-  (await getPosts("en")).map((post) => ({
-    params: { slug: post.slug },
+  (await getPosts("zh")).map((post) => ({
+    params: { id: post.id.split("/")[1] },
     props: { post }
   }));
+
+const { post } = Astro.props;
 ---
 
-<Post post={post} lang="en" />
+<Post post={post} lang="zh" />

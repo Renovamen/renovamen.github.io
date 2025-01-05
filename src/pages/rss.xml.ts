@@ -11,7 +11,7 @@ export async function GET() {
     description: SITE.desc,
     site: SITE.website,
     items: posts.map((item) => ({
-      link: `posts/${item.slug}`,
+      link: `posts/${item.id}`,
       title: item.data.title,
       pubDate: new Date(getPostDate(item.id))
     }))
