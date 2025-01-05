@@ -30,9 +30,9 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) Department at [Pennsylvania State University](https://www.psu.edu/). My current research focuses on trustworthiness and safety in multimodal foundation models. I aim to enhance multimodal AI systems to be robust, adaptable, and efficient in practical environments.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on trustworthiness and safety in multimodal foundation models. I aim to enhance multimodal models to be robust, adaptable, and efficient in practical environments.
 
-Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou and PKU.
+Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou.
 
 By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
 
