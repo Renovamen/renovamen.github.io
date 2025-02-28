@@ -30,67 +30,41 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on trustworthiness and safety in multimodal foundation models. I aim to enhance multimodal models to be robust, adaptable, and efficient in practical environments.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on trustworthiness and reliability in multimodal foundation models.
 
 Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou.
 
 By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
 
 
-## Publications <span text-base>(also see <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
+## Selected Publications <span text-base>(see the <a href="/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
-:::paper[/img/about/rebq.png]
+:::paper[/img/publications/shiftdc.png]
+**Understanding and Rectifying Safety Perception Distortion in VLMs**
+
+<u>Xiaohan Zou</u>, Jian Kang, George Kesidis, Lu Lin
+
+*Preprint*
+
+[arXiv:2502.13095](https://arxiv.org/abs/2502.13095)
+:::
+
+:::paper[/img/publications/costep.png]
+**Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning**
+
+<u>Xiaohan Zou</u>, Shu Zhao, Wenchao Ma, Huijuan Xu
+
+*Preprint*
+:::
+
+:::paper[/img/publications/rebq.png]
 **Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
 
 Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
-In Submission, 2024
+*Preprint*
 
-[paper](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
-:::
-
-:::paper[/img/about/tokenflow-1.png /img/about/tokenflow-2.png]
-**TokenFlow: Rethinking Fine-grained Cross-modal Alignment in Vision-Language Retrieval**
-
-<u>Xiaohan Zou</u>, Changqiao Wu, Lele Cheng, and Zhongyuan Wang
-
-Preprint, 2022
-
-[paper](http://arxiv.org/abs/2209.13822)
-:::
-
-:::paper
-**Efficient Meta-Learning for Continual Learning with Taylor Expansion Approximation**
-
-<u>Xiaohan Zou</u>, and Tong Lin
-
-International Joint Conference on Neural Networks (IJCNN), 2022
-
-**Oral Presentation**
-
-[paper](https://arxiv.org/abs/2210.00713) / [slide](/files/papers/ijcnn2022/slide.pdf)
-:::
-
-:::paper[/img/about/ictai2020.png]
-**To be an Artist: Automatic Generation on Food Image Aesthetic Captioning**
-
-<u>Xiaohan Zou</u>, Cheng Lin, Yinjia Zhang, and Qinpei Zhao
-
-International Conference on Tools with Artificial Intelligence (ICTAI), 2020
-
-**Oral Presentation**
-
-[paper](https://ieeexplore.ieee.org/document/9288208) / [code](https://github.com/Renovamen/Food-IAC) / [slide](/files/papers/ictai2020/slide.pdf)
-:::
-
-:::paper
-**A Survey on Application of Knowledge Graph**
-
-<u>Xiaohan Zou</u>
-
-International Conference on Control Engineering and Artificial Intelligence (CCEAI), 2020
-
-[paper](https://iopscience.iop.org/article/10.1088/1742-6596/1487/1/012016/pdf)
+[arXiv:2403.11373](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
 :::
 
 

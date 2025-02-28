@@ -1,0 +1,11 @@
+---
+import { Content } from "@content/publications/index.md";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title={`Publications - ${SITE.title}`} activePage="publications">
+  <h1>Publications</h1>
+
+  <Content />
+</Layout>

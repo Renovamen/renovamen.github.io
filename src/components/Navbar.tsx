@@ -48,6 +48,15 @@ export const Navbar: Component<{
 
       <nav hstack gap-x-4>
         <a
+          class={`nav-item ${props.activePage === "publications" && "nav-active"}`}
+          href="/publications"
+          aria-label="Publications"
+        >
+          <div i-ph:rocket-launch-duotone class="md:hidden" />
+          <span lt-md:hidden>Publications</span>
+        </a>
+
+        <a
           class={`nav-item ${props.activePage === "projects" && "nav-active"}`}
           href="/projects"
           aria-label="Projects"
