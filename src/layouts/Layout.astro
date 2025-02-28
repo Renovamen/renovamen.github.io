@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
@@ -78,7 +78,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
 
     <!-- Page Transitions -->
-    <ViewTransitions />
+    <ClientRouter />
   </head>
 
   <body class="font-sans">
