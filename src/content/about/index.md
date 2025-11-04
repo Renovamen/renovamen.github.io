@@ -44,9 +44,9 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 
 <u>Xiaohan Zou</u>, Jian Kang, George Kesidis, Lu Lin
 
-*Preprint*
+*NeurIPS 2025*
 
-[arXiv\:2502.13095](https://arxiv.org/abs/2502.13095)
+[paper](https://arxiv.org/abs/2502.13095)
 :::
 
 :::paper[/img/publications/costep.png]
