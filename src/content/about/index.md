@@ -30,9 +30,9 @@ socials:
 
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on trustworthiness and reliability in multimodal foundation models.
+I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on improving the reliability of multimodal large language models.
 
-Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou.
+Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Oracle (OCI) and Kuaishou.
 
 By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
 
@@ -68,12 +68,6 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 [arXiv\:2403.11373](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
 :::
-
-
-## Talks
-
-- [Meta / Few-shot Learning](/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
-- [Continual Learning: Meta Continual Learning & Task Free Settings](/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
 
 
 ## Miscellaneous
