@@ -9,13 +9,16 @@ const { front, back = front, alt = "" } = Astro.props;
 ---
 
 <div class="group relative size-full perspective-600">
-  <img class="no-zoom group-hover:rotate-y-180" src={front} alt={alt} />
-  <img class="no-zoom -rotate-y-180 group-hover:rotate-y-0" src={back} alt={alt} />
+  <div
+    class="relative size-full transform-3d transition-transform duration-700 group-hover:rotate-y-[180deg]"
+  >
+    <img class="no-zoom flip-face" src={front} alt={alt} />
+    <img class="no-zoom flip-face rotate-y-[180deg]" src={back} alt={alt} />
+  </div>
 </div>
 
 <style scoped>
-  img {
-    @apply absolute !my-0 rounded-md shadow shadow-neutral-400 dark:shadow-neutral-800 transition-transform duration-700;
-    backface-visibility: hidden;
+  .flip-face {
+    @apply absolute !my-0 rounded-md shadow shadow-neutral-400 dark:shadow-neutral-800 backface-hidden;
   }
 </style>

@@ -1,16 +1,16 @@
 import { visit } from "unist-util-visit";
 import { fromMarkdown } from "mdast-util-from-markdown";
-import type * as mdast from "mdast";
-import type { RemarkPlugin } from "@astrojs/markdown-remark";
+import type { Root, Html, RootContent } from "mdast";
+import type { Plugin } from "unified";
 
-export const remarkImage = (): ReturnType<RemarkPlugin> => {
+export const remarkImage: Plugin<[], Root> = () => {
   const imageRE = /^<!-- (w=(?<width>\d+))? ?(desc="(?<desc>.*)")? -->/i;
 
   return (tree) => {
     visit(tree, "image", (node, index, parent) => {
       if (!parent || typeof index !== "number") return;
 
-      const content = (parent.children[index + 2] as mdast.Html)?.value;
+      const content = (parent.children[index + 2] as Html)?.value;
       const match = content?.match(imageRE);
 
       if (match) {
@@ -33,7 +33,7 @@ export const remarkImage = (): ReturnType<RemarkPlugin> => {
             type: "html",
             value: "</figure>"
           }
-        ] as mdast.RootContent[];
+        ] as RootContent[];
 
         parent.children.splice(index, 3, ...figNodes);
         return index + figNodes.length;

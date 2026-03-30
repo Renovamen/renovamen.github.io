@@ -8,7 +8,7 @@
 }
 
 .prose a {
-  @apply no-underline hover:underline underline-offset-4 text-primary font-normal;
+  @apply no-underline hover:underline underline-offset-4 font-normal;
 }
 
 .prose img,
@@ -18,10 +18,6 @@
 
 .prose figure figcaption {
   @apply text-sm text-fg-light;
-}
-
-.prose hr {
-  border-top: 1px solid hsl(var(--border));
 }
 
 main:not(.post) a.header-anchor {
@@ -52,12 +48,14 @@ main:not(.post) a.header-anchor {
 
 /** Code blocks **/
 
-.prose div[class*="language-"] code span {
+.prose div[class*="language-"] code[data-theme*=" "],
+.prose div[class*="language-"] code[data-theme*=" "] span {
   color: var(--shiki-light);
   background-color: var(--shiki-light-bg);
 }
 
-html.dark .prose div[class*="language-"] code span {
+html.dark .prose div[class*="language-"] code[data-theme*=" "],
+html.dark .prose div[class*="language-"] code[data-theme*=" "] span {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
 }
@@ -84,7 +82,7 @@ html.dark .prose div[class*="language-"] code span {
 }
 
 .prose div[class*="language-"] pre {
-  @apply m-0 p-4 leading-6 text-[0.925em];
+  @apply m-0 p-4 leading-6 text-[0.9em];
 }
 
 .prose div[class*="language-"] code {

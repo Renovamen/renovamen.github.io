@@ -1,6 +1,6 @@
 import { onMount, createEffect, type Component } from "solid-js";
 import { useDark } from "solidjs-use";
-import { GISCUS } from "@config";
+import { GISCUS } from "@/config";
 
 export const Giscus: Component = () => {
   const [isDark] = useDark();

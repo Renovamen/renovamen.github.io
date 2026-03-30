@@ -1,10 +1,11 @@
 import { toc } from "mdast-util-toc";
 import { visit } from "unist-util-visit";
-import type { RemarkPlugin } from "@astrojs/markdown-remark";
+import type { Root } from "mdast";
+import type { Plugin } from "unified";
 
-export const remarkToc = (
-  options = {} as { heading?: string }
-): ReturnType<RemarkPlugin> => {
+type TocOptions = { heading?: string };
+
+export const remarkToc: Plugin<[TocOptions?], Root> = (options = {} as TocOptions) => {
   return (node) => {
     const result = toc(node, {
       ...options,

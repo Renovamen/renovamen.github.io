@@ -1,11 +1,11 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer.astro";
-import { SITE } from "@config";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
 
 import "katex/dist/katex.min.css";
-import "@styles/main.css";
+import "@/styles/main.css";
 
 export interface Props {
   title?: string;
@@ -25,7 +25,8 @@ const {
 } = Astro.props;
 
 const className = Astro.props.class || "";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = "";
 ---
 
 <!doctype html>
@@ -89,7 +90,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <main class={`${className} flex flex-col min-h-full px-4 pt-24 pb-4 md:pb-6`}>
       <Navbar client:load activePage={activePage} hasToc={hasToc} />
       <div class="flex-1 mb-6">
-        <div class="prose prose-lg mx-auto">
+        <div class="prose prose-content prose-lg mx-auto">
           <slot />
         </div>
       </div>

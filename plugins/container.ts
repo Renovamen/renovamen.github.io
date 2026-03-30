@@ -1,6 +1,8 @@
 import { visit } from "unist-util-visit";
-import type * as mdast from "mdast";
-import type { RemarkPlugin } from "@astrojs/markdown-remark";
+import type { Root, Paragraph, Text } from "mdast";
+import type { Plugin } from "unified";
+
+type DirectiveLabelData = { directiveLabel?: boolean };
 
 const getImages = (info: string) => {
   if (!info) return `<div class="paper-images no-image"></div>`;
@@ -16,9 +18,8 @@ const getImages = (info: string) => {
   return `<div class="paper-images"><div>${images}</div></div>`;
 };
 
-export const remarkContainer = (): ReturnType<RemarkPlugin> => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (tree: any) => {
+export const remarkContainer: Plugin<[], Root> = () => {
+  return (tree) => {
     visit(tree, "containerDirective", (node) => {
       const data = node.data || (node.data = {});
       const children = node.children;
@@ -29,12 +30,12 @@ export const remarkContainer = (): ReturnType<RemarkPlugin> => {
 
         let title = node.name.toUpperCase();
 
-        if (children[0]?.data?.directiveLabel) {
-          title = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
+        if ((children[0]?.data as DirectiveLabelData | undefined)?.directiveLabel) {
+          title = ((children[0] as Paragraph).children[0] as Text).value;
           children.shift();
         }
 
-        const titleNode: mdast.Paragraph = {
+        const titleNode: Paragraph = {
           type: "paragraph",
           data: {
             hName: node.name === "details" ? "summary" : "p",
@@ -56,8 +57,8 @@ export const remarkContainer = (): ReturnType<RemarkPlugin> => {
 
         let info = "";
 
-        if (children[0]?.data?.directiveLabel) {
-          info = ((children[0] as mdast.Paragraph).children[0] as mdast.Text).value;
+        if ((children[0]?.data as DirectiveLabelData | undefined)?.directiveLabel) {
+          info = ((children[0] as Paragraph).children[0] as Text).value;
           children.shift();
         }
 

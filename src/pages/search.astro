@@ -1,8 +1,8 @@
 ---
-import { SITE } from "@config";
-import { getPosts, getPostDate, formatDate } from "@utils";
-import Layout from "@layouts/Layout.astro";
-import SearchComponent from "@components/Search";
+import { SITE } from "@/config";
+import { getPosts, getPostDate, formatDate } from "@/utils";
+import Layout from "@/layouts/Layout.astro";
+import SearchComponent from "@/components/Search";
 
 const posts = await getPosts();
 const searchList = posts.map(({ id, body, data }) => ({

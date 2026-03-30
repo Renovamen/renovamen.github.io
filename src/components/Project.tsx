@@ -1,7 +1,7 @@
 import { onMount, createSignal, Show, Switch, Match, For } from "solid-js";
 import type { Component } from "solid-js";
 import { OhVueIcons, OhMyCV } from "./icons";
-import type { ProjectItem } from "@types";
+import type { ProjectItem } from "@/types";
 
 export const Project: Component<{ project: ProjectItem }> = (props) => {
   /* eslint-disable-next-line solid/reactivity */

@@ -1,15 +1,15 @@
 import { visit } from "unist-util-visit";
-import type * as mdast from "mdast";
-import type { RemarkPlugin } from "@astrojs/markdown-remark";
+import type { Root, Paragraph, Html } from "mdast";
+import type { Plugin } from "unified";
 
-export const remarkCodeBlock = (): ReturnType<RemarkPlugin> => {
+export const remarkCodeBlock: Plugin<[], Root> = () => {
   return (tree) => {
     visit(tree, "code", (node, index, parent) => {
       if (!parent || typeof index !== "number") return;
 
       const lang = (node.lang ?? "").trim();
 
-      const start: mdast.Paragraph = {
+      const start: Paragraph = {
         type: "paragraph",
         children: [
           {
@@ -26,7 +26,7 @@ export const remarkCodeBlock = (): ReturnType<RemarkPlugin> => {
           }
         ]
       };
-      const end: mdast.Html = {
+      const end: Html = {
         type: "html",
         value: "</div>"
       };

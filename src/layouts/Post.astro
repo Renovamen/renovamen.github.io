@@ -1,10 +1,10 @@
 ---
 import { slugify } from "@renovamen/utils";
 import { render, type CollectionEntry } from "astro:content";
-import { SITE, THEME } from "@config";
-import Layout from "@layouts/Layout.astro";
-import TocButtons from "@components/TocButtons";
-import Giscus from "@components/Giscus";
+import { SITE, THEME } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import TocButtons from "@/components/TocButtons";
+import Giscus from "@/components/Giscus";
 import {
   getPostDate,
   getPosts,
@@ -12,7 +12,7 @@ import {
   formatDate,
   readingTime,
   lastUpdated
-} from "@utils";
+} from "@/utils";
 
 export interface Props {
   post: CollectionEntry<"blog">;

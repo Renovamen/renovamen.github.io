@@ -3,7 +3,7 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
+  presetWind4,
   transformerDirectives,
   transformerVariantGroup
 } from "unocss";
@@ -66,7 +66,6 @@ export default defineConfig({
         }
 
         body {
-          color: hsl(var(--fg));
           background: hsl(var(--bg));
         }
       `
@@ -89,11 +88,14 @@ export default defineConfig({
     }
   ],
   theme: {
-    fontFamily: {
+    font: {
       sans: `Computer Modern Sans, ${DEFAULT_FONTS}`,
       ui: DEFAULT_FONTS
     },
     colors: {
+      content: {
+        DEFAULT: "hsl(var(--fg))"
+      },
       fg: {
         DEFAULT: "hsl(var(--fg))",
         light: "hsl(var(--fg-light))",
@@ -110,12 +112,16 @@ export default defineConfig({
       warning: "var(--warning)",
       danger: "var(--danger)"
     },
-    maxWidth: {
+    container: {
       content: "90ch"
     }
   },
   presets: [
-    presetUno(),
+    presetWind4({
+      preflights: {
+        reset: true
+      }
+    }),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
@@ -125,7 +131,28 @@ export default defineConfig({
         "vertical-align": "sub"
       }
     }),
-    presetTypography()
+    presetTypography({
+      colorScheme: {
+        body: ["hsl(var(--fg))", "hsl(var(--fg))"],
+        headings: ["hsl(var(--fg-dark))", "hsl(var(--fg-dark))"],
+        lead: ["hsl(var(--fg-light))", "hsl(var(--fg-light))"],
+        links: ["hsl(var(--primary))", "hsl(var(--primary))"],
+        bold: ["hsl(var(--fg-dark))", "hsl(var(--fg-dark))"],
+        counters: ["hsl(var(--fg))", "hsl(var(--fg))"],
+        bullets: ["hsl(var(--fg))", "hsl(var(--fg))"],
+        hr: ["hsl(var(--border))", "hsl(var(--border))"],
+        quotes: ["hsl(var(--fg))", "hsl(var(--fg))"],
+        "quote-borders": ["hsl(var(--border))", "hsl(var(--border))"],
+        captions: ["hsl(var(--fg-light))", "hsl(var(--fg-light))"],
+        kbd: ["hsl(var(--fg-dark))", "hsl(var(--fg-dark))"],
+        "kbd-shadows": ["0 0% 0%", "100 0% 100%"],
+        code: ["hsl(var(--fg-dark))", "hsl(var(--fg-dark))"],
+        "pre-code": ["hsl(var(--fg))", "hsl(var(--fg))"],
+        "pre-bg": ["hsl(var(--bg))", "hsl(var(--bg))"],
+        "th-borders": ["hsl(var(--border))", "hsl(var(--border))"],
+        "td-borders": ["hsl(var(--border))", "hsl(var(--border))"]
+      }
+    })
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()]
 });
