@@ -4,16 +4,26 @@ import { OhVueIcons, OhMyCV } from "./icons";
 import type { ProjectItem } from "@/types";
 
 export const Project: Component<{ project: ProjectItem }> = (props) => {
-  /* eslint-disable-next-line solid/reactivity */
-  const api = "https://api.github.com/repos/" + props.project.repo;
-  const [star, setStar] = createSignal<string>();
+  const [star, setStar] = createSignal<number>();
 
-  const getRepoStars = async () => {
-    const data = await fetch(api).then((res) => res.json());
-    return data.stargazers_count;
+  const getRepoStars = async (repo: string) => {
+    const response = await fetch(`https://api.github.com/repos/${repo}`);
+    if (!response.ok) throw new Error(`Failed to fetch repo metadata for ${repo}`);
+
+    const data = await response.json();
+    return typeof data.stargazers_count === "number" ? data.stargazers_count : undefined;
   };
 
-  onMount(async () => props.project.repo && setStar(await getRepoStars()));
+  onMount(async () => {
+    if (!props.project.repo) return;
+
+    try {
+      const stargazersCount = await getRepoStars(props.project.repo);
+      if (stargazersCount != null) setStar(stargazersCount);
+    } catch (error) {
+      console.error(error);
+    }
+  });
 
   return (
     <a

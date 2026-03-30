@@ -1,9 +1,10 @@
-import { onMount, createEffect, type Component } from "solid-js";
+import { onMount, createEffect, createSignal, type Component } from "solid-js";
 import { useDark } from "solidjs-use";
 import { GISCUS } from "@/config";
 
 export const Giscus: Component = () => {
   const [isDark] = useDark();
+  const [container, setContainer] = createSignal<HTMLDivElement>();
   const getTheme = () => (isDark() ? GISCUS.dark : GISCUS.light);
 
   const getScriptElement = (theme: string) => {
@@ -40,12 +41,12 @@ export const Giscus: Component = () => {
   };
 
   onMount(() => {
-    document.head.appendChild(getScriptElement(getTheme()));
+    container()?.appendChild(getScriptElement(getTheme()));
   });
 
   createEffect(() => updateGiscus(getTheme()));
 
-  return <div class="giscus" />;
+  return <div ref={setContainer} class="giscus" />;
 };
 
 export default Giscus;

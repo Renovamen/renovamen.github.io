@@ -13,6 +13,7 @@ export interface Props {
   description?: string;
   hasToc?: boolean;
   activePage?: string;
+  lang?: "en" | "zh";
   class?: string;
 }
 
@@ -21,16 +22,16 @@ const {
   author = SITE.author,
   description = SITE.desc,
   hasToc = false,
-  activePage
+  activePage,
+  lang = "en"
 } = Astro.props;
 
 const className = Astro.props.class || "";
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const canonicalURL = "";
+const canonicalURL = new URL(Astro.url.pathname, SITE.website);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -71,11 +72,10 @@ const canonicalURL = "";
         const prefersDark =
           window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
         const setting = localStorage.getItem("solidjs-use-color-scheme") || "auto";
+        const shouldUseDark = setting === "dark" || (setting !== "light" && prefersDark);
 
         document.documentElement.classList.toggle(`theme-${setting}`, true);
-
-        if (setting === "dark" || (setting !== "light" && prefersDark))
-          document.documentElement.classList.toggle("dark", true);
+        document.documentElement.classList.toggle("dark", shouldUseDark);
       };
 
       document.addEventListener("astro:after-swap", checkTheme);

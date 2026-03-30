@@ -28,7 +28,7 @@ const { tags, numPostsPerTag } = getTags(posts);
 const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) : posts);
 ---
 
-<Layout title={`${title} - ${SITE.title}`} activePage={"posts"}>
+<Layout title={`${title} - ${SITE.title}`} lang={lang} activePage={"posts"}>
   <h1>{title} <ToggleLang /></h1>
 
   <!-- tag list -->

@@ -1,9 +1,10 @@
-import { onMount, createSignal, type Component } from "solid-js";
+import { createEffect, createSignal, onMount, type Component } from "solid-js";
 import { useWindowSize } from "solidjs-use";
 
 export const ToggleToc: Component = () => {
   const { width } = useWindowSize();
-  const [isTocOpen, setIsTocOpen] = createSignal(width() > 1200);
+  const [isTocOpen, setIsTocOpen] = createSignal(false);
+  let previousIsDesktop: boolean | undefined;
 
   const toggleToc = () => {
     setIsTocOpen(!isTocOpen());
@@ -15,6 +16,17 @@ export const ToggleToc: Component = () => {
     else document.documentElement.classList.remove("toc-open");
   };
 
+  createEffect(() => {
+    const isDesktop = width() > 1200;
+
+    // Only resync when crossing the desktop breakpoint, so manual toggles persist.
+    if (previousIsDesktop === undefined || previousIsDesktop !== isDesktop) {
+      previousIsDesktop = isDesktop;
+      setIsTocOpen(isDesktop);
+    }
+  });
+
+  createEffect(handleClass);
   onMount(handleClass);
 
   return (
