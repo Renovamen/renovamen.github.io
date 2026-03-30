@@ -4,3 +4,7 @@ node_modules
 *.log*
 .astro
 .vscode
+
+.agents
+.claude
+skills-lock.json
