@@ -1,7 +1,7 @@
 Please also check my [Google Scholar](https://scholar.google.com/citations?user=RuW6xgMAAAAJ).
 
 
-## Conference Papaers
+## Conference Papers
 
 :::paper[/img/publications/shiftdc.png]
 **Understanding and Rectifying Safety Perception Distortion in VLMs**

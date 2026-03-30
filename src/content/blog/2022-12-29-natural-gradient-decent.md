@@ -1,5 +1,5 @@
 ---
-title: Natural Gradient Decent
+title: Natural Gradient Descent
 tags:
   - machine learning
   - math
@@ -9,13 +9,13 @@ tags:
 
 [中文版本](/posts/zh/2021-07-28-natural-gradient-decent)
 
-Natural gradient decent minimizes the loss function in distribution space with KL-divergence as metric, instead of the usual parameter space with Euclidean metric.
+Natural gradient descent minimizes the loss function in distribution space with KL divergence as the metric, instead of in the usual parameter space with the Euclidean metric.
 
 ## Preliminary
 
-### Gradient Decent
+### Gradient Descent
 
-Assume that $L(\theta)$ is a loss function with first-order continuous partial derivatives, where $\theta \in R^n$. Now want to solve a unconstrained optimization problem:
+Assume that $L(\theta)$ is a loss function with first-order continuous partial derivatives, where $\theta \in R^n$. Now we want to solve an unconstrained optimization problem:
 
 $$
 \min_\theta L(\theta)
@@ -43,7 +43,7 @@ $$
 L(\theta^{(k+1)}) - L(\theta^{(k)}) = \eta \vec{v} \cdot \nabla L(\theta^{(k)}) = \eta  \cdot \| \vec{v} \| \cdot \| \nabla L(\theta^{(k)}) \| \cdot \cos(\alpha)
 $$
 
-where $\alpha$ is the angle between $\vec{v}$ and $\nabla L(\theta^{(k)})$. Obviously, when $\alpha = - \pi$, i.e. when $\vec{v}$ and $\nabla L(\theta^{(k)})$ are in the opposite directions, $\cos(\alpha) = -1$ and the loss decrease most greatly. This is why gradient decent moves in the direction of the negative gradient:
+where $\alpha$ is the angle between $\vec{v}$ and $\nabla L(\theta^{(k)})$. Obviously, when $\alpha = - \pi$, i.e. when $\vec{v}$ and $\nabla L(\theta^{(k)})$ are in opposite directions, $\cos(\alpha) = -1$ and the loss decreases the most. This is why gradient descent moves in the direction of the negative gradient:
 
 $$
 \vec{v} = - \frac{\nabla L(\theta^{(k)})}{\| \nabla L(\theta^{(k)}) \|}
@@ -117,11 +117,11 @@ Which means the Fisher Information Matrix $F$ defines the local curvature in dis
 
 A manifold is a topological space sharing the local properties of Euclidean spaces. Every point on a manifold has a small neighborhood around it that can be locally approximated by a tangent plane, which means that the curvature of this neighborhood is approximately zero. This allows us to use the Euclidean metric, which is based on the properties of flat space, to measure distance within this small neighborhood. To help your understanding, people on earth may experience their surroundings as being flat, but they are unable to perceive the curvature of the earth due to its large size.
 
-More formally: A manifold $M$ of dimension $n$ is a topological space, such that every point $x \in M$ has a neighbourhood which is homeomorphic to an open set in Euclidean space $\Reals^n$. This open set in Euclidean space is called **tangent space**, refered as $T_x M$.
+More formally: a manifold $M$ of dimension $n$ is a topological space such that every point $x \in M$ has a neighbourhood that is homeomorphic to an open set in Euclidean space $\Reals^n$. This open set in Euclidean space is called the **tangent space**, denoted by $T_x M$.
 
 #### Riemannian Metric
 
-The distance between two points in an Euclidean space can be easily determined by taking the modulusof the vector connecting the points. However, manifolds are not linear spaces, so we need to use alternative methods to calculate lengths on a manifold. One possible approach is to consider a continuous, differentiable curve, represented by $\gamma: [a, b] \to M$, on the manifold and compute the integral of the distance differential at each point along curve $\gamma$:
+The distance between two points in a Euclidean space can be easily determined by taking the modulus of the vector connecting the points. However, manifolds are not linear spaces, so we need to use alternative methods to calculate lengths on a manifold. One possible approach is to consider a continuous, differentiable curve, represented by $\gamma: [a, b] \to M$, on the manifold and compute the integral of the distance differential at each point along the curve $\gamma$:
 
 $$
 L(\gamma) = \int_a^b \| \gamma'(x) \| dx
@@ -147,11 +147,11 @@ Formally, for each $x \in M$，a Riemannian metric $g = g_x$ satisfies:
 - $g(u, u) \geq 0$ for all $u \in T_x M$
 - $g(u, u) = 0$ if and only if $u = 0$
 
-## Natural Gradient Decent
+## Natural Gradient Descent
 
 ### Constrained Optimization
 
-Let's start with looking at **natural gradient decent** from aspect of constrained optimization. In traditional gradient decent, the constrained optimization problem we want to solve is:
+Let's start by looking at **natural gradient descent** from the aspect of constrained optimization. In traditional gradient descent, the constrained optimization problem we want to solve is:
 
 $$
 \begin{gathered}
@@ -160,15 +160,15 @@ $$
 \end{gathered}
 $$
 
-where the distance in parameter space is contrained and can be calculated using Euclidean metric.
+where the distance in parameter space is constrained and can be calculated using the Euclidean metric.
 
-As mentioned [before](#gradient-decent), the steepest descent direction is the direction of the negative gradient:
+As mentioned [before](#gradient-descent), the steepest descent direction is the direction of the negative gradient:
 
 $$
 - \frac{\nabla L(\theta)}{\| \nabla L(\theta) \|} = \lim_{\epsilon \to 0} \frac{1}{\epsilon} \arg \min_{d \text{ s.t.} \| d \| \leq \epsilon} L(\theta + d)
 $$
 
-When using gradient descent, the distribution of the parameters may change as the optimization process progresses. However, it is also important to ensure that the amount of change in the distribution is controlled, as large changes can lead to instability in the model. The Euclidean distance, which is based on the properties of flat space, may not be an appropriate measure of the amount of change in the distribution. Therefore, natural gradient decent works in **distribution space** and uses KL divergence to compare the current distribution of parameters $p(x \mid \theta)$ with the target distribution $p(x \mid \theta + d)$. Now the constraint becomes:
+When using gradient descent, the distribution of the parameters may change as the optimization process progresses. However, it is also important to ensure that the amount of change in the distribution is controlled, as large changes can lead to instability in the model. The Euclidean distance, which is based on the properties of flat space, may not be an appropriate measure of the amount of change in the distribution. Therefore, natural gradient descent works in **distribution space** and uses KL divergence to compare the current distribution of parameters $p(x \mid \theta)$ with the target distribution $p(x \mid \theta + d)$. Now the constraint becomes:
 
 $$
 \text{s.t.} \enspace KL \Big ( p(x \mid \theta) \| p(x \mid \theta + d) \Big ) \leq \epsilon
@@ -200,7 +200,7 @@ Finally, the optimal descent direction is $\tilde{\nabla} L(\theta) = F^{-1} \na
 
 Now we consider optimizing the objective function on a manifold. We can easily recognize that the descent direction depends on how to calculate $\|d\|$, i.e., what's the metric on the manifold.
 
-The tranditional gradient decent works on parameter space (a Euclidean space), of which the metric is Euclidean metric. The natural gradient descent operates in distribution space (a Riemannian manifold), in which a point, represented by $p(x \mid \theta)$, can be thought of as a parameterized probability distribution. When the parameter $\theta$ changes to $\theta + d$, the distance between $p(x \mid \theta)$ and $p(x \mid \theta + d)$ is $\frac{1}{2} d^T F d$. It can be seen that the Fisher information matrix $F$ serves as the Riemannian metric on this Riemannian manifold.
+Traditional gradient descent works in parameter space (a Euclidean space), whose metric is the Euclidean metric. Natural gradient descent operates in distribution space (a Riemannian manifold), in which a point, represented by $p(x \mid \theta)$, can be thought of as a parameterized probability distribution. When the parameter $\theta$ changes to $\theta + d$, the distance between $p(x \mid \theta)$ and $p(x \mid \theta + d)$ is $\frac{1}{2} d^T F d$. It can be seen that the Fisher information matrix $F$ serves as the Riemannian metric on this Riemannian manifold.
 
 The Fisher information matrix reflects the local curvature of the likelihood probability distribution space, which means that it encodes information about how much the probability distribution changes as the parameters vary. By using the Fisher information matrix as a measure, we can obtain the descent direction that takes into account the curvature of the probability distribution space. This is important because the larger the curvature, the smaller the range of parameter values that can be used to maintain a given likelihood. Natural gradient descent ensures that the optimization process respects the underlying geometry of the probability distribution space and avoids making large, unstable changes to the parameters.
 

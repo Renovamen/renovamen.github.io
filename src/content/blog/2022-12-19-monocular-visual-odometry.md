@@ -8,7 +8,7 @@ tags:
 
 Monocular Visual Odometry (VO) is the process of estimating the pose (position and orientation) of a camera using only visual information from a single camera. It is a crucial component of many robotics and augmented reality systems, as it allows a device to understand its own movement and position in the world.
 
-This blog would be focussing on how to implement a simple monocular VO algorithm in Python. If you are new to it, I suggest having a look at [this article](https://cmsc426.github.io/sfm/).
+This blog focuses on how to implement a simple monocular VO algorithm in Python. If you are new to it, I suggest taking a look at [this article](https://cmsc426.github.io/sfm/).
 
 The overall process can be broken down into the following steps:
 
@@ -24,7 +24,7 @@ Suppose that we have a camera attached to a vehicle. A video coming from this ca
 
 ## Feature Detection
 
-We first look for salient landmarks, called keypoints $K_i$, in $I_i$. Keypoints are features that differ from their immediate neighborhood such as corners or areas with unique colors or textures. These features should ideally be found in both two adjacent frames.
+We first look for salient landmarks, called keypoints $K_i$, in $I_i$. Keypoints are features that differ from their immediate neighborhood, such as corners or areas with unique colors or textures. These features should ideally be found in both adjacent frames.
 
 Using OpenCV, detecting keypoints is trivial:
 
@@ -105,7 +105,7 @@ $$
 = 0,
 $$
 
-which can be answered by solving the linear least squares using Singular Value Decomposition (SVD). This algorithm requires 8 keypoint correspondences exists, where $(x_i, y_i)$ are the coordinates of the 8 keypoints selected from $K_i$, and $(x_{i+1}, y_{i+1})$ are the coordinates of their corresponding keypoints in $K_{i+1}$. The coordinates should be normalized by shifting them around the mean of the points and enclosing them at a distance of $\sqrt{2}$ from the new center.
+which can be solved by linear least squares using Singular Value Decomposition (SVD). This algorithm requires 8 keypoint correspondences, where $(x_i, y_i)$ are the coordinates of the 8 keypoints selected from $K_i$, and $(x_{i+1}, y_{i+1})$ are the coordinates of their corresponding keypoints in $K_{i+1}$. The coordinates should be normalized by shifting them around the mean of the points and scaling them so that they lie at a distance of $\sqrt{2}$ from the new center.
 
 Given 8 keypoint correspondences, the code for computing $F$ is:
 
@@ -231,7 +231,7 @@ Then the problem is how to pick 8 keypoint correspondences (`sample_eight_points
 
 ## Essential Matrix
 
-Essential matrix $E$ is another $3 \times 3$ matrix. But unlike $F$, $E$ assumes that the cameras obey the pinhole model. More specifically, given the camera calibration matrix $K$, $E = K^T F K$, which also can be solved using SVD.
+The essential matrix $E$ is another $3 \times 3$ matrix. But unlike $F$, $E$ assumes that the cameras obey the pinhole model. More specifically, given the camera calibration matrix $K$, $E = K^T F K$, which can also be solved using SVD.
 
 ```python {6-10,12}
 def find_essential_mat(K: np.ndarray, F: np.ndarray)-> np.ndarray:
@@ -269,7 +269,7 @@ $$
 
 ---
 
-Now we have successfully estimated the essential matrix $E$ manually, looks cool! However, this can also be done with the help of OpenCV, and all you need is one line:
+Now we have successfully estimated the essential matrix $E$ manually, which looks cool. However, this can also be done with the help of OpenCV, and all you need is one line:
 
 ```python
 E, mask = cv2.findEssentialMat(kp2, kp1, K, cv2.RANSAC, 0.999, 0.3, None)
@@ -279,7 +279,7 @@ OpenCV uses [Nistér's 5-point algorithm](https://www-users.cse.umn.edu/~hspark/
 
 ## Camera Pose
 
-Just follow [here](https://cmsc426.github.io/sfm/#essential) to recover the camera rotation matrix $R_i$ and translation vector $t_i$ from $E$.
+You can follow [this explanation](https://cmsc426.github.io/sfm/#essential) to recover the camera rotation matrix $R_i$ and translation vector $t_i$ from $E$.
 
 ```python
 def linear_triangulation(

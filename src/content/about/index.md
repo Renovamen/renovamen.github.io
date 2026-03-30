@@ -80,7 +80,7 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 - 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
 
-- 🧐 _Renovamen_ is a Latin word means _renewal_
+- 🧐 _Renovamen_ is a Latin word meaning _renewal_
 
 - 🖥 Ex-OIer/ACMer
 
