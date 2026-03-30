@@ -11,28 +11,19 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      NODE_VERSION: 20
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install, build, and upload your site
-        uses: withastro/action@v2
-
+        uses: withastro/action@v6
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     environment:
