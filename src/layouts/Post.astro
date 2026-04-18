@@ -1,6 +1,7 @@
 ---
 import { slugify } from "@renovamen/utils";
 import { render, type CollectionEntry } from "astro:content";
+import type { ComponentProps } from "astro/types";
 import { SITE, THEME } from "@/config";
 import Layout from "@/layouts/Layout.astro";
 import TocButtons from "@/components/TocButtons";
@@ -14,9 +15,11 @@ import {
   lastUpdated
 } from "@/utils";
 
+type LayoutLang = NonNullable<ComponentProps<typeof Layout>["lang"]>;
+
 export interface Props {
   post: CollectionEntry<"blog">;
-  lang: string;
+  lang: LayoutLang;
 }
 
 const { post, lang } = Astro.props;

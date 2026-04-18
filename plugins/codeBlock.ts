@@ -31,8 +31,7 @@ export const remarkCodeBlock: Plugin<[], Root> = () => {
         value: "</div>"
       };
 
-      parent.children.splice(index, 0, start);
-      parent.children.splice(index + 2, 0, end);
+      parent.children.splice(index, 1, start, node, end);
 
       return index + 3;
     });

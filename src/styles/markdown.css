@@ -82,7 +82,7 @@ html.dark .prose div[class*="language-"] code[data-theme*=" "] span {
 }
 
 .prose div[class*="language-"] pre {
-  @apply m-0 p-4 leading-6 text-[0.9em];
+  @apply m-0 p-4 leading-6 text-sm;
 }
 
 .prose div[class*="language-"] code {

@@ -5,6 +5,11 @@ node_modules
 .astro
 .vscode
 
-.agents
-.claude
+# Code agents
+.agents/
+.claude/
+.codex/
+.omx/
+AGENTS.md
 skills-lock.json
+

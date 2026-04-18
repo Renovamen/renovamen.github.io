@@ -4,14 +4,39 @@ import type { Plugin } from "unified";
 
 type DirectiveLabelData = { directiveLabel?: boolean };
 
-const getImages = (info: string) => {
-  if (!info) return `<div class="paper-images no-image"></div>`;
+const CUSTOM_BLOCK_NAMES = new Set(["info", "tip", "warning", "danger", "details"]);
 
-  const images = info
-    .split(" ")
+const takeDirectiveLabel = (children: Root["children"]) => {
+  const firstChild = children[0];
+
+  if (
+    firstChild?.type !== "paragraph" ||
+    !(firstChild.data as DirectiveLabelData | undefined)?.directiveLabel
+  ) {
+    return "";
+  }
+
+  children.shift();
+  return ((firstChild as Paragraph).children[0] as Text | undefined)?.value ?? "";
+};
+
+const getImageAlt = (src: string) => {
+  const fileName = src.substring(src.lastIndexOf("/") + 1);
+  const extensionIndex = fileName.lastIndexOf(".");
+
+  return extensionIndex === -1 ? fileName : fileName.substring(0, extensionIndex);
+};
+
+const getImages = (info: string) => {
+  const imageSources = info.trim().split(/\s+/).filter(Boolean);
+
+  if (imageSources.length === 0) {
+    return `<div class="paper-images no-image"></div>`;
+  }
+
+  const images = imageSources
     .map((src) => {
-      const alt = src.substring(src.lastIndexOf("/") + 1, src.lastIndexOf("."));
-      return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
+      return `<img src="${src}" alt="${getImageAlt(src)}" loading="lazy" decoding="async" />`;
     })
     .join("");
 
@@ -24,16 +49,11 @@ export const remarkContainer: Plugin<[], Root> = () => {
       const data = node.data || (node.data = {});
       const children = node.children;
 
-      if (["info", "tip", "warning", "danger", "details"].includes(node.name)) {
+      if (CUSTOM_BLOCK_NAMES.has(node.name)) {
         data.hProperties = { class: ["custom-block", node.name] };
         data.hName = node.name === "details" ? "details" : "div";
 
-        let title = node.name.toUpperCase();
-
-        if ((children[0]?.data as DirectiveLabelData | undefined)?.directiveLabel) {
-          title = ((children[0] as Paragraph).children[0] as Text).value;
-          children.shift();
-        }
+        const title = takeDirectiveLabel(children) || node.name.toUpperCase();
 
         const titleNode: Paragraph = {
           type: "paragraph",
@@ -54,15 +74,7 @@ export const remarkContainer: Plugin<[], Root> = () => {
 
       if (node.name === "paper") {
         data.hProperties = { class: ["paper-block"] };
-
-        let info = "";
-
-        if ((children[0]?.data as DirectiveLabelData | undefined)?.directiveLabel) {
-          info = ((children[0] as Paragraph).children[0] as Text).value;
-          children.shift();
-        }
-
-        const images = getImages(info);
+        const images = getImages(takeDirectiveLabel(children));
 
         children.unshift({
           type: "html",

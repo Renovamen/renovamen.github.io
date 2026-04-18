@@ -1,5 +1,6 @@
 ---
 import { slugify } from "@renovamen/utils";
+import type { ComponentProps } from "astro/types";
 import { SITE } from "@/config";
 import Layout from "@/layouts/Layout.astro";
 import ToggleLang from "@/components/ToggleLang.astro";
@@ -12,8 +13,10 @@ import {
   formatDate
 } from "@/utils";
 
+type LayoutLang = NonNullable<ComponentProps<typeof Layout>["lang"]>;
+
 export interface Props {
-  lang: string;
+  lang: LayoutLang;
   tag?: string;
 }
 

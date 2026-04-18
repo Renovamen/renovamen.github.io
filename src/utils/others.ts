@@ -7,25 +7,28 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export const formatDate = (date: string | Date, type: 0 | 1 | 2 = 0) => {
-  switch (type) {
-    case 0:
-      return dayjs(date).format("MMM D, YYYY");
-    case 1:
-      return dayjs(date).format("MMM D");
-    case 2:
-      return dayjs(date).format("YYYY/MM");
-  }
+const DATE_FORMATS = ["MMM D, YYYY", "MMM D", "YYYY/MM"] as const;
+const BLOG_FILE_CANDIDATES = [
+  "../content/blog",
+  "../../src/content/blog"
+] as const satisfies readonly string[];
+
+export const formatDate = (date: string | Date, type: 0 | 1 | 2 = 0) =>
+  dayjs(date).format(DATE_FORMATS[type]);
+
+const getBlogFilePath = (id: string) => {
+  const candidates = BLOG_FILE_CANDIDATES.map((basePath) =>
+    path.resolve(__dirname, basePath, `${id}.md`)
+  );
+
+  return candidates.find(fs.existsSync) ?? candidates.at(-1)!;
 };
 
 // Modified from: https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
 export const lastUpdated = (id: string) => {
-  // a workaround to find absolute path for a blog file
-  const fileDev = path.resolve(__dirname, "../content/blog", `${id}.md`);
-  const fileProd = path.resolve(__dirname, "../../src/content/blog", `${id}.md`);
-  const file = fs.existsSync(fileDev) ? fileDev : fileProd;
+  const output = sync("git", ["log", "-1", '--pretty="%ci"', getBlogFilePath(id)])
+    .stdout.toString()
+    .trim();
 
-  const child = sync("git", ["log", "-1", '--pretty="%ci"', file]);
-  const output = child.stdout.toString();
   return new Date(output).toLocaleString();
 };

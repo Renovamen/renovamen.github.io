@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview --host",
     "astro": "astro",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "node --test --experimental-strip-types tests/plugins.test.ts tests/utils.test.ts"
   },
   "prettier": "@renovamen/prettier-config",
   "dependencies": {

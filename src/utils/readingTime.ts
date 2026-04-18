@@ -39,46 +39,41 @@ export interface ReadingTime {
   words: number;
 }
 
-const getNumCN = (text: string) => {
-  return (text.match(/[\u4E00-\u9FA5]/g) || []).length;
-};
+const CHINESE_CHAR_REGEX = /[\u4E00-\u9FA5]/g;
+const NON_LATIN_WORD_REGEX =
+  /[a-zA-Z0-9_\u0392-\u03c9\u0400-\u04FF]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af\u0400-\u04FF]+|[\u00E4\u00C4\u00E5\u00C5\u00F6\u00D6]+|\w+/g;
+const CODE_BLOCK_REGEX = /```[\s\S]*?```/g;
+const TEX_BLOCK_REGEX = /\$\$[\s\S]*?\$\$/g;
 
-const getNumEN = (text: string) => {
-  return (
-    text
-      .replace(/[\u4E00-\u9FA5]/g, "")
-      .match(
-        /[a-zA-Z0-9_\u0392-\u03c9\u0400-\u04FF]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af\u0400-\u04FF]+|[\u00E4\u00C4\u00E5\u00C5\u00F6\u00D6]+|\w+/g
-      ) || []
-  ).length;
-};
+const countMatches = (text: string, pattern: RegExp) =>
+  (text.match(pattern) ?? []).length;
 
-const excludeCodeBlock = (text: string) => {
-  return text.replace(/```[\s\S]*?```/g, "");
-};
+const getNumCN = (text: string) => countMatches(text, CHINESE_CHAR_REGEX);
 
-const excludeTexBlock = (text: string) => {
-  return text.replace(/\$\$[\s\S]*?\$\$/g, "");
-};
+const getNumEN = (text: string) =>
+  countMatches(text.replace(CHINESE_CHAR_REGEX, ""), NON_LATIN_WORD_REGEX);
+
+const excludeCodeBlock = (text: string) => text.replace(CODE_BLOCK_REGEX, "");
+
+const excludeTexBlock = (text: string) => text.replace(TEX_BLOCK_REGEX, "");
 
 export const readingTime = (text: string, options?: ReadingTimeOptions): ReadingTime => {
-  options = options || {};
-
-  // use default values if necessary
-  options.wordsPerMinuteCN = options.wordsPerMinuteCN || 300;
-  options.wordsPerMinuteEN = options.wordsPerMinuteEN || 200;
+  const normalizedOptions = options ?? {};
+  const wordsPerMinuteCN = normalizedOptions.wordsPerMinuteCN || 300;
+  const wordsPerMinuteEN = normalizedOptions.wordsPerMinuteEN || 200;
+  let content = text;
 
   // exclude all content inside code blocks
-  if (options.excludeCodeBlock) text = excludeCodeBlock(text);
+  if (normalizedOptions.excludeCodeBlock) content = excludeCodeBlock(content);
   // exclude all content inside tex blocks
-  if (options.excludeTexBlock) text = excludeTexBlock(text);
+  if (normalizedOptions.excludeTexBlock) content = excludeTexBlock(content);
 
   // number of chinese words and english words
-  const cntCN = getNumCN(text || "");
-  const cntEN = getNumEN(text || "");
+  const cntCN = getNumCN(content);
+  const cntEN = getNumEN(content);
 
   // compute reading time
-  let minutes = cntCN / options.wordsPerMinuteCN + cntEN / options.wordsPerMinuteEN;
+  let minutes = cntCN / wordsPerMinuteCN + cntEN / wordsPerMinuteEN;
   minutes = minutes < 1 ? 1 : Math.ceil(Number(minutes.toFixed(2)));
 
   return {
