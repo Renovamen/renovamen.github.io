@@ -39,6 +39,24 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 
 ## Selected Publications <span text-base>(see the <a href="/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
+:::paper[/img/publications/birch.png]
+**When Vision-Language Models Judge Without Seeing: Exposing Informativeness Bias**
+
+<u>Xiaohan Zou</u>, Roshan Sridhar, Mohammadtaher Safarzadeh, Dan Roth
+
+*ACL 2026 (Main Conference)*
+
+[paper](https://arxiv.org/abs/2604.17768)
+:::
+
+:::paper[/img/publications/carv.png]
+**CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs**
+
+Yongkang Du, <u>Xiaohan Zou</u>, Minhao Cheng, Lu Lin
+
+[arXiv\:2603.27958](https://arxiv.org/abs/2603.27958)
+:::
+
 :::paper[/img/publications/shiftdc.png]
 **Understanding and Rectifying Safety Perception Distortion in VLMs**
 
@@ -57,16 +75,6 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 *CVPR 2025 (Highlight)*
 
 [paper](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html)
-:::
-
-:::paper[/img/publications/rebq.png]
-**Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
-
-Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
-
-*Preprint*
-
-[arXiv\:2403.11373](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
 :::
 
 

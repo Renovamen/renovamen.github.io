@@ -3,6 +3,16 @@ Please also check my [Google Scholar](https://scholar.google.com/citations?user=
 
 ## Conference Papers
 
+:::paper[/img/publications/birch.png]
+**When Vision-Language Models Judge Without Seeing: Exposing Informativeness Bias**
+
+<u>Xiaohan Zou</u>, Roshan Sridhar, Mohammadtaher Safarzadeh, Dan Roth
+
+*ACL 2026 (Main Conference)*
+
+[paper](https://arxiv.org/abs/2604.17768)
+:::
+
 :::paper[/img/publications/shiftdc.png]
 **Understanding and Rectifying Safety Perception Distortion in VLMs**
 
@@ -10,7 +20,7 @@ Please also check my [Google Scholar](https://scholar.google.com/citations?user=
 
 *NeurIPS 2025*
 
-[paper](https://arxiv.org/abs/2502.13095)
+[paper](https://arxiv.org/abs/2502.13095) / [code](https://github.com/Renovamen/ShiftDC) / [poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202025/118667.png)
 :::
 
 :::paper[/img/publications/costep.png]
@@ -20,7 +30,7 @@ Please also check my [Google Scholar](https://scholar.google.com/citations?user=
 
 *CVPR 2025 (Highlight)*
 
-[paper](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html)
+[paper](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html) / [poster](https://cvpr.thecvf.com/media/PosterPDFs/CVPR%202025/35204.png)
 :::
 
 :::paper[/img/publications/storylab.webp]
@@ -64,22 +74,15 @@ Zhaohui Li, Feiwen Xiao, Jiaju Lin, <u>Xiaohan Zou</u>, Qingxiao Zheng, Jinjun X
 :::
 
 
-## Journal Papers
-
-:::paper[/img/publications/storio.jpg]
-**Leveraging an LLM-Enhanced Bilingual Conversational Agent for EFL Children's Dialogic Reading: Insights from Children, Parents, and Educators**
-
-Feiwen Xiao, Zhaohui Li, Jiaju Lin, <u>Xiaohan Zou</u>, Dandan Yang, Wenting Zou, Jinjun Xiong
-
-*Computers and Education: Artificial Intelligence, 2025*
-
-[paper](https://www.sciencedirect.com/science/article/pii/S2666920X25001249)
-:::
-
-
-
 ## Preprints
 
+:::paper[/img/publications/carv.png]
+**CARV: A Diagnostic Benchmark for Compositional Analogical Reasoning in Multimodal LLMs**
+
+Yongkang Du, <u>Xiaohan Zou</u>, Minhao Cheng, Lu Lin
+
+[arXiv\:2603.27958](https://arxiv.org/abs/2603.27958)
+:::
 
 :::paper[/img/publications/rebq.png]
 **Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
@@ -95,4 +98,17 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 <u>Xiaohan Zou</u>, Changqiao Wu, Lele Cheng, Zhongyuan Wang
 
 [arXiv\:2209.13822](http://arxiv.org/abs/2209.13822)
+:::
+
+
+## Journal Papers
+
+:::paper[/img/publications/storio.jpg]
+**Leveraging an LLM-Enhanced Bilingual Conversational Agent for EFL Children's Dialogic Reading: Insights from Children, Parents, and Educators**
+
+Feiwen Xiao, Zhaohui Li, Jiaju Lin, <u>Xiaohan Zou</u>, Dandan Yang, Wenting Zou, Jinjun Xiong
+
+*Computers and Education: Artificial Intelligence, 2025*
+
+[paper](https://www.sciencedirect.com/science/article/pii/S2666920X25001249)
 :::
