@@ -46,7 +46,7 @@ By the way, take a look at [some things](/projects) I've built as a web develope
 
 *ACL 2026 (Main Conference)*
 
-[paper](https://arxiv.org/abs/2604.17768)
+[paper](https://arxiv.org/abs/2604.17768) / [poster](/files/papers/acl2026/poster.pdf)
 :::
 
 :::paper[/img/publications/carv.png]
@@ -64,7 +64,7 @@ Yongkang Du, <u>Xiaohan Zou</u>, Minhao Cheng, Lu Lin
 
 *NeurIPS 2025*
 
-[paper](https://arxiv.org/abs/2502.13095)
+[paper](https://arxiv.org/abs/2502.13095) / [code](https://github.com/Renovamen/ShiftDC) / [poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202025/118667.png)
 :::
 
 :::paper[/img/publications/costep.png]
@@ -74,7 +74,7 @@ Yongkang Du, <u>Xiaohan Zou</u>, Minhao Cheng, Lu Lin
 
 *CVPR 2025 (Highlight)*
 
-[paper](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html)
+[paper](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html) / [poster](https://cvpr.thecvf.com/media/PosterPDFs/CVPR%202025/35204.png)
 :::
 
 
