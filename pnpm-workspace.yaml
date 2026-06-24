@@ -1,0 +1,6 @@
+minimumReleaseAge: 0
+shamefullyHoist: true
+strictPeerDependencies: false
+allowBuilds:
+  esbuild: true
+  sharp: true

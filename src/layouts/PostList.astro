@@ -35,19 +35,19 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
   <h1>{title} <ToggleLang /></h1>
 
   <!-- tag list -->
-  <span class="mr-1.5 -space-x-0.5 text-fg-light">
+  <span class="mr-2 inline-hstack gap-x-1.5 text-fg-light">
     <span class="i-uil:tag-alt size-4"></span>
     <a href={allURL} class={`!nav-item ${!tag && "!nav-active"}`}>all</a>
-    <sup>{numPostsPerTag["all"]}</sup>
+    <sup class="-ml-0.5">{numPostsPerTag["all"]}</sup>
   </span>
 
   {
     tags.map((t) => (
-      <span class="mr-1.5 -space-x-0.5 text-fg-light">
+      <span class="mr-2 inline-hstack gap-x-1.5 text-fg-light">
         <span class="i-uil:tag-alt size-4" />
         {/* eslint-disable-next-line format/prettier */}
         <a href={tagURL + slugify(t)} class={`!nav-item ${t === tag && '!nav-active'}`}>{t}</a>
-        <sup>{numPostsPerTag[t]}</sup>
+        <sup class="-ml-0.5">{numPostsPerTag[t]}</sup>
       </span>
     ))
   }
