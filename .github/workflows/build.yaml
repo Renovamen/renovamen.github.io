@@ -1,0 +1,64 @@
+name: Build and renovamen
+
+# 触发条件：当推送新 tag 时
+on:
+  push:
+    tags:
+      - 'v*'
+# 定义环境变量
+env:
+    OUTPUT_DIR: renovamen  # 将 "dist" 定义为变量，可随时修改
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: npm i
+
+      # 4. 编译 TypeScript
+      - name: Build TypeScript
+        run: npm run build
+
+      # 5. 获取 tag 名称
+      - name: Get tag name
+        id: tag
+        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      # 6. 创建 tar 文件（包含版本号）
+      - name: Create tar archive with version
+        run: tar -czf ${{ env.OUTPUT_DIR }}-${{ steps.tag.outputs.TAG_NAME }}.tar.gz -C dist .
+
+      # 7. 创建 Release
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.TAG_NAME }}
+          release_name: Release ${{ steps.tag.outputs.TAG_NAME }}
+          draft: false
+          prerelease: false
+
+      # 8. 上传 tar 文件到 Release
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ env.OUTPUT_DIR }}-${{ steps.tag.outputs.TAG_NAME }}.tar.gz
+          asset_name: ${{ env.OUTPUT_DIR }}-${{ steps.tag.outputs.TAG_NAME }}.tar.gz
+          asset_content_type: application/gzip
